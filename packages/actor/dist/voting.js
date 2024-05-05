@@ -1,0 +1,19 @@
+import { actor } from "./actor";
+import { ActorName } from "./ActorName";
+import { VoteControllerInterfaceFactory, VoteFileInterfaceFactory, VoteProjectInterfaceFactory, } from "@icpswap/candid";
+export const votingController = (identity) => actor.create({
+    actorName: ActorName.VotingController,
+    idlFactory: VoteControllerInterfaceFactory,
+    identity,
+});
+export const votingCanister = (canisterId, identity) => actor.create({
+    canisterId,
+    identity,
+    idlFactory: VoteProjectInterfaceFactory,
+});
+export const votingFile = (canisterId, identity) => actor.create({
+    canisterId,
+    identity,
+    idlFactory: VoteFileInterfaceFactory,
+});
+//# sourceMappingURL=voting.js.map
