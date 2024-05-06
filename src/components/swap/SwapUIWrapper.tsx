@@ -55,7 +55,7 @@ export function SwapV2Wrapper({ children }: { children: React.ReactNode }) {
               },
             }}
           >
-            Swap V3
+            Exchange
           </Typography>
           <Box sx={{ margin: "0 0 0 3px", position: "relative", top: "-4px" }}>
             <LinkIcon />

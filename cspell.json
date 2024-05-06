@@ -1,9 +1,21 @@
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
   "version": "0.2",
-  "dictionaries": ["typescript", "node", "html", "css", "fonts"],
-  "ignorePaths": ["node_modules", "packages/*/dist", "/build", "/locales/*"],
+  "dictionaries": [
+    "typescript",
+    "node",
+    "html",
+    "css",
+    "fonts"
+  ],
+  "ignorePaths": [
+    "node_modules",
+    "packages/*/dist",
+    "/build",
+    "/locales/*"
+  ],
   "words": [
+    "waste2earn",
     "icpswap",
     "dfinity",
     "honopu",
