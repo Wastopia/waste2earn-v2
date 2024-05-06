@@ -1,7 +1,7 @@
 // @ts-ignore
 import { StoicIdentity } from "ic-stoic-identity";
 import { Actor, ActorSubclass, HttpAgent } from "@dfinity/agent";
-import { Connector } from "@icpswap/actor";
+import { Connector } from "@w2e/actor";
 import { type CreateActorArgs, IConnector, ConnectorType, type WalletConnectorConfig } from "./connectors";
 
 export class StoicConnector implements IConnector {

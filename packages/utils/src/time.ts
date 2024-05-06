@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { SECONDS_IN_DAY } from "@icpswap/constants";
+import { SECONDS_IN_DAY } from "@w2e/constants";
 
 export function nanosecond2Millisecond(time: string | number | bigint) {
   return Number(BigInt(time) / BigInt(1000000));

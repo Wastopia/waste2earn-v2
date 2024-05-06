@@ -1,4 +1,4 @@
-import { tickToPrice, Token } from "@icpswap/swap-sdk";
+import { tickToPrice, Token } from "@w2e/swap-sdk";
 import JSBI from "jsbi";
 
 const PRICE_FIXED_DIGITS = 8;

@@ -1,9 +1,9 @@
 import { useState, useMemo, useCallback } from "react";
-import { getVotingTransactions } from "@icpswap/hooks";
-import { UserVoteRecord } from "@icpswap/types";
+import { getVotingTransactions } from "@w2e/hooks";
+import { UserVoteRecord } from "@w2e/types";
 import { usePaginationAllDataCallback } from "hooks/usePaginationAllData";
 import dayjs from "dayjs";
-import { valueofUser, nanosecond2Millisecond, writeFileOneSheet } from "@icpswap/utils";
+import { valueofUser, nanosecond2Millisecond, writeFileOneSheet } from "@w2e/utils";
 
 export function useDownloadVotes(canisterId: string, id: string, limit?: number): [boolean, () => void] {
   const [loading, setLoading] = useState(false);

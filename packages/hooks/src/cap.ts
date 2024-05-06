@@ -1,20 +1,18 @@
 import { useCallback } from "react";
 import { useCallsData } from "./useCallData";
-import { cap, cap_router } from "@icpswap/actor";
-import { resultFormat, enumToString } from "@icpswap/utils";
-import type { PaginationResult } from "@icpswap/types";
-import type { GetTokenContractRootBucketResponse } from "@icpswap/candid";
+import { cap, cap_router } from "@w2e/actor";
+import { resultFormat, enumToString } from "@w2e/utils";
+import type { PaginationResult } from "@w2e/types";
+import type { GetTokenContractRootBucketResponse } from "@w2e/candid";
 import { Principal } from "@dfinity/principal";
-import type { TokenTransaction, TokenTransType } from "@icpswap/types";
+import type { TokenTransaction, TokenTransType } from "@w2e/types";
 
 export async function getCapHistorySize(canisterId: string) {
   return await (await cap(canisterId)).size();
 }
 
 export function useCapHistorySize(canisterId: string) {
-  return useCallsData<bigint>(
-    useCallback(async () => await getCapHistorySize(canisterId), [canisterId])
-  );
+  return useCallsData<bigint>(useCallback(async () => await getCapHistorySize(canisterId), [canisterId]));
 }
 
 function SliceFormat(amount: any) {
@@ -34,8 +32,7 @@ function SliceFormat(amount: any) {
     return value;
   }
 
-  return amount instanceof Array &&
-    !amount.some((value) => typeof value !== "number")
+  return amount instanceof Array && !amount.some((value) => typeof value !== "number")
     ? lebDecode(Uint8Array.from(amount))
     : amount;
 }
@@ -70,15 +67,9 @@ export function detailsFormatter(details: any): { [key: string]: any } {
   return obj;
 }
 
-export async function getCapTransactions(
-  canisterId: string,
-  witness: boolean,
-  offset: number
-) {
+export async function getCapTransactions(canisterId: string, witness: boolean, offset: number) {
   const totalElements = await getCapHistorySize(canisterId!);
-  const totalPage =
-    parseInt(String(Number(totalElements) / 64)) +
-    (Number(totalElements) % 64 === 0 ? 0 : 1);
+  const totalPage = parseInt(String(Number(totalElements) / 64)) + (Number(totalElements) % 64 === 0 ? 0 : 1);
   const page = parseInt(String(offset / 64)) + 1;
 
   if (totalPage - page < 0 && totalPage !== 0) {
@@ -126,16 +117,12 @@ export async function getCapTransactions(
   };
 }
 
-export function useCapTransactions(
-  canisterId: string | undefined,
-  witness: boolean,
-  offset: number
-) {
+export function useCapTransactions(canisterId: string | undefined, witness: boolean, offset: number) {
   return useCallsData<PaginationResult<TokenTransaction>>(
     useCallback(async () => {
       return await getCapTransactions(canisterId!, witness, offset);
     }, [canisterId, offset]),
-    !!canisterId
+    !!canisterId,
   );
 }
 
@@ -143,7 +130,7 @@ export async function getCapUserTransactions(
   canisterId: string,
   principal: Principal,
   witness: boolean,
-  offset: number
+  offset: number,
 ) {
   const default_result = await (
     await cap(canisterId!)
@@ -207,18 +194,13 @@ export function useCapUserTransactions(
   canisterId: string | undefined,
   principal: Principal | undefined,
   witness: boolean,
-  offset: number
+  offset: number,
 ) {
   return useCallsData<PaginationResult<TokenTransaction>>(
     useCallback(async () => {
-      return await getCapUserTransactions(
-        canisterId!,
-        principal!,
-        witness,
-        offset
-      );
+      return await getCapUserTransactions(canisterId!, principal!, witness, offset);
     }, [canisterId, offset]),
-    !!canisterId && !!principal
+    !!canisterId && !!principal,
   );
 }
 
@@ -229,22 +211,17 @@ export async function getCapRootId(canisterId: string, witness?: boolean) {
     ).get_token_contract_root_bucket({
       canister: Principal.fromText(canisterId),
       witness: witness ?? false,
-    })
+    }),
   ).data;
 
-  return result?.canister && result?.canister[0]
-    ? result?.canister[0]
-    : undefined;
+  return result?.canister && result?.canister[0] ? result?.canister[0] : undefined;
 }
 
-export function useCapRootId(
-  canisterId: string | undefined,
-  witness?: boolean
-) {
+export function useCapRootId(canisterId: string | undefined, witness?: boolean) {
   return useCallsData<Principal>(
     useCallback(async () => {
       return await getCapRootId(canisterId!, witness);
     }, [canisterId, witness]),
-    !!canisterId
+    !!canisterId,
   );
 }

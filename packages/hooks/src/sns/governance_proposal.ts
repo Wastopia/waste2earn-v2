@@ -1,7 +1,7 @@
-import { sns_governance } from "@icpswap/actor";
+import { sns_governance } from "@w2e/actor";
 import { useCallback } from "react";
-import { availableArgsNull, resultFormat } from "@icpswap/utils";
-import type { GetProposalResponse, ListProposalsResponse, ProposalData, ProposalId } from "@icpswap/types";
+import { availableArgsNull, resultFormat } from "@w2e/utils";
+import type { GetProposalResponse, ListProposalsResponse, ProposalData, ProposalId } from "@w2e/types";
 import { useCallsData } from "../useCallData";
 
 export async function getProposal(canisterId: string, proposal_id: bigint) {

@@ -4,10 +4,10 @@ import { Theme } from "@mui/material/styles";
 import { Trans } from "@lingui/macro";
 import HotIcon from "assets/icons/swap-pro/hot.svg";
 import { useTokenInfo } from "hooks/token/useTokenInfo";
-import type { PublicTokenOverview } from "@icpswap/types";
+import type { PublicTokenOverview } from "@w2e/types";
 import { TokenImage } from "components/index";
 import { useHistory } from "react-router-dom";
-import { ICP } from "@icpswap/tokens";
+import { ICP } from "@w2e/tokens";
 import { useInfoAllTokens } from "hooks/info/useInfoTokens";
 
 const animationKeyframes = keyframes`

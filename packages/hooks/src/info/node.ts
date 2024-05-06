@@ -1,7 +1,7 @@
 import { useCallback } from "react";
-import { resultFormat } from "@icpswap/utils";
-import { node_index } from "@icpswap/actor";
-import { PublicPoolOverView, PublicTokenOverview } from "@icpswap/types";
+import { resultFormat } from "@w2e/utils";
+import { node_index } from "@w2e/actor";
+import { PublicPoolOverView, PublicTokenOverview } from "@w2e/types";
 import { useCallsData } from "../useCallData";
 
 export async function getInfoAllPools() {

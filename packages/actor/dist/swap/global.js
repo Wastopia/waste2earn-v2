@@ -1,6 +1,6 @@
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
-import { SwapFactoryInterfaceFactory, SwapNFTInterfaceFactory, SwapPoolInterfaceFactory, TicketInterfaceFactory, PositionIndexInterfaceFactory, } from "@icpswap/candid";
+import { SwapFactoryInterfaceFactory, SwapNFTInterfaceFactory, SwapPoolInterfaceFactory, TicketInterfaceFactory, PositionIndexInterfaceFactory, } from "@w2e/candid";
 export const swapNFT = (identity) => actor.create({
     actorName: ActorName.SwapNFTCanister,
     identity,

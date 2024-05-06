@@ -5,7 +5,7 @@ import { makeStyles, useTheme } from "@mui/styles";
 import { isDarkTheme } from "utils";
 import { useNFTOrderInfo } from "hooks/nft/trade";
 import { useNFTByMetadata } from "hooks/nft/useNFTMetadata";
-import type { NFTTokenMetadata } from "@icpswap/types";
+import type { NFTTokenMetadata } from "@w2e/types";
 import { Theme } from "@mui/material/styles";
 import NFTAvatar from "components/NFT/NFTAvatar";
 import WICPPriceFormat from "./WICPPriceFormat";

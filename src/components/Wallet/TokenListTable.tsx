@@ -1,7 +1,7 @@
 import { useState, useContext, useMemo, useEffect } from "react";
 import { Typography, Box, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { formatDollarAmount, parseTokenAmount, mockALinkAndOpen, BigNumber, principalToAccount } from "@icpswap/utils";
+import { formatDollarAmount, parseTokenAmount, mockALinkAndOpen, BigNumber, principalToAccount } from "@w2e/utils";
 import TransferModal from "components/TokenTransfer/index";
 import { NoData, LoadingRow } from "components/index";
 import { useTokenBalance } from "hooks/token/useTokenBalance";
@@ -381,8 +381,8 @@ export function TokenListItem({ canisterId, isHideSmallBalances, searchValue }: 
             !principal
               ? ""
               : tokenInfo?.standardType === TOKEN_STANDARD.EXT || tokenInfo?.canisterId === ICP.address
-              ? principalToAccount(principal.toString())
-              : principal.toString()
+                ? principalToAccount(principal.toString())
+                : principal.toString()
           }
         />
       ) : null}

@@ -6,9 +6,9 @@ import { Identity as CallIdentity } from "types/global";
 import { Trans, t } from "@lingui/macro";
 import Upload from "components/upload/index";
 import { useSuccessTip, useErrorTip } from "hooks/useTips";
-import { createVotingCanister } from "@icpswap/hooks";
+import { createVotingCanister } from "@w2e/hooks";
 import { Principal } from "@dfinity/principal";
-import { isValidPrincipal } from "@icpswap/utils";
+import { isValidPrincipal } from "@w2e/utils";
 import { TOKEN_STANDARD } from "constants/tokens";
 // import { standardCheck } from "utils/token/standardCheck";
 

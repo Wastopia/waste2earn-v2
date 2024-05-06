@@ -6,7 +6,7 @@ import { useTokenBalance } from "hooks/token/useTokenBalance";
 import { useAccountPrincipal } from "store/auth/hooks";
 import { XTC } from "constants/tokens";
 import { useTokenInfo } from "hooks/token/useTokenInfo";
-import { parseTokenAmount, formatTokenAmount, numberToString, isValidPrincipal } from "@icpswap/utils";
+import { parseTokenAmount, formatTokenAmount, numberToString, isValidPrincipal } from "@w2e/utils";
 import BigNumber from "bignumber.js";
 import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity";
 import { Identity as CallIdentity } from "types/global";

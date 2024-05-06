@@ -1,6 +1,6 @@
 import { ButtonBase, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import { isDarkTheme } from "utils";
 import { Theme } from "@mui/material/styles";
 

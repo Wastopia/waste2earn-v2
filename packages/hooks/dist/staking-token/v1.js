@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { useCallsData } from "../useCallData";
 import { useCallback } from "react";
-import { resultFormat, isAvailablePageArgs, isPrincipal } from "@icpswap/utils";
-import { v1StakingTokenStorage, v1StakingToken } from "@icpswap/actor";
+import { resultFormat, isAvailablePageArgs, isPrincipal } from "@w2e/utils";
+import { v1StakingTokenStorage, v1StakingToken } from "@w2e/actor";
 /* token pool */
 export function getV1StakingTokenPool(canisterId) {
     return __awaiter(this, void 0, void 0, function* () {

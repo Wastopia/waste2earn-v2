@@ -11,9 +11,9 @@ import { t } from "@lingui/macro";
 import { useActualSwapAmount } from "hooks/swap/index";
 import useDebounce from "hooks/useDebounce";
 import store from "store/index";
-import { CurrencyAmount } from "@icpswap/swap-sdk";
-import { useParsedQueryString } from "@icpswap/hooks";
-import { isValidPrincipal } from "@icpswap/utils";
+import { CurrencyAmount } from "@w2e/swap-sdk";
+import { useParsedQueryString } from "@w2e/hooks";
+import { isValidPrincipal } from "@w2e/utils";
 import {
   selectCurrency,
   switchCurrencies,

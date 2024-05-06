@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { Position } from "@icpswap/swap-sdk";
+import { Position } from "@w2e/swap-sdk";
 import { t } from "@lingui/macro";
 import { getActorIdentity } from "components/Identity";
 import { useAccountPrincipal } from "store/auth/hooks";
@@ -8,7 +8,7 @@ import { useStepCalls, newStepKey } from "hooks/useStepCall";
 import { getIncreaseLiquiditySteps } from "components/swap/IncreaseLiquiditySteps";
 import { useStepContentManager } from "store/steps/hooks";
 import { useSwapApprove, useSwapDeposit, useSwapTransfer } from "hooks/swap/index";
-import { isUseTransfer , actualAmountToPool } from "utils/token/index";
+import { isUseTransfer, actualAmountToPool } from "utils/token/index";
 import { useSuccessTip } from "hooks/useTips";
 import { increaseLiquidity } from "hooks/swap/v3Calls";
 import { ExternalTipArgs, OpenExternalTip } from "types/index";
@@ -88,8 +88,8 @@ export function useIncreaseLiquidityCalls() {
 
         const identity = await getActorIdentity();
 
-        const {token0} = position.pool;
-        const {token1} = position.pool;
+        const { token0 } = position.pool;
+        const { token1 } = position.pool;
 
         const amount0Desired = actualAmountToPool(token0, position.mintAmounts.amount0.toString());
         const amount1Desired = actualAmountToPool(token1, position.mintAmounts.amount1.toString());

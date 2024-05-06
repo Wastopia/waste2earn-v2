@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Box } from "@mui/material";
 import SwitchIcon from "assets/images/swap/switch";
-import { CurrencyAmount, Token } from "@icpswap/swap-sdk";
+import { CurrencyAmount, Token } from "@w2e/swap-sdk";
 import { useSwapState, useSwapHandlers } from "store/swap/hooks";
 import BigNumber from "bignumber.js";
 import { SWAP_FIELD } from "constants/swap";
@@ -74,10 +74,10 @@ export function SwapInputWrapper({
   const USDChange =
     !!outputBalanceUSDValue && !!inputBalanceUSDValue
       ? new BigNumber(outputBalanceUSDValue)
-          .minus(inputBalanceUSDValue)
-          .dividedBy(inputBalanceUSDValue)
-          .multipliedBy(100)
-          .toFixed(2)
+        .minus(inputBalanceUSDValue)
+        .dividedBy(inputBalanceUSDValue)
+        .multipliedBy(100)
+        .toFixed(2)
       : null;
 
   return (

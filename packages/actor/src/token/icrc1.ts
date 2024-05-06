@@ -1,4 +1,3 @@
-import { actor } from "../actor";
 import {
   ICRCArchive,
   ICRCArchiveInterfaceFactory,
@@ -6,8 +5,9 @@ import {
   ICRC1InterfaceFactory,
   ICRC2,
   ICRC2InterfaceFactory,
-} from "@icpswap/candid";
-import type { ActorIdentity } from "@icpswap/types";
+} from "@w2e/candid";
+import type { ActorIdentity } from "@w2e/types";
+import { actor } from "../actor";
 
 export const icrcArchive = (canisterId: string) =>
   actor.create<ICRCArchive>({

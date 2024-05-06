@@ -2,10 +2,10 @@ import { useMemo, useState } from "react";
 import { Box, useTheme, useMediaQuery } from "@mui/material";
 
 import { useTokenInfo } from "hooks/token/useTokenInfo";
-import { useTokenListTokenInfo } from "@icpswap/hooks";
-import { Token } from "@icpswap/swap-sdk";
+import { useTokenListTokenInfo } from "@w2e/hooks";
+import { Token } from "@w2e/swap-sdk";
 import { useInfoToken } from "hooks/info/useInfoTokens";
-import { ICP } from "@icpswap/tokens";
+import { ICP } from "@w2e/tokens";
 
 import { SwapProContext } from "./context";
 import HotTokens from "./HotTokens";

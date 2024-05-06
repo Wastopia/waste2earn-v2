@@ -1,10 +1,10 @@
 import { Typography, Box, useTheme } from "@mui/material";
 import { useUserSwapTransactions } from "hooks/swap/v3Calls";
 import { useAccountPrincipalString } from "store/auth/hooks";
-import { enumToString } from "@icpswap/utils";
+import { enumToString } from "@w2e/utils";
 import BigNumber from "bignumber.js";
 import { LoadingRow, NoData, TokenImage } from "components/index";
-import type { UserStorageTransaction } from "@icpswap/types";
+import type { UserStorageTransaction } from "@w2e/types";
 import dayjs from "dayjs";
 import { DAYJS_FORMAT, INFO_URL } from "constants/index";
 import { Theme } from "@mui/material/styles";

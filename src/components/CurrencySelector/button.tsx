@@ -6,7 +6,7 @@ import { isDarkTheme } from "utils";
 import Loading from "components/Loading";
 import { Trans } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import { TokenImage } from "components/index";
 
 const useStyle = (bgGray: boolean) =>
@@ -21,8 +21,8 @@ const useStyle = (bgGray: boolean) =>
         backgroundColor: isDarkTheme(theme)
           ? theme.palette.background.level2
           : bgGray
-          ? theme.colors.lightGray200
-          : "#ffffff",
+            ? theme.colors.lightGray200
+            : "#ffffff",
         borderRadius: `${theme.radius}px`,
       },
       selectButtonActive: {

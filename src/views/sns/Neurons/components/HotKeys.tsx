@@ -1,12 +1,12 @@
 import { Trans, t } from "@lingui/macro";
-import { Modal } from "@icpswap/ui";
+import { Modal } from "@w2e/ui";
 import { FilledTextField } from "components/index";
 import { Button, Box, Typography } from "components/Mui";
 import { useMemo, useState } from "react";
-import { isValidPrincipal, shorten } from "@icpswap/utils";
-import { neuronAddPermissions, neuronRemovePermissions } from "@icpswap/hooks";
-import { HotKeysPermissions } from "@icpswap/constants";
-import type { Neuron, NeuronPermission } from "@icpswap/types";
+import { isValidPrincipal, shorten } from "@w2e/utils";
+import { neuronAddPermissions, neuronRemovePermissions } from "@w2e/hooks";
+import { HotKeysPermissions } from "@w2e/constants";
+import type { Neuron, NeuronPermission } from "@w2e/types";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
 import { Principal } from "@dfinity/principal";
 import { useAccountPrincipal } from "store/auth/hooks";

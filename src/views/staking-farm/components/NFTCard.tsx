@@ -1,8 +1,8 @@
 import { Checkbox, Skeleton, Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { usePositionNFTSvg } from "hooks/swap/useNFTSvg";
-import { type NFTTokenMetadata } from "@icpswap/types";
-import { useSwapPosition } from "@icpswap/hooks";
+import { type NFTTokenMetadata } from "@w2e/types";
+import { useSwapPosition } from "@w2e/hooks";
 import { getNFTSwapPoolId, getNFTSwapPositionId } from "utils/index";
 import { Trans } from "@lingui/macro";
 
@@ -53,9 +53,8 @@ export default function StakingNFTCard({ nft, selectedNFTId, setSelectedNFTId }:
       {svg ? (
         <>
           <img
-            className={`${
-              nft.tokenId === selectedNFTId && position?.liquidity !== BigInt(0) ? classes.checked : classes.nft
-            }`}
+            className={`${nft.tokenId === selectedNFTId && position?.liquidity !== BigInt(0) ? classes.checked : classes.nft
+              }`}
             src={svg}
             alt=""
           />

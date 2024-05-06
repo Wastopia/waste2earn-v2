@@ -1,17 +1,17 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import { useListDeployedSNSs, useSwapSaleParameters } from "@icpswap/hooks";
+import { useListDeployedSNSs, useSwapSaleParameters } from "@w2e/hooks";
 import { Trans, t } from "@lingui/macro";
 import { useEffect, useMemo } from "react";
 import { LoadingRow } from "components/index";
-import type { SnsTokensInfo } from "@icpswap/types";
+import type { SnsTokensInfo } from "@w2e/types";
 import { Theme } from "@mui/material/styles";
 import AvatarImage from "components/Image/Avatar";
 import dayjs from "dayjs";
 import { useHistory } from "react-router-dom";
 import { useUpdateTokenStandard } from "store/token/cache/hooks";
-import { TOKEN_STANDARD } from "@icpswap/types";
+import { TOKEN_STANDARD } from "@w2e/types";
 import { Tabs } from "components/sns/Tab";
-import { SnsSwapLifecycle } from "@icpswap/constants";
+import { SnsSwapLifecycle } from "@w2e/constants";
 import { useFetchSnsAllTokensInfo } from "store/sns/hooks";
 
 interface LaunchpadProps {
@@ -75,8 +75,8 @@ function Launchpad({ sns }: LaunchpadProps) {
           {sns.lifecycle.lifecycle === SnsSwapLifecycle.Committed
             ? t`Complete`
             : deadline !== undefined
-            ? dayjs(Number(deadline)).format("YYYY-MM-DD HH:mm:ss")
-            : "--"}
+              ? dayjs(Number(deadline)).format("YYYY-MM-DD HH:mm:ss")
+              : "--"}
         </Typography>
       </Box>
     </Box>

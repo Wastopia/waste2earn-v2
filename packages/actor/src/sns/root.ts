@@ -1,4 +1,4 @@
-import { SNS_ROOT_SERVE, SNS_INTERFACE_FACTORY } from "@icpswap/candid";
+import { SNS_ROOT_SERVE, SNS_INTERFACE_FACTORY } from "@w2e/candid";
 import { actor } from "../actor";
 
 export const sns_root = async (canisterId: string) =>

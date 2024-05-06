@@ -1,5 +1,5 @@
 import { useAccountPrincipal } from "store/auth/hooks";
-import type { StakingPoolControllerPoolInfo } from "@icpswap/types";
+import type { StakingPoolControllerPoolInfo } from "@w2e/types";
 import { useStakingToken } from "hooks/staking-token";
 import { useLoadingTip } from "hooks/useTips";
 import { StepViewButton } from "components/index";

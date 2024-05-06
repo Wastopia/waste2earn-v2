@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { Position, Token, Percent } from "@icpswap/swap-sdk";
+import { Position, Token, Percent } from "@w2e/swap-sdk";
 import { decreaseLiquidity } from "hooks/swap/v3Calls";
 import { useSwapWithdraw } from "hooks/swap/index";
 import { useErrorTip } from "hooks/useTips";

@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { Select, AvatarImage } from "components/index";
 import { Box, Typography } from "@mui/material";
 import { useFetchSnsAllTokensInfo } from "store/sns/hooks";
-import { SnsSwapLifecycle } from "@icpswap/constants";
+import { SnsSwapLifecycle } from "@w2e/constants";
 
 export interface SelectSnsProps {
   onChange: (value: string) => void;

@@ -1,13 +1,13 @@
 import { useTheme } from "@mui/material";
 import { Trans } from "@lingui/macro";
 import { useMemo, useState } from "react";
-import type { Neuron, ProposalData } from "@icpswap/types";
-import { shorten, toHexString } from "@icpswap/utils";
+import type { Neuron, ProposalData } from "@w2e/types";
+import { shorten, toHexString } from "@w2e/utils";
 import { Collapse, Typography, Box } from "components/Mui";
 import { Theme } from "@mui/material/styles";
 import { neuronFormat, votingPowerFormat, getVotingPower, getVotingPowers, getVote } from "utils/sns/index";
 import { ChevronDown, ThumbsUp, ThumbsDown } from "react-feather";
-import { Vote } from "@icpswap/constants";
+import { Vote } from "@w2e/constants";
 
 interface VotedNeuronItemProps {
   neuron: Neuron;

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { UserVotePowersInfo } from "@icpswap/types";
-import { useUserVotingPowers } from "@icpswap/hooks";
+import { UserVotePowersInfo } from "@w2e/types";
+import { useUserVotingPowers } from "@w2e/hooks";
 
 export function useUserVotePower(
   canisterId: string,

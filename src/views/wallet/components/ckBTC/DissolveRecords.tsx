@@ -1,10 +1,10 @@
-import { Box, Typography , Table, TableBody, TableCell, TableRow, TableContainer, TableHead } from "@mui/material";
+import { Box, Typography, Table, TableBody, TableCell, TableRow, TableContainer, TableHead } from "@mui/material";
 import { Trans } from "@lingui/macro";
 import { MainCard, NoData, ALink } from "components/index";
 import { useUserTxs } from "store/wallet/hooks";
 import { useAccountPrincipalString } from "store/auth/hooks";
 import { StoredTxValue } from "types/ckBTC";
-import { parseTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount } from "@w2e/utils";
 
 function ListItem({ tx }: { tx: StoredTxValue }) {
   return (

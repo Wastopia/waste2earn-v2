@@ -1,6 +1,6 @@
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
-import { BaseIndexInterfaceFactory, BaseStorageInterfaceFactory, } from "@icpswap/candid";
+import { BaseIndexInterfaceFactory, BaseStorageInterfaceFactory, } from "@w2e/candid";
 export const baseIndex = (identity) => actor.create({
     idlFactory: BaseIndexInterfaceFactory,
     actorName: ActorName.BaseIndex,

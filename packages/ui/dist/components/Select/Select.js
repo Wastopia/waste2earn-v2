@@ -1,5 +1,16 @@
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { useEffect, useState, useRef, useMemo } from "react";
+import { Typography, Box, Checkbox, Popper, InputAdornment, } from "@mui/material";
+import { makeStyles, useTheme } from "@mui/styles";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import CloseIcon from "@mui/icons-material/Close";
+import { ClickAwayListener } from "@mui/base";
+import { NoData } from "../NoData";
+import FilledTextField from "../FilledTextField";
+import { SearchIcon } from "../../assets/icons/Search";
+
+const __rest = (this && this.__rest) || function (s, e) {
+    const t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
         t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === "function")
@@ -9,16 +20,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
-import { useEffect, useState, useRef, useMemo } from "react";
-import { Typography, Box, Checkbox, Popper, InputAdornment, } from "@mui/material";
-import { makeStyles, useTheme } from "@mui/styles";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import CloseIcon from "@mui/icons-material/Close";
-import { NoData } from "../NoData";
-import FilledTextField from "../FilledTextField";
-import { SearchIcon } from "../../assets/icons/Search";
-import { ClickAwayListener } from "@mui/base";
+
 const useStyles = (contained, fullHeight) => {
     return makeStyles((theme) => {
         return {
@@ -37,8 +39,8 @@ const useStyles = (contained, fullHeight) => {
     });
 };
 export function Select(_a) {
-    var _b;
-    var { label, value, onChange, required, menus = [], maxWidth, fullHeight, disabled, InputProps, contained = true, width, CustomNoData, multiple = false, menuMaxHeight, onSearch, search: hasSearch, customLabel } = _a, props = __rest(_a, ["label", "value", "onChange", "required", "menus", "maxWidth", "fullHeight", "disabled", "InputProps", "contained", "width", "CustomNoData", "multiple", "menuMaxHeight", "onSearch", "search", "customLabel"]);
+    let _b;
+    const { label, value, onChange, required, menus = [], maxWidth, fullHeight, disabled, InputProps, contained = true, width, CustomNoData, multiple = false, menuMaxHeight, onSearch, search: hasSearch, customLabel } = _a; const props = __rest(_a, ["label", "value", "onChange", "required", "menus", "maxWidth", "fullHeight", "disabled", "InputProps", "contained", "width", "CustomNoData", "multiple", "menuMaxHeight", "onSearch", "search", "customLabel"]);
     const classes = useStyles(contained, fullHeight)();
     const [anchorEl, setAnchorEl] = useState(null);
     const outerBoxRef = useRef(null);
@@ -58,7 +60,7 @@ export function Select(_a) {
             onSearch(undefined);
     };
     useEffect(() => {
-        var _a;
+        let _a;
         const width = (_a = outerBoxRef === null || outerBoxRef === void 0 ? void 0 : outerBoxRef.current) === null || _a === void 0 ? void 0 : _a.clientWidth;
         setMenuWidth(width !== null && width !== void 0 ? width : undefined);
     }, []);
@@ -123,16 +125,16 @@ export function Select(_a) {
         if (onChange)
             onChange(undefined);
     };
-    return (_jsxs(_Fragment, { children: [_jsxs(Box, { ref: outerBoxRef, className: classes.inputBox, sx: Object.assign(Object.assign(Object.assign({}, (fullHeight ? { height: "100%" } : {})), (maxWidth ? { maxWidth: `${maxWidth}px` } : {})), { cursor: "pointer" }), onClick: handleOuterBoxClick, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave, children: [contained && label && (_jsxs(Box, { children: [required && (_jsx(Typography, { sx: { color: "#D3625B" }, fontSize: 12, component: "span", children: "*" })), _jsx(Typography, { component: "span", fontSize: 12, children: label })] })), _jsxs(Box, { sx: {
+    return (_jsxs(_Fragment, { children: [_jsxs(Box, { ref: outerBoxRef, className: classes.inputBox, sx: {...(fullHeight ? { height: "100%" } : {}), ...(maxWidth ? { maxWidth: `${maxWidth}px` } : {}), cursor: "pointer"}, onClick: handleOuterBoxClick, onMouseEnter: handleMouseEnter, onMouseLeave: handleMouseLeave, children: [contained && label && (_jsxs(Box, { children: [required && (_jsx(Typography, { sx: { color: "#D3625B" }, fontSize: 12, component: "span", children: "*" })), _jsx(Typography, { component: "span", fontSize: 12, children: label })] })), _jsxs(Box, { sx: {
                             display: "flex",
                             width: "100%",
                             alignItems: "center",
                             justifyContent: "space-between",
-                        }, children: [_jsx(Box, { children: !!value ? (_jsx(Typography, { color: "textPrimary", component: "div", children: (_b = selectedMenu === null || selectedMenu === void 0 ? void 0 : selectedMenu.selectLabel) !== null && _b !== void 0 ? _b : selectedMenu === null || selectedMenu === void 0 ? void 0 : selectedMenu.label })) : (_jsx(Typography, { color: "#4f5a7f", children: props.placeholder })) }), _jsx(Box, { sx: { display: "flex", alignItems: "center" }, children: showClose && !!value ? (_jsx(CloseIcon, { sx: { cursor: "pointer" }, onClick: handleEmptyValue })) : (_jsx(KeyboardArrowDownIcon, { sx: {
+                        }, children: [_jsx(Box, { children: value ? (_jsx(Typography, { color: "textPrimary", component: "div", children: (_b = selectedMenu === null || selectedMenu === void 0 ? void 0 : selectedMenu.selectLabel) !== null && _b !== void 0 ? _b : selectedMenu === null || selectedMenu === void 0 ? void 0 : selectedMenu.label })) : (_jsx(Typography, { color: "#4f5a7f", children: props.placeholder })) }), _jsx(Box, { sx: { display: "flex", alignItems: "center" }, children: showClose && !!value ? (_jsx(CloseIcon, { sx: { cursor: "pointer" }, onClick: handleEmptyValue })) : (_jsx(KeyboardArrowDownIcon, { sx: {
                                         transition: "all 300ms",
-                                        rotate: Boolean(anchorEl) ? "180deg" : "0deg",
+                                        rotate: anchorEl ? "180deg" : "0deg",
                                         cursor: "pointer",
-                                    } })) })] })] }), Boolean(anchorEl) ? (_jsx(Popper, { id: "Select-popper", open: Boolean(anchorEl), anchorEl: anchorEl, style: {
+                                    } })) })] })] }), anchorEl ? (_jsx(Popper, { id: "Select-popper", open: Boolean(anchorEl), anchorEl, style: {
                     width: menuWidth,
                     background: theme.colors.darkLevel3,
                     border: "1px solid #49588E",
@@ -154,6 +156,6 @@ export function Select(_a) {
                                                     background: "#313D67",
                                                 },
                                             }, onClick: () => handleMenuItemClick(menu), children: [multiple ? (_jsx(Box, { sx: { margin: "0 5px 0 0" }, children: _jsx(Checkbox, { sx: { padding: 0 }, onChange: (event, checked) => handleCheckboxChange(checked, menu.value), checked: value === null || value === void 0 ? void 0 : value.includes(menu.value) }) })) : null, menu.label] }, `${menu.value}_${index}`));
-                                    }), menus.length === 0 ? (!!CustomNoData ? (CustomNoData) : (_jsx(NoData, {}))) : null] })] }) }) })) : null] }));
+                                    }), menus.length === 0 ? (CustomNoData || (_jsx(NoData, {}))) : null] })] }) }) })) : null] }));
 }
-//# sourceMappingURL=Select.js.map
+// # sourceMappingURL=Select.js.map

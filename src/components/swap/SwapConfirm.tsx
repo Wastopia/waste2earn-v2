@@ -7,9 +7,9 @@ import CurrencyAvatar from "components/CurrencyAvatar";
 import { computeRealizedLPFeePercent } from "utils/swap/prices";
 import { TradePriceNoInfo as TradePrice } from "components/swap/TradePrice";
 import Tooltip from "components/Tooltip";
-import { numberToString } from "@icpswap/utils";
-import { Token, CurrencyAmount, Trade, Percent } from "@icpswap/swap-sdk";
-import { TradeType } from "@icpswap/constants";
+import { numberToString } from "@w2e/utils";
+import { Token, CurrencyAmount, Trade, Percent } from "@w2e/swap-sdk";
+import { TradeType } from "@w2e/constants";
 import { t } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";
 import { isElement } from "react-is";
@@ -217,9 +217,8 @@ export default ({ slippageTolerance, open, trade, loading, onConfirm, onClose }:
                   sx={{ margin: "5px 0 0 0", "@media(max-width: 640px)": { fontSize: "12px" } }}
                 >
                   {outputTokenFee && trade?.outputAmount.currency
-                    ? `${outputTokenFee.toFormat()} ${trade.outputAmount.currency.symbol} ($${
-                        outputFeeUSDValue ?? "--"
-                      })`
+                    ? `${outputTokenFee.toFormat()} ${trade.outputAmount.currency.symbol} ($${outputFeeUSDValue ?? "--"
+                    })`
                     : "--"}
                 </Typography>
               </Box>

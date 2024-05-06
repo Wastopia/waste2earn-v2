@@ -6,11 +6,11 @@ import {
   toSignificantWithGroupSeparator,
   secondsToDays,
   daysToSeconds,
-} from "@icpswap/utils";
-import { increaseNeuronDelay } from "@icpswap/hooks";
+} from "@w2e/utils";
+import { increaseNeuronDelay } from "@w2e/hooks";
 import BigNumber from "bignumber.js";
 import CircularProgress from "@mui/material/CircularProgress";
-import type { NervousSystemParameters, Neuron } from "@icpswap/types";
+import type { NervousSystemParameters, Neuron } from "@w2e/types";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
 import { Trans, t } from "@lingui/macro";
 import { TokenInfo } from "types/token";
@@ -281,8 +281,8 @@ export function SetDissolveDelay({
           </Box>
 
           {day &&
-          neuron_minimum_dissolve_seconds &&
-          new BigNumber(day).isLessThan(secondsToDays(Number(neuron_minimum_dissolve_seconds))) ? (
+            neuron_minimum_dissolve_seconds &&
+            new BigNumber(day).isLessThan(secondsToDays(Number(neuron_minimum_dissolve_seconds))) ? (
             <Box>
               <Typography sx={{ color: theme.palette.warning.dark }}>
                 <Trans>The neuron will not have voting power unless the dissolve delay is increased.</Trans>

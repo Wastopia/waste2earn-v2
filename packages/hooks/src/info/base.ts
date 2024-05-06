@@ -1,7 +1,7 @@
 import { useCallback } from "react";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
-import { baseIndex, baseStorage } from "@icpswap/actor";
-import type { PaginationResult, BaseTransaction } from "@icpswap/types";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
+import { baseIndex, baseStorage } from "@w2e/actor";
+import type { PaginationResult, BaseTransaction } from "@w2e/types";
 import { useCallsData } from "../useCallData";
 
 export async function getBaseStorages() {

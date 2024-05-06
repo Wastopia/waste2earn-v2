@@ -1,4 +1,4 @@
-import { BigintIsh, Token, CurrencyAmount } from "@icpswap/swap-sdk";
+import { BigintIsh, Token, CurrencyAmount } from "@w2e/swap-sdk";
 import { JSBI } from "utils/index";
 import { SAFE_INTEGER_LENGTH, SAFE_DECIMALS_LENGTH } from "constants/index";
 import BigNumber from "bignumber.js";

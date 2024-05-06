@@ -1,5 +1,5 @@
 {
-  "name": "@icpswap/tokens",
+  "name": "@w2e/tokens",
   "version": "0.0.1",
   "private": true,
   "main": "./dist/index.js",
@@ -14,8 +14,8 @@
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
-    "@icpswap/types": "../types",
-    "@icpswap/swap-sdk": "../swap-sdk",
-    "@icpswap/constants": "../constants"
+    "@w2e/types": "../types",
+    "@w2e/swap-sdk": "../swap-sdk",
+    "@w2e/constants": "../constants"
   }
 }

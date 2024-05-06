@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { Box, Typography, BoxProps } from "@mui/material";
 import { Theme } from "@mui/material/styles";
 import { useTheme } from "@mui/styles";
-import { Override } from "@icpswap/types";
+import { Override } from "@w2e/types";
 
 export enum ChartView {
   TVL,

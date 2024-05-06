@@ -1,6 +1,6 @@
 import { actor } from "./actor";
 import { ActorName } from "./ActorName";
-import { VoteControllerInterfaceFactory, VoteFileInterfaceFactory, VoteProjectInterfaceFactory, } from "@icpswap/candid";
+import { VoteControllerInterfaceFactory, VoteFileInterfaceFactory, VoteProjectInterfaceFactory, } from "@w2e/candid";
 export const votingController = (identity) => actor.create({
     actorName: ActorName.VotingController,
     idlFactory: VoteControllerInterfaceFactory,

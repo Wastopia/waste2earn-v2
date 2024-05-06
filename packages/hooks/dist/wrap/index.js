@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { useCallback } from "react";
 import { useCallsData } from "../useCallData";
-import { wrapICP } from "@icpswap/actor";
-import { resultFormat, availableArgsNull, isPrincipal, isAvailablePageArgs, } from "@icpswap/utils";
+import { wrapICP } from "@w2e/actor";
+import { resultFormat, availableArgsNull, isPrincipal, isAvailablePageArgs, } from "@w2e/utils";
 export function getWrapTransactions(account, offset, limit, index) {
     return __awaiter(this, void 0, void 0, function* () {
         return yield (yield wrapICP()).wrappedTx({

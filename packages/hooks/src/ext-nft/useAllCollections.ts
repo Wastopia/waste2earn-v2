@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { EXTCollection } from "@icpswap/types";
+import { EXTCollection } from "@w2e/types";
 import { useCallsData } from "../useCallData";
 
 export function useEXTAllCollections() {

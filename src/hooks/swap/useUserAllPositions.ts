@@ -1,4 +1,4 @@
-import { getSwapPosition } from "@icpswap/hooks";
+import { getSwapPosition } from "@w2e/hooks";
 import { useEffect, useMemo, useState } from "react";
 import { UserPosition } from "types/swap";
 import { useStoreUserPositionPools } from "store/hooks";
@@ -37,12 +37,9 @@ export function useUserAllPositions(refresh?: number) {
 
           const positions = await Promise.all(
             userPositionsResult
-              .reduce(
-                (prev, curr) => {
-                  return prev.concat(curr.positions.map((index) => [curr.poolId, index]));
-                },
-                [] as [string, bigint][],
-              )
+              .reduce((prev, curr) => {
+                return prev.concat(curr.positions.map((index) => [curr.poolId, index]));
+              }, [] as [string, bigint][])
               .map(async ([canisterId, index]) => {
                 const position = await getSwapPosition(canisterId, index);
                 return { ...position, id: canisterId, index: Number(index) };

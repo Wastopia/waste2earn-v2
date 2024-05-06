@@ -1,6 +1,6 @@
-import type { ProposalData } from "@icpswap/types";
-import { nowInSeconds, BigNumber } from "@icpswap/utils";
-import { SnsProposalDecisionStatus } from "@icpswap/constants";
+import type { ProposalData } from "@w2e/types";
+import { nowInSeconds, BigNumber } from "@w2e/utils";
+import { SnsProposalDecisionStatus } from "@w2e/constants";
 import { t } from "@lingui/macro";
 
 const PROPOSAL_TYPES = [

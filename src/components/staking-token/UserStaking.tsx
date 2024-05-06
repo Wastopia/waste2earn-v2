@@ -1,15 +1,15 @@
 import React, { useMemo } from "react";
 import { Grid, Box, Typography } from "@mui/material";
-import { parseTokenAmount } from "@icpswap/utils";
-import { Token } from "@icpswap/swap-sdk";
+import { parseTokenAmount } from "@w2e/utils";
+import { Token } from "@w2e/swap-sdk";
 import BigNumber from "bignumber.js";
 import CountUp from "react-countup";
 import { Trans } from "@lingui/macro";
 import { useConnectorStateConnected } from "store/auth/hooks";
 import ConnectWallet from "components/authentication/ButtonConnector";
 import { useICPPrice } from "store/global/hooks";
-import { PoolData , UserStakingInfo , STATE } from "types/staking-token";
-import type { StakingPoolControllerPoolInfo } from "@icpswap/types";
+import { PoolData, UserStakingInfo, STATE } from "types/staking-token";
+import type { StakingPoolControllerPoolInfo } from "@w2e/types";
 import Harvest from "components/staking-token/Harvest";
 
 export interface UserStakingProps {

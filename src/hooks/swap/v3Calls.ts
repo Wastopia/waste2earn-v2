@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { getSwapTokenArgs } from "hooks/token/index";
-import { userStorage, swapPool } from "@icpswap/actor";
+import { userStorage, swapPool } from "@w2e/actor";
 import {
   useCallsData,
   useInfoUserStorageIds,
@@ -11,10 +11,10 @@ import {
   getSwapPool,
   createSwapPool,
   _getSwapPoolAllBalance,
-} from "@icpswap/hooks";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
-import { FeeAmount } from "@icpswap/swap-sdk";
-import type { PaginationResult, SwapPoolData, UserStorageTransaction } from "@icpswap/types";
+} from "@w2e/hooks";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
+import { FeeAmount } from "@w2e/swap-sdk";
+import type { PaginationResult, SwapPoolData, UserStorageTransaction } from "@w2e/types";
 import BigNumber from "bignumber.js";
 import { swapFactory_update_call } from "actor/swap";
 import { UserPosition } from "types/swap";
@@ -70,7 +70,7 @@ export async function createPool(
   });
 }
 
-export { deposit, mint, increaseLiquidity, decreaseLiquidity, quote, swap, collect, withdraw } from "@icpswap/hooks";
+export { deposit, mint, increaseLiquidity, decreaseLiquidity, quote, swap, collect, withdraw } from "@w2e/hooks";
 
 export async function getPositionDetailsFromId(poolId: string, positionId: string) {
   const pool = await getSwapPoolMetadata(poolId);

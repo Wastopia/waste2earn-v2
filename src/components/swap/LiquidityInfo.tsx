@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 import { formatTickPrice } from "utils/swap/formatTickPrice";
 import useIsTickAtLimit from "hooks/swap/useIsTickAtLimit";
 import { Bound } from "constants/swap";
-import { Position, getPriceOrderingFromPositionForUI, useInverter } from "@icpswap/swap-sdk";
+import { Position, getPriceOrderingFromPositionForUI, useInverter } from "@w2e/swap-sdk";
 import { SyncAlt as SyncAltIcon } from "@mui/icons-material";
 import { Trans } from "@lingui/macro";
 import { Theme, createTheme } from "@mui/material/styles";
@@ -177,8 +177,8 @@ export default function LiquidityInfo({ position }: LiquidityInfoProps) {
                       ? `${pool?.priceOf(token1).toSignificant(6)}`
                       : "--"
                     : pool?.priceOf(token0)
-                    ? `${pool?.priceOf(token0).toSignificant(6)}`
-                    : "--"
+                      ? `${pool?.priceOf(token0).toSignificant(6)}`
+                      : "--"
                   : "--"}
               </Typography>
               <SyncAltIcon

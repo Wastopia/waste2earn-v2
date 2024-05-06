@@ -8,9 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { tokenClaimController, tokenClaimStorage } from "@icpswap/actor";
+import { tokenClaimController, tokenClaimStorage } from "@w2e/actor";
 import { useCallsData } from "../useCallData";
-import { resultFormat, isAvailablePageArgs, availableArgsNull, } from "@icpswap/utils";
+import { resultFormat, isAvailablePageArgs, availableArgsNull, } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 export function getEvent(eventId) {
     return __awaiter(this, void 0, void 0, function* () {

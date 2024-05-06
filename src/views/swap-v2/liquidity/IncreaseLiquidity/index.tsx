@@ -17,8 +17,8 @@ import ConfirmAddLiquidity from "components/swap/AddLiquidityConfirmModal";
 import { useErrorTip, useSuccessTip, useLoadingTip } from "hooks/useTips";
 import { NONE_TOKEN_SYMBOL } from "constants/index";
 import Loading from "components/Loading/Static";
-import { parseTokenAmount } from "@icpswap/utils";
-import { Token } from "@icpswap/swap-sdk";
+import { parseTokenAmount } from "@w2e/utils";
+import { Token } from "@w2e/swap-sdk";
 import { isDarkTheme } from "utils/index";
 import { Trans, t } from "@lingui/macro";
 import { useApprove } from "hooks/token/useApprove";
@@ -196,11 +196,9 @@ export default memo(() => {
         const amount1Min = minimumAmounts.amount1.toString();
 
         const loadingTipKey = openLoadingTip(
-          t`Add ${parseTokenAmount(amount0Desired, position.pool.token0.decimals).toFormat()} ${
-            position.pool.token0.symbol
-          } and ${parseTokenAmount(amount1Desired, position.pool.token1.decimals).toFormat()} ${
-            position.pool.token1.symbol
-          }`,
+          t`Add ${parseTokenAmount(amount0Desired, position.pool.token0.decimals).toFormat()} ${position.pool.token0.symbol
+            } and ${parseTokenAmount(amount1Desired, position.pool.token1.decimals).toFormat()} ${position.pool.token1.symbol
+            }`,
         );
 
         const { status: approve0Status } = await approve({

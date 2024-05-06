@@ -1,4 +1,4 @@
-import { SNS_GOVERNANCE_INTERFACE_FACTORY, SNS_GOVERNANCE_SERVICE } from "@icpswap/candid";
+import { SNS_GOVERNANCE_INTERFACE_FACTORY, SNS_GOVERNANCE_SERVICE } from "@w2e/candid";
 import { actor } from "../actor";
 
 export const sns_governance = async (canisterId: string, identity?: true) =>

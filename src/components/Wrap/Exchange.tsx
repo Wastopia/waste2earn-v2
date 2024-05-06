@@ -11,9 +11,9 @@ import { Trans, t } from "@lingui/macro";
 import CurrencySelectButton from "components/CurrencySelector/button";
 import { useAccount } from "store/global/hooks";
 import { useTokenBalance } from "hooks/token/useTokenBalance";
-import { CurrencyAmount } from "@icpswap/swap-sdk";
+import { CurrencyAmount } from "@w2e/swap-sdk";
 import BigNumber from "bignumber.js";
-import { formatDollarAmount, formatTokenAmount, parseTokenAmount, principalToAccount } from "@icpswap/utils";
+import { formatDollarAmount, formatTokenAmount, parseTokenAmount, principalToAccount } from "@w2e/utils";
 import ConfirmModal from "components/Wrap/ConfirmModal";
 import { wrapICP, unwrapICP } from "hooks/useWICPCalls";
 import { tokenTransfer } from "hooks/token/calls";
@@ -24,8 +24,8 @@ import Button from "components/authentication/ButtonConnector";
 import { Theme } from "@mui/material/styles";
 import { WICPCanisterId } from "constants/canister";
 import { useICPPrice } from "hooks/useUSDPrice";
-import { useParsedQueryString } from "@icpswap/hooks";
-import { StatusResult } from "@icpswap/types";
+import { useParsedQueryString } from "@w2e/hooks";
+import { StatusResult } from "@w2e/types";
 
 const useStyles = makeStyles((theme: Theme) => {
   return {
@@ -130,7 +130,7 @@ export default function Exchange() {
   );
 
   // @ts-ignore
-  const formattedAmounts: { [SWAP_FIELD.INPUT]: number | string; [SWAP_FIELD.OUTPUT]: number | string } = {
+  const formattedAmounts: { [SWAP_FIELD.INPUT]: number | string;[SWAP_FIELD.OUTPUT]: number | string } = {
     [independentField]: typedValue,
     [dependentField]: parsedAmounts[dependentField] ?? "",
   };
@@ -180,11 +180,10 @@ export default function Exchange() {
       debouncedTypeInput("");
 
       const loadingKey = openTip(
-        t`${
-          isWrap
-            ? `Wrapping ${formattedAmounts[SWAP_FIELD.INPUT]} ICP to ${formattedAmounts[SWAP_FIELD.OUTPUT]} WICP`
-            : `Unwrapping ${formattedAmounts[SWAP_FIELD.INPUT]} WICP to ${formattedAmounts[SWAP_FIELD.OUTPUT]} ICP`
-        }`,
+        t`${isWrap
+          ? `Wrapping ${formattedAmounts[SWAP_FIELD.INPUT]} ICP to ${formattedAmounts[SWAP_FIELD.OUTPUT]} WICP`
+          : `Unwrapping ${formattedAmounts[SWAP_FIELD.INPUT]} WICP to ${formattedAmounts[SWAP_FIELD.OUTPUT]} ICP`
+          }`,
         TIP_LOADING,
       );
 

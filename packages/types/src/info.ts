@@ -14,7 +14,7 @@ export type {
   PublicTokenPricesData,
   TokenPoolsInfo,
   UserStorageTransaction,
-} from "@icpswap/candid";
+} from "@w2e/candid";
 
 export type AllPoolsTVL = Array<[string, number]>;
 

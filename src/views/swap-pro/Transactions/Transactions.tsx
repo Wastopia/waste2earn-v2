@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Trans, t } from "@lingui/macro";
-import { enumToString, shorten, formatDollarAmount, formatAmount } from "@icpswap/utils";
+import { enumToString, shorten, formatDollarAmount, formatAmount } from "@w2e/utils";
 import {
   Header,
   HeaderCell,
@@ -12,8 +12,8 @@ import {
   LoadingRow,
   NoData,
   SimplePagination,
-} from "@icpswap/ui";
-import { PoolStorageTransaction } from "@icpswap/types";
+} from "@w2e/ui";
+import { PoolStorageTransaction } from "@w2e/types";
 import dayjs from "dayjs";
 import { Copy } from "components/index";
 import { Theme } from "@mui/material/styles";
@@ -85,37 +85,37 @@ export default function Transactions({
   const filteredTransactions = useMemo(() => {
     return transactions
       ? transactions
-          .slice()
-          .filter((ele) => {
-            const type = enumToString(ele.action);
-            if (filter === "swaps") return type === "swap";
-            if (filter === "adds") return type === "increaseLiquidity" || type === "addLiquidity" || type === "mint";
-            if (filter === "removes") return type === "decreaseLiquidity";
-            return true;
-          })
-          .filter((ele) => {
-            if (!showedTokens) return true;
-            return showedTokens?.includes(ele.token0Id) && showedTokens?.includes(ele.token1Id);
-          })
+        .slice()
+        .filter((ele) => {
+          const type = enumToString(ele.action);
+          if (filter === "swaps") return type === "swap";
+          if (filter === "adds") return type === "increaseLiquidity" || type === "addLiquidity" || type === "mint";
+          if (filter === "removes") return type === "decreaseLiquidity";
+          return true;
+        })
+        .filter((ele) => {
+          if (!showedTokens) return true;
+          return showedTokens?.includes(ele.token0Id) && showedTokens?.includes(ele.token1Id);
+        })
       : [];
   }, [transactions, filter, showedTokens]);
 
   const sortedTransactions = useMemo(() => {
     return filteredTransactions
       ? filteredTransactions
-          .slice()
-          .sort((a, b) => {
-            if (a && b && !!sortField) {
-              const bool =
-                a[sortField as keyof PoolStorageTransaction] > b[sortField as keyof PoolStorageTransaction]
-                  ? (sortDirection === SortDirection.ASC ? 1 : -1) * 1
-                  : (sortDirection === SortDirection.ASC ? 1 : -1) * -1;
+        .slice()
+        .sort((a, b) => {
+          if (a && b && !!sortField) {
+            const bool =
+              a[sortField as keyof PoolStorageTransaction] > b[sortField as keyof PoolStorageTransaction]
+                ? (sortDirection === SortDirection.ASC ? 1 : -1) * 1
+                : (sortDirection === SortDirection.ASC ? 1 : -1) * -1;
 
-              return bool;
-            }
-            return 0;
-          })
-          .slice(maxItems * (page - 1), page * maxItems)
+            return bool;
+          }
+          return 0;
+        })
+        .slice(maxItems * (page - 1), page * maxItems)
       : [];
   }, [filteredTransactions, maxItems, page, sortField, sortDirection]);
 
@@ -187,28 +187,28 @@ export default function Transactions({
 
       {!loading
         ? (sortedTransactions ?? []).map((transaction, index) => (
-            <TableRow key={`${String(transaction.timestamp)}_${index}`} className={classes.wrapper}>
-              <BodyCell>{ActionTypeFormat(transaction)}</BodyCell>
+          <TableRow key={`${String(transaction.timestamp)}_${index}`} className={classes.wrapper}>
+            <BodyCell>{ActionTypeFormat(transaction)}</BodyCell>
 
-              <BodyCell>{formatDollarAmount(transaction.amountUSD, 3)}</BodyCell>
+            <BodyCell>{formatDollarAmount(transaction.amountUSD, 3)}</BodyCell>
 
-              <BodyCell>
-                {formatAmount(transaction.token0ChangeAmount, 6)} {transaction.token0Symbol}
-              </BodyCell>
+            <BodyCell>
+              {formatAmount(transaction.token0ChangeAmount, 6)} {transaction.token0Symbol}
+            </BodyCell>
 
-              <BodyCell>
-                {formatAmount(transaction.token1ChangeAmount, 6)} {transaction.token1Symbol}
-              </BodyCell>
+            <BodyCell>
+              {formatAmount(transaction.token1ChangeAmount, 6)} {transaction.token1Symbol}
+            </BodyCell>
 
-              <BodyCell>
-                <Copy content={transaction.recipient}>
-                  <BodyCell color="primary.main">{shorten(transaction.recipient, 8)}</BodyCell>
-                </Copy>
-              </BodyCell>
+            <BodyCell>
+              <Copy content={transaction.recipient}>
+                <BodyCell color="primary.main">{shorten(transaction.recipient, 8)}</BodyCell>
+              </Copy>
+            </BodyCell>
 
-              <BodyCell>{dayjs(Number(transaction.timestamp) * 1000).format("YYYY-MM-DD HH:mm:ss")}</BodyCell>
-            </TableRow>
-          ))
+            <BodyCell>{dayjs(Number(transaction.timestamp) * 1000).format("YYYY-MM-DD HH:mm:ss")}</BodyCell>
+          </TableRow>
+        ))
         : null}
 
       {(sortedTransactions ?? []).length === 0 && !loading ? <NoData /> : null}

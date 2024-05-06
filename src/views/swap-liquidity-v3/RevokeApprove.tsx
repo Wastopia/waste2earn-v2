@@ -3,15 +3,15 @@ import { Theme } from "@mui/material/styles";
 import { Typography, Box, Grid, Button, CircularProgress, Avatar, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/styles";
 import { NoData, LoadingRow, Wrapper, Breadcrumbs, SelectToken } from "components/index";
-import { parseTokenAmount, toSignificant } from "@icpswap/utils";
-import { ResultStatus, TOKEN_STANDARD } from "@icpswap/types";
+import { parseTokenAmount, toSignificant } from "@w2e/utils";
+import { ResultStatus, TOKEN_STANDARD } from "@w2e/types";
 import { Trans } from "@lingui/macro";
 import { useTokenInfo } from "hooks/token/useTokenInfo";
 import { useTips, MessageTypes } from "hooks/useTips";
 import { ICP } from "constants/tokens";
 import { useGlobalContext } from "hooks/useGlobalContext";
 import { useRevokeApprove, revoke } from "hooks/swap/useRevokeApprove";
-import type { SwapPoolData, AllTokenOfSwapTokenInfo } from "@icpswap/types";
+import type { SwapPoolData, AllTokenOfSwapTokenInfo } from "@w2e/types";
 import { useAccountPrincipal } from "store/auth/hooks";
 
 export interface RevokeItemProps {

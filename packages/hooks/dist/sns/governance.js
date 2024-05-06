@@ -7,9 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { sns_governance } from "@icpswap/actor";
+import { sns_governance } from "@w2e/actor";
 import { useCallback } from "react";
-import { availableArgsNull, resultFormat } from "@icpswap/utils";
+import { availableArgsNull, resultFormat } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 import { useCallsData } from "../useCallData";
 import { neuronOperationCommand } from "./neuronCommand";

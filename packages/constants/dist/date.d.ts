@@ -8,4 +8,4 @@ export declare const SECONDS_IN_HALF_YEAR: number;
 export declare const SECONDS_IN_MONTH: number;
 export declare const SECONDS_IN_FOUR_YEARS: number;
 export declare const SECONDS_IN_EIGHT_YEARS: number;
-//# sourceMappingURL=date.d.ts.map
+// # sourceMappingURL=date.d.ts.map

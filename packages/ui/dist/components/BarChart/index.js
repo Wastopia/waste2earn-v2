@@ -1,5 +1,16 @@
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
+import { jsxs as _jsxs, jsx as _jsx } from "react/jsx-runtime";
+import { useRef, useState, useEffect, useCallback } from "react";
+import { createChart } from "lightweight-charts";
+import { Box } from "@mui/material";
+import { useTheme } from "@mui/styles";
+import { usePrevious } from "@w2e/hooks";
+import { formatDollarAmount } from "@w2e/utils";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import { GridRowBetween } from "../Grid/Row";
+
+const __rest = (this && this.__rest) || function (s, e) {
+    const t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
         t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === "function")
@@ -9,21 +20,12 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import { jsxs as _jsxs, jsx as _jsx } from "react/jsx-runtime";
-import { useRef, useState, useEffect, useCallback } from "react";
-import { createChart } from "lightweight-charts";
-import { Box } from "@mui/material";
-import { useTheme } from "@mui/styles";
-import { usePrevious } from "@icpswap/hooks";
-import { formatDollarAmount } from "@icpswap/utils";
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import { GridRowBetween } from "../Grid/Row";
+
 dayjs.extend(utc);
 const DEFAULT_HEIGHT = 300;
 export function BarChart(_a) {
-    var _b;
-    var { data, color = "#56B2A4", setValue, setLabel, topLeft, topRight, bottomLeft, bottomRight, height = DEFAULT_HEIGHT, minHeight = DEFAULT_HEIGHT } = _a, rest = __rest(_a, ["data", "color", "setValue", "setLabel", "topLeft", "topRight", "bottomLeft", "bottomRight", "height", "minHeight"]);
+    let _b;
+    const { data, color = "#56B2A4", setValue, setLabel, topLeft, topRight, bottomLeft, bottomRight, height = DEFAULT_HEIGHT, minHeight = DEFAULT_HEIGHT } = _a; const rest = __rest(_a, ["data", "color", "setValue", "setLabel", "topLeft", "topRight", "bottomLeft", "bottomRight", "height", "minHeight"]);
     const theme = useTheme();
     const textColor = "#fff";
     const chartRef = useRef(null);
@@ -39,7 +41,7 @@ export function BarChart(_a) {
     // for reseting value on hover exit
     const currentValue = (_b = data[data.length - 1]) === null || _b === void 0 ? void 0 : _b.value;
     const handleResize = useCallback(() => {
-        var _a;
+        let _a;
         if (chartCreated && ((_a = chartRef === null || chartRef === void 0 ? void 0 : chartRef.current) === null || _a === void 0 ? void 0 : _a.parentElement)) {
             chartCreated.resize(chartRef.current.parentElement.clientWidth - 32, height);
             chartCreated.timeScale().fitContent();
@@ -57,7 +59,7 @@ export function BarChart(_a) {
     }, [isClient, chartRef, handleResize]); // Empty array ensures that effect is only run on mount and unmount
     // if chart not instantiated in canvas, create it
     useEffect(() => {
-        var _a;
+        let _a;
         if (!chartCreated && data && !!((_a = chartRef === null || chartRef === void 0 ? void 0 : chartRef.current) === null || _a === void 0 ? void 0 : _a.parentElement)) {
             const chart = createChart(chartRef.current, {
                 height,
@@ -125,7 +127,7 @@ export function BarChart(_a) {
             });
             // update the title when hovering on the chart
             chartCreated.subscribeCrosshairMove((param) => {
-                var _a, _b, _c;
+                let _a; let _b; let _c;
                 if ((chartRef === null || chartRef === void 0 ? void 0 : chartRef.current) &&
                     (param === undefined ||
                         param.time === undefined ||
@@ -161,6 +163,6 @@ export function BarChart(_a) {
             "> * ": {
                 fontSize: "1rem",
             },
-        }, children: [_jsxs(GridRowBetween, { children: [topLeft !== null && topLeft !== void 0 ? topLeft : null, topRight !== null && topRight !== void 0 ? topRight : null] }), _jsx("div", Object.assign({ ref: chartRef, id: "bar-chart" }, rest)), _jsxs(GridRowBetween, { children: [bottomLeft !== null && bottomLeft !== void 0 ? bottomLeft : null, bottomRight !== null && bottomRight !== void 0 ? bottomRight : null] })] }));
+        }, children: [_jsxs(GridRowBetween, { children: [topLeft !== null && topLeft !== void 0 ? topLeft : null, topRight !== null && topRight !== void 0 ? topRight : null] }), _jsx("div", {ref: chartRef, id: "bar-chart", ...rest}), _jsxs(GridRowBetween, { children: [bottomLeft !== null && bottomLeft !== void 0 ? bottomLeft : null, bottomRight !== null && bottomRight !== void 0 ? bottomRight : null] })] }));
 }
-//# sourceMappingURL=index.js.map
+// # sourceMappingURL=index.js.map

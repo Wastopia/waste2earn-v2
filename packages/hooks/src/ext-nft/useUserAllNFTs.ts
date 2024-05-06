@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { type ExtNft } from "@icpswap/types";
+import { type ExtNft } from "@w2e/types";
 import { useCallsData } from "../useCallData";
 
 export function useExtUserNFTs(address: string | undefined, reload?: boolean) {

@@ -1,5 +1,5 @@
 import { JSBI } from "utils/index";
-import { Percent, BigintIsh } from "@icpswap/swap-sdk";
+import { Percent, BigintIsh } from "@w2e/swap-sdk";
 
 export enum Bound {
   LOWER = "LOWER",

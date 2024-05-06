@@ -1,5 +1,5 @@
 import { Principal } from "@dfinity/principal";
-import { type SwapNFTTokenMetadata } from "@icpswap/types";
+import { type SwapNFTTokenMetadata } from "@w2e/types";
 
 export function from32bits(data: number[]) {
   let value;

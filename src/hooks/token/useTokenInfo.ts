@@ -1,11 +1,11 @@
 import { useMemo, useEffect, useState } from "react";
 import { ICP_TOKEN_INFO, TOKEN_STANDARD, WRAPPED_ICP_TOKEN_INFO } from "constants/index";
-import type { TokenInfo, StorageTokenInfo } from "@icpswap/types";
+import type { TokenInfo, StorageTokenInfo } from "@w2e/types";
 import { getTokenStandard } from "store/token/cache/hooks";
 import { DB_NAME, DB_VERSION } from "constants/db";
-import { IdbStorage } from "@icpswap/utils";
+import { IdbStorage } from "@w2e/utils";
 import TokenDefaultLogo from "assets/images/Token_default_logo.png";
-import { getPromisesAwait } from "@icpswap/hooks";
+import { getPromisesAwait } from "@w2e/hooks";
 import { useLocalTokens } from "./useLocalTokens";
 import { getTokenInfo } from "./calls";
 

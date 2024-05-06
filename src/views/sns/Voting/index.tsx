@@ -1,12 +1,12 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { t } from "@lingui/macro";
-import { useListDeployedSNSs, getListProposals, useParsedQueryString } from "@icpswap/hooks";
+import { useListDeployedSNSs, getListProposals, useParsedQueryString } from "@w2e/hooks";
 import { useMemo, useState, useEffect } from "react";
-import type { ProposalData } from "@icpswap/types";
-import { SnsProposalDecisionStatus } from "@icpswap/constants";
+import type { ProposalData } from "@w2e/types";
+import { SnsProposalDecisionStatus } from "@w2e/constants";
 import { Theme } from "@mui/material/styles";
 import { SelectSns } from "components/sns/SelectSNSTokens";
-import { shortenString, nowInSeconds } from "@icpswap/utils";
+import { shortenString, nowInSeconds } from "@w2e/utils";
 import { secondsToDuration } from "@dfinity/utils";
 import { Tabs } from "components/sns/Tab";
 import InfiniteScroll from "react-infinite-scroll-component";

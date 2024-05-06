@@ -1,4 +1,4 @@
-import type { StakingFarmInfo } from "@icpswap/types";
+import type { StakingFarmInfo } from "@w2e/types";
 
 export enum POOL_STATE {
   LIVE = "Live",

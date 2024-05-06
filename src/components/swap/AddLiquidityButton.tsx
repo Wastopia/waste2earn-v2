@@ -1,5 +1,5 @@
 import Button, { ButtonConnectorProps } from "components/authentication/ButtonConnector";
-import { Override } from "@icpswap/types";
+import { Override } from "@w2e/types";
 import { t } from "@lingui/macro";
 
 export interface AddLiquidityButtonProps {

@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { usePoolActiveLiquidity } from "hooks/swap/usePoolTickData";
-import { Token, FeeAmount } from "@icpswap/swap-sdk";
+import { Token, FeeAmount } from "@w2e/swap-sdk";
 import BigNumber from "bignumber.js";
 
 export interface UseDensityChartDataArgs {

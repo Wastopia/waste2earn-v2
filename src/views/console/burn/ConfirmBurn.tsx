@@ -1,11 +1,11 @@
-import { Modal } from "@icpswap/ui";
+import { Modal } from "@w2e/ui";
 import { Trans, t } from "@lingui/macro";
 import { TokenImage } from "components/index";
 import { Typography, Box, Button, CircularProgress } from "components/Mui";
 import { type TokenInfo } from "types/token";
 import { tokenTransfer } from "hooks/token/calls";
 import { useAccountPrincipal } from "store/auth/hooks";
-import { BigNumber, formatTokenAmount } from "@icpswap/utils";
+import { BigNumber, formatTokenAmount } from "@w2e/utils";
 import { useSuccessTip, useErrorTip, useLoadingTip } from "hooks/useTips";
 import { useState } from "react";
 
@@ -14,11 +14,11 @@ export interface ConfirmBurnProps {
   onClose: () => void;
   token: TokenInfo | undefined;
   mintingAccount:
-    | {
-        owner: string;
-        sub: number[] | undefined;
-      }
-    | undefined;
+  | {
+    owner: string;
+    sub: number[] | undefined;
+  }
+  | undefined;
   amount: string | undefined;
   onBurnSuccess?: () => void;
 }

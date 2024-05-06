@@ -1,7 +1,7 @@
 import type { ActorSubclass } from "@dfinity/agent";
 import { AstroXWebViewHandler } from "@astrox/sdk-webview";
 import { IC as AuthClient } from "@astrox/sdk-web";
-import { Connector } from "@icpswap/actor";
+import { Connector } from "@w2e/actor";
 import type { IConnector, CreateActorArgs, WalletConnectorConfig } from "./connectors";
 
 const MeExpireTime = 7 * 24 * 3600; // seconds

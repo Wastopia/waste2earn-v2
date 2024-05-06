@@ -2,8 +2,8 @@ import { useMemo } from "react";
 import { Typography, Grid, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import BigNumber from "bignumber.js";
-import { CurrencyAmount, Position } from "@icpswap/swap-sdk";
-import { toSignificant, numberToString } from "@icpswap/utils";
+import { CurrencyAmount, Position } from "@w2e/swap-sdk";
+import { toSignificant, numberToString } from "@w2e/utils";
 import { Theme } from "@mui/material/styles";
 import { TokenImage } from "components/index";
 

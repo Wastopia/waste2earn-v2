@@ -2,7 +2,7 @@ import React, { memo, useState, useEffect, useCallback, useMemo } from "react";
 import { Box, Grid, Typography, TextField, Chip, Button, ButtonBase } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import { Add as AddIcon, Remove as RemoveIcon } from "@mui/icons-material";
-import { Token, Price } from "@icpswap/swap-sdk";
+import { Token, Price } from "@w2e/swap-sdk";
 import WarningIcon from "assets/images/swap/warning";
 import { Bound, FeeAmount } from "constants/swap";
 import { MAX_SWAP_INPUT_LENGTH } from "constants/index";
@@ -391,9 +391,9 @@ const PriceRange = memo(
             sx={
               isRangePriceDisabled
                 ? {
-                    opacity: "0.2",
-                    pointerEvents: "none",
-                  }
+                  opacity: "0.2",
+                  pointerEvents: "none",
+                }
                 : {}
             }
           >

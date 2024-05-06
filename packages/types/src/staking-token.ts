@@ -6,4 +6,4 @@ export type {
   StakingPoolTransaction,
   StakingPoolGlobalData,
   StakingPoolControllerPoolInfo,
-} from "@icpswap/candid";
+} from "@w2e/candid";

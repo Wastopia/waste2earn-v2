@@ -1,13 +1,7 @@
+import { ActorIdentity } from "@w2e/types";
+import { BaseIndex, BaseStorage, BaseIndexInterfaceFactory, BaseStorageInterfaceFactory } from "@w2e/candid";
 import { actor } from "../actor";
-import { ActorIdentity } from "@icpswap/types";
 import { ActorName } from "../ActorName";
-
-import {
-  BaseIndex,
-  BaseStorage,
-  BaseIndexInterfaceFactory,
-  BaseStorageInterfaceFactory,
-} from "@icpswap/candid";
 
 export const baseIndex = (identity?: ActorIdentity) =>
   actor.create<BaseIndex>({

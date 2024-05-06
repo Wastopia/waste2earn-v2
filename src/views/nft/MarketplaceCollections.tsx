@@ -7,7 +7,7 @@ import { useNFTCanisterList, useCanisterMetadata } from "hooks/nft/useNFTCalls";
 import { Theme } from "@mui/material/styles";
 import Wrapper from "components/Wrapper";
 import { Trans } from "@lingui/macro";
-import type { NFTControllerInfo } from "@icpswap/types";
+import type { NFTControllerInfo } from "@w2e/types";
 import Loading from "components/Loading/Static";
 import CollectionAvatar from "components/NFT/CollectionAvatar";
 

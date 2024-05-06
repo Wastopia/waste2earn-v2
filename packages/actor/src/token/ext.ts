@@ -1,12 +1,7 @@
+import { ActorIdentity } from "@w2e/types";
+import { WrapICP, WrapICPInterfaceFactory, EXTToken, EXTTokenInterfaceFactory } from "@w2e/candid";
 import { actor } from "../actor";
-import { ActorIdentity } from "@icpswap/types";
 import { ActorName } from "../ActorName";
-import {
-  WrapICP,
-  WrapICPInterfaceFactory,
-  EXTToken,
-  EXTTokenInterfaceFactory,
-} from "@icpswap/candid";
 
 export const ext = (canisterId: string, identity?: ActorIdentity) =>
   actor.create<EXTToken>({

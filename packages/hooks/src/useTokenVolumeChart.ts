@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { PublicTokenChartDayData } from "@icpswap/types";
+import { PublicTokenChartDayData } from "@w2e/types";
 import { getInfoTokenChartData, useInfoTokenStorageIds } from "./info";
 import { getLimitedInfinityCall } from "./useLimitedInfinityCall";
 

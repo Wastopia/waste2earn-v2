@@ -1,8 +1,8 @@
 import { BigNumber } from "bignumber.js";
-import { Override, ActorIdentity, StatusResult, PaginationResult } from "@icpswap/types";
+import { Override, ActorIdentity, StatusResult, PaginationResult } from "@w2e/types";
 import { ActorSubclass } from "@dfinity/agent";
 import { Principal } from "@dfinity/principal";
-import type { TokenTransaction } from "@icpswap/types";
+import type { TokenTransaction } from "@w2e/types";
 import {
   TokenHolder,
   BalanceRequest as _BalanceRequest,

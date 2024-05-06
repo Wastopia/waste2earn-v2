@@ -1,6 +1,6 @@
 import { Box, Grid, Avatar } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import type { NFTControllerInfo } from "@icpswap/types";
+import type { NFTControllerInfo } from "@w2e/types";
 import VerifyNFT from "components/NFT/VerifyNFT";
 
 const useStyles = makeStyles(() => {

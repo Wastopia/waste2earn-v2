@@ -1,8 +1,8 @@
 import { useTheme } from "@mui/material";
 import { Trans } from "@lingui/macro";
 import { useMemo, useState } from "react";
-import type { Neuron, ProposalData, NervousSystemParameters } from "@icpswap/types";
-import { nowInSeconds, formatPercentage, BigNumber, shorten, toHexString } from "@icpswap/utils";
+import type { Neuron, ProposalData, NervousSystemParameters } from "@w2e/types";
+import { nowInSeconds, formatPercentage, BigNumber, shorten, toHexString } from "@w2e/utils";
 import { CollapseText } from "components/index";
 import { Collapse, Typography, Button, Box } from "components/Mui";
 import { Theme } from "@mui/material/styles";

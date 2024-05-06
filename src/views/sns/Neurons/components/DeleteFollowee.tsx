@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { toHexString } from "@icpswap/utils";
-import { setNeuronFollows } from "@icpswap/hooks";
+import { toHexString } from "@w2e/utils";
+import { setNeuronFollows } from "@w2e/hooks";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
 import { t } from "@lingui/macro";
-import { Neuron } from "@icpswap/types";
+import { Neuron } from "@w2e/types";
 import { X } from "react-feather";
-import { ConfirmModal } from "@icpswap/ui";
+import { ConfirmModal } from "@w2e/ui";
 
 export interface DeleteFolloweeProps {
   onDeleteSuccess?: () => void;

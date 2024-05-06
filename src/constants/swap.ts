@@ -1,4 +1,4 @@
-import { ICP, WRAPPED_ICP, ckBTC } from "@icpswap/tokens";
+import { ICP, WRAPPED_ICP, ckBTC } from "@w2e/tokens";
 import { isIC } from "./server";
 
 export enum SWAP_FIELD {

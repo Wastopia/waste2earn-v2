@@ -1,6 +1,6 @@
 import { useContext, useMemo, useRef } from "react";
 import { Box, Typography } from "@mui/material";
-import { formatDollarAmount, principalToAccount } from "@icpswap/utils";
+import { formatDollarAmount, principalToAccount } from "@w2e/utils";
 import { Trans, t } from "@lingui/macro";
 import { useSuccessTip } from "hooks/useTips";
 import { useICPPrice } from "hooks/useUSDPrice";

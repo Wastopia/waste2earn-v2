@@ -8,9 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { isPrincipal, isValidPrincipal } from "@icpswap/utils";
+import { isPrincipal, isValidPrincipal } from "@w2e/utils";
 import { useLatestDataCall } from "../useCallData";
-import { tokenAdapter } from "@icpswap/token-adapter";
+import { tokenAdapter } from "@w2e/token-adapter";
 import { Principal } from "@dfinity/principal";
 import BigNumber from "bignumber.js";
 export function getTokenBalance(_a) {

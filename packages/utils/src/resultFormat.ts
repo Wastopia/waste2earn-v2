@@ -1,4 +1,4 @@
-import { StatusResult, ResultStatus } from "@icpswap/types";
+import { StatusResult, ResultStatus } from "@w2e/types";
 import isObject from "lodash/isObject";
 
 export function isResultKey(key: string) {
@@ -24,13 +24,7 @@ export function resultFormat<T>(result: any): StatusResult<T> {
 
   const key = Object.keys(result);
 
-  if (
-    result &&
-    isObject(result as object) &&
-    key &&
-    key[0] &&
-    isResultKey(key[0])
-  ) {
+  if (result && isObject(result as object) && key && key[0] && isResultKey(key[0])) {
     let message = "";
 
     if (isResultErrKey(key[0]) && isObject(result[key[0]])) {
@@ -40,15 +34,10 @@ export function resultFormat<T>(result: any): StatusResult<T> {
       // TODO: for token
       if (messageKey === "Other") {
         message = value;
+      } else if (typeof value === "object") {
+        message = `${messageKey}: ${JSON.stringify(value).replace(/\"/g, "")}`;
       } else {
-        if (typeof value === "object") {
-          message = `${messageKey}: ${JSON.stringify(value).replace(
-            /\"/g,
-            ""
-          )}`;
-        } else {
-          message = `${messageKey}: ${value}`;
-        }
+        message = `${messageKey}: ${value}`;
       }
     } else if (typeof result[key[0]] === "string") {
       message = result[key[0]];

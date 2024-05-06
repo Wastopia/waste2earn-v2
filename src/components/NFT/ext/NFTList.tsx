@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import { NoData, StaticLoading as Loading } from "components/index";
-import { EXTCollection, type ExtNft } from "@icpswap/types";
+import { EXTCollection, type ExtNft } from "@w2e/types";
 import { NFTCard } from "./NFTCard";
 
 export interface NFTListProps {

@@ -3,15 +3,15 @@ import { Theme } from "@mui/material/styles";
 import { Typography, Box, Grid, Button, CircularProgress, Avatar } from "@mui/material";
 import { useTheme } from "@mui/styles";
 import { NoData, LoadingRow, Wrapper, Breadcrumbs, SwapTooltip } from "components/index";
-import { parseTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount } from "@w2e/utils";
 import { Trans } from "@lingui/macro";
 import { useTokenInfo } from "hooks/token/useTokenInfo";
 import { TokenInfo } from "types/token";
 import { useTips, MessageTypes } from "hooks/useTips";
 import { useHideUnavailableClaimManager } from "store/customization/hooks";
-import { useUserPCMBalance, usePassCode, usePCMMetadata, destroyPassCode, withdrawPCMBalance } from "@icpswap/hooks";
+import { useUserPCMBalance, usePassCode, usePCMMetadata, destroyPassCode, withdrawPCMBalance } from "@w2e/hooks";
 import { useAccountPrincipal } from "store/auth/hooks";
-import { type PassCode, type PCMMetadata, ResultStatus } from "@icpswap/types";
+import { type PassCode, type PCMMetadata, ResultStatus } from "@w2e/types";
 
 type ClaimedKey = string | number;
 

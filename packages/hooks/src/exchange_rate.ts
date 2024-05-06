@@ -1,7 +1,7 @@
 import { useCallback } from "react";
-import { exchangeRate } from "@icpswap/actor";
+import { exchangeRate } from "@w2e/actor";
 import { useCallsData } from "./useCallData";
-import { parseTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount } from "@w2e/utils";
 
 export async function getExchangeRates() {
   return await (await exchangeRate()).get_exchange_rates();
@@ -11,7 +11,7 @@ export function useExchangeRates() {
   return useCallsData(
     useCallback(async () => {
       return await getExchangeRates();
-    }, [])
+    }, []),
   );
 }
 
@@ -24,7 +24,7 @@ export function useExchangeRate(pair: string | undefined) {
     useCallback(async () => {
       return await getExchangeRate(pair!);
     }, [pair]),
-    !!pair
+    !!pair,
   );
 }
 
@@ -37,6 +37,6 @@ export function useXDR2USD() {
   return useCallsData(
     useCallback(async () => {
       return await getXDR2USD();
-    }, [])
+    }, []),
   );
 }

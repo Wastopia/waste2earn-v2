@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { makeStyles } from "@mui/styles";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import { MAX_SWAP_INPUT_LENGTH, SAFE_DECIMALS_LENGTH } from "constants/index";
 import { NumberTextField } from "components/index";
 

@@ -1,4 +1,4 @@
-import { Token, CurrencyAmount } from "@icpswap/swap-sdk";
+import { Token, CurrencyAmount } from "@w2e/swap-sdk";
 import BigNumber from "bignumber.js";
 import { useAllowance } from "hooks/token";
 import { useMemo } from "react";

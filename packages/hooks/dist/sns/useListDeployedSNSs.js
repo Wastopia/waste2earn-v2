@@ -7,8 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { resultFormat } from "@icpswap/utils";
-import { sns_wasm } from "@icpswap/actor";
+import { resultFormat } from "@w2e/utils";
+import { sns_wasm } from "@w2e/actor";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useCallsData } from "../useCallData";
 export function getListDeployedSNSs() {

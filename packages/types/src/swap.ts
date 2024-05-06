@@ -1,5 +1,5 @@
 import { Override } from "./global";
-import type { SwapPoolData } from "@icpswap/candid";
+import type { SwapPoolData } from "@w2e/candid";
 import type { Principal } from "@dfinity/principal";
 
 export type UserSwapPoolsBalance = Override<
@@ -7,7 +7,7 @@ export type UserSwapPoolsBalance = Override<
   { type: "unDeposit" | "unUsed"; balance0: bigint; balance1: bigint }
 >;
 
-export type { GetPoolArgs, CreatePoolArgs } from "@icpswap/candid";
+export type { GetPoolArgs, CreatePoolArgs } from "@w2e/candid";
 
 export type {
   TickLiquidityInfo,
@@ -25,9 +25,9 @@ export type {
   SwapPoolData,
   SwapPoolToken,
   Ticket,
-} from "@icpswap/candid";
+} from "@w2e/candid";
 
-export type { SwapNFTTokenMetadata, PassCode } from "@icpswap/candid";
+export type { SwapNFTTokenMetadata, PassCode } from "@w2e/candid";
 
 export type PCMMetadata = {
   passcodePrice: bigint;

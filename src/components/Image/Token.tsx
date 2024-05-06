@@ -1,4 +1,4 @@
-import { TokenImage as UITokenImage } from "@icpswap/ui";
+import { TokenImage as UITokenImage } from "@w2e/ui";
 import { useSNSTokenRootId } from "hooks/token/useSNSTokenRootId";
 import { SxProps } from "@mui/material";
 

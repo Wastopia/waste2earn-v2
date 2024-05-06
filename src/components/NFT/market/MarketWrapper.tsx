@@ -8,7 +8,7 @@ import { customizeBreakPoints } from "theme/customizeThemeBreakpoints";
 import debounce from "lodash/debounce";
 import { Theme } from "@mui/material/styles";
 import Wrapper from "components/Wrapper";
-import { useParsedQueryString } from "@icpswap/hooks";
+import { useParsedQueryString } from "@w2e/hooks";
 import NFTMarketplace from "./NFTMarket";
 import NFTMarketSaleRecords from "./NFTMarketSaleRecords";
 import NFTUserSaleRecords from "./NFTUserSaleRecords";

@@ -1,12 +1,12 @@
 import { useState, useMemo, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Box, Grid, Typography } from "@mui/material";
-import { createTheme , Theme } from "@mui/material/styles";
+import { createTheme, Theme } from "@mui/material/styles";
 import { makeStyles } from "@mui/styles";
 import CarouselArrow from "assets/images/nft/CarouselArrow";
 import { useMarketplaceRecommendCanisters } from "hooks/nft/tradeData";
 import { useCanisterMetadata } from "hooks/nft/useNFTCalls";
-import type { NFTControllerInfo } from "@icpswap/types";
+import type { NFTControllerInfo } from "@w2e/types";
 import { Trans } from "@lingui/macro";
 import CollectionAvatar from "../CollectionAvatar";
 

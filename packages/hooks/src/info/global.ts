@@ -1,7 +1,7 @@
 import { useCallback } from "react";
-import { resultFormat } from "@icpswap/utils";
-import { globalIndex } from "@icpswap/actor";
-import { AllPoolsTVL, AllTokensTVL, PoolLatestTVL, PublicProtocolData, TokenLatestTVL } from "@icpswap/types";
+import { resultFormat } from "@w2e/utils";
+import { globalIndex } from "@w2e/actor";
+import { AllPoolsTVL, AllTokensTVL, PoolLatestTVL, PublicProtocolData, TokenLatestTVL } from "@w2e/types";
 import { useCallsData } from "../useCallData";
 
 // Global

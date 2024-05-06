@@ -5,10 +5,10 @@ import { makeStyles } from "@mui/styles";
 import { t, Trans } from "@lingui/macro";
 import { Wrapper, Breadcrumbs, MainCard, Pagination, PaginationType, StaticLoading, NoData } from "components/index";
 import { Header, HeaderCell, BodyCell, Row } from "components/Table/index";
-import { useUserClaimEventTransactions } from "@icpswap/hooks";
-import { ClaimTransaction } from "@icpswap/types";
+import { useUserClaimEventTransactions } from "@w2e/hooks";
+import { ClaimTransaction } from "@w2e/types";
 import { useTokenInfo } from "hooks/token/useTokenInfo";
-import { timestampFormat, pageArgsFormat, parseTokenAmount } from "@icpswap/utils";
+import { timestampFormat, pageArgsFormat, parseTokenAmount } from "@w2e/utils";
 
 const useStyles = makeStyles(() => {
   return {

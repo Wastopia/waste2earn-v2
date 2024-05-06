@@ -1,6 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Box, keyframes } from "@mui/material";
 import { useTheme } from "@mui/styles";
+
 const loadingAnimation = keyframes `
   0% {
     background-position: 100% 50%;
@@ -71,6 +72,6 @@ export function LoadingRow({ children }) {
                 gridColumn: "3 / 4",
                 marginBottom: "16px",
             },
-        }, children: children }));
+        }, children }));
 }
-//# sourceMappingURL=LoadingRow.js.map
+// # sourceMappingURL=LoadingRow.js.map

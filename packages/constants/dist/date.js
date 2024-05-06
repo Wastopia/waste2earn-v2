@@ -9,4 +9,4 @@ export const SECONDS_IN_HALF_YEAR = SECONDS_IN_YEAR / 2;
 export const SECONDS_IN_MONTH = SECONDS_IN_YEAR / 12;
 export const SECONDS_IN_FOUR_YEARS = SECONDS_IN_YEAR * 4;
 export const SECONDS_IN_EIGHT_YEARS = SECONDS_IN_YEAR * 8;
-//# sourceMappingURL=date.js.map
+// # sourceMappingURL=date.js.map

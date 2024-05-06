@@ -14,4 +14,4 @@ export * from "./token-claim";
 export * from "./voting";
 export * from "./other";
 export * from "./analytic";
-//# sourceMappingURL=index.d.ts.map
+// # sourceMappingURL=index.d.ts.map

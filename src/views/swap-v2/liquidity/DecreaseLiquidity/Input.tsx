@@ -5,7 +5,7 @@ import { NumberTextField } from "components/index";
 import { MAX_SWAP_INPUT_LENGTH } from "constants/index";
 import { Trans } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 
 const useStyle = makeStyles((theme: Theme) => {
   return {

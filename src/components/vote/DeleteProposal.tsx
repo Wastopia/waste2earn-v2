@@ -4,8 +4,8 @@ import { t } from "@lingui/macro";
 import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity/index";
 import { Identity as CallIdentity } from "types/global";
 import { useTips, MessageTypes } from "hooks/useTips";
-import { ResultStatus } from "@icpswap/types";
-import { deleteVotingProposal } from "@icpswap/hooks";
+import { ResultStatus } from "@w2e/types";
+import { deleteVotingProposal } from "@w2e/hooks";
 
 export default function DeleteProposal({
   open,

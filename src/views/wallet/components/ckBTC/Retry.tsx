@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Modal from "components/modal/index";
 import { Typography, Box, Button, CircularProgress } from "@mui/material";
-import { numberToString, parseTokenAmount } from "@icpswap/utils";
-import { ResultStatus } from "@icpswap/types";
+import { numberToString, parseTokenAmount } from "@w2e/utils";
+import { ResultStatus } from "@w2e/types";
 import { t, Trans } from "@lingui/macro";
 import Identity, { CallbackProps } from "components/Identity/index";
 import { useTips, MessageTypes } from "hooks/useTips";

@@ -8,9 +8,9 @@ import {
   swapPool,
   swapGraphPool,
 } from "actor/swapV2";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
-import { useCallsData } from "@icpswap/hooks";
-import { FeeAmount } from "@icpswap/swap-sdk";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
+import { useCallsData } from "@w2e/hooks";
+import { FeeAmount } from "@w2e/swap-sdk";
 import { useStateCallsData } from "hooks/useCallsData";
 import { useAccount } from "store/global/hooks";
 import {

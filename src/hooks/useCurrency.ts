@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import { TOKEN_STANDARD, ICP, WRAPPED_ICP } from "constants/index";
 import { TokenInfo } from "types/token";
 import { useTokenInfo } from "hooks/token/useTokenInfo";

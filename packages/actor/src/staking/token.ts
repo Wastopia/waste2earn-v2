@@ -1,7 +1,4 @@
-import { actor } from "../actor";
-import { ActorIdentity } from "@icpswap/types";
-import { ActorName } from "../ActorName";
-
+import { ActorIdentity } from "@w2e/types";
 import {
   TokenPool,
   TokenPoolController,
@@ -15,7 +12,9 @@ import {
   V1TokenPoolControllerInterfaceFactory,
   V1TokenPoolStorage,
   V1TokenPoolStorageInterfaceFactory,
-} from "@icpswap/candid";
+} from "@w2e/candid";
+import { actor } from "../actor";
+import { ActorName } from "../ActorName";
 
 export const stakingTokenController = (identity?: ActorIdentity) =>
   actor.create<TokenPoolController>({
@@ -32,10 +31,7 @@ export const stakingToken = (canisterId: string, identity?: ActorIdentity) =>
     idlFactory: TokenPoolInterfaceFactory,
   });
 
-export const stakingTokenStorage = (
-  canisterId: string,
-  identity?: ActorIdentity
-) =>
+export const stakingTokenStorage = (canisterId: string, identity?: ActorIdentity) =>
   actor.create<TokenPoolStorage>({
     canisterId,
     actorName: ActorName.TokenPoolStorage,

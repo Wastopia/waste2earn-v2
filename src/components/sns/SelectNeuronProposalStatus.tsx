@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { SnsProposalDecisionStatus } from "@icpswap/constants";
+import { SnsProposalDecisionStatus } from "@w2e/constants";
 import { Box, Checkbox, Typography } from "@mui/material";
 import { Trans, t } from "@lingui/macro";
-import { Modal } from "@icpswap/ui";
+import { Modal } from "@w2e/ui";
 import { Filter } from "react-feather";
 
 const SnsProposalDecisionStatusMap = [

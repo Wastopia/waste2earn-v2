@@ -1,7 +1,7 @@
 import { useCallback, useState, useMemo } from "react";
 import BigNumber from "bignumber.js";
-import { Price, Token } from "@icpswap/swap-sdk";
-import { formatDollarAmount } from "@icpswap/utils";
+import { Price, Token } from "@w2e/swap-sdk";
+import { formatDollarAmount } from "@w2e/utils";
 import { Typography, Grid, useTheme, useMediaQuery } from "@mui/material";
 import LinkIcon from "assets/images/LinkIcon";
 import { TextButton } from "components/index";
@@ -46,8 +46,8 @@ export function TradePriceNoInfo({
         ? token0PriceUSDValue
         : token1PriceUSDValue
       : price.quoteCurrency.equals(token0)
-      ? token0PriceUSDValue
-      : token1PriceUSDValue;
+        ? token0PriceUSDValue
+        : token1PriceUSDValue;
   }, [price, showInverted, token0, token0PriceUSDValue, token1, token1PriceUSDValue]);
 
   const text = `${`1 ${labelInverted} = ${formattedPrice ? new BigNumber(formattedPrice).toFormat() : "-"}`} ${label}`;
@@ -111,8 +111,8 @@ export default function TradePrice({
         ? token0PriceUSDValue
         : token1PriceUSDValue
       : price.quoteCurrency.equals(token0)
-      ? token0PriceUSDValue
-      : token1PriceUSDValue;
+        ? token0PriceUSDValue
+        : token1PriceUSDValue;
   }, [price, showInverted, token0, token0PriceUSDValue, token1, token1PriceUSDValue]);
 
   const text = `${`1 ${labelInverted} = ${formattedPrice ? new BigNumber(formattedPrice).toFormat() : "-"}`} ${label}`;

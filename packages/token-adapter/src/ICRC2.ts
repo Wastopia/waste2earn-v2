@@ -1,7 +1,7 @@
-import { resultFormat, availableArgsNull, isBigIntMemo } from "@icpswap/utils";
-import { PaginationResult, ResultStatus } from "@icpswap/types";
-import { icrc2 } from "@icpswap/actor";
-import { ICRC2 } from "@icpswap/candid";
+import { resultFormat, availableArgsNull, isBigIntMemo } from "@w2e/utils";
+import { PaginationResult, ResultStatus } from "@w2e/types";
+import { icrc2 } from "@w2e/actor";
+import { ICRC2 } from "@w2e/candid";
 import {
   BaseTokenAdapter,
   SupplyRequest,

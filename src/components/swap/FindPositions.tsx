@@ -8,7 +8,7 @@ import { TokenInfo } from "types/token";
 import CurrencySelector from "components/CurrencySelector/selector";
 import { getUserPositionIds } from "hooks/swap/useUserPositionIds";
 import { useUpdateUserPositionPools } from "store/hooks";
-import { updateUserPositionPoolId } from "@icpswap/hooks";
+import { updateUserPositionPoolId } from "@w2e/hooks";
 import { useTips, TIP_SUCCESS } from "hooks/index";
 import { useAccountPrincipal } from "store/auth/hooks";
 

@@ -1,5 +1,5 @@
 {
-  "name": "@icpswap/utils",
+  "name": "@w2e/utils",
   "version": "0.0.1",
   "sideEffects": [
     "*.css.ts"
@@ -17,8 +17,8 @@
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
-    "@icpswap/types": "../types",
-    "@icpswap/constants": "../constants",
+    "@w2e/types": "../types",
+    "@w2e/constants": "../constants",
     "big.js": "^6.1.1",
     "decimal.js-light": "^2.5.1",
     "idb": "8.0.0",

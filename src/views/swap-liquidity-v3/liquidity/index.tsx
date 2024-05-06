@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Box } from "@mui/material";
 import SwapWrapper from "components/swap/SwapUIWrapper";
-import { useSwapPools } from "@icpswap/hooks";
+import { useSwapPools } from "@w2e/hooks";
 import { usePoolStandardManager } from "store/global/hooks";
 import { useUpdateTokenStandard } from "store/token/cache/hooks";
 import { TOKEN_STANDARD } from "constants/tokens";

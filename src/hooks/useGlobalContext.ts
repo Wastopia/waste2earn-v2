@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import type { SwapPoolData } from "@icpswap/types";
+import type { SwapPoolData } from "@w2e/types";
 
 export type GlobalContextProps = {
   AllPools: SwapPoolData[] | undefined;

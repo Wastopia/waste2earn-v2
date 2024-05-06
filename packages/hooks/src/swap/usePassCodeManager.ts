@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import { passCodeManager } from "@icpswap/actor";
-import { resultFormat } from "@icpswap/utils";
+import { passCodeManager } from "@w2e/actor";
+import { resultFormat } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 import { useCallsData } from "../useCallData";
 

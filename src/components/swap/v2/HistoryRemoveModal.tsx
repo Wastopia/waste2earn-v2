@@ -4,7 +4,7 @@ import SwapModal from "components/modal/swap";
 import CurrencyAvatar from "components/CurrencyAvatar";
 import { BURN_FIELD } from "constants/swap";
 import { Trans } from "@lingui/macro";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 
 export default memo(
   ({

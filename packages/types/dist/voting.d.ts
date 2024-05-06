@@ -1,7 +1,14 @@
 export type CommitBatchArgs = {
-    batch_id: bigint;
-    content_type: string;
-    chunk_ids: Array<bigint>;
+  batch_id: bigint;
+  content_type: string;
+  chunk_ids: Array<bigint>;
 };
-export type { ProjectInfo, ProposalInfo, UserVoteRecord, ProposalCreateInfo, UserVotePowersInfo, VotingFileChunk, } from "@icpswap/candid";
-//# sourceMappingURL=voting.d.ts.map
+export type {
+  ProjectInfo,
+  ProposalInfo,
+  UserVoteRecord,
+  ProposalCreateInfo,
+  UserVotePowersInfo,
+  VotingFileChunk,
+} from "@w2e/candid";
+// # sourceMappingURL=voting.d.ts.map

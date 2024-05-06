@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useAppSelector, useAppDispatch } from "store/hooks";
 import { Bound, BIG_INT_ZERO, FIELD } from "constants/swap";
-import { resultFormat } from "@icpswap/utils";
+import { resultFormat } from "@w2e/utils";
 import {
   FeeAmount,
   TickMath,
@@ -17,7 +17,7 @@ import {
   Price,
   CurrencyAmount,
   nearestUsableTick,
-} from "@icpswap/swap-sdk";
+} from "@w2e/swap-sdk";
 import { tryParseTick } from "utils/swap/mint";
 import { tryParseAmount } from "utils/swap";
 import { getTickToPrice } from "utils/swap/getTickToPrice";

@@ -4,12 +4,12 @@ import { network, NETWORK } from "constants/server";
 import { useUpdateTokenStandard, useTokenStandards } from "store/token/cache/hooks";
 import { useGlobalTokenList } from "store/global/hooks";
 import { usePoolCanisterIdManager } from "store/swap/hooks";
-import { getSwapPools } from "@icpswap/hooks";
-import { registerTokens } from "@icpswap/token-adapter";
+import { getSwapPools } from "@w2e/hooks";
+import { registerTokens } from "@w2e/token-adapter";
 import { getAllTokenPools } from "hooks/staking-token/index";
 import { getAllClaimEvents } from "hooks/token-claim";
 import { updateCanisters } from "store/allCanisters";
-import type { SwapPoolData } from "@icpswap/types";
+import type { SwapPoolData } from "@w2e/types";
 
 export const Tokens = [XTC, CAT, MOD, BoomDAO, ICX, NUA, SONIC];
 

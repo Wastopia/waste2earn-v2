@@ -1,15 +1,15 @@
 import { useState, useMemo } from "react";
 import { useHistory } from "react-router-dom";
 import { Grid, Typography, Avatar, Box } from "@mui/material";
-import { pageArgsFormat, shortenString } from "@icpswap/utils";
+import { pageArgsFormat, shortenString } from "@w2e/utils";
 import { Trans, t } from "@lingui/macro";
-import { ProposalInfo, ProjectInfo } from "@icpswap/types";
+import { ProposalInfo, ProjectInfo } from "@w2e/types";
 import { Pagination, PaginationType, NoData, StaticLoading, MainCard } from "components/index";
 import { VoteStateCount, StateLabel, useVoteState } from "components/vote/VoteState";
 import { Select } from "components/Select";
 import { useAccount } from "store/auth/hooks";
 import removeMD from "remove-markdown";
-import { useVotingProposals } from "@icpswap/hooks";
+import { useVotingProposals } from "@w2e/hooks";
 
 export interface VoteItemProps {
   proposal: ProposalInfo;

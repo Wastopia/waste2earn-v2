@@ -1,8 +1,8 @@
 import { Principal } from "@dfinity/principal";
-import { isValidPrincipal } from "@icpswap/utils";
+import { isValidPrincipal } from "@w2e/utils";
 import { useCallback } from "react";
-import { useCallsData } from "@icpswap/hooks";
-import { tokenAdapter } from "@icpswap/token-adapter";
+import { useCallsData } from "@w2e/hooks";
+import { tokenAdapter } from "@w2e/token-adapter";
 
 export interface AllowanceArgs {
   canisterId: string;

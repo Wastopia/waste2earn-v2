@@ -1,11 +1,11 @@
 import { Principal } from "@dfinity/principal";
-import { Override } from "@icpswap/types";
+import { Override } from "@w2e/types";
 import { TOKEN_STANDARD } from "constants/tokens";
-import type { TokenApproveArgs } from "@icpswap/types";
+import type { TokenApproveArgs } from "@w2e/types";
 
 export type { Metadata as DIP20Metadata } from "candid/dip20/dip20";
 
-export type { TokenInfo } from "@icpswap/types";
+export type { TokenInfo } from "@w2e/types";
 
 export type BalanceRequest = { token: string; user: { [key: string]: string | Principal } };
 

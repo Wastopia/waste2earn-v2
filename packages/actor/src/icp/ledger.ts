@@ -1,8 +1,8 @@
-import { actor } from "../actor";
-import { ActorIdentity } from "@icpswap/types";
-import { Ledger, LedgerInterfaceFactory } from "@icpswap/candid";
+import { ActorIdentity } from "@w2e/types";
+import { Ledger, LedgerInterfaceFactory } from "@w2e/candid";
 
-import { LEDGER_CANISTER_ID, ic_host } from "@icpswap/constants";
+import { LEDGER_CANISTER_ID, ic_host } from "@w2e/constants";
+import { actor } from "../actor";
 
 export const ledgerService = (identity?: ActorIdentity) =>
   actor.create<Ledger>({

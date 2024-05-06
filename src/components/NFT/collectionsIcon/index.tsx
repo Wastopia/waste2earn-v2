@@ -3,7 +3,7 @@ import { Grid, Box, MenuList, MenuItem, Popper, useMediaQuery } from "@mui/mater
 import { ClickAwayListener } from "@mui/base";
 import { makeStyles, useTheme } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
-import { mockALinkAndOpen } from "@icpswap/utils";
+import { mockALinkAndOpen } from "@w2e/utils";
 import DiscordIcon from "./Discord";
 import TwitterIcon from "./Twitter";
 import TelegramIcon from "./Telegram";

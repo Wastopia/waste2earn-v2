@@ -1,13 +1,13 @@
 import { useMemo, useCallback, useEffect, useState } from "react";
-import { NumberType, ResultStatus } from "@icpswap/types";
-import { parseTokenAmount, formatTokenAmount } from "@icpswap/utils";
-import { Token, FeeAmount } from "@icpswap/swap-sdk";
+import { NumberType, ResultStatus } from "@w2e/types";
+import { parseTokenAmount, formatTokenAmount } from "@w2e/utils";
+import { Token, FeeAmount } from "@w2e/swap-sdk";
 import { getPoolCanisterId } from "hooks/swap/v3Calls";
-import { getSwapPosition, depositFrom, withdraw, deposit } from "@icpswap/hooks";
+import { getSwapPosition, depositFrom, withdraw, deposit } from "@w2e/hooks";
 import { usePoolCanisterIdManager } from "store/swap/hooks";
 import BigNumber from "bignumber.js";
 import { PositionDetail } from "types/swap";
-import type { SwapNFTTokenMetadata } from "@icpswap/types";
+import type { SwapNFTTokenMetadata } from "@w2e/types";
 import { getActorIdentity } from "components/Identity";
 import { useErrorTip, TIP_OPTIONS } from "hooks/useTips";
 import { t } from "@lingui/macro";

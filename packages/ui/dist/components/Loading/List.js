@@ -2,6 +2,7 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Grid, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import LoadingImage from "assets/images/loading.png";
+
 const useStyles = makeStyles((theme) => {
     return {
         loadingContainer: {
@@ -29,4 +30,4 @@ export default ({ loading, mask = true }) => {
     const classes = useStyles();
     return loading ? (_jsxs(Grid, { className: classes.loadingContainer, container: true, justifyContent: "center", alignContent: "center", children: [_jsx(Box, { className: mask ? classes.mask : "" }), _jsx("img", { style: { zIndex: 2 }, width: "80px", height: "80px", src: LoadingImage, alt: "" })] })) : null;
 };
-//# sourceMappingURL=List.js.map
+// # sourceMappingURL=List.js.map

@@ -1,5 +1,5 @@
 {
-  "name": "@icpswap/types",
+  "name": "@w2e/types",
   "version": "0.0.1",
   "sideEffects": [
     "*.css.ts"
@@ -19,6 +19,6 @@
   "dependencies": {
     "idb": "8.0.0",
     "numbro": "^2.3.6",
-    "@icpswap/candid": "../candid"
+    "@w2e/candid": "../candid"
   }
 }

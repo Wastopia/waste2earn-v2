@@ -1,4 +1,4 @@
-import { Override } from "@icpswap/types";
+import { Override } from "@w2e/types";
 import FilledTextField, { FilledTextFieldProps } from "components/Input/FilledTextField";
 import { TextFieldNumberComponent, NumericProps } from "components/Input/NumberTextField";
 

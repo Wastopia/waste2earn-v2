@@ -1,6 +1,6 @@
 import { useEffect, useState, useMemo } from "react";
 import { getSwapNFTStat } from "hooks/nft/useNFTCalls";
-import type { NFTControllerInfo } from "@icpswap/types";
+import type { NFTControllerInfo } from "@w2e/types";
 
 const SwapNFTIds = ["4lnl6-hqaaa-aaaag-qblla-cai"];
 

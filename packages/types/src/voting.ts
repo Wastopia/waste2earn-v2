@@ -11,4 +11,4 @@ export type {
   ProposalCreateInfo,
   UserVotePowersInfo,
   VotingFileChunk,
-} from "@icpswap/candid";
+} from "@w2e/candid";

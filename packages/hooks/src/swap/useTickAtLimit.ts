@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { nearestUsableTick, TickMath, TICK_SPACINGS, FeeAmount } from "@icpswap/swap-sdk";
-import { Bound } from "@icpswap/constants";
+import { nearestUsableTick, TickMath, TICK_SPACINGS, FeeAmount } from "@w2e/swap-sdk";
+import { Bound } from "@w2e/constants";
 
 export function useTickAtLimit(
   feeAmount: FeeAmount | undefined,

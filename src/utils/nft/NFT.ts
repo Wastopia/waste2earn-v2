@@ -1,4 +1,4 @@
-import { type NFTTransferArgs, type NFTAllowanceArgs, type NFTApproveArgs, ResultStatus } from "@icpswap/types";
+import { type NFTTransferArgs, type NFTAllowanceArgs, type NFTApproveArgs, ResultStatus } from "@w2e/types";
 import { Identity } from "types/global";
 import { BaseNFTAdapter } from "./BaseNFTAdapter";
 import { ICPSwapAdapter } from "./ICPSwapNFTAdapter";

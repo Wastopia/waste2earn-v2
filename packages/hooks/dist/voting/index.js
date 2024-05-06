@@ -8,9 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { isAvailablePageArgs, availableArgsNull, resultFormat, } from "@icpswap/utils";
+import { isAvailablePageArgs, availableArgsNull, resultFormat, } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
-import { votingCanister, votingController, votingFile } from "@icpswap/actor";
+import { votingCanister, votingController, votingFile } from "@w2e/actor";
 export function createVotingCanister(identity, args) {
     return __awaiter(this, void 0, void 0, function* () {
         return resultFormat(yield (yield votingController(identity)).create(args));

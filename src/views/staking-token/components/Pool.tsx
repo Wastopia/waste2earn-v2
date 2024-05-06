@@ -7,13 +7,13 @@ import { useToken } from "hooks/useCurrency";
 import { Theme } from "@mui/material/styles";
 import { STATE } from "types/staking-token";
 import upperFirst from "lodash/upperFirst";
-import type { StakingPoolControllerPoolInfo } from "@icpswap/types";
+import type { StakingPoolControllerPoolInfo } from "@w2e/types";
 import PoolDetails from "components/staking-token/PoolDetails";
 import UserStaking from "components/staking-token/UserStaking";
 import StakingAndClaim from "components/staking-token/StakingAndClaim";
 import { useStakingPoolData, useUserStakingInfo } from "hooks/staking-token/index";
-import { Token } from "@icpswap/swap-sdk";
-import { TokenImage } from "@icpswap/ui";
+import { Token } from "@w2e/swap-sdk";
+import { TokenImage } from "@w2e/ui";
 
 export interface PoolInfoProps {
   pool: StakingPoolControllerPoolInfo | undefined | null;

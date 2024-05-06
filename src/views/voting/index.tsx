@@ -2,11 +2,11 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { Grid, Typography, Avatar, Box, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/styles";
-import { formatAmount, pageArgsFormat } from "@icpswap/utils";
+import { formatAmount, pageArgsFormat } from "@w2e/utils";
 import { Wrapper, MainCard, Pagination, PaginationType, NoData, StaticLoading } from "components/index";
 import { Trans } from "@lingui/macro";
-import { ProjectInfo } from "@icpswap/types";
-import { useTokenTotalHolder, useVotingProjects } from "@icpswap/hooks";
+import { ProjectInfo } from "@w2e/types";
+import { useTokenTotalHolder, useVotingProjects } from "@w2e/hooks";
 import { Theme } from "@mui/material/styles";
 
 export interface VoteItemProps {

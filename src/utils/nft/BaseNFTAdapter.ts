@@ -1,5 +1,5 @@
-import type { NFTTransferArgs, NFTTransferResult, NFTAllowanceArgs, NFTApproveArgs } from "@icpswap/types";
-import { StatusResult } from "@icpswap/types";
+import type { NFTTransferArgs, NFTTransferResult, NFTAllowanceArgs, NFTApproveArgs } from "@w2e/types";
+import { StatusResult } from "@w2e/types";
 import { Identity } from "types/global";
 
 export interface TransferParameters {

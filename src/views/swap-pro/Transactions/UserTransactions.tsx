@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { useUserPoolTransactions } from "@icpswap/hooks";
+import { useUserPoolTransactions } from "@w2e/hooks";
 import { useAccountPrincipalString } from "store/auth/hooks";
 
 import Transaction from "./Transactions";

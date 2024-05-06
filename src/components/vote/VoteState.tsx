@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { Typography, Box } from "@mui/material";
 import { t } from "@lingui/macro";
-import { ProposalInfo } from "@icpswap/types";
+import { ProposalInfo } from "@w2e/types";
 import { useCounter } from "hooks/useTimeCounter";
 import { ProposalLabel, ProposalState } from "constants/vote";
-import { nanosecond2Millisecond } from "@icpswap/utils";
+import { nanosecond2Millisecond } from "@w2e/utils";
 
 export function VoteClosedIcon() {
   return (
@@ -31,8 +31,8 @@ export function StateLabel({ state }: { state: ProposalState | undefined }) {
           state === ProposalState.ACTIVE
             ? "linear-gradient(89.44deg, #5569DB -0.31%, #8572FF 91.14%)"
             : state === ProposalState.CLOSED
-            ? "#565F80"
-            : "#54C081",
+              ? "#565F80"
+              : "#54C081",
       }}
     >
       {state ? (
@@ -56,8 +56,8 @@ export function useVoteState(proposal: ProposalInfo | undefined | null): Proposa
           ? nanosecond2Millisecond(proposal?.beginTime)
           : undefined
         : proposal?.endTime
-        ? nanosecond2Millisecond(proposal?.endTime)
-        : undefined
+          ? nanosecond2Millisecond(proposal?.endTime)
+          : undefined
       : undefined,
   );
 
@@ -94,8 +94,8 @@ export function VoteStateCount({ proposal }: VoteItemProps) {
           ? nanosecond2Millisecond(proposal?.beginTime)
           : undefined
         : proposal?.endTime
-        ? nanosecond2Millisecond(proposal?.endTime)
-        : undefined
+          ? nanosecond2Millisecond(proposal?.endTime)
+          : undefined
       : undefined,
   );
 
@@ -135,8 +135,8 @@ export function VoteStateCount({ proposal }: VoteItemProps) {
         {proposalState === ProposalState.ACTIVE
           ? t`${count?.hour}:${count?.min}:${count?.sec} left`
           : proposalState === ProposalState.PENDING
-          ? t`start in ${count?.hour}:${count?.min}:${count?.sec}`
-          : t`${String(total)} Votes`}
+            ? t`start in ${count?.hour}:${count?.min}:${count?.sec}`
+            : t`${String(total)} Votes`}
       </Typography>
     </Box>
   ) : null;

@@ -1,5 +1,5 @@
 import { useErrorTip } from "hooks/useTips";
-import { actor, ActorError } from "@icpswap/actor";
+import { actor, ActorError } from "@w2e/actor";
 import { useEffect } from "react";
 import { t } from "@lingui/macro";
 

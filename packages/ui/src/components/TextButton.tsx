@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { useHistory } from "react-router-dom";
 import { Typography, Box } from "@mui/material";
-import { mockALinkAndOpen } from "@icpswap/utils";
+import { mockALinkAndOpen } from "@w2e/utils";
 
 export interface ALinkProps {
   children: ReactNode;

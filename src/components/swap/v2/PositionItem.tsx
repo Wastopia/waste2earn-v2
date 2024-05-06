@@ -15,9 +15,9 @@ import { usePositionFees } from "hooks/swap/v2/usePositionFees";
 import { useAccount } from "store/global/hooks";
 import { useAccountPrincipal } from "store/auth/hooks";
 import { MaxUint128 } from "constants/misc";
-import { numberToString } from "@icpswap/utils";
+import { numberToString } from "@w2e/utils";
 import BigNumber from "bignumber.js";
-import { CurrencyAmount, Position, getPriceOrderingFromPositionForUI, useInverter } from "@icpswap/swap-sdk";
+import { CurrencyAmount, Position, getPriceOrderingFromPositionForUI, useInverter } from "@w2e/swap-sdk";
 import { isDarkTheme } from "utils";
 import { useErrorTip, useSuccessTip, useLoadingTip } from "hooks/useTips";
 import { Trans, t } from "@lingui/macro";
@@ -199,8 +199,8 @@ export function PositionDetails({
         `Claim ${new BigNumber(currencyFeeAmount0?.toExact() ?? 0)
           .multipliedBy(0.8)
           .toFixed(8)} ${token0?.symbol} and ${new BigNumber(currencyFeeAmount1?.toExact() ?? 0)
-          .multipliedBy(0.8)
-          .toFixed(8)} ${token1?.symbol}`,
+            .multipliedBy(0.8)
+            .toFixed(8)} ${token1?.symbol}`,
       );
 
       const { status, message } = await collectFeesCall(identity, {
@@ -267,8 +267,8 @@ export function PositionDetails({
                   ? `${pool?.priceOf(token1).toSignificant(6)} ${pairName}`
                   : "--"
                 : pool?.priceOf(token0)
-                ? `${pool?.priceOf(token0).toSignificant(6)} ${pairName}`
-                : "--"
+                  ? `${pool?.priceOf(token0).toSignificant(6)} ${pairName}`
+                  : "--"
               : "--"
           }
           convert
@@ -289,8 +289,8 @@ export function PositionDetails({
           value={
             currencyFeeAmount0 && currencyFeeAmount1
               ? `${new BigNumber(currencyFeeAmount0.toExact())
-                  .multipliedBy(0.8)
-                  .toFixed(8)} ${token0?.symbol} and ${new BigNumber(currencyFeeAmount1.toExact())
+                .multipliedBy(0.8)
+                .toFixed(8)} ${token0?.symbol} and ${new BigNumber(currencyFeeAmount1.toExact())
                   .multipliedBy(0.8)
                   .toFixed(8)} ${token1?.symbol}`
               : "--"

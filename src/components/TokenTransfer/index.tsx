@@ -7,7 +7,7 @@ import {
   isValidAccount,
   isValidPrincipal,
   toSignificantWithGroupSeparator,
-} from "@icpswap/utils";
+} from "@w2e/utils";
 import BigNumber from "bignumber.js";
 import { WRAPPED_ICP, ICP } from "constants/tokens";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -204,9 +204,9 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
                 <Typography color="text.primary">
                   {tokenUSDPrice && values.amount
                     ? `~$${toSignificantWithGroupSeparator(
-                        new BigNumber(values.amount).multipliedBy(tokenUSDPrice).toString(),
-                        4,
-                      )}`
+                      new BigNumber(values.amount).multipliedBy(tokenUSDPrice).toString(),
+                      4,
+                    )}`
                     : "--"}
                 </Typography>
               </InputAdornment>
@@ -218,13 +218,12 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           <Typography>
             <Trans>
               Balance:{" "}
-              {`${
-                balance
+              {`${balance
                   ? new BigNumber(
-                      parseTokenAmount(balance, token.decimals).toFixed(token.decimals > 8 ? 8 : token.decimals),
-                    ).toFormat()
+                    parseTokenAmount(balance, token.decimals).toFixed(token.decimals > 8 ? 8 : token.decimals),
+                  ).toFormat()
                   : "--"
-              }`}
+                }`}
             </Trans>
           </Typography>
           <MaxButton
@@ -239,9 +238,9 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           &nbsp;{token.symbol}&nbsp;(
           {tokenUSDPrice && token
             ? `$${toSignificantWithGroupSeparator(
-                parseTokenAmount(token.transFee.toString(), token.decimals).multipliedBy(tokenUSDPrice).toString(),
-                4,
-              )}`
+              parseTokenAmount(token.transFee.toString(), token.decimals).multipliedBy(tokenUSDPrice).toString(),
+              4,
+            )}`
             : "--"}
           )
         </Typography>
@@ -250,9 +249,9 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           &nbsp;{token.symbol}&nbsp;(
           {tokenUSDPrice && token
             ? `$${toSignificantWithGroupSeparator(
-                new BigNumber(actualTransferAmount).multipliedBy(tokenUSDPrice).toString(),
-                4,
-              )}`
+              new BigNumber(actualTransferAmount).multipliedBy(tokenUSDPrice).toString(),
+              4,
+            )}`
             : "--"}
           )
         </Typography>

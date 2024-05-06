@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { useEffect, useMemo, useState } from "react";
-import type { SwapPoolData, UserSwapPoolsBalance } from "@icpswap/types";
+import type { SwapPoolData, UserSwapPoolsBalance } from "@w2e/types";
 import { SubAccount } from "@dfinity/ledger-icp";
 import { Principal } from "@dfinity/principal";
 import { useSwapPools, getUserUnusedBalance, _getSwapPoolAllBalance } from "./calls";

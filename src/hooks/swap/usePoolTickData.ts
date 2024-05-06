@@ -1,9 +1,9 @@
-import { tickToPrice, TICK_SPACINGS, Token, FeeAmount, TickMath } from "@icpswap/swap-sdk";
+import { tickToPrice, TICK_SPACINGS, Token, FeeAmount, TickMath } from "@w2e/swap-sdk";
 import BigNumber from "bignumber.js";
 import { JSBI } from "utils/index";
 import { useMemo } from "react";
 import computeSurroundingTicks from "utils/computeSurroundingTicks";
-import { useSwapAllTicks } from "@icpswap/hooks";
+import { useSwapAllTicks } from "@w2e/hooks";
 import { usePoolCanisterId } from "hooks/swap/index";
 import { PoolState, usePool } from "./usePools";
 

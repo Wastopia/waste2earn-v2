@@ -1,4 +1,4 @@
-import { actor } from "@icpswap/actor";
+import { actor } from "@w2e/actor";
 import { Identity } from "types/index";
 
 import { _SERVICE as SWAP_POSITION_SERVICE } from "candid/swap-v2/SwapPositionManager";

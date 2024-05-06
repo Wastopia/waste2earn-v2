@@ -1,13 +1,10 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import type { ApiResult, CallResult, PaginationResult } from "@icpswap/types";
-import { pageArgsFormat, sleep } from "@icpswap/utils";
+import type { ApiResult, CallResult, PaginationResult } from "@w2e/types";
+import { pageArgsFormat, sleep } from "@w2e/utils";
 
 export type Call<T> = () => Promise<ApiResult<T>>;
 
-export function useCallsData<T>(
-  fn: Call<T>,
-  reload?: number | string | boolean
-): CallResult<T> {
+export function useCallsData<T>(fn: Call<T>, reload?: number | string | boolean): CallResult<T> {
   const [result, setResult] = useState<ApiResult<T>>(undefined);
   const [loading, setLoading] = useState(false);
 
@@ -27,14 +24,11 @@ export function useCallsData<T>(
       result,
       loading,
     }),
-    [result, loading]
+    [result, loading],
   );
 }
 
-export function useLatestDataCall<T>(
-  fn: Call<T>,
-  reload?: number | string | boolean
-): CallResult<T> {
+export function useLatestDataCall<T>(fn: Call<T>, reload?: number | string | boolean): CallResult<T> {
   const [loading, setLoading] = useState(false);
 
   const indexRef = useRef<number>(0);
@@ -67,12 +61,9 @@ export function useLatestDataCall<T>(
 }
 
 export function usePaginationAllData<T>(
-  callback: (
-    offset: number,
-    limit: number
-  ) => Promise<PaginationResult<T> | undefined>,
+  callback: (offset: number, limit: number) => Promise<PaginationResult<T> | undefined>,
   limit: number,
-  reload: boolean = false
+  reload: boolean = false,
 ) {
   const [loading, setLoading] = useState(false);
   const [list, setList] = useState<T[]>([]);
@@ -118,9 +109,7 @@ export function usePaginationAllData<T>(
       if (Number(totalElements) !== 0) {
         const num = Number(totalElements) % limit;
         const totalPage =
-          num === 0
-            ? Number(totalElements) / limit
-            : parseInt(String(Number(totalElements) / limit)) + 1;
+          num === 0 ? Number(totalElements) / limit : parseInt(String(Number(totalElements) / limit)) + 1;
 
         setLoading(true);
 
@@ -166,16 +155,13 @@ export function usePaginationAllData<T>(
       result: list,
       loading,
     }),
-    [list, loading]
+    [list, loading],
   );
 }
 
 export async function getPaginationAllData<T>(
-  callback: (
-    offset: number,
-    limit: number
-  ) => Promise<PaginationResult<T> | undefined>,
-  limit: number
+  callback: (offset: number, limit: number) => Promise<PaginationResult<T> | undefined>,
+  limit: number,
 ) {
   const fetch = async (offset: number, limit: number) => {
     return await callback(offset, limit);
@@ -184,9 +170,7 @@ export async function getPaginationAllData<T>(
   const _result = await fetch(0, 1);
   const totalElements = Number(_result?.totalElements ?? 0);
   const totalPage =
-    totalElements % limit === 0
-      ? parseInt(String(totalElements / limit))
-      : parseInt(String(totalElements / limit)) + 1;
+    totalElements % limit === 0 ? parseInt(String(totalElements / limit)) : parseInt(String(totalElements / limit)) + 1;
 
   const promise: Promise<PaginationResult<T> | undefined>[] = [];
 

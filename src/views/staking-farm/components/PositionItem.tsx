@@ -8,12 +8,12 @@ import { useState, useMemo } from "react";
 import { Theme } from "@mui/material/styles";
 import { formatTickPrice } from "utils/swap/formatTickPrice";
 import { Bound } from "constants/swap";
-import { getPriceOrderingFromPositionForUI, useInverter } from "@icpswap/swap-sdk";
+import { getPriceOrderingFromPositionForUI, useInverter } from "@w2e/swap-sdk";
 import useIsTickAtLimit from "hooks/swap/useIsTickAtLimit";
 import LoadingRow from "components/Loading/LoadingRow";
 import { useUSDPriceById } from "hooks/useUSDPrice";
 import { BigNumber } from "bignumber.js";
-import { formatDollarAmount } from "@icpswap/utils";
+import { formatDollarAmount } from "@w2e/utils";
 
 const useStyle = makeStyles(() => ({
   selectNFTBox: {
@@ -281,8 +281,8 @@ export function PositionItem({ positionInfo, selectedPositionId, setSelectedPosi
                         ? `${toFormat(pool?.priceOf(token1).toSignificant(6))} ${pairName}`
                         : "--"
                       : pool?.priceOf(token0)
-                      ? `${toFormat(pool?.priceOf(token0).toSignificant(6))} ${pairName}`
-                      : "--"
+                        ? `${toFormat(pool?.priceOf(token0).toSignificant(6))} ${pairName}`
+                        : "--"
                     : "--"
                 }
               />

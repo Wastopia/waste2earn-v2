@@ -1,8 +1,8 @@
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import { WICPCanisterId } from "constants/canister";
 import { TokenInfo, TokenMetadata } from "types/token";
 import { Principal } from "@dfinity/principal";
-import { TOKEN_STANDARD } from "@icpswap/types";
+import { TOKEN_STANDARD } from "@w2e/types";
 import { LEDGER_CANISTER_ID } from "constants/icp";
 import ICPAvatar from "../assets/images/icons/tokens/icp.svg";
 import { ckETH_LEDGER_ID } from "./ckETH";

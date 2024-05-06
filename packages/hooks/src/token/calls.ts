@@ -1,8 +1,8 @@
 import { useCallback } from "react";
-import { isPrincipal, isAvailablePageArgs } from "@icpswap/utils";
-import { tokenAdapter } from "@icpswap/token-adapter";
+import { isPrincipal, isAvailablePageArgs } from "@w2e/utils";
+import { tokenAdapter } from "@w2e/token-adapter";
 import { Principal } from "@dfinity/principal";
-import type { ActorIdentity, StatusResult } from "@icpswap/types";
+import type { ActorIdentity, StatusResult } from "@w2e/types";
 
 import { useCallsData } from "../useCallData";
 
@@ -201,13 +201,12 @@ export function useApproveCallback(): (approveParams: Approve) => Promise<Status
         value,
         account,
       });
-    } 
-      return await Promise.resolve({
-        status: "ok",
-        data: true,
-        message: "You have approved successfully",
-      } as StatusResult<boolean>);
-    
+    }
+    return await Promise.resolve({
+      status: "ok",
+      data: true,
+      message: "You have approved successfully",
+    } as StatusResult<boolean>);
   }, []);
 }
 

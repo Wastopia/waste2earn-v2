@@ -1,7 +1,7 @@
 import type { Principal } from "@dfinity/principal";
-import { Override } from "@icpswap/types";
+import { Override } from "@w2e/types";
 
-export type { TokenHolder, TokenHolderArgs } from "@icpswap/candid";
+export type { TokenHolder, TokenHolderArgs } from "@w2e/candid";
 
 export interface Transaction {
   fee: bigint | undefined;
@@ -81,7 +81,7 @@ export type ApproveRequest = {
 
 export type TokenApproveRequest = Override<ApproveRequest, { account: string | Principal }>;
 
-export type { DIP20Metadata } from "@icpswap/candid";
+export type { DIP20Metadata } from "@w2e/candid";
 
 export enum TOKEN_STANDARD {
   EXT = "EXT",

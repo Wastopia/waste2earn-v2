@@ -1,7 +1,7 @@
+import { ActorIdentity } from "@w2e/types";
+import { Governance, GovernanceInterfaceFactory } from "@w2e/candid";
+import { GOVERNANCE_CANISTER_ID, ic_host } from "@w2e/constants";
 import { actor } from "../actor";
-import { ActorIdentity } from "@icpswap/types";
-import { Governance, GovernanceInterfaceFactory } from "@icpswap/candid";
-import { GOVERNANCE_CANISTER_ID, ic_host } from "@icpswap/constants";
 
 export const governanceService = (identity?: ActorIdentity) =>
   actor.create<Governance>({

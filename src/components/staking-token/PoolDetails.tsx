@@ -2,8 +2,8 @@ import React, { useMemo } from "react";
 import { Grid, Box, Collapse, Typography, Link } from "@mui/material";
 import { INFO_URL } from "constants/index";
 import { WRAPPED_ICP, ICP } from "constants/tokens";
-import { useStakingTokenPool } from "@icpswap/hooks";
-import { Token } from "@icpswap/swap-sdk";
+import { useStakingTokenPool } from "@w2e/hooks";
+import { Token } from "@w2e/swap-sdk";
 import BigNumber from "bignumber.js";
 import { useTheme } from "@mui/styles";
 import { usePoolCycles } from "hooks/staking-token/index";
@@ -12,9 +12,9 @@ import Countdown from "react-countdown";
 import { ICRocksLoadIcon } from "components/Layout/Header/ProfileSection";
 import { Theme } from "@mui/material/styles";
 import { STATE, PoolData } from "types/staking-token";
-import type { StakingPoolControllerPoolInfo } from "@icpswap/types";
+import type { StakingPoolControllerPoolInfo } from "@w2e/types";
 import { useTokenBalance } from "hooks/token/useTokenBalance";
-import { shorten, timestampFormat, parseTokenAmount, cycleValueFormat } from "@icpswap/utils";
+import { shorten, timestampFormat, parseTokenAmount, cycleValueFormat } from "@w2e/utils";
 import { getExplorerPrincipalLink } from "utils/index";
 
 const CountdownBox = ({ startTime, endTime }: { startTime: number; endTime: number }) => {
@@ -189,11 +189,11 @@ export default function StakingPoolDetails({
                 <Typography color="text.primary" style={{ textAlign: "right" }}>
                   {stakingTokenPoolInfo && rewardToken
                     ? parseTokenAmount(
-                        new BigNumber(stakingTokenPoolInfo.rewardPerTime.toString()).multipliedBy(
-                          stakingTokenPoolInfo.BONUS_MULTIPLIER.toString(),
-                        ),
-                        rewardToken.decimals,
-                      ).toFormat()
+                      new BigNumber(stakingTokenPoolInfo.rewardPerTime.toString()).multipliedBy(
+                        stakingTokenPoolInfo.BONUS_MULTIPLIER.toString(),
+                      ),
+                      rewardToken.decimals,
+                    ).toFormat()
                     : "--"}
                   &nbsp;
                   {pool?.rewardTokenSymbol}

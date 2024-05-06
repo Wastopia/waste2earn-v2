@@ -1,6 +1,6 @@
-import { swapPool } from "@icpswap/actor";
-import { resultFormat } from "@icpswap/utils";
-import { PoolMetadata } from "@icpswap/candid";
+import { swapPool } from "@w2e/actor";
+import { resultFormat } from "@w2e/utils";
+import { PoolMetadata } from "@w2e/candid";
 
 export async function getSwapPoolMeta(canisterId: string) {
   const result = await (await swapPool(canisterId)).metadata();

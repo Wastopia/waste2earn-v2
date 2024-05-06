@@ -3,7 +3,7 @@ import { Box, Typography, Grid, Button } from "@mui/material";
 import SwapModal from "components/modal/swap";
 import { BURN_FIELD } from "constants/swap";
 import { Trans } from "@lingui/macro";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import { TokenImage } from "components/index";
 
 export default memo(

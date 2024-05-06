@@ -18,4 +18,4 @@ export type {
   NFTSaleArgs,
   NFTTransferArgs,
   NFTTransferResult,
-} from "@icpswap/candid";
+} from "@w2e/candid";

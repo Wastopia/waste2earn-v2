@@ -16,10 +16,10 @@ import {
   formatDollarAmount,
   isValidPrincipal,
   toSignificantWithGroupSeparator,
-} from "@icpswap/utils";
-import { swapPool } from "@icpswap/actor";
-import { ResultStatus } from "@icpswap/types";
-import { CurrencyAmount, Position, getPriceOrderingFromPositionForUI, useInverter } from "@icpswap/swap-sdk";
+} from "@w2e/utils";
+import { swapPool } from "@w2e/actor";
+import { ResultStatus } from "@w2e/types";
+import { CurrencyAmount, Position, getPriceOrderingFromPositionForUI, useInverter } from "@w2e/swap-sdk";
 import { isDarkTheme } from "utils/index";
 import { useSuccessTip, useLoadingTip, useErrorTip } from "hooks/useTips";
 import { SyncAlt as SyncAltIcon } from "@mui/icons-material";
@@ -175,10 +175,10 @@ export function PositionDetails({
             !position
               ? "--"
               : inverted
-              ? toSignificantWithGroupSeparator(
+                ? toSignificantWithGroupSeparator(
                   position.amount0.toFixed(CurrencyAmountFormatDecimals(position?.amount0.currency.decimals)),
                 )
-              : toSignificantWithGroupSeparator(
+                : toSignificantWithGroupSeparator(
                   position.amount1.toFixed(CurrencyAmountFormatDecimals(position?.amount1.currency.decimals)),
                 )
           }
@@ -189,10 +189,10 @@ export function PositionDetails({
             !position
               ? "--"
               : inverted
-              ? toSignificantWithGroupSeparator(
+                ? toSignificantWithGroupSeparator(
                   position.amount1.toFixed(CurrencyAmountFormatDecimals(position?.amount1.currency.decimals)),
                 )
-              : toSignificantWithGroupSeparator(
+                : toSignificantWithGroupSeparator(
                   position.amount0.toFixed(CurrencyAmountFormatDecimals(position?.amount0.currency.decimals)),
                 )
           }
@@ -256,8 +256,8 @@ export function PositionDetails({
               >
                 {currencyFeeAmount0 !== undefined || currencyFeeAmount1 !== undefined
                   ? `${toSignificantWithGroupSeparator(
-                      new BigNumber(currencyFeeAmount0 ? currencyFeeAmount0.toExact() : 0).toString(),
-                    )} ${token0?.symbol}`
+                    new BigNumber(currencyFeeAmount0 ? currencyFeeAmount0.toExact() : 0).toString(),
+                  )} ${token0?.symbol}`
                   : "--"}
               </Typography>
               <Typography
@@ -271,8 +271,8 @@ export function PositionDetails({
               >
                 {currencyFeeAmount0 !== undefined || currencyFeeAmount1 !== undefined
                   ? `and ${toSignificantWithGroupSeparator(
-                      new BigNumber(currencyFeeAmount1 ? currencyFeeAmount1.toExact() : 0).toString(),
-                    )} ${token1?.symbol}`
+                    new BigNumber(currencyFeeAmount1 ? currencyFeeAmount1.toExact() : 0).toString(),
+                  )} ${token1?.symbol}`
                   : "--"}
               </Typography>
               <Typography
@@ -285,19 +285,19 @@ export function PositionDetails({
                 }}
               >
                 {currencyFeeAmount0 !== undefined &&
-                currencyFeeAmount1 !== undefined &&
-                !!token0USDPrice &&
-                !!token1USDPrice
+                  currencyFeeAmount1 !== undefined &&
+                  !!token0USDPrice &&
+                  !!token1USDPrice
                   ? formatDollarAmount(
-                      new BigNumber(currencyFeeAmount0 ? currencyFeeAmount0.toExact() : 0)
-                        .multipliedBy(token0USDPrice)
-                        .plus(
-                          new BigNumber(currencyFeeAmount1 ? currencyFeeAmount1.toExact() : 0).multipliedBy(
-                            token1USDPrice,
-                          ),
-                        )
-                        .toString(),
-                    )
+                    new BigNumber(currencyFeeAmount0 ? currencyFeeAmount0.toExact() : 0)
+                      .multipliedBy(token0USDPrice)
+                      .plus(
+                        new BigNumber(currencyFeeAmount1 ? currencyFeeAmount1.toExact() : 0).multipliedBy(
+                          token1USDPrice,
+                        ),
+                      )
+                      .toString(),
+                  )
                   : "--"}
               </Typography>
             </Box>

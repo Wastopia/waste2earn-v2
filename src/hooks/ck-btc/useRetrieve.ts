@@ -1,4 +1,4 @@
-import { resultFormat, availableArgsNull } from "@icpswap/utils";
+import { resultFormat, availableArgsNull } from "@w2e/utils";
 import { ckBTCMinterActor } from "actor/ckBTC";
 import { getActorIdentity } from "components/Identity";
 

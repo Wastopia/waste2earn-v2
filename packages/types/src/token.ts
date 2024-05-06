@@ -39,7 +39,7 @@ export type {
   TokenTransferArgs,
   TokenTransferResult,
   TokenTransaction as CandidTokenTransaction,
-} from "@icpswap/candid";
+} from "@w2e/candid";
 
 export type TokenInfo = {
   decimals: number;

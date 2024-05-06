@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Button } from "@mui/material";
-import { dissolveNeuron } from "@icpswap/hooks";
+import { dissolveNeuron } from "@w2e/hooks";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
 import { Trans, t } from "@lingui/macro";
-import { ConfirmModal } from "@icpswap/ui";
+import { ConfirmModal } from "@w2e/ui";
 
 export interface DissolveProps {
   onDissolveSuccess?: () => void;

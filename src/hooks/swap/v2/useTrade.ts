@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { formatTokenAmount, numberToString } from "@icpswap/utils";
-import { TradeType } from "@icpswap/constants";
-import { CurrencyAmount, Trade, Token, Route } from "@icpswap/swap-sdk";
+import { formatTokenAmount, numberToString } from "@w2e/utils";
+import { TradeType } from "@w2e/constants";
+import { CurrencyAmount, Trade, Token, Route } from "@w2e/swap-sdk";
 import { useQuoteExactInput, useQuoteExactOutput, useQuoteUnitPrice } from "hooks/swap/v2/useSwapCalls";
 import { tryParseAmount } from "utils/swap";
 import BigNumber from "bignumber.js";

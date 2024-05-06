@@ -1,18 +1,18 @@
 import { Box, Typography, CircularProgress, Checkbox, InputAdornment } from "@mui/material";
-import { getSwapLifeCycle, refreshSNSBuyerTokens } from "@icpswap/hooks";
+import { getSwapLifeCycle, refreshSNSBuyerTokens } from "@w2e/hooks";
 import { Trans, t } from "@lingui/macro";
 import { useState } from "react";
 import { NumberFilledTextField, Modal } from "components/index";
-import { type SNSSwapInitArgs, ResultStatus } from "@icpswap/types";
+import { type SNSSwapInitArgs, ResultStatus } from "@w2e/types";
 import { TokenInfo } from "types/index";
-import { parseTokenAmount, toSignificant, principalToAccount, formatTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount, toSignificant, principalToAccount, formatTokenAmount } from "@w2e/utils";
 import { ICP } from "constants/tokens";
 import Button from "components/authentication/ButtonConnector";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
 import { useTokenBalance } from "hooks/token/index";
 import { useAccountPrincipal } from "store/auth/hooks";
 import { tokenTransfer } from "hooks/token/calls";
-import { SnsSwapLifecycle } from "@icpswap/constants";
+import { SnsSwapLifecycle } from "@w2e/constants";
 
 export interface ParticipateProps {
   swap_id: string | undefined;

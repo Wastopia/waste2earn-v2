@@ -1,10 +1,10 @@
-import { Box, Typography , Table, TableBody, TableCell, TableRow, TableContainer, TableHead } from "@mui/material";
+import { Box, Typography, Table, TableBody, TableCell, TableRow, TableContainer, TableHead } from "@mui/material";
 import { Trans } from "@lingui/macro";
 import { MainCard, NoData, ALink } from "components/index";
 import { useUserWithdrawTxs } from "store/web3/hooks";
 import { useAccountPrincipalString } from "store/auth/hooks";
 import { StoredWithdrawTxValue } from "types/ckETH";
-import { parseTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount } from "@w2e/utils";
 import { EXPLORER_TX_LINK } from "constants/ckETH";
 import { ckETH } from "constants/tokens";
 

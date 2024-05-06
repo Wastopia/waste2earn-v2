@@ -5,7 +5,7 @@ import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity
 import { ResultStatus, Identity as TypeIdentity } from "types/index";
 import { useSuccessTip, useErrorTip } from "hooks/useTips";
 import { getLocaleMessage } from "locales/services";
-import type { NFTTokenMetadata } from "@icpswap/types";
+import type { NFTTokenMetadata } from "@w2e/types";
 
 export default function NFTInfo({
   metadata,

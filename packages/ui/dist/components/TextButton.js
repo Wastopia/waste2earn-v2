@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useHistory } from "react-router-dom";
 import { Typography, Box } from "@mui/material";
-import { mockALinkAndOpen } from "@icpswap/utils";
+import { mockALinkAndOpen } from "@w2e/utils";
 export function ALink({ children, link }) {
     return (_jsx("a", { href: link, target: "_blank", rel: "noreferrer", style: { textDecoration: "underline", textDecorationColor: "#8492c4" }, children: _jsx(Typography, { color: "text.secondary", sx: {
                 cursor: "pointer",

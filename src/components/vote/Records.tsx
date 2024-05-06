@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { Grid, Typography, Box, CircularProgress } from "@mui/material";
 import { useTheme } from "@mui/styles";
-import { valueofUser , timestampFormat, pageArgsFormat } from "@icpswap/utils";
-import { getVotingTransactions } from "@icpswap/hooks";
+import { valueofUser, timestampFormat, pageArgsFormat } from "@w2e/utils";
+import { getVotingTransactions } from "@w2e/hooks";
 import { Trans } from "@lingui/macro";
-import { UserVoteRecord } from "@icpswap/types";
+import { UserVoteRecord } from "@w2e/types";
 import { NoData, StaticLoading, MainCard } from "components/index";
 import { Theme } from "@mui/material/styles";
 import { useDownloadVotes } from "hooks/voting/useDownloadVotes";

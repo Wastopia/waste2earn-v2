@@ -8,9 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { exchangeRate } from "@icpswap/actor";
+import { exchangeRate } from "@w2e/actor";
 import { useCallsData } from "./useCallData";
-import { parseTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount } from "@w2e/utils";
 export function getExchangeRates() {
     return __awaiter(this, void 0, void 0, function* () {
         return yield (yield exchangeRate()).get_exchange_rates();

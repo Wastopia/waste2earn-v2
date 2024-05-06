@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { Grid, Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { CurrencyAmount } from "@icpswap/swap-sdk";
+import { CurrencyAmount } from "@w2e/swap-sdk";
 import BigNumber from "bignumber.js";
 import PercentageSlider from "components/PercentageSlider";
 import HeaderTab from "components/swap/Header";
@@ -72,14 +72,14 @@ export default function DecreaseLiquidity() {
       independentField === BURN_FIELD.CURRENCY_A
         ? typedValue
         : parsedAmounts[BURN_FIELD.CURRENCY_A]?.toFixed(
-            CurrencyAmountFormatDecimals(parsedAmounts[BURN_FIELD.CURRENCY_A]?.currency.decimals),
-          ) ?? "",
+          CurrencyAmountFormatDecimals(parsedAmounts[BURN_FIELD.CURRENCY_A]?.currency.decimals),
+        ) ?? "",
     [BURN_FIELD.CURRENCY_B]:
       independentField === BURN_FIELD.CURRENCY_B
         ? typedValue
         : parsedAmounts[BURN_FIELD.CURRENCY_B]?.toFixed(
-            CurrencyAmountFormatDecimals(parsedAmounts[BURN_FIELD.CURRENCY_B]?.currency.decimals),
-          ) ?? "",
+          CurrencyAmountFormatDecimals(parsedAmounts[BURN_FIELD.CURRENCY_B]?.currency.decimals),
+        ) ?? "",
   };
 
   const totalAmount = useMemo(() => {

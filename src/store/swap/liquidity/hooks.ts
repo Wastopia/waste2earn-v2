@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from "react";
 import { useAppSelector, useAppDispatch } from "store/hooks";
 import { Bound, BIG_INT_ZERO, FIELD } from "constants/swap";
-import { TOKEN_STANDARD } from "@icpswap/types";
+import { TOKEN_STANDARD } from "@w2e/types";
 import {
   Price,
   CurrencyAmount,
@@ -16,7 +16,7 @@ import {
   Position,
   Token,
   FeeAmount,
-} from "@icpswap/swap-sdk";
+} from "@w2e/swap-sdk";
 import { tryParseTick } from "utils/swap/mint";
 import { tryParseAmount, inputNumberCheck } from "utils/swap";
 import { getTickToPrice } from "utils/swap/getTickToPrice";

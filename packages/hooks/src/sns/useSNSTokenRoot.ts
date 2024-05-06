@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import type { TokenRoots } from "@icpswap/types";
+import type { TokenRoots } from "@w2e/types";
 import { useCallsData } from "../useCallData";
 
 export function useSNSTokensRootIds() {

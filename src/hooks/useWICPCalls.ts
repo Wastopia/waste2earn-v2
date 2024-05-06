@@ -1,9 +1,9 @@
 import { useCallback } from "react";
 import { WICP } from "actor/index";
-import { isAvailablePageArgs, resultFormat } from "@icpswap/utils";
-import { useCallsData } from "@icpswap/hooks";
+import { isAvailablePageArgs, resultFormat } from "@w2e/utils";
+import { useCallsData } from "@w2e/hooks";
 import { Identity, PaginationResult } from "types/index";
-import type { WrapMintArgs, WrapTransaction, WrapWithdrawArgs } from "@icpswap/types";
+import type { WrapMintArgs, WrapTransaction, WrapWithdrawArgs } from "@w2e/types";
 
 export async function wrapICP(identity: Identity, params: WrapMintArgs) {
   return resultFormat<boolean>(await (await WICP(identity)).mint(params));

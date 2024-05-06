@@ -1,14 +1,14 @@
 import React, { useMemo, useState } from "react";
 import { Button, Grid, Typography, Box, InputAdornment } from "@mui/material";
-import { parseTokenAmount, formatTokenAmount, uint8ArrayToBigInt } from "@icpswap/utils";
-import { claimOrRefreshNeuronFromAccount } from "@icpswap/hooks";
+import { parseTokenAmount, formatTokenAmount, uint8ArrayToBigInt } from "@w2e/utils";
+import { claimOrRefreshNeuronFromAccount } from "@w2e/hooks";
 import { tokenTransfer } from "hooks/token/calls";
 import BigNumber from "bignumber.js";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
 import { Trans, t } from "@lingui/macro";
 import { TokenInfo } from "types/token";
-import type { NervousSystemParameters } from "@icpswap/types";
+import type { NervousSystemParameters } from "@w2e/types";
 import { Modal, NumberFilledTextField } from "components/index";
 import MaxButton from "components/MaxButton";
 import { useTokenBalance } from "hooks/token";

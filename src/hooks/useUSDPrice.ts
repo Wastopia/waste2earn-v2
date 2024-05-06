@@ -1,5 +1,5 @@
-import { formatTokenAmount } from "@icpswap/utils";
-import { Price, Token, CurrencyAmount } from "@icpswap/swap-sdk";
+import { formatTokenAmount } from "@w2e/utils";
+import { Price, Token, CurrencyAmount } from "@w2e/swap-sdk";
 import { useAppSelector } from "store/hooks";
 import { useMemo } from "react";
 import { WRAPPED_ICP, ICP } from "constants/tokens";

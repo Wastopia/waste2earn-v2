@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import CurrencyAvatar from "components/CurrencyAvatar";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 
 const useStyles = makeStyles(() => {
   return {

@@ -9,13 +9,13 @@ import {
   AuthButton,
   SelectToken,
 } from "components/index";
-import { type AllTokenOfSwapTokenInfo, TOKEN_STANDARD } from "@icpswap/types";
+import { type AllTokenOfSwapTokenInfo, TOKEN_STANDARD } from "@w2e/types";
 import { Trans, t } from "@lingui/macro";
-import { useTokenMintingAccount } from "@icpswap/hooks";
+import { useTokenMintingAccount } from "@w2e/hooks";
 import { useTokenBalance } from "hooks/token/useTokenBalance";
 import { useAccountPrincipal } from "store/auth/hooks";
 import { useTokenInfo } from "hooks/token";
-import { parseTokenAmount, BigNumber } from "@icpswap/utils";
+import { parseTokenAmount, BigNumber } from "@w2e/utils";
 import { CardContent1120 } from "components/Layout/CardContent1120";
 
 import { ConfirmBurnModal } from "./ConfirmBurn";

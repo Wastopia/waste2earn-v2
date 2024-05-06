@@ -1,5 +1,5 @@
 import type { Ed25519KeyIdentity, Secp256k1KeyIdentity } from "@dfinity/identity";
-import { ActorIdentity } from "@icpswap/types";
+import { ActorIdentity } from "@w2e/types";
 
 export enum ResultStatus {
   ERROR = "err",

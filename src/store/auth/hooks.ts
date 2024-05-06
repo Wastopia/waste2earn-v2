@@ -1,11 +1,11 @@
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { principalToAccount, isPrincipal } from "@icpswap/utils";
+import { principalToAccount, isPrincipal } from "@w2e/utils";
 import { Connector } from "constants/wallet";
 import { Principal } from "@dfinity/principal";
 import { getConnectorIsConnected, getConnectorPrincipal, connector, WalletConnector } from "utils/connector";
 import { isMeWebview } from "utils/connector/me";
-import { actor } from "@icpswap/actor";
+import { actor } from "@w2e/actor";
 import store from "../index";
 import { login, logout, updateConnected, updateWalletConnector } from "./actions";
 import { updateLockStatus as _updateLockStatus } from "../session/actions";

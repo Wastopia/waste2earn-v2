@@ -1,5 +1,5 @@
-import { enumToString, isOkSubAccount } from "@icpswap/utils";
-import { ICRCTransaction } from "@icpswap/candid";
+import { enumToString, isOkSubAccount } from "@w2e/utils";
+import { ICRCTransaction } from "@w2e/candid";
 import { AccountIdentifier, SubAccount } from "@dfinity/ledger-icp";
 import { Transaction as TokenTransaction } from "./types";
 

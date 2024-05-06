@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useNFTMetadata as useNFTMetadataCall } from "hooks/nft/useNFTCalls";
-import type { NFTTokenMetadata } from "@icpswap/types";
+import type { NFTTokenMetadata } from "@w2e/types";
 
 import { useNFTSvg } from "./useNFTSvg";
 

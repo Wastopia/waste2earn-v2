@@ -1,7 +1,7 @@
-import { Box, Typography , Table, TableBody, TableCell, TableRow, TableContainer, TableHead } from "@mui/material";
+import { Box, Typography, Table, TableBody, TableCell, TableRow, TableContainer, TableHead } from "@mui/material";
 import { Trans } from "@lingui/macro";
 import { MainCard, NoData, ALink } from "components/index";
-import { parseTokenAmount, toSignificant } from "@icpswap/utils";
+import { parseTokenAmount, toSignificant } from "@w2e/utils";
 import dayjs from "dayjs";
 import { usePrincipalTX } from "store/web3/hooks";
 import { useAccountPrincipalString } from "store/auth/hooks";

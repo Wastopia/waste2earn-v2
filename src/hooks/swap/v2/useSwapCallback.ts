@@ -1,6 +1,6 @@
-import { CurrencyAmount, BigintIsh, Trade, Token } from "@icpswap/swap-sdk";
-import { StatusResult } from "@icpswap/types";
-import { TradeType } from "@icpswap/constants";
+import { CurrencyAmount, BigintIsh, Trade, Token } from "@w2e/swap-sdk";
+import { StatusResult } from "@w2e/types";
+import { TradeType } from "@w2e/constants";
 import { useMemo } from "react";
 import { useSlippageManager, useUserTransactionsDeadline } from "store/swapv2/cache/hooks";
 import { useAccount } from "store/global/hooks";

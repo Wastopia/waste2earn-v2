@@ -1,15 +1,15 @@
 import React from "react";
 import { Grid, Button, CircularProgress } from "@mui/material";
 import { useTips, TIP_SUCCESS, TIP_ERROR } from "hooks/useTips";
-import { Token } from "@icpswap/swap-sdk";
-import { parseTokenAmount } from "@icpswap/utils";
-import { ResultStatus } from "@icpswap/types";
+import { Token } from "@w2e/swap-sdk";
+import { parseTokenAmount } from "@w2e/utils";
+import { ResultStatus } from "@w2e/types";
 import { getLocaleMessage } from "locales/services";
 import Identity, { CallbackProps } from "components/Identity";
 import { t } from "@lingui/macro";
 import { useConnectorStateConnected } from "store/auth/hooks";
 import ConnectWallet from "components/authentication/ButtonConnector";
-import type { ActorIdentity, StakingPoolControllerPoolInfo } from "@icpswap/types";
+import type { ActorIdentity, StakingPoolControllerPoolInfo } from "@w2e/types";
 import { harvest } from "hooks/staking-token/index";
 
 export interface ClaimRewardProps {

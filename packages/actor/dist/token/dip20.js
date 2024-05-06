@@ -1,5 +1,5 @@
 import { actor } from "../actor";
-import { DIP20InterfaceFactory, DIP20BalanceInterfaceFactory, XTCInterfaceFactory, DIP20SupplyInterfaceFactory, } from "@icpswap/candid";
+import { DIP20InterfaceFactory, DIP20BalanceInterfaceFactory, XTCInterfaceFactory, DIP20SupplyInterfaceFactory, } from "@w2e/candid";
 export const xtc = (identity) => actor.create({
     identity,
     idlFactory: XTCInterfaceFactory,

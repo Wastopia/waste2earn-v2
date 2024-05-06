@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
-import { userStorage } from "@icpswap/actor";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
+import { userStorage } from "@w2e/actor";
 import { useCallsData } from "../useCallData";
 /**
  * @param storageId The user storage canister id

@@ -1,8 +1,8 @@
-import { resultFormat } from "@icpswap/utils";
-import { sns_wasm } from "@icpswap/actor";
-import type { ListDeployedSnsesResponse } from "@icpswap/candid";
+import { resultFormat } from "@w2e/utils";
+import { sns_wasm } from "@w2e/actor";
+import type { ListDeployedSnsesResponse } from "@w2e/candid";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import type { SnsTokensInfo } from "@icpswap/types";
+import type { SnsTokensInfo } from "@w2e/types";
 import { useCallsData } from "../useCallData";
 
 export async function getListDeployedSNSs() {

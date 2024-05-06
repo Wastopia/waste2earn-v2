@@ -6,10 +6,10 @@ import Copy from "components/Copy";
 import { useUserNFTTransactions } from "hooks/nft/useNFTCalls";
 import { Pagination, TextButton } from "components/index";
 import { Trans } from "@lingui/macro";
-import type { PaginationResult, NFTTransaction } from "@icpswap/types";
+import type { PaginationResult, NFTTransaction } from "@w2e/types";
 import { useAccount } from "store/global/hooks";
 import upperFirst from "lodash/upperFirst";
-import { pageArgsFormat, enumToString, arrayBufferToString , shorten, timestampFormat } from "@icpswap/utils";
+import { pageArgsFormat, enumToString, arrayBufferToString, shorten, timestampFormat } from "@w2e/utils";
 
 export default function CollectionUserTransactions({ canisterId }: { canisterId: string }) {
   const [pageNum, setPageNum] = useState(1);

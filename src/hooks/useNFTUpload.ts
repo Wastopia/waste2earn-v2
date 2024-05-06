@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import { fileCanisterId, network, NETWORK, host } from "constants/index";
 import { t } from "@lingui/macro";
-import { NFTCanister } from "@icpswap/actor";
-import { resultFormat } from "@icpswap/utils";
+import { NFTCanister } from "@w2e/actor";
+import { resultFormat } from "@w2e/utils";
 
 export interface UploadChunkRequest {
   batch_id: bigint;

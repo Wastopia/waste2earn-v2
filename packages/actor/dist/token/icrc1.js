@@ -1,5 +1,5 @@
 import { actor } from "../actor";
-import { ICRCArchiveInterfaceFactory, ICRC1InterfaceFactory, ICRC2InterfaceFactory, } from "@icpswap/candid";
+import { ICRCArchiveInterfaceFactory, ICRC1InterfaceFactory, ICRC2InterfaceFactory, } from "@w2e/candid";
 export const icrcArchive = (canisterId) => actor.create({
     idlFactory: ICRCArchiveInterfaceFactory,
     canisterId,

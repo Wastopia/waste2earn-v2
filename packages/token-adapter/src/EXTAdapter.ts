@@ -1,8 +1,8 @@
-import { resultFormat, availableArgsNull, principalToAccount, isOkSubAccount, isBigIntMemo } from "@icpswap/utils";
+import { resultFormat, availableArgsNull, principalToAccount, isOkSubAccount, isBigIntMemo } from "@w2e/utils";
 import { SubAccount } from "@dfinity/ledger-icp";
-import { PaginationResult, ResultStatus } from "@icpswap/types";
-import { ext } from "@icpswap/actor";
-import { EXTToken, TokenUser } from "@icpswap/candid";
+import { PaginationResult, ResultStatus } from "@w2e/types";
+import { ext } from "@w2e/actor";
+import { EXTToken, TokenUser } from "@w2e/candid";
 import { TokenHolder, Transaction, Metadata } from "./types";
 import {
   BaseTokenAdapter,

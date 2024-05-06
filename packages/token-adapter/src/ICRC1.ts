@@ -1,7 +1,7 @@
-import { resultFormat, availableArgsNull, isBigIntMemo } from "@icpswap/utils";
-import { PaginationResult, ResultStatus } from "@icpswap/types";
-import { icrc1, icrcArchive } from "@icpswap/actor";
-import { ICRC1_SERVICE, MetadataValue, GetTransactionsResponse, ArchivedTransaction } from "@icpswap/candid";
+import { resultFormat, availableArgsNull, isBigIntMemo } from "@w2e/utils";
+import { PaginationResult, ResultStatus } from "@w2e/types";
+import { icrc1, icrcArchive } from "@w2e/actor";
+import { ICRC1_SERVICE, MetadataValue, GetTransactionsResponse, ArchivedTransaction } from "@w2e/candid";
 import { Principal } from "@dfinity/principal";
 
 import { TokenHolder, Transaction, Metadata } from "./types";

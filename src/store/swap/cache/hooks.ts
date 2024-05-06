@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { useUserPositionPools } from "@icpswap/hooks";
+import { useUserPositionPools } from "@w2e/hooks";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { slippageToPercent, getDefaultSlippageTolerance } from "constants/swap";
 import { useAccount } from "store/auth/hooks";
-import { Percent } from "@icpswap/swap-sdk";
+import { Percent } from "@w2e/swap-sdk";
 import {
   updateUserExpertMode,
   updateUserSingleHop,

@@ -1,6 +1,6 @@
 import { FilledTextField } from "components/index";
 import { t } from "@lingui/macro";
-import { useClaimEvents } from "@icpswap/hooks";
+import { useClaimEvents } from "@w2e/hooks";
 
 export default function EventSelector({
   onChange,

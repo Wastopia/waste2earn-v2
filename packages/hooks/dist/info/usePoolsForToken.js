@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { useCallback } from "react";
 import { useCallsData } from "../useCallData";
-import { node_index } from "@icpswap/actor";
-import { resultFormat } from "@icpswap/utils";
+import { node_index } from "@w2e/actor";
+import { resultFormat } from "@w2e/utils";
 export function usePoolsForToken(canisterId) {
     return useCallsData(useCallback(() => __awaiter(this, void 0, void 0, function* () {
         if (!canisterId)

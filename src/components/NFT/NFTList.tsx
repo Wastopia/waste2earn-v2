@@ -5,9 +5,9 @@ import NFTCard from "components/NFT/NFTCard";
 import { useCanisterNFTList } from "hooks/nft/useNFTCalls";
 import { useAccount } from "store/global/hooks";
 import NoData from "components/no-data";
-import { pageArgsFormat } from "@icpswap/utils";
+import { pageArgsFormat } from "@w2e/utils";
 import Pagination from "components/pagination";
-import type { NFTTokenMetadata } from "@icpswap/types";
+import type { NFTTokenMetadata } from "@w2e/types";
 import Loading from "components/Loading/Static";
 
 export default function NFTList({ canisterId }: { canisterId: string }) {

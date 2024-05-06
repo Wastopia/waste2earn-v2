@@ -1,10 +1,10 @@
 import { Typography, Box } from "@mui/material";
 import { useTheme } from "@mui/styles";
-import { formatAmount, toSignificant } from "@icpswap/utils";
+import { formatAmount, toSignificant } from "@w2e/utils";
 import { Theme } from "@mui/material/styles";
 import BigNumber from "bignumber.js";
 import { TokenImage } from "components/index";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 
 export interface TokenPoolPriceProps {
   tokenA: Token | undefined;

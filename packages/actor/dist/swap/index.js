@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { PassCodeManagerInterfaceFactory, } from "@icpswap/candid";
+import { PassCodeManagerInterfaceFactory, } from "@w2e/candid";
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
 export const passCodeManager = (identity) => __awaiter(void 0, void 0, void 0, function* () {

@@ -1,7 +1,7 @@
 import { useContext, useMemo } from "react";
 import { Box, useTheme } from "@mui/material";
 import { Theme } from "@mui/material/styles";
-import { TokenCharts } from "@icpswap/ui";
+import { TokenCharts } from "@w2e/ui";
 
 import { SwapProContext } from "../context";
 

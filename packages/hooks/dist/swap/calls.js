@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { swapFactory, swapPool, swapNFT, swapPosition } from "@icpswap/actor";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
+import { swapFactory, swapPool, swapNFT, swapPosition } from "@w2e/actor";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 import { useCallsData, getPaginationAllData, usePaginationAllData } from "../useCallData";
 export function createSwapPool(identity, args) {

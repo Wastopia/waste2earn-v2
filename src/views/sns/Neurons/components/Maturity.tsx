@@ -1,14 +1,14 @@
 import { Box, Typography, Checkbox } from "@mui/material";
 import { Trans, t } from "@lingui/macro";
-import { autoStakeMaturity, disburseNeuronMaturity } from "@icpswap/hooks";
-import { Flex, ConfirmModal } from "@icpswap/ui";
-import { Neuron } from "@icpswap/types";
+import { autoStakeMaturity, disburseNeuronMaturity } from "@w2e/hooks";
+import { Flex, ConfirmModal } from "@w2e/ui";
+import { Neuron } from "@w2e/types";
 import type { TokenInfo } from "types/token";
 import { useMemo, useState } from "react";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
-import { parseTokenAmount, toSignificantWithGroupSeparator } from "@icpswap/utils";
+import { parseTokenAmount, toSignificantWithGroupSeparator } from "@w2e/utils";
 import { secondsToDuration } from "@dfinity/utils";
-import { SnsNeuronPermissionType } from "@icpswap/constants";
+import { SnsNeuronPermissionType } from "@w2e/constants";
 
 import { DisburseMaturity } from "./DisburseMaturity";
 import { StakeMaturity } from "./StakeMaturity";
@@ -112,9 +112,8 @@ export function Maturity({ neuron, token, governance_id, neuron_id, onMaturitySu
         <Typography color="text.primary" fontWeight={500}>
           Staked:&nbsp;
           {token && staked_maturity
-            ? `${toSignificantWithGroupSeparator(parseTokenAmount(staked_maturity, token.decimals).toString())} ${
-                token.symbol
-              }`
+            ? `${toSignificantWithGroupSeparator(parseTokenAmount(staked_maturity, token.decimals).toString())} ${token.symbol
+            }`
             : "--"}
         </Typography>
       </Flex>
@@ -123,9 +122,8 @@ export function Maturity({ neuron, token, governance_id, neuron_id, onMaturitySu
         <Typography color="text.primary" fontWeight={500}>
           Available:&nbsp;
           {token
-            ? `${toSignificantWithGroupSeparator(parseTokenAmount(available_maturity, token.decimals).toString())} ${
-                token.symbol
-              }`
+            ? `${toSignificantWithGroupSeparator(parseTokenAmount(available_maturity, token.decimals).toString())} ${token.symbol
+            }`
             : "--"}
         </Typography>
 

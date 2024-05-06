@@ -1,8 +1,8 @@
 import { useState, useMemo, useCallback } from "react";
-import { UserVotePowersInfo } from "@icpswap/types";
+import { UserVotePowersInfo } from "@w2e/types";
 import { usePaginationAllDataCallback } from "hooks/usePaginationAllData";
-import { getUserVotingPowers } from "@icpswap/hooks";
-import { valueofUser, writeFileOneSheet } from "@icpswap/utils";
+import { getUserVotingPowers } from "@w2e/hooks";
+import { valueofUser, writeFileOneSheet } from "@w2e/utils";
 
 export function useDownloadPowers(canisterId: string | undefined, id: string, limit?: number): [boolean, () => void] {
   const [loading, setLoading] = useState(false);

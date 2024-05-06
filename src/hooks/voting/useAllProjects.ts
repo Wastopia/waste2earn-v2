@@ -1,6 +1,6 @@
 import { useMemo, useCallback } from "react";
-import { ProjectInfo } from "@icpswap/types";
-import { getVotingProjects, usePaginationAllData, getPaginationAllData } from "@icpswap/hooks";
+import { ProjectInfo } from "@w2e/types";
+import { getVotingProjects, usePaginationAllData, getPaginationAllData } from "@w2e/hooks";
 
 export async function getAllProjects() {
   const fetchRecords = async (offset: number, limit: number) => {

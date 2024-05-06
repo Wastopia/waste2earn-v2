@@ -1,5 +1,5 @@
-import { Token } from "@icpswap/swap-sdk";
-import { TOKEN_STANDARD, LEDGER_CANISTER_ID } from "@icpswap/constants";
+import { Token } from "@w2e/swap-sdk";
+import { TOKEN_STANDARD, LEDGER_CANISTER_ID } from "@w2e/constants";
 export const ICP_TOKEN_INFO = {
     symbol: "ICP",
     name: "Internet Computer",

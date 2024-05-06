@@ -3,7 +3,7 @@ import { Grid, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { getFarmsState, POOL_STATE } from "utils/staking-farm";
 import { Theme } from "@mui/material/styles";
-import type { StakingFarmInfo, StakingFarmDepositArgs } from "@icpswap/types";
+import type { StakingFarmInfo, StakingFarmDepositArgs } from "@w2e/types";
 import UnStakingModal from "./UnStakingModal";
 import StakingModal from "./StakingModal";
 

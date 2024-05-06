@@ -1,10 +1,10 @@
-import { actor, BeforeSubmitArgs, Connector } from "@icpswap/actor";
+import { actor, BeforeSubmitArgs, Connector } from "@w2e/actor";
 import { useEffect } from "react";
 import store from "store/index";
 import { t } from "@lingui/macro";
 
 async function isCurrentAccount() {
-  const {principal} = store.getState().auth;
+  const { principal } = store.getState().auth;
 
   if (window.ic && window.ic.plug && !!principal) {
     const plugPrincipal = await window.ic.plug.getPrincipal();

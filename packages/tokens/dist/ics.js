@@ -1,5 +1,5 @@
-import { Token } from "@icpswap/swap-sdk";
-import { TOKEN_STANDARD, ICS_CANISTER_ID } from "@icpswap/constants";
+import { Token } from "@w2e/swap-sdk";
+import { TOKEN_STANDARD, ICS_CANISTER_ID } from "@w2e/constants";
 export const ICS_TOKEN_INFO = {
     symbol: "ICS",
     name: "ICPSwap Token",

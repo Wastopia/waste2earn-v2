@@ -1,4 +1,4 @@
-import { isValidPrincipal } from "@icpswap/utils";
+import { isValidPrincipal } from "@w2e/utils";
 /**
  * Validates an address and returns the address
  * @param address the principal address

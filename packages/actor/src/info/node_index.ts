@@ -1,4 +1,4 @@
-import { NodeIndex, NodeIndexInterfaceFactory } from "@icpswap/candid";
+import { NodeIndex, NodeIndexInterfaceFactory } from "@w2e/candid";
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
 

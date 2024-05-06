@@ -2,7 +2,7 @@ import { useState, useMemo, useContext } from "react";
 import { Box, Button, Typography, useTheme, useMediaQuery } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Trans } from "@lingui/macro";
-import { useTickAtLimit } from "@icpswap/hooks";
+import { useTickAtLimit } from "@w2e/hooks";
 import {
   CurrencyAmount,
   FeeAmount,
@@ -10,14 +10,14 @@ import {
   useInverter,
   getPriceOrderingFromPositionForUI,
   formatTickPrice,
-} from "@icpswap/swap-sdk";
+} from "@w2e/swap-sdk";
 import { useUserPoolPositions } from "hooks/swap/useUserAllPositions";
-import { Header, HeaderCell, TableRow, BodyCell, LoadingRow, NoData, SimplePagination } from "@icpswap/ui";
+import { Header, HeaderCell, TableRow, BodyCell, LoadingRow, NoData, SimplePagination } from "@w2e/ui";
 import type { UserPosition } from "types/swap";
 import { usePositionFees } from "hooks/swap/usePositionFees";
 import { usePositionWithPool } from "hooks/swap/usePosition";
 import { usePool } from "hooks/swap/usePools";
-import { toSignificantWithGroupSeparator, BigNumber, formatDollarAmount } from "@icpswap/utils";
+import { toSignificantWithGroupSeparator, BigNumber, formatDollarAmount } from "@w2e/utils";
 import { ChevronDown } from "react-feather";
 import CollectFeesModal from "components/swap/CollectFeesModal";
 import TransferPosition from "components/swap/TransferPosition";

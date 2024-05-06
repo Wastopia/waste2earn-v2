@@ -1,8 +1,8 @@
 import { useCallback } from "react";
-import { xtc } from "@icpswap/actor";
+import { xtc } from "@w2e/actor";
 import { Identity as CallIdentity } from "types/global";
 import { Principal } from "@dfinity/principal";
-import { resultFormat } from "@icpswap/utils";
+import { resultFormat } from "@w2e/utils";
 
 export interface XTCTopUpProps {
   canisterId: string;

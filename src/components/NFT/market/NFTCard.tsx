@@ -7,7 +7,7 @@ import { TradeOrder } from "types";
 import { Theme } from "@mui/material/styles";
 import { WRAPPED_ICP_TOKEN_INFO } from "constants/index";
 import WICPCurrencyImage from "assets/images/wicp_currency.svg";
-import { parseTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount } from "@w2e/utils";
 import { useAccount } from "store/global/hooks";
 import NFTBuyReview from "components/NFT/market/NFTBuyReview";
 import VerifyNFT from "components/NFT/VerifyNFT";

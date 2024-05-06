@@ -1,7 +1,7 @@
-import { resultFormat, availableArgsNull, isBigIntMemo } from "@icpswap/utils";
-import { ledgerService } from "@icpswap/actor";
-import { Ledger } from "@icpswap/candid";
-import { ActorIdentity, PaginationResult, ResultStatus } from "@icpswap/types";
+import { resultFormat, availableArgsNull, isBigIntMemo } from "@w2e/utils";
+import { ledgerService } from "@w2e/actor";
+import { Ledger } from "@w2e/candid";
+import { ActorIdentity, PaginationResult, ResultStatus } from "@w2e/types";
 import { TokenHolder, Transaction, Metadata } from "./types";
 import {
   BaseTokenAdapter,

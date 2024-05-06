@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { useCallsData, usePaginationAllData } from "../useCallData";
 import { useCallback } from "react";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
-import { v3Farm, v3FarmController } from "@icpswap/actor";
+import { v3Farm, v3FarmController } from "@w2e/actor";
 export function getV3UserFarmInfo(canisterId, principal) {
     return __awaiter(this, void 0, void 0, function* () {
         return resultFormat(yield (yield v3Farm(canisterId)).getFarmInfo(principal)).data;

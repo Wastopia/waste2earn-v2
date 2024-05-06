@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { resultFormat } from "@icpswap/utils";
-import { globalIndex } from "@icpswap/actor";
+import { resultFormat } from "@w2e/utils";
+import { globalIndex } from "@w2e/actor";
 import { useCallsData } from "../useCallData";
 // Global
 export function getAllPoolsTVL() {

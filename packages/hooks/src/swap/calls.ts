@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { swapFactory, swapPool, swapNFT, swapPosition } from "@icpswap/actor";
+import { swapFactory, swapPool, swapNFT, swapPosition } from "@w2e/actor";
 import type {
   SwapPoolData,
   TickLiquidityInfo,
@@ -19,8 +19,8 @@ import type {
   TickInfoWithId,
   ActorIdentity,
   PaginationResult,
-} from "@icpswap/types";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
+} from "@w2e/types";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 import { useCallsData, getPaginationAllData, usePaginationAllData } from "../useCallData";
 

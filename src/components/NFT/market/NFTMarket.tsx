@@ -5,7 +5,7 @@ import { Theme } from "@mui/material/styles";
 import NFTCard from "components/NFT/market/NFTCard";
 import { getTradeOrders } from "hooks/nft/trade";
 import NoData from "components/no-data";
-import { isValidAccount, pageArgsFormat } from "@icpswap/utils";
+import { isValidAccount, pageArgsFormat } from "@w2e/utils";
 import Loading from "components/Loading/Static";
 import { TradeOrder } from "types/nft";
 import { Trans } from "@lingui/macro";

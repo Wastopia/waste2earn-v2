@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import { usePoolTransactions } from "@icpswap/hooks";
+import { usePoolTransactions } from "@w2e/hooks";
 import Transaction from "./Transactions";
 
 export interface PoolTransactionsProps {

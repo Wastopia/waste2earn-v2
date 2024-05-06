@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { SNS_SWAP_INTERFACE_FACTORY } from "@icpswap/candid";
+import { SNS_SWAP_INTERFACE_FACTORY } from "@w2e/candid";
 import { actor } from "../actor";
 export const sns_swap = (canisterId, identity) => __awaiter(void 0, void 0, void 0, function* () {
     return actor.create({

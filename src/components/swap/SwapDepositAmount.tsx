@@ -1,6 +1,6 @@
 import { Box, Grid, Typography, Chip } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
-import { CurrencyAmount, Token } from "@icpswap/swap-sdk";
+import { CurrencyAmount, Token } from "@w2e/swap-sdk";
 import LockIcon from "assets/images/swap/Lock";
 import { NumberTextField, TokenImage } from "components/index";
 import { SAFE_DECIMALS_LENGTH, MAX_SWAP_INPUT_LENGTH } from "constants/index";

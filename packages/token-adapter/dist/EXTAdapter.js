@@ -7,10 +7,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { resultFormat, availableArgsNull, principalToAccount, isOkSubAccount, isBigIntMemo } from "@icpswap/utils";
+import { resultFormat, availableArgsNull, principalToAccount, isOkSubAccount, isBigIntMemo } from "@w2e/utils";
 import { SubAccount } from "@dfinity/ledger-icp";
-import { ResultStatus } from "@icpswap/types";
-import { ext } from "@icpswap/actor";
+import { ResultStatus } from "@w2e/types";
+import { ext } from "@w2e/actor";
 import { BaseTokenAdapter, } from "./BaseTokenAdapter";
 export class EXTTokenAdapter extends BaseTokenAdapter {
     holders(_a) {

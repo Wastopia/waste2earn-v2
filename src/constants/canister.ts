@@ -1,4 +1,4 @@
-import { actor, Actor } from "@icpswap/actor";
+import { actor, Actor } from "@w2e/actor";
 import { network, NETWORK, host } from "./server";
 
 let CanisterIdsJson: { [key: string]: { [key1: string]: string } } = {};

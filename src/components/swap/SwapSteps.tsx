@@ -1,6 +1,6 @@
 import { Box, Avatar } from "@mui/material";
-import { Token } from "@icpswap/swap-sdk";
-import { parseTokenAmount, BigNumber } from "@icpswap/utils";
+import { Token } from "@w2e/swap-sdk";
+import { parseTokenAmount, BigNumber } from "@w2e/utils";
 import { t, Trans } from "@lingui/macro";
 import { isUseTransfer } from "utils/token/index";
 import { getSwapOutAmount } from "store/swap/hooks";

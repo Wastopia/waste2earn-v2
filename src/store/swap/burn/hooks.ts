@@ -1,8 +1,8 @@
 import { useAppSelector, useAppDispatch } from "store/hooks";
 import { useCallback, useMemo } from "react";
-import { useSwapPoolMetadata } from "@icpswap/hooks";
-import { numberToString } from "@icpswap/utils";
-import { Percent, CurrencyAmount, Position, Token } from "@icpswap/swap-sdk";
+import { useSwapPoolMetadata } from "@w2e/hooks";
+import { numberToString } from "@w2e/utils";
+import { Percent, CurrencyAmount, Position, Token } from "@w2e/swap-sdk";
 import { BURN_FIELD } from "constants/swap";
 import { tryParseAmount, inputNumberCheck } from "utils/swap";
 import { useToken } from "hooks/useCurrency";

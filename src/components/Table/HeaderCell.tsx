@@ -1,6 +1,6 @@
 import { useCallback, useContext } from "react";
 import { Typography, TypographyProps } from "@mui/material";
-import { Override } from "@icpswap/types";
+import { Override } from "@w2e/types";
 import { Theme } from "@mui/material/styles";
 import { useTheme } from "@mui/styles";
 import { UpArrow, DownArrow } from "components/Arrow";

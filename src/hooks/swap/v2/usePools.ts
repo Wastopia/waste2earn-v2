@@ -1,5 +1,5 @@
-import { Pool, Token, FeeAmount } from "@icpswap/swap-sdk";
-import { numberToString } from "@icpswap/utils";
+import { Pool, Token, FeeAmount } from "@w2e/swap-sdk";
+import { numberToString } from "@w2e/utils";
 import { useMemo, useEffect, useState } from "react";
 import { swapFactory, swapFactoryV1, swapPool } from "actor/swapV2";
 import { SwapPoolInfo, TickLiquidityInfo } from "types/swapv2";

@@ -1,17 +1,17 @@
 import { useState } from "react";
 import { Button, Box, Grid, Typography, Checkbox, CircularProgress, Avatar } from "@mui/material";
-import { Modal, TextButton , FilledTextField } from "components/index";
+import { Modal, TextButton, FilledTextField } from "components/index";
 import { Trans, t } from "@lingui/macro";
 import TokenStandardLabel from "components/token/TokenStandardLabel";
 import { TOKEN_STANDARD } from "constants/tokens";
-import { isValidPrincipal } from "@icpswap/utils";
+import { isValidPrincipal } from "@w2e/utils";
 import { standardCheck } from "utils/token/standardCheck";
 import { useUpdateImportedToken, useUpdateTokenStandard, getTokenStandard } from "store/token/cache/hooks";
 import { useSuccessTip } from "hooks/useTips";
 import { Metadata } from "types/token";
 import { INFO_URL } from "constants/index";
 import { useGlobalTokenList } from "store/global/hooks";
-import { registerTokens } from "@icpswap/token-adapter";
+import { registerTokens } from "@w2e/token-adapter";
 import { Principal } from "@dfinity/principal";
 import { useSaveCacheTokenCallback } from "store/wallet/hooks";
 

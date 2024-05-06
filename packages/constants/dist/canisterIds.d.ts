@@ -2,4 +2,4 @@ export declare const LEDGER_CANISTER_ID = "ryjl3-tyaaa-aaaaa-aaaba-cai";
 export declare const GOVERNANCE_CANISTER_ID = "rrkah-fqaaa-aaaaa-aaaaq-cai";
 export declare const WICP_CANISTER_ID = "5xnja-6aaaa-aaaan-qad4a-cai";
 export declare const ICS_CANISTER_ID = "ca6gz-lqaaa-aaaaq-aacwa-cai";
-//# sourceMappingURL=canisterIds.d.ts.map
+// # sourceMappingURL=canisterIds.d.ts.map

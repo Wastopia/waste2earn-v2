@@ -2,10 +2,10 @@ import { Box, Typography } from "@mui/material";
 import { useEffect, useMemo, useState } from "react";
 import { Select, type MenuProps } from "components/Select/ForToken";
 import { useTokenInfo } from "hooks/token/useTokenInfo";
-import { isValidPrincipal } from "@icpswap/utils";
+import { isValidPrincipal } from "@w2e/utils";
 import { TokenImage } from "components/index";
-import { useAllTokensOfSwap } from "@icpswap/hooks";
-import type { AllTokenOfSwapTokenInfo } from "@icpswap/types";
+import { useAllTokensOfSwap } from "@w2e/hooks";
+import type { AllTokenOfSwapTokenInfo } from "@w2e/types";
 
 interface TokenMenuItemProps {
   tokenInfo: AllTokenOfSwapTokenInfo;

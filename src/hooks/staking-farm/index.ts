@@ -1,8 +1,8 @@
 import { useCallback, useMemo, useState } from "react";
 import { useICPPrice, useUSDPrice } from "hooks/useUSDPrice";
-import { resultFormat, parseTokenAmount, formatDollarAmount } from "@icpswap/utils";
+import { resultFormat, parseTokenAmount, formatDollarAmount } from "@w2e/utils";
 import BigNumber from "bignumber.js";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import {
   getV3StakingFarms,
   usePaginationAllData,
@@ -12,9 +12,9 @@ import {
   getV3UserFarmRewardInfo,
   getFarmTVL,
   getFarmUserTVL,
-} from "@icpswap/hooks";
-import { v3FarmController, v3Farm } from "@icpswap/actor";
-import { type StakingFarmInfo, type ActorIdentity } from "@icpswap/types";
+} from "@w2e/hooks";
+import { v3FarmController, v3Farm } from "@w2e/actor";
+import { type StakingFarmInfo, type ActorIdentity } from "@w2e/types";
 import { useIntervalFetch } from "hooks/useIntervalFetch";
 import { useAccountPrincipalString } from "store/auth/hooks";
 

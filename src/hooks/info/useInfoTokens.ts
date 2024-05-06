@@ -1,7 +1,7 @@
-import { getInfoAllTokens } from "@icpswap/hooks";
+import { getInfoAllTokens } from "@w2e/hooks";
 import useSwr from "swr";
 import useSWRImmutable from "swr/immutable";
-import type { PublicTokenOverview } from "@icpswap/types";
+import type { PublicTokenOverview } from "@w2e/types";
 import { useMemo } from "react";
 
 export function useFetchInfoAllToken() {

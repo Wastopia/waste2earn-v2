@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import BigNumber from "bignumber.js";
 import { useErrorTip, TIP_OPTIONS } from "hooks/useTips";
 import { t } from "@lingui/macro";

@@ -23,7 +23,7 @@ import { useNFTCanisterList, useCanisterLogo } from "hooks/nft/useNFTCalls";
 import { Trans, t } from "@lingui/macro";
 import { OFFICIAL_CANISTER_IDS } from "constants/index";
 import { isICPSwapOfficial } from "utils";
-import type { NFTControllerInfo } from "@icpswap/types";
+import type { NFTControllerInfo } from "@w2e/types";
 import { Theme } from "@mui/material/styles";
 import { NoData, FilledTextField } from "components/index";
 

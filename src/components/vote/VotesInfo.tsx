@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { Grid, Typography, Box } from "@mui/material";
 import { useTheme } from "@mui/styles";
-import { ResultStatus , ProposalInfo } from "@icpswap/types";
+import { ResultStatus, ProposalInfo } from "@w2e/types";
 import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity";
 import { Identity as CallIdentity } from "types/global";
 import { Trans, t } from "@lingui/macro";
@@ -11,7 +11,7 @@ import { useSuccessTip, useErrorTip } from "hooks/useTips";
 import { getLocaleMessage } from "locales/services";
 import { useUserVotePower } from "hooks/voting/useUserVotePower";
 import { useAccount } from "store/auth/hooks";
-import { voting, useVotingProposal } from "@icpswap/hooks";
+import { voting, useVotingProposal } from "@w2e/hooks";
 import BigNumber from "bignumber.js";
 import VoteConfirm from "./VoteConfirm";
 
@@ -143,8 +143,8 @@ export function VotesResult({ proposal: _proposal }: { proposal: ProposalInfo })
           Number(total) === 0
             ? new BigNumber(0)
             : total && _option?.v
-            ? new BigNumber(String(_option?.v ?? 0)).dividedBy(String(total ?? 0)).multipliedBy(100)
-            : new BigNumber(0);
+              ? new BigNumber(String(_option?.v ?? 0)).dividedBy(String(total ?? 0)).multipliedBy(100)
+              : new BigNumber(0);
 
         return (
           <Box key={`${option.k}-${index}`} sx={{ marginBottom: "40px", "&:last-child": { marginBottom: "0px" } }}>

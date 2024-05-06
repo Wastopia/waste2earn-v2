@@ -1,4 +1,4 @@
-import type { Operation } from "@icpswap/types";
+import type { Operation } from "@w2e/types";
 
 export function neuronOperationCommand(operation: Operation): [] | [{ Configure: { operation: [] | [Operation] } }] {
   return [

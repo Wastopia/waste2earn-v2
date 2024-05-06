@@ -1,4 +1,4 @@
-import { Percent, CurrencyAmount, Token } from "@icpswap/swap-sdk";
+import { Percent, CurrencyAmount, Token } from "@w2e/swap-sdk";
 import JSBI from "jsbi";
 import { ONE_HUNDRED_PERCENT } from "constants/misc";
 

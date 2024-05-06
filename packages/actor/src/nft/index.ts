@@ -1,7 +1,4 @@
-import { actor } from "../actor";
-import { ActorIdentity } from "@icpswap/types";
-import { ActorName } from "../ActorName";
-
+import { ActorIdentity } from "@w2e/types";
 import {
   V3TradeCanister,
   V3TradeCanisterInterfaceFactory,
@@ -17,7 +14,9 @@ import {
   V1NFTCanisterInterfaceFactory,
   ExtNFTInterfaceFactory,
   ExtNFTService,
-} from "@icpswap/candid";
+} from "@w2e/candid";
+import { actor } from "../actor";
+import { ActorName } from "../ActorName";
 
 export const NFTCanisterController = (identity?: ActorIdentity) =>
   actor.create<V3NFTCanisterController>({

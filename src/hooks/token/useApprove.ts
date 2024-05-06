@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { Principal } from "@dfinity/principal";
-import { tokenAdapter } from "@icpswap/token-adapter";
-import { ResultStatus, StatusResult } from "@icpswap/types";
+import { tokenAdapter } from "@w2e/token-adapter";
+import { ResultStatus, StatusResult } from "@w2e/types";
 import { allowance } from "./useAllowance";
 
 export interface ApproveArgs {

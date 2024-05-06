@@ -1,9 +1,9 @@
 import { useMemo } from "react";
-import { TradeType } from "@icpswap/constants";
-import { CurrencyAmount, Trade, Token, Route } from "@icpswap/swap-sdk";
+import { TradeType } from "@w2e/constants";
+import { CurrencyAmount, Trade, Token, Route } from "@w2e/swap-sdk";
 import { tryParseAmount } from "utils/swap";
 import { BigNumber } from "bignumber.js";
-import { formatTokenAmount, numberToString } from "@icpswap/utils";
+import { formatTokenAmount, numberToString } from "@w2e/utils";
 import { useQuoteExactInput, useSwapPoolAvailable } from "hooks/swap/v3Calls";
 import { useActualSwapAmount } from "hooks/swap/index";
 import { useAllRoutes } from "./useAllRoutes";

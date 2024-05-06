@@ -8,9 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { resultFormat } from "@icpswap/utils";
+import { resultFormat } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
-import { globalStorage } from "@icpswap/actor";
+import { globalStorage } from "@w2e/actor";
 /**
  * get swap public chart data
  * @param {string} id storage canister id

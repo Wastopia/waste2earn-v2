@@ -1,6 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
+
 const useStyles = makeStyles(() => {
     const translateLength = 5;
     return {
@@ -61,4 +62,4 @@ export function DotLoading({ loading }) {
             lineHeight: "8px",
         }, children: [_jsx("span", { className: `${classes.dot} ${classes.dot1}` }), _jsx("span", { className: `${classes.dot} ${classes.dot2}` }), _jsx("span", { className: `${classes.dot} ${classes.dot3}` })] })) : null;
 }
-//# sourceMappingURL=Dot.js.map
+// # sourceMappingURL=Dot.js.map

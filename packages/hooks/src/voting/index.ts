@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import { isAvailablePageArgs, availableArgsNull, resultFormat } from "@icpswap/utils";
-import { votingCanister, votingController, votingFile } from "@icpswap/actor";
+import { isAvailablePageArgs, availableArgsNull, resultFormat } from "@w2e/utils";
+import { votingCanister, votingController, votingFile } from "@w2e/actor";
 import type {
   ActorIdentity,
   PaginationResult,
@@ -11,7 +11,7 @@ import type {
   VotingFileChunk,
   CommitBatchArgs,
   ProposalCreateInfo,
-} from "@icpswap/types";
+} from "@w2e/types";
 import { Principal } from "@dfinity/principal";
 import { useCallsData } from "../useCallData";
 

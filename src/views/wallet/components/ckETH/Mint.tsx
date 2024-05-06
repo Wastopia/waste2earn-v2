@@ -9,7 +9,7 @@ import { useETHContract } from "hooks/web3/useETHContract";
 import { useWeb3React } from "@web3-react/core";
 import { toHexString } from "utils/web3/index";
 import { useETHBalance } from "hooks/web3/useETHBalance";
-import { parseTokenAmount, toSignificant } from "@icpswap/utils";
+import { parseTokenAmount, toSignificant } from "@w2e/utils";
 import { useBlockNumber } from "hooks/web3/useBlockNumber";
 import { useUpdateTX } from "store/web3/hooks";
 import ButtonConnector from "components/authentication/ButtonConnector";

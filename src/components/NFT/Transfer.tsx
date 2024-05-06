@@ -3,7 +3,7 @@ import LazyImage from "components/LazyImage";
 import { Button, Grid, TextField, Typography, CircularProgress, Box } from "@mui/material";
 import { makeStyles, useTheme } from "@mui/styles";
 import { stringToArrayBuffer, encodeTokenIdentifier } from "utils";
-import { isValidAccount } from "@icpswap/utils";
+import { isValidAccount } from "@w2e/utils";
 import Modal from "components/modal/index";
 import { useErrorTip, useSuccessTip } from "hooks/useTips";
 import { useAccount } from "store/global/hooks";
@@ -12,7 +12,7 @@ import { t, Trans } from "@lingui/macro";
 import Identity, { CallbackProps } from "components/Identity";
 import { useNFTByMetadata } from "hooks/nft/useNFTMetadata";
 import { Theme } from "@mui/material/styles";
-import type { NFTTokenMetadata } from "@icpswap/types";
+import type { NFTTokenMetadata } from "@w2e/types";
 import { getLocaleMessage } from "locales/services";
 import FileImage from "./FileImage";
 

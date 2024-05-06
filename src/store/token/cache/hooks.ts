@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from "store/hooks";
 import { TokenMetadata } from "types/token";
 import store from "store/index";
 import { ICP, TOKEN_STANDARD } from "constants/tokens";
-import { registerTokens } from "@icpswap/token-adapter";
+import { registerTokens } from "@w2e/token-adapter";
 import { updateTokenStandard, updateImportedToken, updateAllTokenIds } from "./actions";
 
 export function useUpdateTokenStandard() {

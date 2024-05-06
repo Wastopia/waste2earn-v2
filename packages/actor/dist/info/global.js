@@ -1,6 +1,6 @@
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
-import { GlobalIndexInterfaceFactory, GlobalStorageInterfaceFactory, GlobalTVLInterfaceFactory, } from "@icpswap/candid";
+import { GlobalIndexInterfaceFactory, GlobalStorageInterfaceFactory, GlobalTVLInterfaceFactory, } from "@w2e/candid";
 export const globalIndex = (identity) => actor.create({
     idlFactory: GlobalIndexInterfaceFactory,
     actorName: ActorName.GlobalIndex,

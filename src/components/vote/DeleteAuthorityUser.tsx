@@ -5,8 +5,8 @@ import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity
 import { Identity as CallIdentity } from "types/global";
 import { useTips, MessageTypes } from "hooks/useTips";
 import { Principal } from "@dfinity/principal";
-import { deleteVotingAuthorityUsers } from "@icpswap/hooks";
-import { ResultStatus } from "@icpswap/types";
+import { deleteVotingAuthorityUsers } from "@w2e/hooks";
+import { ResultStatus } from "@w2e/types";
 
 export default function DeleteAuthorityUser({
   open,

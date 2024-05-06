@@ -11,8 +11,8 @@ import { DEFAULT_PERCENT_SYMBOL, CurrencyAmountFormatDecimals } from "constants/
 import { feeAmountToPercentage } from "utils/swap/index";
 import CollectFeesModal from "components/swap/CollectFeesModal";
 import { usePositionFees } from "hooks/swap/usePositionFees";
-import { numberToString, BigNumber, formatDollarAmount } from "@icpswap/utils";
-import { CurrencyAmount, Position, getPriceOrderingFromPositionForUI, useInverter } from "@icpswap/swap-sdk";
+import { numberToString, BigNumber, formatDollarAmount } from "@w2e/utils";
+import { CurrencyAmount, Position, getPriceOrderingFromPositionForUI, useInverter } from "@w2e/swap-sdk";
 import { isDarkTheme, toFormat } from "utils";
 import { Trans, t } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";
@@ -236,8 +236,8 @@ export function PositionDetails({
                   ? `${toFormat(pool?.priceOf(token1).toSignificant(6))} ${pairName}`
                   : "--"
                 : pool?.priceOf(token0)
-                ? `${toFormat(pool?.priceOf(token0).toSignificant(6))} ${pairName}`
-                : "--"
+                  ? `${toFormat(pool?.priceOf(token0).toSignificant(6))} ${pairName}`
+                  : "--"
               : "--"
           }
           convert
@@ -268,10 +268,10 @@ export function PositionDetails({
               >
                 {currencyFeeAmount0 !== undefined || currencyFeeAmount1 !== undefined
                   ? `${toFormat(
-                      new BigNumber(currencyFeeAmount0 ? currencyFeeAmount0.toExact() : 0).toFixed(8),
-                    )} ${token0?.symbol} and ${toFormat(
-                      new BigNumber(currencyFeeAmount1 ? currencyFeeAmount1.toExact() : 0).toFixed(8),
-                    )} ${token1?.symbol}`
+                    new BigNumber(currencyFeeAmount0 ? currencyFeeAmount0.toExact() : 0).toFixed(8),
+                  )} ${token0?.symbol} and ${toFormat(
+                    new BigNumber(currencyFeeAmount1 ? currencyFeeAmount1.toExact() : 0).toFixed(8),
+                  )} ${token1?.symbol}`
                   : "--"}
               </Typography>
               <Typography
@@ -284,19 +284,19 @@ export function PositionDetails({
                 }}
               >
                 {currencyFeeAmount0 !== undefined &&
-                currencyFeeAmount1 !== undefined &&
-                !!token0USDPrice &&
-                !!token1USDPrice
+                  currencyFeeAmount1 !== undefined &&
+                  !!token0USDPrice &&
+                  !!token1USDPrice
                   ? formatDollarAmount(
-                      new BigNumber(currencyFeeAmount0 ? currencyFeeAmount0.toExact() : 0)
-                        .multipliedBy(token0USDPrice)
-                        .plus(
-                          new BigNumber(currencyFeeAmount1 ? currencyFeeAmount1.toExact() : 0).multipliedBy(
-                            token1USDPrice,
-                          ),
-                        )
-                        .toString(),
-                    )
+                    new BigNumber(currencyFeeAmount0 ? currencyFeeAmount0.toExact() : 0)
+                      .multipliedBy(token0USDPrice)
+                      .plus(
+                        new BigNumber(currencyFeeAmount1 ? currencyFeeAmount1.toExact() : 0).multipliedBy(
+                          token1USDPrice,
+                        ),
+                      )
+                      .toString(),
+                  )
                   : "--"}
               </Typography>
             </Box>

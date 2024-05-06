@@ -1,5 +1,9 @@
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
+import { jsx as _jsx } from "react/jsx-runtime";
+import { Slider, Tooltip, tooltipClasses } from "@mui/material";
+import { styled, makeStyles } from "@mui/styles";
+
+const __rest = (this && this.__rest) || function (s, e) {
+    const t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
         t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === "function")
@@ -9,9 +13,7 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import { jsx as _jsx } from "react/jsx-runtime";
-import { Slider, Tooltip, tooltipClasses } from "@mui/material";
-import { styled, makeStyles } from "@mui/styles";
+
 const marks = [{ value: 0 }, { value: 25 }, { value: 50 }, { value: 75 }, { value: 100 }];
 const useStyle = makeStyles((theme) => {
     return {
@@ -44,8 +46,8 @@ const useStyle = makeStyles((theme) => {
     };
 });
 const LightTooltip = styled((_a) => {
-    var { className } = _a, props = __rest(_a, ["className"]);
-    return _jsx(Tooltip, Object.assign({}, props, { classes: { popper: className } }));
+    const { className } = _a; const props = __rest(_a, ["className"]);
+    return _jsx(Tooltip, { ...props, classes: { popper: className }});
 })(({ theme }) => ({
     [`& .${tooltipClasses.tooltip}`]: {
         backgroundColor: theme.colors.secondaryMain,
@@ -59,7 +61,7 @@ const LightTooltip = styled((_a) => {
 const ValueLabelComponent = (props) => {
     const { children, value } = props;
     const classes = useStyle();
-    return (_jsx(LightTooltip, { placement: "top", arrow: true, title: `${value}%`, className: classes.tooltip, children: children }));
+    return (_jsx(LightTooltip, { placement: "top", arrow: true, title: `${value}%`, className: classes.tooltip, children }));
 };
 export function Progression({ value, onChange }) {
     const classes = useStyle();
@@ -71,8 +73,8 @@ export function Progression({ value, onChange }) {
             onChange(value[0]);
         }
     };
-    return (_jsx(Slider, { value: value, className: classes.root, marks: marks, valueLabelDisplay: "auto", components: {
+    return (_jsx(Slider, { value, className: classes.root, marks, valueLabelDisplay: "auto", components: {
             ValueLabel: ValueLabelComponent,
         }, onChange: handleSliderChange }));
 }
-//# sourceMappingURL=Progression.js.map
+// # sourceMappingURL=Progression.js.map

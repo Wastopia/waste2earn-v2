@@ -6,16 +6,16 @@ import {
   resultFormat,
   isAvailablePageArgs,
   parseTokenAmount,
-} from "@icpswap/utils";
+} from "@w2e/utils";
 import { ICP } from "constants/tokens";
 import { Principal } from "@dfinity/principal";
 import { TokenInfo } from "types/token";
-import { tokenAdapter, icpAdapter } from "@icpswap/token-adapter";
-import { tokenList } from "@icpswap/actor";
+import { tokenAdapter, icpAdapter } from "@w2e/token-adapter";
+import { tokenList } from "@w2e/actor";
 import { getTokenStandard } from "store/token/cache/hooks";
 import TokenDefaultLogo from "assets/images/Token_default_logo.png";
-import { useCallsData } from "@icpswap/hooks";
-import { ResultStatus, StatusResult, TOKEN_STANDARD } from "@icpswap/types";
+import { useCallsData } from "@w2e/hooks";
+import { ResultStatus, StatusResult, TOKEN_STANDARD } from "@w2e/types";
 
 export async function getTokenTotalHolder(canisterId: string | undefined) {
   if (!canisterId) return undefined;

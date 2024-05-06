@@ -1,7 +1,7 @@
 import React, { useState, useMemo } from "react";
 import { Grid, InputAdornment, Typography, Box } from "@mui/material";
 import { NumberTextField } from "components/index";
-import { cycleValueFormat, formatTokenAmount, parseTokenAmount } from "@icpswap/utils";
+import { cycleValueFormat, formatTokenAmount, parseTokenAmount } from "@w2e/utils";
 import BigNumber from "bignumber.js";
 import { useFullscreenLoading, useErrorTip, useSuccessTip } from "hooks/useTips";
 import { useICP2CyclesManager } from "store/global/hooks";
@@ -16,7 +16,7 @@ import MaxButton from "components/MaxButton";
 import { tokenTransfer } from "hooks/token/calls";
 import { ledgerService } from "actor/index";
 import { AccountIdentifier, SubAccount } from "@dfinity/ledger-icp";
-import { useTokenBalance } from "@icpswap/hooks";
+import { useTokenBalance } from "@w2e/hooks";
 import Modal from "./index";
 
 export interface TopUpCanisterProps {

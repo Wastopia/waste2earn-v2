@@ -1,9 +1,9 @@
 import { useState, useMemo, useEffect } from "react";
 import { Typography, Box } from "@mui/material";
-import { BigNumber, toSignificant, formatDollarAmount } from "@icpswap/utils";
-import { useTransformedVolumeData, useTokenTvlChart, useTokenVolChart, useTokenPriceChart } from "@icpswap/hooks";
-import type { PublicTokenChartDayData } from "@icpswap/types";
-import { VolumeWindow } from "@icpswap/constants";
+import { BigNumber, toSignificant, formatDollarAmount } from "@w2e/utils";
+import { useTransformedVolumeData, useTokenTvlChart, useTokenVolChart, useTokenPriceChart } from "@w2e/hooks";
+import type { PublicTokenChartDayData } from "@w2e/types";
+import { VolumeWindow } from "@w2e/constants";
 
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
@@ -223,14 +223,14 @@ export function TokenCharts({ canisterId, volume, borderRadius, priceToggles, ba
               ? latestValue
               : formatDollarAmount(latestValue, 2)
             : chartView === ChartView.VOL
-            ? volume
-              ? formatDollarAmount(volume)
-              : formatDollarAmount(formattedVolumeData[formattedVolumeData.length - 1]?.value)
-            : chartView === ChartView.TVL
-            ? formatDollarAmount(formattedTvlData[formattedTvlData.length - 1]?.value)
-            : priceChartData
-            ? formatDollarAmount(priceChartData[priceChartData.length - 1]?.close, 2)
-            : "--"}
+              ? volume
+                ? formatDollarAmount(volume)
+                : formatDollarAmount(formattedVolumeData[formattedVolumeData.length - 1]?.value)
+              : chartView === ChartView.TVL
+                ? formatDollarAmount(formattedTvlData[formattedTvlData.length - 1]?.value)
+                : priceChartData
+                  ? formatDollarAmount(priceChartData[priceChartData.length - 1]?.close, 2)
+                  : "--"}
 
           {chartView === ChartView.PRICE && priceToggles ? (
             <Box sx={{ display: "flex" }}>
@@ -331,8 +331,8 @@ export function TokenCharts({ canisterId, volume, borderRadius, priceToggles, ba
                 volumeWindow === VolumeWindow.daily
                   ? "daily"
                   : volumeWindow === VolumeWindow.monthly
-                  ? "monthly"
-                  : "weekly"
+                    ? "monthly"
+                    : "weekly"
               }
             />
           ) : (

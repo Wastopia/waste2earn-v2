@@ -1,6 +1,6 @@
 import { Avatar } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 
 const useStyles = ({ borderColor, size }: { borderColor: string; size?: string | undefined }) =>
   makeStyles(() => {

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { makeStyles, useTheme } from "@mui/styles";
 import { Chip, List, Paper, Popper, ButtonBase, Box, Typography, useMediaQuery, SvgIcon, Fade } from "@mui/material";
-import { shorten } from "@icpswap/utils";
+import { shorten } from "@w2e/utils";
 import { Trans, t } from "@lingui/macro";
 import { ClickAwayListener } from "@mui/base/ClickAwayListener";
 import {

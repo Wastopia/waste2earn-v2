@@ -1,4 +1,4 @@
-import { ActorIdentity, Override } from "@icpswap/types";
+import { ActorIdentity, Override } from "@w2e/types";
 import {
   HoldersRequest,
   TotalHoldersRequest,

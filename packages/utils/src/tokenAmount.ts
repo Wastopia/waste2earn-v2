@@ -1,10 +1,7 @@
 import BigNumber from "bignumber.js";
-import type { NumberType } from "@icpswap/types";
+import type { NumberType } from "@w2e/types";
 
-export function formatTokenAmount(
-  amount: NumberType | null | undefined,
-  decimals: number | bigint = 8
-): BigNumber {
+export function formatTokenAmount(amount: NumberType | null | undefined, decimals: number | bigint = 8): BigNumber {
   let _amount = amount;
   let _decimals = decimals;
 
@@ -15,10 +12,7 @@ export function formatTokenAmount(
   return new BigNumber(_amount).multipliedBy(10 ** Number(_decimals));
 }
 
-export function parseTokenAmount(
-  amount: NumberType | null | undefined,
-  decimals: number | bigint = 8
-): BigNumber {
+export function parseTokenAmount(amount: NumberType | null | undefined, decimals: number | bigint = 8): BigNumber {
   if (amount !== 0 && !amount) return new BigNumber(0);
   if (typeof amount === "bigint") amount = Number(amount);
   if (typeof decimals === "bigint") decimals = Number(decimals);

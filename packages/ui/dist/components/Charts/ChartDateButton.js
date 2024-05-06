@@ -2,7 +2,7 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState, useEffect } from "react";
 import { Typography, Box } from "@mui/material";
 import { useTheme } from "@mui/styles";
-import { VolumeWindow } from "@icpswap/constants";
+import { VolumeWindow } from "@w2e/constants";
 export function SmallOptionButton({ active, children, onClick, }) {
     const theme = useTheme();
     return (_jsx(Typography, { onClick: onClick, color: "text.primary", component: "div", sx: {

@@ -21,13 +21,13 @@ import {
   shorten,
   timestampFormat,
   explorerLink,
-} from "@icpswap/utils";
-import { useV3FarmMetadata, useFarmUserAllPositions } from "@icpswap/hooks";
+} from "@w2e/utils";
+import { useV3FarmMetadata, useFarmUserAllPositions } from "@w2e/hooks";
 import Countdown from "react-countdown";
 import { ICRocksLoadIcon } from "components/Layout/Header/ProfileSection";
 import { Theme } from "@mui/material/styles";
 import { STATE } from "types/staking-farm";
-import type { StakingFarmInfo } from "@icpswap/types";
+import type { StakingFarmInfo } from "@w2e/types";
 import upperFirst from "lodash/upperFirst";
 import FarmContext from "../context";
 import OptionStaking from "./OptionStaking";

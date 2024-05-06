@@ -5,7 +5,7 @@ import { batch } from "react-redux";
 import { useDensityChartData } from "hooks/swap/useDensityChartData";
 import { format } from "d3";
 import { Bound, FeeAmount } from "constants/swap";
-import { Price, Token } from "@icpswap/swap-sdk";
+import { Price, Token } from "@w2e/swap-sdk";
 import { Box, Grid, Typography, useTheme } from "@mui/material";
 import { t } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";

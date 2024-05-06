@@ -1,8 +1,8 @@
 import { useCallback } from "react";
-import { tokenStorage, node_index } from "@icpswap/actor";
-import { resultFormat } from "@icpswap/utils";
-import { useCallsData } from "@icpswap/hooks";
-import type { PublicTokenOverview } from "@icpswap/types";
+import { tokenStorage, node_index } from "@w2e/actor";
+import { resultFormat } from "@w2e/utils";
+import { useCallsData } from "@w2e/hooks";
+import type { PublicTokenOverview } from "@w2e/types";
 
 export async function getInfoToken(storageId: string, tokenId: string) {
   return resultFormat<PublicTokenOverview>(await (await tokenStorage(storageId)).getToken(tokenId)).data;

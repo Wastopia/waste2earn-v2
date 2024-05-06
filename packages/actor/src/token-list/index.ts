@@ -3,7 +3,7 @@ import {
   TokenListInterfaceFactory,
   AllTokenOfSwapInterfaceFactory,
   AllTokenOfSwapService,
-} from "@icpswap/candid";
+} from "@w2e/candid";
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
 

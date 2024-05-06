@@ -6,7 +6,7 @@ import Pagination from "components/pagination";
 import ListLoading from "components/Loading/List";
 import { Trans } from "@lingui/macro";
 import { useUserExchangeRecord } from "hooks/useWICPCalls";
-import { enumToString, pageArgsFormat, parseTokenAmount, timestampFormat } from "@icpswap/utils";
+import { enumToString, pageArgsFormat, parseTokenAmount, timestampFormat } from "@w2e/utils";
 import { ICP } from "constants/index";
 import WrapContext from "components/Wrap/context";
 

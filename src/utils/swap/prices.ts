@@ -1,6 +1,6 @@
 import JSBI from "jsbi";
-import { TradeType } from "@icpswap/constants";
-import { Token, CurrencyAmount, Fraction, Percent, Trade } from "@icpswap/swap-sdk";
+import { TradeType } from "@w2e/constants";
+import { Token, CurrencyAmount, Fraction, Percent, Trade } from "@w2e/swap-sdk";
 import {
   ALLOWED_PRICE_IMPACT_HIGH,
   ALLOWED_PRICE_IMPACT_LOW,

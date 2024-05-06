@@ -1,4 +1,4 @@
-import { Price, CurrencyAmount, Token, Fraction } from "@icpswap/swap-sdk";
+import { Price, CurrencyAmount, Token, Fraction } from "@w2e/swap-sdk";
 import { JSBI } from "utils/index";
 import { NONE_PRICE_SYMBOL } from "constants/index";
 

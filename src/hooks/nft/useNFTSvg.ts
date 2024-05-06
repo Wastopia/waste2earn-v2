@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { NFTTokenMetadata } from "@icpswap/types";
+import type { NFTTokenMetadata } from "@w2e/types";
 import { V3SwapNFTCanisterId } from "constants/canister";
 import v2Ids from "constants/swap-v2-ids.json";
 import { usePositionNFTSvg } from "hooks/swap/useNFTSvg";

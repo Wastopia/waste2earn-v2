@@ -16,7 +16,7 @@ import { useAccountPrincipal } from "store/auth/hooks";
 import TokenStandardLabel from "components/token/TokenStandardLabel";
 import ImportToken from "components/Wallet/ImportToken";
 import { useUSDPriceById } from "hooks/useUSDPrice";
-import { parseTokenAmount, formatDollarAmount, BigNumber } from "@icpswap/utils";
+import { parseTokenAmount, formatDollarAmount, BigNumber } from "@w2e/utils";
 
 export interface SwapToken {
   canisterId: string;
@@ -259,7 +259,7 @@ export default function Selector({
   const [searchKeyword, setSearchKeyword] = useState("");
   const [importTokenShow, setImportTokenShow] = useState(false);
 
-  // const [tokenAdditionalData, setTokenAdditionalData] = useState({} as TokenAdditionalData);
+  const [tokenAdditionalData, setTokenAdditionalData] = useState({} as TokenAdditionalData);
 
   const [taggedTokenIds] = useTaggedTokenManager();
   const originList = useSwapTokenList(version);
@@ -268,23 +268,23 @@ export default function Selector({
   const list = useMemo(() => {
     const list: SwapToken[] = [...originList];
 
-    // const new_list_tagged: SwapToken[] = [];
-    // const new_list_has_balance: SwapToken[] = [];
-    // const new_list_no_balance: SwapToken[] = [];
-
-    // list.forEach((e) => {
-    //   const tokenBalance = tokenAdditionalData[e.canisterId]?.balance ?? "0";
-
-    //   if (taggedTokenIds.includes(e.canisterId)) {
-    //     new_list_tagged.push(e);
-    //   } else if (tokenBalance !== "0") {
-    //     new_list_has_balance.push(e);
-    //   } else {
-    //     new_list_no_balance.push(e);
-    //   }
-    // });
-
     const new_list_tagged: SwapToken[] = [];
+    const new_list_has_balance: SwapToken[] = [];
+    const new_list_no_balance: SwapToken[] = [];
+
+    list.forEach((e) => {
+      const tokenBalance = tokenAdditionalData[e.canisterId]?.balance ?? "0";
+
+      if (taggedTokenIds.includes(e.canisterId)) {
+        new_list_tagged.push(e);
+      } else if (tokenBalance !== "0") {
+        new_list_has_balance.push(e);
+      } else {
+        new_list_no_balance.push(e);
+      }
+    });
+
+    // const new_list_tagged: SwapToken[] = [];
     const other_tokens: SwapToken[] = [];
 
     list.forEach((e) => {
@@ -310,14 +310,14 @@ export default function Selector({
     setSearchKeyword(value);
   }, []);
 
-  // const handleUpdateTokenAdditionalData = (tokenId: string, balance: string) => {
-  //   setTokenAdditionalData((prevState) => ({
-  //     ...prevState,
-  //     [tokenId]: {
-  //       balance,
-  //     },
-  //   }));
-  // };
+  const handleUpdateTokenAdditionalData = (tokenId: string, balance: string) => {
+    setTokenAdditionalData((prevState) => ({
+      ...prevState,
+      [tokenId]: {
+        balance,
+      },
+    }));
+  };
 
   const no_data = useMemo(() => {
     if (list.length === 0) return true;

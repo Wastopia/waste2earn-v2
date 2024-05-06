@@ -1,5 +1,5 @@
-import { resultFormat, availableArgsNull } from "@icpswap/utils";
-import { useCallsData } from "@icpswap/hooks";
+import { resultFormat, availableArgsNull } from "@w2e/utils";
+import { useCallsData } from "@w2e/hooks";
 import { Principal } from "@dfinity/principal";
 import { ckBTCActor } from "actor/ckBTC";
 import { useCallback } from "react";

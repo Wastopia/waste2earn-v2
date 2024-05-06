@@ -1,8 +1,8 @@
 import { Button } from "@mui/material";
 import { Trans, t } from "@lingui/macro";
-import { disburseNeuronMaturity } from "@icpswap/hooks";
-import { ConfirmModal } from "@icpswap/ui";
-import { Neuron } from "@icpswap/types";
+import { disburseNeuronMaturity } from "@w2e/hooks";
+import { ConfirmModal } from "@w2e/ui";
+import { Neuron } from "@w2e/types";
 import { useMemo, useState } from "react";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
 

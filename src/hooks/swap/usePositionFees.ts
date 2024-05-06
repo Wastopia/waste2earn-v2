@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { usePositionFee } from "@icpswap/hooks";
+import { usePositionFee } from "@w2e/hooks";
 
 export function usePositionFees(
   canisterId: string | undefined,

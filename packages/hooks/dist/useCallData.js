@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useState, useMemo, useEffect, useRef } from "react";
-import { pageArgsFormat, sleep } from "@icpswap/utils";
+import { pageArgsFormat, sleep } from "@w2e/utils";
 export function useCallsData(fn, reload) {
     const [result, setResult] = useState(undefined);
     const [loading, setLoading] = useState(false);

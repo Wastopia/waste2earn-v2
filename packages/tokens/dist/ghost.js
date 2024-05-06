@@ -1,5 +1,5 @@
-import { Token } from "@icpswap/swap-sdk";
-import { TOKEN_STANDARD } from "@icpswap/constants";
+import { Token } from "@w2e/swap-sdk";
+import { TOKEN_STANDARD } from "@w2e/constants";
 export const GHOST_TOKEN_INFO = {
     standardType: TOKEN_STANDARD.ICRC1,
     name: "GHOST",

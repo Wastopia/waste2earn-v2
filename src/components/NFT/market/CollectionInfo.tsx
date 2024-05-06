@@ -8,7 +8,7 @@ import { useCollectionData } from "hooks/nft/tradeData";
 import { Trans } from "@lingui/macro";
 import VerifyNFT from "components/NFT/VerifyNFT";
 import WICPPriceFormat from "components/NFT/WICPPriceFormat";
-import { formatAmount } from "@icpswap/utils";
+import { formatAmount } from "@w2e/utils";
 import { LoadingRow, Breadcrumbs } from "components/index";
 
 import CollectionLinks from "../collectionsIcon/index";

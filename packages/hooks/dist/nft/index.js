@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { NFTCanister, NFTTradeCanister, NFTCanisterController, NFTTradeStat, NFT_V1, } from "@icpswap/actor";
-import { resultFormat, isAvailablePageArgs, isPrincipal, availableArgsNull, } from "@icpswap/utils";
+import { NFTCanister, NFTTradeCanister, NFTCanisterController, NFTTradeStat, NFT_V1, } from "@w2e/actor";
+import { resultFormat, isAvailablePageArgs, isPrincipal, availableArgsNull, } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
 // ----------------> NFT Canisters
 export function getNFTCanisters(offset, limit) {

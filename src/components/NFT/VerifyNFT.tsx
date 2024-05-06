@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { isICPSwapOfficial } from "utils/index";
 import VerifyImage from "assets/images/nft/verify.svg";
-import { shorten } from "@icpswap/utils";
+import { shorten } from "@w2e/utils";
 
 export interface LabelProps {
   minter?: string;

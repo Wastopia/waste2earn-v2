@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Override } from "@icpswap/types";
+import { Override } from "@w2e/types";
 
 export interface StepContent {
   title: ReactNode;

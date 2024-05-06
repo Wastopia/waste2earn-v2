@@ -1,17 +1,17 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import { useSNSSwapDerivedState, useSwapLifeCycle, useSNSBuyerState, useIpLocationCode } from "@icpswap/hooks";
+import { useSNSSwapDerivedState, useSwapLifeCycle, useSNSBuyerState, useIpLocationCode } from "@w2e/hooks";
 import { Trans, t } from "@lingui/macro";
 import { useMemo, useState, useContext } from "react";
 import { TextButton } from "components/index";
-import type { SwapSaleParameters, SNSSwapInitArgs } from "@icpswap/types";
+import type { SwapSaleParameters, SNSSwapInitArgs } from "@w2e/types";
 import { Theme } from "@mui/material/styles";
 import dayjs from "dayjs";
 import { TokenInfo } from "types/index";
-import { BigNumber, parseTokenAmount, toSignificant } from "@icpswap/utils";
+import { BigNumber, parseTokenAmount, toSignificant } from "@w2e/utils";
 import { ICP } from "constants/tokens";
 import Button from "components/authentication/ButtonConnector";
 import { useAccountPrincipal, useConnectorType } from "store/auth/hooks";
-import { SnsSwapLifecycle } from "@icpswap/constants";
+import { SnsSwapLifecycle } from "@w2e/constants";
 import { Connector } from "constants/wallet";
 import { Participate } from "./Participate";
 import { LaunchContext } from "./context";
@@ -108,9 +108,9 @@ export function LaunchStatus({ tokenInfo, swap_id, swapInitArgs, saleParameters 
           !neurons_fund_icp || !max_neurons_fund_commitment
             ? undefined
             : `${new BigNumber(neurons_fund_icp.toString())
-                .dividedBy(max_neurons_fund_commitment.toString())
-                .multipliedBy(100)
-                .toFixed(2)}%`,
+              .dividedBy(max_neurons_fund_commitment.toString())
+              .multipliedBy(100)
+              .toFixed(2)}%`,
       };
     }, [swap_derived_state, max_neurons_fund_commitment]);
 
@@ -220,8 +220,8 @@ export function LaunchStatus({ tokenInfo, swap_id, swapInitArgs, saleParameters 
           <Typography color="text.primary" align="right" sx={{ wordBreak: "break-all" }}>
             {direct_participation_icp
               ? `${toSignificant(parseTokenAmount(direct_participation_icp, ICP.decimals).toString(), 8, {
-                  groupSeparator: ",",
-                })} ${ICP.symbol}`
+                groupSeparator: ",",
+              })} ${ICP.symbol}`
               : "--"}
           </Typography>
         </Box>
@@ -308,8 +308,8 @@ export function LaunchStatus({ tokenInfo, swap_id, swapInitArgs, saleParameters 
           <Typography color="text.primary" align="right" sx={{ wordBreak: "break-all" }}>
             {neurons_fund_icp
               ? `${toSignificant(parseTokenAmount(neurons_fund_icp, ICP.decimals).toString(), 8, {
-                  groupSeparator: ",",
-                })} ${ICP.symbol}`
+                groupSeparator: ",",
+              })} ${ICP.symbol}`
               : "--"}
           </Typography>
         </Box>
@@ -352,8 +352,8 @@ export function LaunchStatus({ tokenInfo, swap_id, swapInitArgs, saleParameters 
             <Typography sx={{ margin: "5px 0 0 0" }} align="right">
               {max_neurons_fund_commitment
                 ? `${toSignificant(parseTokenAmount(max_neurons_fund_commitment, ICP.decimals).toString(), 8, {
-                    groupSeparator: ",",
-                  })} ${ICP.symbol}`
+                  groupSeparator: ",",
+                })} ${ICP.symbol}`
                 : "--"}
             </Typography>
           </Box>
@@ -368,8 +368,8 @@ export function LaunchStatus({ tokenInfo, swap_id, swapInitArgs, saleParameters 
         <Typography color="text.primary">
           {buyer_total_icp
             ? `${toSignificant(parseTokenAmount(buyer_total_icp, ICP.decimals).toString(), 8, {
-                groupSeparator: ",",
-              })} ${ICP.symbol}`
+              groupSeparator: ",",
+            })} ${ICP.symbol}`
             : "--"}
         </Typography>
       </Box>
@@ -382,8 +382,8 @@ export function LaunchStatus({ tokenInfo, swap_id, swapInitArgs, saleParameters 
         <Typography color="text.primary">
           {buyer_total_icp
             ? `${toSignificant(parseTokenAmount(bought_amount, ICP.decimals).toString(), 8, {
-                groupSeparator: ",",
-              })} ${ICP.symbol}`
+              groupSeparator: ",",
+            })} ${ICP.symbol}`
             : "--"}
         </Typography>
       </Box>
@@ -397,8 +397,8 @@ export function LaunchStatus({ tokenInfo, swap_id, swapInitArgs, saleParameters 
           {buyer_total_icp
             ? saleParameters
               ? `${dayjs(Number(saleParameters.swap_due_timestamp_seconds * BigInt(1000))).format(
-                  "YYYY-MM-DD HH:mm:ss",
-                )}`
+                "YYYY-MM-DD HH:mm:ss",
+              )}`
               : "--"
             : "--"}
         </Typography>

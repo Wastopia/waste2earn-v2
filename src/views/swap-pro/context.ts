@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 
 export interface SwapProContextProps {
   tradePoolId: string | undefined;

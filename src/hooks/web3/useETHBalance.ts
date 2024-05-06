@@ -1,6 +1,6 @@
 import { useWeb3React } from "@web3-react/core";
 import { useEffect, useMemo, useState } from "react";
-import { parseTokenAmount, BigNumber } from "@icpswap/utils";
+import { parseTokenAmount, BigNumber } from "@w2e/utils";
 import Web3 from "web3";
 
 export function useETHBalance(reload?: boolean) {

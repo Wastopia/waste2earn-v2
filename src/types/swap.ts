@@ -1,4 +1,4 @@
-import { Override, UserPositionInfo } from "@icpswap/types";
+import { Override, UserPositionInfo } from "@w2e/types";
 
 export type PositionDetail = {
   pool: string;

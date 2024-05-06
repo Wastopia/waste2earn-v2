@@ -1,6 +1,6 @@
-import { sns_governance } from "@icpswap/actor";
+import { sns_governance } from "@w2e/actor";
 import { useCallback } from "react";
-import { availableArgsNull, resultFormat } from "@icpswap/utils";
+import { availableArgsNull, resultFormat } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 import type {
   ListNeuronsResponse,
@@ -10,7 +10,7 @@ import type {
   NeuronId,
   ManageNeuronResponse,
   ListNervousSystemFunctionsResponse,
-} from "@icpswap/types";
+} from "@w2e/types";
 import { useCallsData } from "../useCallData";
 import { neuronOperationCommand } from "./neuronCommand";
 

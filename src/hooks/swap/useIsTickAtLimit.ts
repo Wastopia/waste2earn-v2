@@ -1,4 +1,4 @@
-import { nearestUsableTick, TickMath, TICK_SPACINGS, FeeAmount } from "@icpswap/swap-sdk";
+import { nearestUsableTick, TickMath, TICK_SPACINGS, FeeAmount } from "@w2e/swap-sdk";
 import { useMemo } from "react";
 import { Bound } from "constants/swap";
 

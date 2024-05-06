@@ -1,4 +1,4 @@
-import { Token, CurrencyAmount } from "@icpswap/swap-sdk";
+import { Token, CurrencyAmount } from "@w2e/swap-sdk";
 
 /**
  * Given some token amount, return the max that can be spent of it

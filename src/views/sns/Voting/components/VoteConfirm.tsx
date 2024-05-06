@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { neuronVoteForProposal } from "@icpswap/hooks";
+import { neuronVoteForProposal } from "@w2e/hooks";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
 import { t } from "@lingui/macro";
-import { Neuron, ProposalData } from "@icpswap/types";
-import { ConfirmModal } from "@icpswap/ui";
+import { Neuron, ProposalData } from "@w2e/types";
+import { ConfirmModal } from "@w2e/ui";
 import { neuronFormat, votingPowerFormat } from "utils/sns/index";
-import { Vote } from "@icpswap/constants";
+import { Vote } from "@w2e/constants";
 
 export interface VoteConfirmProps {
   onVoteCallEnded?: () => void;
@@ -95,11 +95,11 @@ export function VoteConfirm({
       text={
         rejected
           ? t`You are about to cast ${votingPowerFormat(
-              votingPowers,
-            )} votes against this proposal, are you sure you want to proceed?`
+            votingPowers,
+          )} votes against this proposal, are you sure you want to proceed?`
           : t`You are about to cast ${votingPowerFormat(
-              votingPowers,
-            )} votes for this proposal, are you sure you want to proceed?`
+            votingPowers,
+          )} votes for this proposal, are you sure you want to proceed?`
       }
     />
   );

@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { resultFormat } from "@icpswap/utils";
+import { resultFormat } from "@w2e/utils";
 import { useCallsData } from "./useCallData";
 export function get100ICPPriceInfo() {
     return __awaiter(this, void 0, void 0, function* () {

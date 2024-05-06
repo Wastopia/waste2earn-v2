@@ -7,4 +7,4 @@ export * from "./sns";
 export * from "./constants";
 export * from "./charts";
 export * from "./date";
-//# sourceMappingURL=index.d.ts.map
+// # sourceMappingURL=index.d.ts.map

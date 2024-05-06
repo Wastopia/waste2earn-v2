@@ -1,7 +1,7 @@
 import { useState, useContext } from "react";
 import { Button, Grid, TextField, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { parseTokenAmount, isValidAccount } from "@icpswap/utils";
+import { parseTokenAmount, isValidAccount } from "@w2e/utils";
 import BigNumber from "bignumber.js";
 import { ICP_TOKEN_INFO } from "constants/tokens";
 import CircularProgress from "@mui/material/CircularProgress";

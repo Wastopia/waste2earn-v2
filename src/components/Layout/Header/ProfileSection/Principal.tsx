@@ -1,4 +1,4 @@
-import { principalToAccount } from "@icpswap/utils";
+import { principalToAccount } from "@w2e/utils";
 import { getExplorerAccountLink } from "utils/index";
 import { t } from "@lingui/macro";
 import { useAccountPrincipalString } from "store/auth/hooks";

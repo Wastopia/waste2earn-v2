@@ -1,12 +1,12 @@
 import { Box, useTheme } from "@mui/material";
 import { t } from "@lingui/macro";
 import { useMemo } from "react";
-import type { SwapSaleParameters, SNSSwapInitArgs } from "@icpswap/types";
+import type { SwapSaleParameters, SNSSwapInitArgs } from "@w2e/types";
 import { Theme } from "@mui/material/styles";
 import dayjs from "dayjs";
 import { TokenInfo } from "types/index";
 import { useTokenSupply } from "hooks/token/calls";
-import { parseTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount } from "@w2e/utils";
 import { ICP } from "constants/tokens";
 import { ItemDisplay } from "./ItemDisplay";
 
@@ -60,9 +60,8 @@ export function LaunchDetail({ ledger_id, tokenInfo, swapInitArgs, saleParameter
         label={t`Tokens Distributed to Participants`}
         value={
           !!saleParameters && !!tokenInfo
-            ? `${parseTokenAmount(saleParameters.sns_token_e8s.toString(), tokenInfo.decimals).toFormat()} ${
-                tokenInfo.symbol
-              }`
+            ? `${parseTokenAmount(saleParameters.sns_token_e8s.toString(), tokenInfo.decimals).toFormat()} ${tokenInfo.symbol
+            }`
             : "--"
         }
       />
@@ -76,9 +75,8 @@ export function LaunchDetail({ ledger_id, tokenInfo, swapInitArgs, saleParameter
         label={t`Minimum Participant Commitment`}
         value={
           !!saleParameters && !!tokenInfo
-            ? `${parseTokenAmount(saleParameters.min_participant_icp_e8s.toString(), ICP.decimals).toFormat()} ${
-                ICP.symbol
-              }`
+            ? `${parseTokenAmount(saleParameters.min_participant_icp_e8s.toString(), ICP.decimals).toFormat()} ${ICP.symbol
+            }`
             : "--"
         }
       />
@@ -87,9 +85,8 @@ export function LaunchDetail({ ledger_id, tokenInfo, swapInitArgs, saleParameter
         label={t`Maximum Participant Commitment`}
         value={
           !!saleParameters && !!tokenInfo
-            ? `${parseTokenAmount(saleParameters.max_participant_icp_e8s.toString(), ICP.decimals).toFormat()} ${
-                ICP.symbol
-              }`
+            ? `${parseTokenAmount(saleParameters.max_participant_icp_e8s.toString(), ICP.decimals).toFormat()} ${ICP.symbol
+            }`
             : "--"
         }
       />
@@ -98,9 +95,8 @@ export function LaunchDetail({ ledger_id, tokenInfo, swapInitArgs, saleParameter
         label={t`Maximum Neurons' Fund Commitment`}
         value={
           !!saleParameters && !!tokenInfo
-            ? `${parseTokenAmount(saleParameters.sns_token_e8s.toString(), tokenInfo.decimals).toFormat()} ${
-                tokenInfo.symbol
-              }`
+            ? `${parseTokenAmount(saleParameters.sns_token_e8s.toString(), tokenInfo.decimals).toFormat()} ${tokenInfo.symbol
+            }`
             : "--"
         }
       />

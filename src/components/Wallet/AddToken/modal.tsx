@@ -13,7 +13,7 @@ import ImportToken from "components/Wallet/ImportToken";
 import { NoData, TextButton, Modal, FilledTextField } from "components/index";
 import { useGlobalTokenList } from "store/global/hooks";
 import { DISPLAY_IN_WALLET_FOREVER } from "constants/wallet";
-import { TokenImage } from "@icpswap/ui";
+import { TokenImage } from "@w2e/ui";
 
 export function TokenItem({ canisterId }: { canisterId: string }) {
   const theme = useTheme() as Theme;

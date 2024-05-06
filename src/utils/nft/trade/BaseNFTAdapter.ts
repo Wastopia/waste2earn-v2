@@ -1,5 +1,5 @@
-import type { NFTBuyArgs, NFTSaleArgs, NFTRevokeArgs } from "@icpswap/types";
-import { StatusResult } from "@icpswap/types";
+import type { NFTBuyArgs, NFTSaleArgs, NFTRevokeArgs } from "@w2e/types";
+import { StatusResult } from "@w2e/types";
 import { Identity } from "types/global";
 
 export interface BuyParameters {

@@ -1,5 +1,5 @@
 import { useMediaQuery, useTheme } from "@mui/material";
-import type { PublicTokenOverview, TokenListMetadata } from "@icpswap/types";
+import type { PublicTokenOverview, TokenListMetadata } from "@w2e/types";
 import type { TokenInfo } from "types/token";
 
 import Token from "./Token";

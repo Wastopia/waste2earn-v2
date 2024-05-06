@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Box } from "@mui/material";
 import { t } from "@lingui/macro";
 import { Wrapper, Breadcrumbs, type Tab } from "components/index";
-import { useParsedQueryString } from "@icpswap/hooks";
+import { useParsedQueryString } from "@w2e/hooks";
 import { useBTCCurrentBlock } from "hooks/ck-btc/useBTCCalls";
 import MintBTC from "./components/ckBTC/Mint";
 import DissolveBTC from "./components/ckBTC/Dissolve";

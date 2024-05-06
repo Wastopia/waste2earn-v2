@@ -7,8 +7,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { swapPool } from "@icpswap/actor";
-import { resultFormat } from "@icpswap/utils";
+import { swapPool } from "@w2e/actor";
+import { resultFormat } from "@w2e/utils";
 export function getSwapPoolMeta(canisterId) {
     return __awaiter(this, void 0, void 0, function* () {
         const result = yield (yield swapPool(canisterId)).metadata();

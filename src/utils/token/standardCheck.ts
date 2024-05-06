@@ -6,8 +6,8 @@ import {
   icrc1Adapter,
   icrc2Adapter,
   icpAdapter,
-} from "@icpswap/token-adapter";
-import { icrc1, icrc2 } from "@icpswap/actor";
+} from "@w2e/token-adapter";
+import { icrc1, icrc2 } from "@w2e/actor";
 import { TOKEN_STANDARD, ICP } from "constants/tokens";
 import { Metadata } from "types/token";
 

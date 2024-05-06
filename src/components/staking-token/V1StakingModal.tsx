@@ -1,9 +1,9 @@
 import { useTips, MessageTypes } from "hooks/useTips";
 import { useAccountPrincipal } from "store/auth/hooks";
-import { stakingV1TokenDeposit } from "@icpswap/hooks";
+import { stakingV1TokenDeposit } from "@w2e/hooks";
 import { useApprove } from "hooks/token/useApprove";
 import { getLocaleMessage } from "locales/services";
-import type { StakingPoolControllerPoolInfo } from "@icpswap/types";
+import type { StakingPoolControllerPoolInfo } from "@w2e/types";
 import StakingModal, { StakingProps } from "components/staking-token/StakingModal";
 
 export interface StakingModalProps {

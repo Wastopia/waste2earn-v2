@@ -1,6 +1,6 @@
 import { actor } from "./actor";
 import { ActorName } from "./ActorName";
-import { ClaimControllerInterfaceFactory, ClaimStorageInterfaceFactory, } from "@icpswap/candid";
+import { ClaimControllerInterfaceFactory, ClaimStorageInterfaceFactory, } from "@w2e/candid";
 export const tokenClaimController = (identity) => actor.create({
     actorName: ActorName.ClaimController,
     identity,

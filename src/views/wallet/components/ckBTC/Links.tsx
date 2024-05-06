@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import { Trans } from "@lingui/macro";
 import { ckBTC_MINTER_ID, ckBTC_DASHBOARD } from "constants/ckBTC";
-import { explorerLink } from "@icpswap/utils";
+import { explorerLink } from "@w2e/utils";
 
 import { Link } from "../Link";
 

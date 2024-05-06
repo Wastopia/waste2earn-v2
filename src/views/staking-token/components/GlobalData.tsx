@@ -9,7 +9,7 @@ import GlobalBg2 from "assets/images/staking/2.png";
 import GlobalBg3 from "assets/images/staking/3.png";
 import { Trans } from "@lingui/macro";
 import { useICPPrice } from "store/global/hooks";
-import { formatDollarAmount } from "@icpswap/utils";
+import { formatDollarAmount } from "@w2e/utils";
 
 const useStyle = makeStyles(() => ({
   item: {

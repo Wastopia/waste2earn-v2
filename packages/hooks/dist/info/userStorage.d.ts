@@ -1,4 +1,4 @@
-import { UserStorageTransaction, PaginationResult } from "@icpswap/types";
+import { UserStorageTransaction, PaginationResult } from "@w2e/types";
 /**
  * @param storageId The user storage canister id
  * @param principal User's principal address
@@ -7,7 +7,13 @@ import { UserStorageTransaction, PaginationResult } from "@icpswap/types";
  * @param poolIds An array of pool ids, empty array will return all pools data
  * @returns
  */
-export declare function getInfoUserTransactions(storageId: string, principal: string, offset: number, limit: number, poolIds: string[]): Promise<PaginationResult<UserStorageTransaction>>;
+export declare function getInfoUserTransactions(
+  storageId: string,
+  principal: string,
+  offset: number,
+  limit: number,
+  poolIds: string[],
+): Promise<PaginationResult<UserStorageTransaction>>;
 /**
  * @param storageId The user storage canister id
  * @param principal User's principal address
@@ -16,5 +22,11 @@ export declare function getInfoUserTransactions(storageId: string, principal: st
  * @param poolIds An array of pool ids, empty array will return all pools data
  * @returns
  */
-export declare function useInfoUserTransactions(storageId: string | undefined, principal: string | undefined, offset: number, limit: number, poolIds?: string[]): import("@icpswap/types").CallResult<PaginationResult<UserStorageTransaction>>;
+export declare function useInfoUserTransactions(
+  storageId: string | undefined,
+  principal: string | undefined,
+  offset: number,
+  limit: number,
+  poolIds?: string[],
+): import("@w2e/types").CallResult<PaginationResult<UserStorageTransaction>>;
 //# sourceMappingURL=userStorage.d.ts.map

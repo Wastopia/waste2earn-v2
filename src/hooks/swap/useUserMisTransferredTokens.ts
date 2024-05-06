@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
-import { getTokenBalance, useSwapPools } from "@icpswap/hooks";
-import { swapPool } from "@icpswap/actor";
-import { resultFormat } from "@icpswap/utils";
+import { getTokenBalance, useSwapPools } from "@w2e/hooks";
+import { swapPool } from "@w2e/actor";
+import { resultFormat } from "@w2e/utils";
 import { useAccountPrincipal } from "store/auth/hooks";
 import { SubAccount } from "@dfinity/ledger-icp";
 

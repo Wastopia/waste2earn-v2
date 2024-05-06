@@ -1,5 +1,5 @@
 {
-  "name": "@icpswap/swap-sdk",
+  "name": "@w2e/swap-sdk",
   "version": "0.0.1",
   "sideEffects": [
     "*.css.ts"
@@ -17,7 +17,7 @@
     "test": "jest --passWithNoTests"
   },
   "dependencies": {
-    "@icpswap/utils": "../utils",
+    "@w2e/utils": "../utils",
     "big.js": "^6.1.1",
     "decimal.js-light": "^2.5.1"
   }

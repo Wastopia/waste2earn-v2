@@ -14,7 +14,7 @@ import { Identity as TypeIdentity, CanisterCreateDetails } from "types/index";
 import PercentageSlider from "components/PercentageSlider/Marks";
 import AddIcon from "@mui/icons-material/Add";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
-import { BigNumber, parseTokenAmount, isValidUrl, numberToString } from "@icpswap/utils";
+import { BigNumber, parseTokenAmount, isValidUrl, numberToString } from "@w2e/utils";
 import { useApprove } from "hooks/token/useApprove";
 import { useAccount } from "store/global/hooks";
 import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity";

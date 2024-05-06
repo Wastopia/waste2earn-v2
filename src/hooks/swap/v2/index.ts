@@ -1,9 +1,9 @@
 import { useMemo, useCallback, useEffect, useState } from "react";
-import { parseTokenAmount, formatTokenAmount, numberToString } from "@icpswap/utils";
-import { type NumberType } from "@icpswap/types";
+import { parseTokenAmount, formatTokenAmount, numberToString } from "@w2e/utils";
+import { type NumberType } from "@w2e/types";
 import { getTokenStandard, useUpdateTokenStandard } from "store/token/cache/hooks";
 import { getPoolTokenStandard, getPoolCanisterId } from "hooks/swap/v2/useSwapCalls";
-import { FeeAmount, Token } from "@icpswap/swap-sdk";
+import { FeeAmount, Token } from "@w2e/swap-sdk";
 
 export function useActualSwapAmount(amount: NumberType | undefined, currency: Token | undefined): string | undefined {
   return useMemo(() => {

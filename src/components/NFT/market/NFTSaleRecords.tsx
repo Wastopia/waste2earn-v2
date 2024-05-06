@@ -1,7 +1,7 @@
 import { Link as ReactLink } from "react-router-dom";
 import { Table, TableContainer, TableCell, TableRow, TableHead, TableBody, Typography, Grid } from "@mui/material";
 import NoData from "components/no-data";
-import { parseTokenAmount , nanosecond2Millisecond, shorten } from "@icpswap/utils";
+import { parseTokenAmount, nanosecond2Millisecond, shorten } from "@w2e/utils";
 import { WRAPPED_ICP_TOKEN_INFO } from "constants/index";
 import Pagination from "components/pagination";
 import { Trans, t } from "@lingui/macro";

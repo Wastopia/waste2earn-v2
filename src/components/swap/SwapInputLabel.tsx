@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { formatCurrencyAmount } from "utils/swap/formatCurrencyAmount";
 import { Trans } from "@lingui/macro";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import { useCurrencyBalance } from "hooks/token/useTokenBalance";
 import { useAccountPrincipal } from "store/auth/hooks";
 

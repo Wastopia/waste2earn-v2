@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Grid, Typography, Button , Table, TableContainer, TableCell, TableRow, TableHead, TableBody } from "@mui/material";
-import { pageArgsFormat } from "@icpswap/utils";
+import { Grid, Typography, Button, Table, TableContainer, TableCell, TableRow, TableHead, TableBody } from "@mui/material";
+import { pageArgsFormat } from "@w2e/utils";
 import { Trans } from "@lingui/macro";
 import { Pagination, PaginationType, NoData, MainCard, ListLoading } from "components/index";
-import { useVotingAuthorityUsers } from "@icpswap/hooks";
+import { useVotingAuthorityUsers } from "@w2e/hooks";
 import { Principal } from "@dfinity/principal";
 import DeleteIcon from "@mui/icons-material/Delete";
 import AddAuthorityUser from "components/vote/AddAuthorityUser";

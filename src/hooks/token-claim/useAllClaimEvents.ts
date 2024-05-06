@@ -1,4 +1,4 @@
-import { getPaginationAllData, getClaimEvents } from "@icpswap/hooks";
+import { getPaginationAllData, getClaimEvents } from "@w2e/hooks";
 
 export async function getAllClaimEvents() {
   const call = async (offset: number, limit: number) => {

@@ -1,4 +1,4 @@
-import { V2Base, V2Pools, V2Token, V2TVL, V2ICPPrice } from "@icpswap/candid";
+import { V2Base, V2Pools, V2Token, V2TVL, V2ICPPrice } from "@w2e/candid";
 export declare const analyticSwap: () => Promise<import("@dfinity/agent").ActorSubclass<V2Base>>;
 export declare const analyticPool: () => Promise<import("@dfinity/agent").ActorSubclass<V2Pools>>;
 export declare const analyticToken: () => Promise<import("@dfinity/agent").ActorSubclass<V2Token>>;

@@ -1,6 +1,6 @@
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
-import { FarmInterfaceFactory, FarmControllerInterfaceFactory, FarmStorageInterfaceFactory, } from "@icpswap/candid";
+import { FarmInterfaceFactory, FarmControllerInterfaceFactory, FarmStorageInterfaceFactory, } from "@w2e/candid";
 export const v3FarmController = (identity) => actor.create({
     actorName: ActorName.FarmController,
     identity,

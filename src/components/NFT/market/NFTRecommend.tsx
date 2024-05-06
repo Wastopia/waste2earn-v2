@@ -5,7 +5,7 @@ import { Theme } from "@mui/material/styles";
 import NFTCard from "components/NFT/market/NFTCard";
 import { useNFTRecommend } from "hooks/nft/trade";
 import NoData from "components/no-data";
-import { pageArgsFormat } from "@icpswap/utils";
+import { pageArgsFormat } from "@w2e/utils";
 import { MainCard } from "components/index";
 import Loading from "components/Loading/Static";
 import { TradeOrder } from "types/nft";

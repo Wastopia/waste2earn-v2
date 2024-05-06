@@ -1,5 +1,5 @@
-import { resultFormat, availableArgsNull } from "@icpswap/utils";
-import { StatusResult } from "@icpswap/types";
+import { resultFormat, availableArgsNull } from "@w2e/utils";
+import { StatusResult } from "@w2e/types";
 import { Principal } from "@dfinity/principal";
 import { ckBTCActor } from "actor/ckBTC";
 import { useAccountPrincipalString } from "store/auth/hooks";

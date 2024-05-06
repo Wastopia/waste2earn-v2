@@ -17,9 +17,9 @@ import {
   getStakingTokenUserInfo,
   getStakingTokenPool,
   getV1StakingTokenPool,
-} from "@icpswap/hooks";
-import { TOKEN_STANDARD , ResultStatus } from "@icpswap/types";
-import { Token } from "@icpswap/swap-sdk";
+} from "@w2e/hooks";
+import { TOKEN_STANDARD, ResultStatus } from "@w2e/types";
+import { Token } from "@w2e/swap-sdk";
 import { getActorIdentity } from "components/Identity";
 import { useErrorTip, TIP_OPTIONS } from "hooks/useTips";
 import { t } from "@lingui/macro";
@@ -35,7 +35,7 @@ import { useTokenTransferOrApprove } from "hooks/token/useTokenTransferOrApprove
 import { Identity as CallIdentity } from "types/global";
 import { StakingPoolInfo as V1PoolData } from "types/staking";
 import type { UserStakingInfo } from "types/staking-token";
-import type { StakingPoolGlobalData, StakingTokenPoolInfo } from "@icpswap/types";
+import type { StakingPoolGlobalData, StakingTokenPoolInfo } from "@w2e/types";
 import { SubAccount } from "@dfinity/ledger-icp";
 
 export function useStakingGlobalData(): [StakingPoolGlobalData | undefined, () => void] {

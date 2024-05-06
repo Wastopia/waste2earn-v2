@@ -10,7 +10,7 @@ import PositionContext from "components/swap/PositionContext";
 import { useUserAllPositions } from "hooks/swap/useUserAllPositions";
 import { UserPosition } from "types/swap";
 import { useInitialUserPositionPools } from "store/hooks";
-import { formatDollarAmount } from "@icpswap/utils";
+import { formatDollarAmount } from "@w2e/utils";
 
 function hasLiquidity(position: UserPosition | undefined) {
   return position?.liquidity?.toString() !== "0";

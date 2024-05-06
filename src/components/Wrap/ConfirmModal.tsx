@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 import { ArrowRightAlt } from "@mui/icons-material";
 import { t } from "@lingui/macro";
 import { SWAP_FIELD } from "constants/swap";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 import { Theme } from "@mui/material/styles";
 import { TokenImage } from "components/index";
 

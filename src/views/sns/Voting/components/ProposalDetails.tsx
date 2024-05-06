@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import { Trans } from "@lingui/macro";
 import { useMemo } from "react";
-import type { ProposalData } from "@icpswap/types";
-import { shorten, nowInSeconds, toHexString } from "@icpswap/utils";
+import type { ProposalData } from "@w2e/types";
+import { shorten, nowInSeconds, toHexString } from "@w2e/utils";
 import { useParams } from "react-router-dom";
 import { Copy } from "components/Copy/icon";
 import dayjs from "dayjs";
@@ -81,8 +81,8 @@ export function ProposalDetails({ proposal_data }: ProposalDetailsProps) {
               <Typography>
                 {proposal_data?.proposal_creation_timestamp_seconds
                   ? dayjs(Number(proposal_data.proposal_creation_timestamp_seconds * BigInt(1000))).format(
-                      "YYYY-MM-DD HH:mm:ss",
-                    )
+                    "YYYY-MM-DD HH:mm:ss",
+                  )
                   : "--"}
               </Typography>
             }
@@ -96,8 +96,8 @@ export function ProposalDetails({ proposal_data }: ProposalDetailsProps) {
                   <Typography>
                     {proposal_data?.decided_timestamp_seconds
                       ? dayjs(Number(proposal_data.decided_timestamp_seconds * BigInt(1000))).format(
-                          "YYYY-MM-DD HH:mm:ss",
-                        )
+                        "YYYY-MM-DD HH:mm:ss",
+                      )
                       : "--"}
                   </Typography>
                 }
@@ -109,8 +109,8 @@ export function ProposalDetails({ proposal_data }: ProposalDetailsProps) {
                   <Typography>
                     {proposal_data?.executed_timestamp_seconds
                       ? dayjs(Number(proposal_data.executed_timestamp_seconds * BigInt(1000))).format(
-                          "YYYY-MM-DD HH:mm:ss",
-                        )
+                        "YYYY-MM-DD HH:mm:ss",
+                      )
                       : "--"}
                   </Typography>
                 }

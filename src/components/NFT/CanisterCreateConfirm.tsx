@@ -3,7 +3,7 @@ import { Typography, Box, Grid, Button } from "@mui/material";
 import { WRAPPED_ICP_TOKEN_INFO } from "constants/index";
 import { CanisterCreateDetails } from "types/index";
 import { Trans, t } from "@lingui/macro";
-import { parseTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount } from "@w2e/utils";
 
 export default ({
   open,

@@ -2,8 +2,8 @@ import { Box, Typography } from "@mui/material";
 import { Trans } from "@lingui/macro";
 import { useMemo } from "react";
 import { MainCard } from "components/index";
-import type { ProposalData } from "@icpswap/types";
-import { nowInSeconds } from "@icpswap/utils";
+import type { ProposalData } from "@w2e/types";
+import { nowInSeconds } from "@w2e/utils";
 
 export interface ProposalSummaryProps {
   proposal_data: ProposalData | undefined;

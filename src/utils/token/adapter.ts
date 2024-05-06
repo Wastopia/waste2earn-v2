@@ -1,7 +1,7 @@
-import { actor } from "@icpswap/actor";
-import { type ActorIdentity } from "@icpswap/types";
+import { actor } from "@w2e/actor";
+import { type ActorIdentity } from "@w2e/types";
 import { Principal } from "@dfinity/principal";
-import { resultFormat, isPrincipal } from "@icpswap/utils";
+import { resultFormat, isPrincipal } from "@w2e/utils";
 import { idlFactory as OGY_IDL } from "candid/ogy.did";
 import { _SERVICE as OGY_SERVICE } from "candid/ogy";
 

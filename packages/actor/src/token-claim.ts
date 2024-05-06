@@ -1,12 +1,12 @@
-import { actor } from "./actor";
-import { ActorIdentity } from "@icpswap/types";
-import { ActorName } from "./ActorName";
+import { ActorIdentity } from "@w2e/types";
 import {
   ClaimController,
   ClaimControllerInterfaceFactory,
   ClaimStorage,
   ClaimStorageInterfaceFactory,
-} from "@icpswap/candid";
+} from "@w2e/candid";
+import { actor } from "./actor";
+import { ActorName } from "./ActorName";
 
 export const tokenClaimController = (identity?: ActorIdentity) =>
   actor.create<ClaimController>({
@@ -15,10 +15,7 @@ export const tokenClaimController = (identity?: ActorIdentity) =>
     idlFactory: ClaimControllerInterfaceFactory,
   });
 
-export const tokenClaimStorage = (
-  canisterId: string,
-  identity?: ActorIdentity
-) =>
+export const tokenClaimStorage = (canisterId: string, identity?: ActorIdentity) =>
   actor.create<ClaimStorage>({
     identity,
     canisterId,

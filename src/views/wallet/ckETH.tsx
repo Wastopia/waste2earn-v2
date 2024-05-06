@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Box } from "@mui/material";
 import { t } from "@lingui/macro";
 import { Wrapper, Breadcrumbs, type Tab } from "components/index";
-import { useParsedQueryString } from "@icpswap/hooks";
+import { useParsedQueryString } from "@w2e/hooks";
 import { useFetchBlockNumber } from "hooks/web3/useBlockNumber";
 import MintETH from "./components/ckETH/Mint";
 import DissolveETH from "./components/ckETH/Dissolve";

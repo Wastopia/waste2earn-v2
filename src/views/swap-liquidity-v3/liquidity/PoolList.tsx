@@ -5,7 +5,7 @@ import { isDarkTheme } from "utils/index";
 import { Theme } from "@mui/material/styles";
 import LoadingRow from "components/Loading/LoadingRow";
 import PoolCard from "components/swap/PoolCard";
-import { useAllPoolsTVL, useInfoAllPools } from "@icpswap/hooks";
+import { useAllPoolsTVL, useInfoAllPools } from "@w2e/hooks";
 
 const useStyles = makeStyles((theme: Theme) => {
   const bgOpacity = isDarkTheme(theme) ? "0.34" : "0.7";

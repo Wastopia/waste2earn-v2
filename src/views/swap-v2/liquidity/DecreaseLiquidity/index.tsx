@@ -2,7 +2,7 @@ import { memo, useCallback, useMemo, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { Grid, Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { CurrencyAmount, Position } from "@icpswap/swap-sdk";
+import { CurrencyAmount, Position } from "@w2e/swap-sdk";
 import { MainCard } from "components/index";
 import PercentageSlider from "components/PercentageSlider";
 import HeaderTab from "components/swap/Header";
@@ -22,7 +22,7 @@ import { CurrencyAmountFormatDecimals } from "constants/index";
 import { t, Trans } from "@lingui/macro";
 import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity";
 import { useAccountPrincipal } from "store/auth/hooks";
-import { type StatusResult, type ActorIdentity } from "@icpswap/types";
+import { type StatusResult, type ActorIdentity } from "@w2e/types";
 import LiquidityInfo from "components/swap/LiquidityInfo";
 import Loading from "components/Loading/Static";
 import { PoolState } from "hooks/swap/v2/usePools";
@@ -81,14 +81,14 @@ export default memo(() => {
       independentField === BURN_FIELD.CURRENCY_A
         ? typedValue
         : parsedAmounts[BURN_FIELD.CURRENCY_A]?.toFixed(
-            CurrencyAmountFormatDecimals(parsedAmounts[BURN_FIELD.CURRENCY_A]?.currency.decimals),
-          ) ?? "",
+          CurrencyAmountFormatDecimals(parsedAmounts[BURN_FIELD.CURRENCY_A]?.currency.decimals),
+        ) ?? "",
     [BURN_FIELD.CURRENCY_B]:
       independentField === BURN_FIELD.CURRENCY_B
         ? typedValue
         : parsedAmounts[BURN_FIELD.CURRENCY_B]?.toFixed(
-            CurrencyAmountFormatDecimals(parsedAmounts[BURN_FIELD.CURRENCY_B]?.currency.decimals),
-          ) ?? "",
+          CurrencyAmountFormatDecimals(parsedAmounts[BURN_FIELD.CURRENCY_B]?.currency.decimals),
+        ) ?? "",
   };
 
   const totalAmount = useMemo(() => {
@@ -173,9 +173,9 @@ export default memo(() => {
       let result:
         | undefined
         | StatusResult<{
-            amount0: bigint;
-            amount1: bigint;
-          }>;
+          amount0: bigint;
+          amount1: bigint;
+        }>;
 
       if (isInvalid) {
         result = await decreaseInvalidLiquidity(identity, {

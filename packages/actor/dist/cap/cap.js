@@ -1,5 +1,5 @@
 import { actor } from "../actor";
-import { CapInterfaceFactory, CapRouterInterfaceFactory, } from "@icpswap/candid";
+import { CapInterfaceFactory, CapRouterInterfaceFactory, } from "@w2e/candid";
 export const cap = (canisterId) => actor.create({
     idlFactory: CapInterfaceFactory,
     canisterId,

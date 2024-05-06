@@ -1,9 +1,8 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import type { Principal } from "@dfinity/principal";
 import type { ActorMethod } from "@dfinity/agent";
 
-export type AuthzChangeOp =
-  | { Authorize: { add_self: boolean } }
-  | { Deauthorize: null };
+export type AuthzChangeOp = { Authorize: { add_self: boolean } } | { Deauthorize: null };
 export interface CanisterCallError {
   code: [] | [number];
   description: string;
@@ -11,10 +10,7 @@ export interface CanisterCallError {
 export interface CanisterIdRecord {
   canister_id: Principal;
 }
-export type CanisterInstallMode =
-  | { reinstall: null }
-  | { upgrade: null }
-  | { install: null };
+export type CanisterInstallMode = { reinstall: null } | { upgrade: null } | { install: null };
 export interface CanisterStatusResult {
   status: CanisterStatusType;
   memory_size: bigint;
@@ -30,10 +26,7 @@ export interface CanisterStatusResultV2 {
   idle_cycles_burned_per_day: bigint;
   module_hash: [] | [Uint8Array | number[]];
 }
-export type CanisterStatusType =
-  | { stopped: null }
-  | { stopping: null }
-  | { running: null };
+export type CanisterStatusType = { stopped: null } | { stopping: null } | { running: null };
 export interface CanisterSummary {
   status: [] | [CanisterStatusResultV2];
   canister_id: [] | [Principal];
@@ -116,15 +109,9 @@ export interface _SERVICE {
   canister_status: ActorMethod<[CanisterIdRecord], CanisterStatusResult>;
   change_canister: ActorMethod<[ChangeCanisterProposal], undefined>;
   get_build_metadata: ActorMethod<[], string>;
-  get_sns_canisters_summary: ActorMethod<
-    [GetSnsCanistersSummaryRequest],
-    GetSnsCanistersSummaryResponse
-  >;
+  get_sns_canisters_summary: ActorMethod<[GetSnsCanistersSummaryRequest], GetSnsCanistersSummaryResponse>;
   list_sns_canisters: ActorMethod<[{}], ListSnsCanistersResponse>;
   register_dapp_canister: ActorMethod<[RegisterDappCanisterRequest], {}>;
   register_dapp_canisters: ActorMethod<[RegisterDappCanistersRequest], {}>;
-  set_dapp_controllers: ActorMethod<
-    [SetDappControllersRequest],
-    SetDappControllersResponse
-  >;
+  set_dapp_controllers: ActorMethod<[SetDappControllersRequest], SetDappControllersResponse>;
 }

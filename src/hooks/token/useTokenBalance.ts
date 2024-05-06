@@ -1,13 +1,13 @@
 import { useCallback, useState, useEffect, useMemo } from "react";
 import { Principal } from "@dfinity/principal";
-import { Token, CurrencyAmount } from "@icpswap/swap-sdk";
+import { Token, CurrencyAmount } from "@w2e/swap-sdk";
 import { getTokenStandard } from "store/token/cache/hooks";
 import { balanceAdapter, isNeedBalanceAdapter } from "utils/token/adapter";
 import { ICP } from "constants/tokens";
-import { isPrincipal, isValidPrincipal, isOkSubAccount, principalToAccount, BigNumber } from "@icpswap/utils";
+import { isPrincipal, isValidPrincipal, isOkSubAccount, principalToAccount, BigNumber } from "@w2e/utils";
 import { AccountIdentifier, SubAccount } from "@dfinity/ledger-icp";
-import { icpAdapter, tokenAdapter } from "@icpswap/token-adapter";
-import { TOKEN_STANDARD } from "@icpswap/types";
+import { icpAdapter, tokenAdapter } from "@w2e/token-adapter";
+import { TOKEN_STANDARD } from "@w2e/types";
 import { useLatestDataCall } from "../useCallsData";
 
 export async function getTokenBalance(canisterId: string, account: string | Principal, subAccount?: Uint8Array) {

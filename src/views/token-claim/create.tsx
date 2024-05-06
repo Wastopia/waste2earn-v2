@@ -4,17 +4,17 @@ import { useHistory } from "react-router-dom";
 import { Typography, Grid, Box, Input } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { useAccountPrincipal } from "store/auth/hooks";
-import { FilledTextField , TextFieldNumberComponent, Wrapper, MainCard } from "components/index";
+import { FilledTextField, TextFieldNumberComponent, Wrapper, MainCard } from "components/index";
 import { MessageTypes, useTips } from "hooks/useTips";
 import { Trans, t } from "@lingui/macro";
 import Identity, { CallbackProps } from "components/Identity";
 import { Theme } from "@mui/material/styles";
-import { formatTokenAmount, isValidAccount, numberToString, isValidPrincipal } from "@icpswap/utils";
+import { formatTokenAmount, isValidAccount, numberToString, isValidPrincipal } from "@w2e/utils";
 import BigNumber from "bignumber.js";
-import { ResultStatus, type ActorIdentity, type StatusResult } from "@icpswap/types";
+import { ResultStatus, type ActorIdentity, type StatusResult } from "@w2e/types";
 import Button from "components/authentication/ButtonConnector";
-import { createClaimEvent, setClaimEventData, setClaimEventReady, setClaimEventState } from "@icpswap/hooks";
-import { TOKEN_STANDARD } from "@icpswap/types";
+import { createClaimEvent, setClaimEventData, setClaimEventReady, setClaimEventState } from "@w2e/hooks";
+import { TOKEN_STANDARD } from "@w2e/types";
 import { read, utils } from "xlsx";
 import { useTokenInfo } from "hooks/token/useTokenInfo";
 import { Principal } from "@dfinity/principal";
@@ -245,8 +245,8 @@ export default function CreateTokenClaim() {
 
   const ExcelTotalAmount = tokenInfo
     ? userClaims.reduce((prev, curr) => {
-        return prev.plus(new BigNumber(curr.amount).toFixed(tokenInfo.decimals, BigNumber.ROUND_DOWN));
-      }, new BigNumber(0))
+      return prev.plus(new BigNumber(curr.amount).toFixed(tokenInfo.decimals, BigNumber.ROUND_DOWN));
+    }, new BigNumber(0))
     : new BigNumber(0);
 
   let errorMsg = "";

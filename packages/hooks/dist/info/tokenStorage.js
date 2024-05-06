@@ -8,9 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
-import { tokenStorage } from "@icpswap/actor";
+import { tokenStorage } from "@w2e/actor";
 export function getInfoToken(storageId, tokenId) {
     return __awaiter(this, void 0, void 0, function* () {
         return resultFormat(yield (yield tokenStorage(storageId)).getToken(tokenId)).data;

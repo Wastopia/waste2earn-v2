@@ -1,6 +1,6 @@
 /* eslint-disable no-case-declarations */
 import { useMemo } from "react";
-import { unixToDate } from "@icpswap/utils";
+import { unixToDate } from "@w2e/utils";
 import utc from "dayjs/plugin/utc";
 import weekOfYear from "dayjs/plugin/weekOfYear";
 import dayjs from "dayjs";

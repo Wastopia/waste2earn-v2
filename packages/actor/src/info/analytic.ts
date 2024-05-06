@@ -12,7 +12,7 @@ import {
   V2TVLInterfaceFactory,
   V2ICPPrice,
   V2ICPPriceInterfaceFactory,
-} from "@icpswap/candid";
+} from "@w2e/candid";
 
 export const analyticSwap = () =>
   actor.create<V2Base>({

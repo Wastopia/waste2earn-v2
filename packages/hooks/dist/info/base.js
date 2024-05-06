@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
-import { baseIndex, baseStorage } from "@icpswap/actor";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
+import { baseIndex, baseStorage } from "@w2e/actor";
 import { useCallsData } from "../useCallData";
 export function getBaseStorages() {
     return __awaiter(this, void 0, void 0, function* () {

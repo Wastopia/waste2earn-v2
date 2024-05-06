@@ -1,17 +1,15 @@
 import { useCallback } from "react";
-import { resultFormat } from "@icpswap/utils";
+import { resultFormat } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
-import { globalStorage } from "@icpswap/actor";
-import { PublicSwapChartDayData } from "@icpswap/types";
+import { globalStorage } from "@w2e/actor";
+import { PublicSwapChartDayData } from "@w2e/types";
 
 /**
  * get swap public chart data
  * @param {string} id storage canister id
  */
 export async function getSwapChartData(id: string) {
-  return resultFormat<PublicSwapChartDayData[]>(
-    await (await globalStorage(id)).getChartData()
-  ).data;
+  return resultFormat<PublicSwapChartDayData[]>(await (await globalStorage(id)).getChartData()).data;
 }
 
 /**
@@ -23,6 +21,6 @@ export function useSwapChartData(id: string | undefined) {
     useCallback(async () => {
       if (!id) return undefined;
       return await getSwapChartData(id!);
-    }, [id])
+    }, [id]),
   );
 }

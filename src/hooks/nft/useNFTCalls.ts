@@ -9,11 +9,11 @@ import type {
   NFTBatchMintArgs,
   NFTControllerInfo,
   StatusResult,
-} from "@icpswap/types";
+} from "@w2e/types";
 import { OLD_CANISTER_IDS } from "constants/nft";
-import { resultFormat, principalToAccount, isAvailablePageArgs } from "@icpswap/utils";
-import { swapNFT, NFTCanisterController, NFTCanister } from "@icpswap/actor";
-import { useCallsData } from "@icpswap/hooks";
+import { resultFormat, principalToAccount, isAvailablePageArgs } from "@w2e/utils";
+import { swapNFT, NFTCanisterController, NFTCanister } from "@w2e/actor";
+import { useCallsData } from "@w2e/hooks";
 import { Principal } from "@dfinity/principal";
 import { v2SwapNFT } from "actor/swapV2";
 

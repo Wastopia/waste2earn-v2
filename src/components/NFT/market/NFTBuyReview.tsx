@@ -4,7 +4,7 @@ import { t, Trans } from "@lingui/macro";
 import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity";
 import { Theme } from "@mui/material/styles";
 import { TradeOrder } from "types/nft";
-import { type NFTTokenMetadata, type ActorIdentity, ResultStatus } from "@icpswap/types";
+import { type NFTTokenMetadata, type ActorIdentity, ResultStatus } from "@w2e/types";
 import { useSuccessTip, useErrorTip } from "hooks/useTips";
 import { useNFTBuyCallback } from "hooks/nft/trade";
 import { useApprove } from "hooks/token/useApprove";
@@ -15,7 +15,7 @@ import {
   WRAPPED_ICP_TOKEN_INFO,
   NFTTradeFee,
 } from "constants/index";
-import { parseTokenAmount, numberToString, formatDollarAmount } from "@icpswap/utils";
+import { parseTokenAmount, numberToString, formatDollarAmount } from "@w2e/utils";
 import BigNumber from "bignumber.js";
 import { useICPAmountUSDValue, useAccount } from "store/global/hooks";
 import WICPPriceFormat from "components/NFT/WICPPriceFormat";

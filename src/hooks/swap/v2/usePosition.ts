@@ -1,4 +1,4 @@
-import { Position, Pool } from "@icpswap/swap-sdk";
+import { Position, Pool } from "@w2e/swap-sdk";
 import { usePool, PoolState, usePoolV1 } from "hooks/swap/v2/usePools";
 import { useToken } from "hooks/useCurrency";
 import { PositionResult, UserPosition } from "types/swapv2";

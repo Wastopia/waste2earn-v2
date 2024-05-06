@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { resultFormat } from "@icpswap/utils";
+import { resultFormat } from "@w2e/utils";
 import { useCallsData } from "./useCallData";
 
 type PriceResult = [number, number];

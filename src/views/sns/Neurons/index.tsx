@@ -1,14 +1,14 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import { useListDeployedSNSs, useListNeurons, useNervousSystemParameters } from "@icpswap/hooks";
+import { useListDeployedSNSs, useListNeurons, useNervousSystemParameters } from "@w2e/hooks";
 import { useMemo, useState } from "react";
 import { LoadingRow, Copy } from "components/index";
-import type { Neuron, NervousSystemParameters } from "@icpswap/types";
-import { SnsNeuronPermissionType } from "@icpswap/constants";
+import type { Neuron, NervousSystemParameters } from "@w2e/types";
+import { SnsNeuronPermissionType } from "@w2e/constants";
 import { Theme } from "@mui/material/styles";
 import { SelectSns } from "components/sns/SelectSNSTokens";
 import { useAccountPrincipal, useAccountPrincipalString } from "store/auth/hooks";
 import { neuronFormat, NeuronState, getDissolvingTimeInSeconds } from "utils/sns/neurons";
-import { parseTokenAmount, shorten, toSignificantWithGroupSeparator } from "@icpswap/utils";
+import { parseTokenAmount, shorten, toSignificantWithGroupSeparator } from "@w2e/utils";
 import { ReactComponent as CopyIcon } from "assets/icons/Copy.svg";
 import { Lock, Clock } from "react-feather";
 import { useTokenInfo } from "hooks/token";
@@ -100,8 +100,8 @@ function NeuronItem({ neuron, token, governance_id, neuronSystemParameters, refr
           <Typography color="text.primary" fontWeight={500} fontSize="24px">
             {token
               ? `${toSignificantWithGroupSeparator(
-                  parseTokenAmount(formatted_neuron.cached_neuron_stake_e8s, token.decimals).toString(),
-                )} ${token.symbol}`
+                parseTokenAmount(formatted_neuron.cached_neuron_stake_e8s, token.decimals).toString(),
+              )} ${token.symbol}`
               : "--"}
           </Typography>
         </Box>

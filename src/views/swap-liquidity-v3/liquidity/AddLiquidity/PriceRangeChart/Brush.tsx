@@ -2,7 +2,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { brushX, select, ScaleLinear, BrushBehavior } from "d3";
 import styled from "styled-components/macro";
-import { usePrevious } from "@icpswap/hooks";
+import { usePrevious } from "@w2e/hooks";
 import { useTheme } from "@mui/material";
 import { brushHandleAccentPath, brushHandlePath, OffScreenHandle } from "./svg";
 
@@ -196,9 +196,8 @@ export const Brush = ({
             {/* west handle */}
             {westHandleInView ? (
               <g
-                transform={`translate(${Math.max(0, xScale(localBrushExtent[0]))}, 0), scale(${
-                  flipWestHandle ? "-1" : "1"
-                }, 1)`}
+                transform={`translate(${Math.max(0, xScale(localBrushExtent[0]))}, 0), scale(${flipWestHandle ? "-1" : "1"
+                  }, 1)`}
               >
                 <g>
                   <Handle color={westHandleColor} d={brushHandlePath(innerHeight)} />

@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { icrc1, icrc2 } from "@icpswap/actor";
+import { icrc1, icrc2 } from "@w2e/actor";
 import { DIP20Adapter } from "./DIP20Adapter";
 import { DIP20WICPAdapter } from "./DIP20WICPAdapter";
 import { DIP20XTCAdapter } from "./DIP20XTCAdapter";

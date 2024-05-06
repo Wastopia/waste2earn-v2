@@ -1,6 +1,6 @@
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
-import { V2BaseInterfaceFactory, V2PoolsInterfaceFactory, V2TokenInterfaceFactory, V2TVLInterfaceFactory, V2ICPPriceInterfaceFactory, } from "@icpswap/candid";
+import { V2BaseInterfaceFactory, V2PoolsInterfaceFactory, V2TokenInterfaceFactory, V2TVLInterfaceFactory, V2ICPPriceInterfaceFactory, } from "@w2e/candid";
 export const analyticSwap = () => actor.create({
     actorName: ActorName.SwapGraphRecord,
     idlFactory: V2BaseInterfaceFactory,

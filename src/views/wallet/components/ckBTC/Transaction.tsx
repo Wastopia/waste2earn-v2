@@ -3,7 +3,7 @@ import { Box, Typography, Table, TableBody, TableCell, TableRow, TableContainer,
 import { Trans } from "@lingui/macro";
 import { MainCard, ListLoading, NoData, ALink } from "components/index";
 import { useBTCTransactions, BTCTx } from "hooks/ck-btc/useBTCCalls";
-import { parseTokenAmount } from "@icpswap/utils";
+import { parseTokenAmount } from "@w2e/utils";
 import dayjs from "dayjs";
 
 function RefreshIcon() {

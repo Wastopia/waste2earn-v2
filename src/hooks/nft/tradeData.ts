@@ -1,9 +1,9 @@
 import { useCallback } from "react";
-import { resultFormat, isAvailablePageArgs } from "@icpswap/utils";
-import type { NFTControllerInfo, TradeStateResult } from "@icpswap/types";
+import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
+import type { NFTControllerInfo, TradeStateResult } from "@w2e/types";
 import { PaginationResult } from "types/global";
-import { NFTTradeStat, NFTCanisterController } from "@icpswap/actor";
-import { useCallsData } from "@icpswap/hooks";
+import { NFTTradeStat, NFTCanisterController } from "@w2e/actor";
+import { useCallsData } from "@w2e/hooks";
 
 export function useMarketplaceRecommendCanisters(offset: number, limit: number) {
   return useCallsData(

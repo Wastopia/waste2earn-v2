@@ -1,5 +1,5 @@
 {
-  "name": "@icpswap/hooks",
+  "name": "@w2e/hooks",
   "version": "0.0.1",
   "sideEffects": [
     "*.css.ts"
@@ -24,12 +24,12 @@
   "dependencies": {
     "qs": "^6.9.4",
     "bignumber.js": "^9.0.1",
-    "@icpswap/actor": "workspace:*",
-    "@icpswap/candid": "workspace:*",
-    "@icpswap/types": "workspace:*",
-    "@icpswap/utils": "workspace:*",
-    "@icpswap/token-adapter": "workspace:*",
-    "@icpswap/constants": "workspace:*",
-    "@icpswap/swap-sdk": "workspace:*"
+    "@w2e/actor": "workspace:*",
+    "@w2e/candid": "workspace:*",
+    "@w2e/types": "workspace:*",
+    "@w2e/utils": "workspace:*",
+    "@w2e/token-adapter": "workspace:*",
+    "@w2e/constants": "workspace:*",
+    "@w2e/swap-sdk": "workspace:*"
   }
 }

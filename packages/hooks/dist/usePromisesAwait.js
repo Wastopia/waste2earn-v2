@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { splitArr } from "@icpswap/utils";
+import { splitArr } from "@w2e/utils";
 import { useEffect, useMemo, useState } from "react";
 export function getPromisesAwait(calls_1) {
     return __awaiter(this, arguments, void 0, function* (calls, limit = 100) {

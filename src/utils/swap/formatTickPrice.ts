@@ -1,4 +1,4 @@
-import { Price, Token } from "@icpswap/swap-sdk";
+import { Price, Token } from "@w2e/swap-sdk";
 import { formatPrice } from "./formatCurrencyAmount";
 
 export enum Bound {

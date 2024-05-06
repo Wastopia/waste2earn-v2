@@ -1,4 +1,4 @@
-import { actor, ActorName } from "@icpswap/actor";
+import { actor, ActorName } from "@w2e/actor";
 
 import { _SERVICE as SwapFactory_update_call } from "candid/swap/SwapFactory_update_call";
 import { idlFactory as SwapFactoryInterfaceFactory_update_call } from "candid/swap/SwapFactory_update_call.did";

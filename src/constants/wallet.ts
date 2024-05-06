@@ -1,6 +1,6 @@
 import { ICP, WRAPPED_ICP } from "./tokens";
 
-export { Connector } from "@icpswap/actor";
+export { Connector } from "@w2e/actor";
 
 export const DISPLAY_IN_WALLET_FOREVER = [ICP.address, WRAPPED_ICP.address];
 

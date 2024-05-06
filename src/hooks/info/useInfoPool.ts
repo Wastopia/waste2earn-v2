@@ -1,4 +1,4 @@
-import { useInfoPoolStorageIds, useInfoPool } from "@icpswap/hooks";
+import { useInfoPoolStorageIds, useInfoPool } from "@w2e/hooks";
 
 export function usePool(poolId: string | undefined) {
   const { result: storageId } = useInfoPoolStorageIds(poolId);

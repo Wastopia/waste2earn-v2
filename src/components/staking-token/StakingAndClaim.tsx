@@ -4,7 +4,7 @@ import { makeStyles } from "@mui/styles";
 import BigNumber from "bignumber.js";
 import { Theme } from "@mui/material/styles";
 import { STATE, UserStakingInfo } from "types/staking-token";
-import type { StakingPoolControllerPoolInfo } from "@icpswap/types";
+import type { StakingPoolControllerPoolInfo } from "@w2e/types";
 import V2StakingModal from "./V2StakingModal";
 import V1StakingModal from "./V1StakingModal";
 import ClaimModal from "./ClaimModal";

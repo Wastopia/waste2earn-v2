@@ -3,7 +3,7 @@ import { makeStyles, useTheme } from "@mui/styles";
 import { AppBar, CssBaseline, Grid, Box } from "@mui/material";
 import { Theme } from "@mui/material/styles";
 import Background from "components/Background";
-import { GlobalTips } from "@icpswap/ui";
+import { GlobalTips } from "@w2e/ui";
 import { useLocation } from "react-router-dom";
 import V3Event from "./V3Event";
 import Header from "./Header";

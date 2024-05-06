@@ -1,7 +1,7 @@
-import { TradeType } from "@icpswap/constants";
-import { ResultStatus } from "@icpswap/types";
+import { TradeType } from "@w2e/constants";
+import { ResultStatus } from "@w2e/types";
 import BigNumber from "bignumber.js";
-import { Trade, Token } from "@icpswap/swap-sdk";
+import { Trade, Token } from "@w2e/swap-sdk";
 import { useCallback } from "react";
 import { useSlippageManager } from "store/swap/cache/hooks";
 import { useUpdateSwapOutAmount, getSwapOutAmount } from "store/swap/hooks";

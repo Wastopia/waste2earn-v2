@@ -1,6 +1,6 @@
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
-import { TokenPoolControllerInterfaceFactory, TokenPoolInterfaceFactory, TokenPoolStorageInterfaceFactory, V1TokenPoolInterfaceFactory, V1TokenPoolControllerInterfaceFactory, V1TokenPoolStorageInterfaceFactory, } from "@icpswap/candid";
+import { TokenPoolControllerInterfaceFactory, TokenPoolInterfaceFactory, TokenPoolStorageInterfaceFactory, V1TokenPoolInterfaceFactory, V1TokenPoolControllerInterfaceFactory, V1TokenPoolStorageInterfaceFactory, } from "@w2e/candid";
 export const stakingTokenController = (identity) => actor.create({
     actorName: ActorName.TokenPoolController,
     identity,

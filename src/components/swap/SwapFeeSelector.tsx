@@ -5,8 +5,8 @@ import { usePoolsTokenAmountsFromKey } from "hooks/swap/v3Calls";
 import { isDarkTheme } from "utils";
 import { Trans, t } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";
-import { BigNumber } from "@icpswap/utils";
-import { Token, FeeAmount } from "@icpswap/swap-sdk";
+import { BigNumber } from "@w2e/utils";
+import { Token, FeeAmount } from "@w2e/swap-sdk";
 
 export const FEE_DESCRIPTION = {
   [FeeAmount.LOW]: t`Best for stable pairs`,

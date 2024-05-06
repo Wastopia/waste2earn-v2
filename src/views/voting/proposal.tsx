@@ -2,7 +2,7 @@ import { useState, useRef, useMemo } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { Grid, Typography, Avatar, Box, CircularProgress, useMediaQuery } from "components/Mui";
 import { useTheme } from "@mui/styles";
-import { valueofUser, isPrincipal, shorten, principalToAccount } from "@icpswap/utils";
+import { valueofUser, isPrincipal, shorten, principalToAccount } from "@w2e/utils";
 import { Wrapper, MainCard, Breadcrumbs } from "components/index";
 import { Trans } from "@lingui/macro";
 import { VoteStateCount, StateLabel, useVoteState } from "components/vote/VoteState";
@@ -11,7 +11,7 @@ import { VotesResult, CastVotes } from "components/vote/VotesInfo";
 import VoteRecords from "components/vote/Records";
 import BaseMarkdown from "components/markdown/BaseMarkdown";
 import { useDownloadPowers } from "hooks/voting/useDownloadPowers";
-import { useVotingProposal } from "@icpswap/hooks";
+import { useVotingProposal } from "@w2e/hooks";
 import DeleteProposalModal from "components/vote/DeleteProposal";
 import { useAccount } from "store/auth/hooks";
 

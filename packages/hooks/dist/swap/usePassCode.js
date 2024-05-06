@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { useCallback } from "react";
 import { useCallsData } from "../useCallData";
-import { swapFactory } from "@icpswap/actor";
-import { resultFormat } from "@icpswap/utils";
+import { swapFactory } from "@w2e/actor";
+import { resultFormat } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 export function getPassCode(principal) {
     return __awaiter(this, void 0, void 0, function* () {

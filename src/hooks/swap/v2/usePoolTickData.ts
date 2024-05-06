@@ -1,4 +1,4 @@
-import { FeeAmount, Token } from "@icpswap/swap-sdk";
+import { FeeAmount, Token } from "@w2e/swap-sdk";
 import { useLiquidityTicks } from "hooks/swap/v2/useSwapCalls";
 import { usePoolCanisterId } from "hooks/swap/v2/index";
 

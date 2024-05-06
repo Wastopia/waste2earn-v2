@@ -14,8 +14,8 @@ import { usePositionFees } from "hooks/swap/usePositionFees";
 import { useAccount } from "store/global/hooks";
 import { useAccountPrincipal } from "store/auth/hooks";
 import { MaxUint128 } from "constants/misc";
-import { numberToString } from "@icpswap/utils";
-import { CurrencyAmount, Position, getPriceOrderingFromPositionForUI, useInverter } from "@icpswap/swap-sdk";
+import { numberToString } from "@w2e/utils";
+import { CurrencyAmount, Position, getPriceOrderingFromPositionForUI, useInverter } from "@w2e/swap-sdk";
 import { isDarkTheme } from "utils";
 import { useErrorTip, useSuccessTip, useLoadingTip } from "hooks/useTips";
 import { Trans, t } from "@lingui/macro";
@@ -322,8 +322,8 @@ export function PositionDetails({
                   ? `${pool?.priceOf(token1).toSignificant(6)} ${pairName}`
                   : "--"
                 : pool?.priceOf(token0)
-                ? `${pool?.priceOf(token0).toSignificant(6)} ${pairName}`
-                : "--"
+                  ? `${pool?.priceOf(token0).toSignificant(6)} ${pairName}`
+                  : "--"
               : "--"
           }
           convert
@@ -341,9 +341,8 @@ export function PositionDetails({
         />
         <DetailItem
           label={t`Unclaimed fees`}
-          value={`${currencyFeeAmount0?.toExact() ?? 0} ${token0?.symbol} and ${
-            currencyFeeAmount1?.toExact() ?? 0
-          } ${token1?.symbol}`}
+          value={`${currencyFeeAmount0?.toExact() ?? 0} ${token0?.symbol} and ${currencyFeeAmount1?.toExact() ?? 0
+            } ${token1?.symbol}`}
         />
         {showButtons && (
           <Grid

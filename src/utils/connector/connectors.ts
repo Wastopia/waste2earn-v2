@@ -1,6 +1,6 @@
 import { ActorSubclass } from "@dfinity/agent";
 import type { IDL } from "@dfinity/candid";
-import { Connector } from "@icpswap/actor";
+import { Connector } from "@w2e/actor";
 
 export type CreateActorArgs = {
   canisterId: string;

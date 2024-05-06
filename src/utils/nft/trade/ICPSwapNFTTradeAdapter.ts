@@ -1,7 +1,7 @@
-import type { NFTBuyArgs, NFTSaleArgs, NFTRevokeArgs } from "@icpswap/types";
-import { resultFormat } from "@icpswap/utils";
+import type { NFTBuyArgs, NFTSaleArgs, NFTRevokeArgs } from "@w2e/types";
+import { resultFormat } from "@w2e/utils";
 import { Identity } from "types/global";
-import { NFTTradeCanister } from "@icpswap/actor";
+import { NFTTradeCanister } from "@w2e/actor";
 import { BaseNFTsTradeAdapter } from "./BaseNFTAdapter";
 
 export class ICPSwapNFTsTradeAdapter extends BaseNFTsTradeAdapter {

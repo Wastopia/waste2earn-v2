@@ -7,9 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { resultFormat, availableArgsNull } from "@icpswap/utils";
+import { resultFormat, availableArgsNull } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
-import { sns_swap } from "@icpswap/actor";
+import { sns_swap } from "@w2e/actor";
 import { useCallback } from "react";
 import { Principal } from "@dfinity/principal";
 export function getSNSBuyerState(swap_id, principal) {

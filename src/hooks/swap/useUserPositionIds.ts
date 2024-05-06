@@ -1,7 +1,7 @@
 import { Principal } from "@dfinity/principal";
-import { resultFormat } from "@icpswap/utils";
-import { swapPool } from "@icpswap/actor";
-import { useCallsData } from "@icpswap/hooks";
+import { resultFormat } from "@w2e/utils";
+import { swapPool } from "@w2e/actor";
+import { useCallsData } from "@w2e/hooks";
 import { useCallback } from "react";
 
 export async function getUserPositionIds(canisterId: string, principal: string) {

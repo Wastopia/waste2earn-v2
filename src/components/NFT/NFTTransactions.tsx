@@ -4,11 +4,11 @@ import NoData from "components/no-data";
 import ListLoading from "components/Loading/List";
 import Copy from "components/Copy";
 import { useNFTTransaction } from "hooks/nft/useNFTCalls";
-import { pageArgsFormat, enumToString, arrayBufferToString , shorten, timestampFormat } from "@icpswap/utils";
+import { pageArgsFormat, enumToString, arrayBufferToString, shorten, timestampFormat } from "@w2e/utils";
 import { encodeTokenIdentifier } from "utils/index";
 import Pagination from "components/pagination";
 import { Trans } from "@lingui/macro";
-import type { NFTTransaction, PaginationResult } from "@icpswap/types";
+import type { NFTTransaction, PaginationResult } from "@w2e/types";
 import upperFirst from "lodash/upperFirst";
 
 export default function NFTTransaction({

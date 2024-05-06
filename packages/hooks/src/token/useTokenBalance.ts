@@ -1,7 +1,7 @@
 import { useCallback } from "react";
-import { isPrincipal, isValidPrincipal } from "@icpswap/utils";
+import { isPrincipal, isValidPrincipal } from "@w2e/utils";
 import { useLatestDataCall } from "../useCallData";
-import { tokenAdapter } from "@icpswap/token-adapter";
+import { tokenAdapter } from "@w2e/token-adapter";
 import { Principal } from "@dfinity/principal";
 import BigNumber from "bignumber.js";
 
@@ -11,11 +11,7 @@ export interface GetTokenBalanceArgs {
   sub?: Uint8Array;
 }
 
-export async function getTokenBalance({
-  canisterId,
-  address,
-  sub,
-}: GetTokenBalanceArgs) {
+export async function getTokenBalance({ canisterId, address, sub }: GetTokenBalanceArgs) {
   const result = await tokenAdapter.balance({
     canisterId,
     params: {
@@ -41,20 +37,13 @@ export interface UserTokenBalanceArgs {
   reload?: boolean | number;
 }
 
-export function useTokenBalance({
-  canisterId,
-  address,
-  sub,
-  reload,
-}: UserTokenBalanceArgs) {
+export function useTokenBalance({ canisterId, address, sub, reload }: UserTokenBalanceArgs) {
   return useLatestDataCall(
     useCallback(async () => {
       if (!address || !canisterId) return undefined;
       const balance = await getTokenBalance({ canisterId, sub, address });
-      return balance === undefined
-        ? undefined
-        : new BigNumber(balance.toString());
+      return balance === undefined ? undefined : new BigNumber(balance.toString());
     }, [address, canisterId, sub]),
-    reload
+    reload,
   );
 }

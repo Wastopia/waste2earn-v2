@@ -1,5 +1,5 @@
 import { STATE } from "types/staking-token";
-import type { StakingPoolControllerPoolInfo } from "@icpswap/types";
+import type { StakingPoolControllerPoolInfo } from "@w2e/types";
 
 export enum POOL_STATE {
   LIVE = "Live",

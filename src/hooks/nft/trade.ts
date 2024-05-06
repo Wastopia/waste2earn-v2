@@ -1,12 +1,12 @@
 import { useCallback } from "react";
-import { resultFormat, availableArgsNull, isAvailablePageArgs } from "@icpswap/utils";
-import { useCallsData } from "@icpswap/hooks";
+import { resultFormat, availableArgsNull, isAvailablePageArgs } from "@w2e/utils";
+import { useCallsData } from "@w2e/hooks";
 import { StatusResult1, PaginationResult, getCanisterId, CANISTER_NAMES } from "constants/index";
 import { Principal } from "@dfinity/principal";
 import { TradeOrder, TxRecord, Identity } from "types";
-import type { NFTSaleArgs } from "@icpswap/types";
+import type { NFTSaleArgs } from "@w2e/types";
 import { NFTs, AdapterName, NFTsTrade, TradeAdapterName } from "utils/nft/index";
-import { NFTTradeCanister } from "@icpswap/actor";
+import { NFTTradeCanister } from "@w2e/actor";
 
 export interface AllowanceArgs {
   canisterId: string;

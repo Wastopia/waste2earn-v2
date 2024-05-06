@@ -1,4 +1,4 @@
-import { NFT_STANDARDS } from "@icpswap/constants";
+import { NFT_STANDARDS } from "@w2e/constants";
 
 export type Allowance = {
   spender: string;

@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { BaseTransaction } from "@icpswap/types";
+import { BaseTransaction } from "@w2e/types";
 import { useInfoUserStorageIds, getInfoUserTransactions } from "./info";
 
 export function useUserPoolTransactions(

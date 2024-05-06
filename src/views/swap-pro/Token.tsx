@@ -2,17 +2,17 @@ import React, { useContext, useMemo, useState } from "react";
 import { Box, Typography, useTheme } from "@mui/material";
 import { Trans, t } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";
-import { BigNumber, shorten, formatDollarAmount, formatAmount, parseTokenAmount } from "@icpswap/utils";
+import { BigNumber, shorten, formatDollarAmount, formatAmount, parseTokenAmount } from "@w2e/utils";
 import { TokenPoolPrice } from "components/TokenPoolPrice";
-import { useTokenTotalHolder, useTokenSupply } from "@icpswap/hooks";
+import { useTokenTotalHolder, useTokenSupply } from "@w2e/hooks";
 import { useTokenBalance } from "hooks/token/useTokenBalance";
 import { TokenImage } from "components/index";
 import { useICPPrice } from "hooks/useUSDPrice";
-import type { PublicTokenOverview, TokenListMetadata } from "@icpswap/types";
+import type { PublicTokenOverview, TokenListMetadata } from "@w2e/types";
 import type { TokenInfo } from "types/token";
 import { ChevronDown } from "react-feather";
 import { Copy } from "components/Copy/icon";
-import { Token } from "@icpswap/swap-sdk";
+import { Token } from "@w2e/swap-sdk";
 
 import { SwapProCardWrapper } from "./SwapProWrapper";
 import { SwapProContext } from "./context";
@@ -211,10 +211,10 @@ export default function TokenUI({ infoToken, tokenListInfo }: TokenProps) {
                     (
                     {tokenSupply && token && tokenPrice
                       ? formatDollarAmount(
-                          parseTokenAmount(token.transFee.toString(), token.decimals)
-                            .multipliedBy(tokenPrice)
-                            .toString(),
-                        )
+                        parseTokenAmount(token.transFee.toString(), token.decimals)
+                          .multipliedBy(tokenPrice)
+                          .toString(),
+                      )
                       : "--"}
                     )
                   </Typography>
@@ -224,8 +224,8 @@ export default function TokenUI({ infoToken, tokenListInfo }: TokenProps) {
                 <Typography color="text.primary" sx={{ fontSize: "16px", fontWeight: 500, textAlign: "center" }}>
                   {tokenSupply && token && tokenPrice
                     ? formatDollarAmount(
-                        parseTokenAmount(tokenSupply.toString(), token.decimals).multipliedBy(tokenPrice).toString(),
-                      )
+                      parseTokenAmount(tokenSupply.toString(), token.decimals).multipliedBy(tokenPrice).toString(),
+                    )
                     : "--"}
                 </Typography>
               </Card>
@@ -233,11 +233,11 @@ export default function TokenUI({ infoToken, tokenListInfo }: TokenProps) {
                 <Typography color="text.primary" sx={{ fontSize: "16px", fontWeight: 500, textAlign: "center" }}>
                   {tokenSupply && token && tokenPrice && icpPrice
                     ? formatAmount(
-                        parseTokenAmount(tokenSupply.toString(), token.decimals)
-                          .multipliedBy(tokenPrice)
-                          .dividedBy(icpPrice)
-                          .toString(),
-                      )
+                      parseTokenAmount(tokenSupply.toString(), token.decimals)
+                        .multipliedBy(tokenPrice)
+                        .dividedBy(icpPrice)
+                        .toString(),
+                    )
                     : "--"}
                 </Typography>
               </Card>

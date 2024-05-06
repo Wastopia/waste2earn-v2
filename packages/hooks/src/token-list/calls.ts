@@ -1,7 +1,7 @@
-import { tokenList, allTokenOfSwap } from "@icpswap/actor";
-import type { TokenListMetadata, AllTokenOfSwapTokenInfo, PaginationResult } from "@icpswap/types";
+import { tokenList, allTokenOfSwap } from "@w2e/actor";
+import type { TokenListMetadata, AllTokenOfSwapTokenInfo, PaginationResult } from "@w2e/types";
 import { useCallback } from "react";
-import { resultFormat } from "@icpswap/utils";
+import { resultFormat } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
 import { getLimitedInfinityCall } from "../useLimitedInfinityCall";
 

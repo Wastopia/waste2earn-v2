@@ -1,4 +1,4 @@
-import { Override } from "@icpswap/types";
+import { Override } from "@w2e/types";
 import { forwardRef } from "react";
 import { NumericFormat, NumericFormatProps } from "react-number-format";
 import { TextField, TextFieldProps } from "@mui/material";

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Position } from "@icpswap/swap-sdk";
+import { Position } from "@w2e/swap-sdk";
 import { Bound } from "constants/swap";
 import useIsTickAtLimit from "hooks/swap/useIsTickAtLimit";
 

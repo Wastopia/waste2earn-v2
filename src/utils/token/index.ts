@@ -1,6 +1,6 @@
-import { numberToString, BigNumber } from "@icpswap/utils";
-import { TOKEN_STANDARD } from "@icpswap/types";
-import { Token } from "@icpswap/swap-sdk";
+import { numberToString, BigNumber } from "@w2e/utils";
+import { TOKEN_STANDARD } from "@w2e/types";
+import { Token } from "@w2e/swap-sdk";
 
 export function isUseTransfer(token: Token | undefined) {
   if (token === undefined) return false;

@@ -35,7 +35,7 @@ import StepViewButton from "components/Steps/View";
 import AddLiquidityButton from "components/swap/AddLiquidityButton";
 import { ExternalTipArgs } from "types/index";
 import { ReclaimTips } from "components/ReclaimTips";
-import { usePCMMetadata, useUserPCMBalance } from "@icpswap/hooks";
+import { usePCMMetadata, useUserPCMBalance } from "@w2e/hooks";
 import SetPriceRange from "./SetPriceRange";
 
 const DISABLED_STYLE = {

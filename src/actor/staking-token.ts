@@ -1,5 +1,5 @@
 import { Identity } from "types/index";
-import { actor } from "@icpswap/actor";
+import { actor } from "@w2e/actor";
 import { _SERVICE } from "candid/v1StakingToken";
 import { idlFactory } from "candid/v1StakingToken.did";
 

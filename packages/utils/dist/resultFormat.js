@@ -1,4 +1,4 @@
-import { ResultStatus } from "@icpswap/types";
+import { ResultStatus } from "@w2e/types";
 import isObject from "lodash/isObject";
 export function isResultKey(key) {
     return isResultErrKey(key) || isResultOkKey(key);

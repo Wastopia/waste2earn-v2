@@ -1,6 +1,6 @@
 export declare enum VolumeWindow {
-    daily = 0,
-    weekly = 1,
-    monthly = 2
+  daily = 0,
+  weekly = 1,
+  monthly = 2,
 }
-//# sourceMappingURL=charts.d.ts.map
+// # sourceMappingURL=charts.d.ts.map

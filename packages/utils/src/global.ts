@@ -1,4 +1,4 @@
-import { type NumberType } from "@icpswap/types";
+import { type NumberType } from "@w2e/types";
 import BigNumber from "bignumber.js";
 import { Principal } from "@dfinity/principal";
 import { parseTokenAmount } from "./tokenAmount";

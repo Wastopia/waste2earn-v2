@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { TokenListInterfaceFactory, AllTokenOfSwapInterfaceFactory, } from "@icpswap/candid";
+import { TokenListInterfaceFactory, AllTokenOfSwapInterfaceFactory, } from "@w2e/candid";
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
 export const tokenList = (identity) => __awaiter(void 0, void 0, void 0, function* () {

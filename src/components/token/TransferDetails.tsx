@@ -1,7 +1,7 @@
 import { Grid, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import Modal from "components/modal/index";
-import { parseTokenAmount, enumToString , timestampFormat } from "@icpswap/utils";
+import { parseTokenAmount, enumToString, timestampFormat } from "@w2e/utils";
 import { t } from "@lingui/macro";
 import upperFirst from "lodash/upperFirst";
 

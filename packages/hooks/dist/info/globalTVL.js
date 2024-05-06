@@ -8,9 +8,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { isAvailablePageArgs, resultFormat } from "@icpswap/utils";
+import { isAvailablePageArgs, resultFormat } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
-import { globalTVL } from "@icpswap/actor";
+import { globalTVL } from "@w2e/actor";
 export function getPoolChartTvl(id, pool, offset, limit) {
     return __awaiter(this, void 0, void 0, function* () {
         return resultFormat(yield (yield globalTVL(id)).getPoolChartTvl(pool, BigInt(offset), BigInt(limit))).data;

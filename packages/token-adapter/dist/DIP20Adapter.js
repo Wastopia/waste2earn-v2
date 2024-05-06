@@ -7,9 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { resultFormat } from "@icpswap/utils";
-import { ResultStatus } from "@icpswap/types";
-import { dip20, dip20BalanceActor, dip20SupplyActor } from "@icpswap/actor";
+import { resultFormat } from "@w2e/utils";
+import { ResultStatus } from "@w2e/types";
+import { dip20, dip20BalanceActor, dip20SupplyActor } from "@w2e/actor";
 import { BaseTokenAdapter, } from "./BaseTokenAdapter";
 export class DIP20TokenAdapter extends BaseTokenAdapter {
     holders(_a) {

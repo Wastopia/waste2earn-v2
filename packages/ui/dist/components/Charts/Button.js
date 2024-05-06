@@ -1,5 +1,9 @@
-var __rest = (this && this.__rest) || function (s, e) {
-    var t = {};
+import { jsx as _jsx } from "react/jsx-runtime";
+import { Box, Typography } from "@mui/material";
+import { useTheme } from "@mui/styles";
+
+const __rest = (this && this.__rest) || function (s, e) {
+    const t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
         t[p] = s[p];
     if (s != null && typeof Object.getOwnPropertySymbols === "function")
@@ -9,17 +13,15 @@ var __rest = (this && this.__rest) || function (s, e) {
         }
     return t;
 };
-import { jsx as _jsx } from "react/jsx-runtime";
-import { Box, Typography } from "@mui/material";
-import { useTheme } from "@mui/styles";
+
 export var ChartView;
 (function (ChartView) {
-    ChartView[ChartView["TVL"] = 0] = "TVL";
-    ChartView[ChartView["VOL"] = 1] = "VOL";
-    ChartView[ChartView["PRICE"] = 2] = "PRICE";
-    ChartView[ChartView["FEES"] = 3] = "FEES";
-    ChartView[ChartView["LIQUIDITY"] = 4] = "LIQUIDITY";
-    ChartView[ChartView["TRANSACTIONS"] = 5] = "TRANSACTIONS";
+    ChartView[ChartView.TVL = 0] = "TVL";
+    ChartView[ChartView.VOL = 1] = "VOL";
+    ChartView[ChartView.PRICE = 2] = "PRICE";
+    ChartView[ChartView.FEES = 3] = "FEES";
+    ChartView[ChartView.LIQUIDITY = 4] = "LIQUIDITY";
+    ChartView[ChartView.TRANSACTIONS = 5] = "TRANSACTIONS";
 })(ChartView || (ChartView = {}));
 export function ChartToggleButton({ children, active, onClick }) {
     const theme = useTheme();
@@ -31,12 +33,12 @@ export function ChartToggleButton({ children, active, onClick }) {
             fontSize: "12px",
             fontWeight: 500,
             padding: "2px 10px",
-        }, onClick: onClick, children: children }));
+        }, onClick, children }));
 }
 export function ChartToggle(_a) {
-    var _b;
-    var { setActiveChartView, activeView, chartViews } = _a, rest = __rest(_a, ["setActiveChartView", "activeView", "chartViews"]);
+    let _b;
+    const { setActiveChartView, activeView, chartViews } = _a; const rest = __rest(_a, ["setActiveChartView", "activeView", "chartViews"]);
     const theme = useTheme();
-    return (_jsx(Box, { sx: Object.assign({ cursor: "pointer", display: "flex", alignItems: "center", padding: "1px", background: theme.palette.background.level4, borderRadius: "12px" }, ((_b = rest.sx) !== null && _b !== void 0 ? _b : {})), children: chartViews.map((chartView) => (_jsx(ChartToggleButton, { active: chartView.key === activeView, onClick: () => setActiveChartView(chartView.key), children: chartView.label }, chartView.key))) }));
+    return (_jsx(Box, { sx: {cursor: "pointer", display: "flex", alignItems: "center", padding: "1px", background: theme.palette.background.level4, borderRadius: "12px", ...((_b = rest.sx) !== null && _b !== void 0 ? _b : {})}, children: chartViews.map((chartView) => (_jsx(ChartToggleButton, { active: chartView.key === activeView, onClick: () => setActiveChartView(chartView.key), children: chartView.label }, chartView.key))) }));
 }
-//# sourceMappingURL=Button.js.map
+// # sourceMappingURL=Button.js.map

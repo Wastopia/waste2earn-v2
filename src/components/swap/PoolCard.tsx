@@ -7,7 +7,7 @@ import { feeAmountToPercentage } from "utils/swap/index";
 import { useHistory } from "react-router-dom";
 import { Trans } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";
-import { formatDollarAmount } from "@icpswap/utils";
+import { formatDollarAmount } from "@w2e/utils";
 
 const useStyles = makeStyles((theme: Theme) => {
   return {
@@ -91,9 +91,8 @@ export default function PoolCard({
           bgColor="transparent"
         />
         <Box className={`${classes.poolName} ${classes.floatLeft}`}>
-          <Typography>{`${token0Symbol ?? currency0?.symbol ?? "--"}/${
-            token1Symbol ?? currency1?.symbol ?? "--"
-          }`}</Typography>
+          <Typography>{`${token0Symbol ?? currency0?.symbol ?? "--"}/${token1Symbol ?? currency1?.symbol ?? "--"
+            }`}</Typography>
         </Box>
         <Box className={`${classes.feeAmount} feeAmount ${classes.floatLeft}`}>
           <Typography>{feeAmountToPercentage(Number(fee))}</Typography>

@@ -7,9 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { resultFormat } from "@icpswap/utils";
+import { resultFormat } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
-import { sns_root } from "@icpswap/actor";
+import { sns_root } from "@w2e/actor";
 import { useCallback } from "react";
 export function getSNSCanisters(root_id) {
     return __awaiter(this, void 0, void 0, function* () {

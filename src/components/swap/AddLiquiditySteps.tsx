@@ -1,12 +1,12 @@
 import { Box, Avatar } from "@mui/material";
-import { parseTokenAmount } from "@icpswap/utils";
-import { Position, Token } from "@icpswap/swap-sdk";
+import { parseTokenAmount } from "@w2e/utils";
+import { Position, Token } from "@w2e/swap-sdk";
 import { Trans, t } from "@lingui/macro";
 import { TextButton } from "components/index";
 import { toFormat } from "utils/index";
 import { isUseTransfer, actualAmountToPool } from "utils/token/index";
 import { StepDetails, StepContent } from "components/Steps/types";
-import type { PCMMetadata } from "@icpswap/types";
+import type { PCMMetadata } from "@w2e/types";
 import { PassCodeManagerId } from "constants/canister";
 
 export interface GetAddLiquidityStepDetails {
@@ -34,8 +34,8 @@ export function getAddLiquidityStepDetails({
 }: GetAddLiquidityStepDetails) {
   if (!position) return [];
 
-  const {token0} = position.pool;
-  const {token1} = position.pool;
+  const { token0 } = position.pool;
+  const { token1 } = position.pool;
 
   const symbol0 = position.pool.token0.symbol;
   const symbol1 = position.pool.token1.symbol;

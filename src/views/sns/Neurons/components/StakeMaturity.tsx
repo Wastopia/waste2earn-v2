@@ -1,12 +1,12 @@
 import { Button, Box, Typography } from "@mui/material";
 import { Trans, t } from "@lingui/macro";
-import { stakeNeuronMaturity } from "@icpswap/hooks";
-import { Flex, Modal, Progression } from "@icpswap/ui";
-import { Neuron } from "@icpswap/types";
+import { stakeNeuronMaturity } from "@w2e/hooks";
+import { Flex, Modal, Progression } from "@w2e/ui";
+import { Neuron } from "@w2e/types";
 import { useMemo, useState } from "react";
 import { TokenInfo } from "types/token";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
-import { parseTokenAmount, toSignificantWithGroupSeparator } from "@icpswap/utils";
+import { parseTokenAmount, toSignificantWithGroupSeparator } from "@w2e/utils";
 
 export interface StakeMaturityProps {
   neuron: Neuron;
@@ -111,11 +111,11 @@ export function StakeMaturity({
           <Typography align="right" color="text.primary">
             {token
               ? toSignificantWithGroupSeparator(
-                  parseTokenAmount(available_maturity, token.decimals)
-                    .multipliedBy(maturityPercent)
-                    .dividedBy(100)
-                    .toString(),
-                )
+                parseTokenAmount(available_maturity, token.decimals)
+                  .multipliedBy(maturityPercent)
+                  .dividedBy(100)
+                  .toString(),
+              )
               : "--"}{" "}
             maturity {maturityPercent}%
           </Typography>

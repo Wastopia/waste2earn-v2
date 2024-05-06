@@ -7,7 +7,7 @@ import {
   TICK_SPACINGS,
   encodeSqrtRatioX96,
   TickMath,
-} from "@icpswap/swap-sdk";
+} from "@w2e/swap-sdk";
 import JSBI from "jsbi";
 
 export function tryParsePrice(baseToken?: Token, quoteToken?: Token, value?: string) {

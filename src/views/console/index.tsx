@@ -5,7 +5,7 @@ import { MainCard } from "components/index";
 import { t, Trans } from "@lingui/macro";
 import NFTIcon from "assets/images/console/NFT.svg";
 import BurnIcon from "assets/images/console/Burn.svg";
-import { mockALinkAndOpen } from "@icpswap/utils";
+import { mockALinkAndOpen } from "@w2e/utils";
 import { Theme } from "@mui/material/styles";
 import { useConnectorStateConnected } from "store/auth/hooks";
 import ConnectWallet from "../../components/ConnectWallet";

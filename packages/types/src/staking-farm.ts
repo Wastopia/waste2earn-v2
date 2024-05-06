@@ -3,7 +3,7 @@ export type {
   StakingFarmDepositArgs,
   StakingFarmDistributeTransaction,
   StakingFarmStakeTransaction,
-} from "@icpswap/candid";
+} from "@w2e/candid";
 
 export type FarmMetadata = {
   secondPerCycle: bigint;

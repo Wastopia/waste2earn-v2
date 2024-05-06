@@ -1,6 +1,6 @@
 import { Box, Avatar } from "@mui/material";
-import { Token, CurrencyAmount } from "@icpswap/swap-sdk";
-import { formatTokenAmount , shorten } from "@icpswap/utils";
+import { Token, CurrencyAmount } from "@w2e/swap-sdk";
+import { formatTokenAmount, shorten } from "@w2e/utils";
 import { t, Trans } from "@lingui/macro";
 import { TextButton } from "components/index";
 import { Principal } from "@dfinity/principal";

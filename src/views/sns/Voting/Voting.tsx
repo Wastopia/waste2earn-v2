@@ -1,10 +1,10 @@
 import { Box, Typography, useTheme } from "@mui/material";
-import { useListDeployedSNSs, useProposal, useListNeurons, useNervousSystemParameters } from "@icpswap/hooks";
+import { useListDeployedSNSs, useProposal, useListNeurons, useNervousSystemParameters } from "@w2e/hooks";
 import { useMemo, useState } from "react";
 import { LoadingRow, TokenImage, MainCard } from "components/index";
 import { Theme } from "@mui/material/styles";
 import { useAccountPrincipalString } from "store/auth/hooks";
-import { nowInSeconds } from "@icpswap/utils";
+import { nowInSeconds } from "@w2e/utils";
 import { useTokenInfo } from "hooks/token";
 import { useHistory, useParams } from "react-router-dom";
 import { ArrowLeft } from "react-feather";

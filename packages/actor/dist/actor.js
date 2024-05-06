@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import { createBaseActor } from "./BaseActor";
 import { HttpAgent } from "@dfinity/agent";
 import { IDL } from "@dfinity/candid";
-import { ic_host } from "@icpswap/constants";
+import { ic_host } from "@w2e/constants";
 let cachedCanisterIds = {};
 export var Connector;
 (function (Connector) {

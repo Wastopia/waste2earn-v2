@@ -1,4 +1,8 @@
-import { ActorIdentity } from "@icpswap/types";
-import { TokenStorage } from "@icpswap/candid";
-export declare const tokenStorage: (id: string, identity?: ActorIdentity) => Promise<import("@dfinity/agent").ActorSubclass<TokenStorage>>;
-//# sourceMappingURL=token.d.ts.map
+import { ActorIdentity } from "@w2e/types";
+import { TokenStorage } from "@w2e/candid";
+
+export declare const tokenStorage: (
+  id: string,
+  identity?: ActorIdentity,
+) => Promise<import("@dfinity/agent").ActorSubclass<TokenStorage>>;
+// # sourceMappingURL=token.d.ts.map

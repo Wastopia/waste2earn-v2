@@ -1,7 +1,4 @@
-import { actor } from "../actor";
-import { ActorIdentity } from "@icpswap/types";
-import { ActorName } from "../ActorName";
-
+import { ActorIdentity } from "@w2e/types";
 import {
   Farm,
   FarmInterfaceFactory,
@@ -9,7 +6,9 @@ import {
   FarmControllerInterfaceFactory,
   FarmStorage,
   FarmStorageInterfaceFactory,
-} from "@icpswap/candid";
+} from "@w2e/candid";
+import { actor } from "../actor";
+import { ActorName } from "../ActorName";
 
 export const v3FarmController = (identity?: ActorIdentity) =>
   actor.create<FarmController>({

@@ -1,8 +1,8 @@
 import { useMemo, useState } from "react";
 import { network, NETWORK, host } from "constants/index";
 import { t } from "@lingui/macro";
-import { createVotingBatch, createVotingChunk, commitVotingChunk } from "@icpswap/hooks";
-import { ResultStatus } from "@icpswap/types";
+import { createVotingBatch, createVotingChunk, commitVotingChunk } from "@w2e/hooks";
+import { ResultStatus } from "@w2e/types";
 import { useTips, MessageTypes } from "hooks/useTips";
 
 export interface UploadChunkRequest {

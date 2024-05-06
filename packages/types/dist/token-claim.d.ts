@@ -1,2 +1,2 @@
-export type { ClaimEventInfo, ClaimQuota, ClaimTransaction, } from "@icpswap/candid";
-//# sourceMappingURL=token-claim.d.ts.map
+export type { ClaimEventInfo, ClaimQuota, ClaimTransaction } from "@w2e/candid";
+// # sourceMappingURL=token-claim.d.ts.map

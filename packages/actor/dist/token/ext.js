@@ -1,6 +1,6 @@
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
-import { WrapICPInterfaceFactory, EXTTokenInterfaceFactory, } from "@icpswap/candid";
+import { WrapICPInterfaceFactory, EXTTokenInterfaceFactory, } from "@w2e/candid";
 export const ext = (canisterId, identity) => actor.create({
     identity,
     canisterId,

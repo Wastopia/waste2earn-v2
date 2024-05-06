@@ -1,9 +1,9 @@
-import { Pool, Token, FeeAmount } from "@icpswap/swap-sdk";
+import { Pool, Token, FeeAmount } from "@w2e/swap-sdk";
 import { useMemo, useEffect, useState } from "react";
 import { getPool, getPool_update_call } from "hooks/swap/v3Calls";
-import { getSwapPoolMetadata, useSwapPools } from "@icpswap/hooks";
-import { numberToString } from "@icpswap/utils";
-import type { PoolMetadata, TickLiquidityInfo } from "@icpswap/types";
+import { getSwapPoolMetadata, useSwapPools } from "@w2e/hooks";
+import { numberToString } from "@w2e/utils";
+import type { PoolMetadata, TickLiquidityInfo } from "@w2e/types";
 import { ICP, NETWORK, network } from "constants/index";
 
 export enum PoolState {

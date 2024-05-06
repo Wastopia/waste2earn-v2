@@ -4,7 +4,7 @@ import { Grid, Box, Typography } from "@mui/material";
 import { NoData, MainCard, StaticLoading, TextButton } from "components/index";
 import Switch from "components/switch";
 import { Trans, t } from "@lingui/macro";
-import { useStakingTokenPools, useStakingPoolInfoFromController, useParsedQueryString } from "@icpswap/hooks";
+import { useStakingTokenPools, useStakingPoolInfoFromController, useParsedQueryString } from "@w2e/hooks";
 import { STATE } from "types/staking-token";
 import { getStakingTokenPoolState } from "utils/staking";
 import UnusedTokens from "./components/UnusedTokens";

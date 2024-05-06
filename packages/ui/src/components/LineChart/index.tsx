@@ -3,9 +3,9 @@ import { createChart, IChartApi } from "lightweight-charts";
 import { Box } from "@mui/material";
 import { useTheme } from "@mui/styles";
 import { darken } from "polished";
-import { usePrevious } from "@icpswap/hooks";
+import { usePrevious } from "@w2e/hooks";
 import { Theme } from "@mui/material/styles";
-import { formatDollarAmount } from "@icpswap/utils";
+import { formatDollarAmount } from "@w2e/utils";
 
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";

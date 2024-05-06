@@ -1,5 +1,4 @@
-import { actor } from "../actor";
-import { ActorIdentity } from "@icpswap/types";
+import { ActorIdentity } from "@w2e/types";
 import {
   DIP20,
   DIP20Balance,
@@ -9,7 +8,8 @@ import {
   XTCInterfaceFactory,
   DIP20Supply,
   DIP20SupplyInterfaceFactory,
-} from "@icpswap/candid";
+} from "@w2e/candid";
+import { actor } from "../actor";
 
 export const xtc = (identity?: ActorIdentity) =>
   actor.create<XTC>({
@@ -25,20 +25,14 @@ export const dip20 = (canisterId: string, identity?: ActorIdentity) =>
     canisterId,
   });
 
-export const dip20BalanceActor = (
-  canisterId: string,
-  identity?: ActorIdentity
-) =>
+export const dip20BalanceActor = (canisterId: string, identity?: ActorIdentity) =>
   actor.create<DIP20Balance>({
     identity,
     idlFactory: DIP20BalanceInterfaceFactory,
     canisterId,
   });
 
-export const dip20SupplyActor = (
-  canisterId: string,
-  identity?: ActorIdentity
-) =>
+export const dip20SupplyActor = (canisterId: string, identity?: ActorIdentity) =>
   actor.create<DIP20Supply>({
     identity,
     idlFactory: DIP20SupplyInterfaceFactory,

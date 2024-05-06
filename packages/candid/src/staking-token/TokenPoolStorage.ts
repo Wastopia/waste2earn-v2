@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Principal } from "@dfinity/principal";
 import type { ActorMethod } from "@dfinity/agent";
 
@@ -55,4 +56,4 @@ export type TransType =
   | { deposit: null }
   | { stakeTokenids: null }
   | { createIncentive: null };
-export interface _SERVICE extends StakerStorage {}
+export type _SERVICE = StakerStorage;

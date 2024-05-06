@@ -1,9 +1,9 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState, useMemo, useEffect } from "react";
 import { Typography, Box } from "@mui/material";
-import { BigNumber, toSignificant, formatDollarAmount } from "@icpswap/utils";
-import { useTransformedVolumeData, useTokenTvlChart, useTokenVolChart, useTokenPriceChart } from "@icpswap/hooks";
-import { VolumeWindow } from "@icpswap/constants";
+import { BigNumber, toSignificant, formatDollarAmount } from "@w2e/utils";
+import { useTransformedVolumeData, useTokenTvlChart, useTokenVolChart, useTokenPriceChart } from "@w2e/hooks";
+import { VolumeWindow } from "@w2e/constants";
 import dayjs from "dayjs";
 import utc from "dayjs/plugin/utc";
 import weekOfYear from "dayjs/plugin/weekOfYear";

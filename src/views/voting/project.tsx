@@ -4,7 +4,7 @@ import { Typography, Avatar, Box, Grid, useMediaQuery } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Trans } from "@lingui/macro";
 import { Wrapper, MainCard } from "components/index";
-import { useVotingProjectDetails } from "@icpswap/hooks";
+import { useVotingProjectDetails } from "@w2e/hooks";
 import { Theme } from "@mui/material/styles";
 import AuthorityUsers from "components/vote/AuthorityUsers";
 import Proposals from "components/vote/Proposals";

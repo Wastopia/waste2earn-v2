@@ -1,12 +1,12 @@
 import { useMemo, useState } from "react";
 import { Button, Typography, Box } from "@mui/material";
-import { toHexString, hexToBytes } from "@icpswap/utils";
-import { setNeuronFollows } from "@icpswap/hooks";
+import { toHexString, hexToBytes } from "@w2e/utils";
+import { setNeuronFollows } from "@w2e/hooks";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useTips, TIP_ERROR, TIP_SUCCESS, useFullscreenLoading } from "hooks/useTips";
 import { Trans, t } from "@lingui/macro";
 import { Modal, FilledTextField } from "components/index";
-import { Neuron } from "@icpswap/types";
+import { Neuron } from "@w2e/types";
 
 export interface AddFolloweeProps {
   onFollowSuccess?: () => void;

@@ -1,4 +1,4 @@
 export declare enum NFT_STANDARDS {
-    EXT = "EXT"
+  EXT = "EXT",
 }
-//# sourceMappingURL=nft.d.ts.map
+// # sourceMappingURL=nft.d.ts.map

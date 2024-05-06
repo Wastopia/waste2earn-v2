@@ -7,9 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { resultFormat, availableArgsNull, isBigIntMemo } from "@icpswap/utils";
-import { ResultStatus } from "@icpswap/types";
-import { icrc1, icrcArchive } from "@icpswap/actor";
+import { resultFormat, availableArgsNull, isBigIntMemo } from "@w2e/utils";
+import { ResultStatus } from "@w2e/types";
+import { icrc1, icrcArchive } from "@w2e/actor";
 import { BaseTokenAdapter, } from "./BaseTokenAdapter";
 import { icrcTransactionFormat } from "./utils";
 export class ICRC1Adapter extends BaseTokenAdapter {

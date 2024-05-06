@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { TvlChartDayData } from "@icpswap/types";
+import { TvlChartDayData } from "@w2e/types";
 import { useTvlStorageCanister, getTokenChartTvl } from "./info";
 import { getLimitedInfinityCall } from "./useLimitedInfinityCall";
 

@@ -1,5 +1,1 @@
-export type {
-  ClaimEventInfo,
-  ClaimQuota,
-  ClaimTransaction,
-} from "@icpswap/candid";
+export type { ClaimEventInfo, ClaimQuota, ClaimTransaction } from "@w2e/candid";

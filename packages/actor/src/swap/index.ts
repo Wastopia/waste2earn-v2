@@ -1,7 +1,4 @@
-import {
-  PassCodeManagerService,
-  PassCodeManagerInterfaceFactory,
-} from "@icpswap/candid";
+import { PassCodeManagerService, PassCodeManagerInterfaceFactory } from "@w2e/candid";
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
 

@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import { useCallback } from "react";
-import { isPrincipal, isAvailablePageArgs } from "@icpswap/utils";
-import { tokenAdapter } from "@icpswap/token-adapter";
+import { isPrincipal, isAvailablePageArgs } from "@w2e/utils";
+import { tokenAdapter } from "@w2e/token-adapter";
 import { Principal } from "@dfinity/principal";
 import { useCallsData } from "../useCallData";
 export function getTokenTotalHolder(canisterId) {

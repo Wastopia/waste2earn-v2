@@ -5,7 +5,7 @@ import { formatTickPrice } from "utils/swap/formatTickPrice";
 import { Bound } from "constants/swap";
 import { Trans } from "@lingui/macro";
 import { SyncAlt as SyncAltIcon } from "@mui/icons-material";
-import { Position, Token } from "@icpswap/swap-sdk";
+import { Position, Token } from "@w2e/swap-sdk";
 import { useTicksAtLimitInvert } from "hooks/swap/usePriceInvert";
 
 export interface AddLiquidityConfirmModalProps {
@@ -33,8 +33,8 @@ export default function AddLiquidityConfirmModal({
       ? baseCurrencyDefault === currency0
         ? currency0
         : baseCurrencyDefault === currency1
-        ? currency1
-        : currency0
+          ? currency1
+          : currency0
       : currency0;
 
     if (manuallyInverted) {
@@ -99,9 +99,8 @@ export default function AddLiquidityConfirmModal({
             </Typography>
             <Grid item xs container justifyContent="flex-end">
               <Typography color="textPrimary" align="right">
-                {`${price.toSignificant(5, { groupSeparator: "," })} ${quoteCurrency.symbol} per ${
-                  baseCurrency.symbol
-                }`}
+                {`${price.toSignificant(5, { groupSeparator: "," })} ${quoteCurrency.symbol} per ${baseCurrency.symbol
+                  }`}
               </Typography>
               <SyncAltIcon sx={{ fontSize: "1rem", marginLeft: "6px", cursor: "pointer" }} onClick={onConvertClick} />
             </Grid>

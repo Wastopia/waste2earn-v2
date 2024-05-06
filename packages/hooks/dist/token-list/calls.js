@@ -7,9 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { tokenList, allTokenOfSwap } from "@icpswap/actor";
+import { tokenList, allTokenOfSwap } from "@w2e/actor";
 import { useCallback } from "react";
-import { resultFormat } from "@icpswap/utils";
+import { resultFormat } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
 import { getLimitedInfinityCall } from "../useLimitedInfinityCall";
 export function getTokensFromList() {

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { AppState } from "store/index";
 import { useAppDispatch, useAppSelector } from "store/hooks";
-import { getSnsAllTokensInfo } from "@icpswap/hooks";
+import { getSnsAllTokensInfo } from "@w2e/hooks";
 import { updateSnsAllTokensInfo } from "./actions";
 
 export function useStateSnsAllTokensInfo() {

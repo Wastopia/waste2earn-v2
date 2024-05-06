@@ -2,10 +2,10 @@ import { ReactElement, useState } from "react";
 import { Typography, Grid, Button, Box, Link, useMediaQuery } from "@mui/material";
 import { useTheme, makeStyles } from "@mui/styles";
 import Copy from "components/Copy";
-import { useAccount , useICPAmountUSDValue } from "store/global/hooks";
+import { useAccount, useICPAmountUSDValue } from "store/global/hooks";
 import NFTVerifyLabel from "components/NFT/VerifyLabel";
-import { isICPSwapOfficial , encodeTokenIdentifier, arrayBufferToString } from "utils/index";
-import { formatDollarAmount, mockALinkAndOpen , shorten, timestampFormat } from "@icpswap/utils";
+import { isICPSwapOfficial, encodeTokenIdentifier, arrayBufferToString } from "utils/index";
+import { formatDollarAmount, mockALinkAndOpen, shorten, timestampFormat } from "@w2e/utils";
 import BigNumber from "bignumber.js";
 import { Trans, t } from "@lingui/macro";
 import { useNFTOrderInfo } from "hooks/nft/trade";
@@ -17,7 +17,7 @@ import WICPPriceFormat from "components/NFT/WICPPriceFormat";
 import NFTBuyReview from "components/NFT/market/NFTBuyReview";
 import NFTRevoke from "components/NFT/market/NFTRevoke";
 import { TextButton } from "components/index";
-import { type NFTTokenMetadata } from "@icpswap/types";
+import { type NFTTokenMetadata } from "@w2e/types";
 import { useCanisterMetadata } from "hooks/nft/useNFTCalls";
 import NFTCanisterLink from "components/info/NFTCanisterLink";
 import { TwitterIcon } from "assets/images/Twitter";
@@ -221,9 +221,8 @@ export default function NFTInfo({
   const matchDownMD = useMediaQuery(theme.breakpoints.down("md"));
 
   const handleToTwitter = () => {
-    const twitterLink = `https://twitter.com/intent/tweet?url=${APP_URL}/wallet/nft/view/${canisterId}/${tokenId}&text=Look at ${
-      isOwner ? "my" : "this"
-    } NFT "${metadata.name}" on ICPSwap (The Hub of Future Decentralized Finance)! &via=ICPSwap`;
+    const twitterLink = `https://twitter.com/intent/tweet?url=${APP_URL}/wallet/nft/view/${canisterId}/${tokenId}&text=Look at ${isOwner ? "my" : "this"
+      } NFT "${metadata.name}" on ICPSwap (The Hub of Future Decentralized Finance)! &via=ICPSwap`;
 
     mockALinkAndOpen(twitterLink, "NFT_share_to_Twitter");
   };

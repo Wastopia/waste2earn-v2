@@ -3,8 +3,8 @@ import SwapModal from "components/modal/swap";
 import { Typography, Box, Grid, Button, CircularProgress, Avatar } from "@mui/material";
 import { useTheme } from "@mui/styles";
 import { NoData, LoadingRow } from "components/index";
-import { parseTokenAmount } from "@icpswap/utils";
-import { ResultStatus } from "@icpswap/types";
+import { parseTokenAmount } from "@w2e/utils";
+import { ResultStatus } from "@w2e/types";
 import { t, Trans } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";
 import { useTokenInfo } from "hooks/token/useTokenInfo";
@@ -15,7 +15,7 @@ import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity
 import { useTips, MessageTypes } from "hooks/useTips";
 import { Identity as CallIdentity } from "types/global";
 import { useUserUnusedTokens } from "hooks/staking-token/index";
-import { stakingTokenClaim } from "@icpswap/hooks";
+import { stakingTokenClaim } from "@w2e/hooks";
 
 export function BalanceItem({
   token,

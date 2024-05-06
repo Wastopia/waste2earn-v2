@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import Modal from "components/modal/index";
 import { Trans, t } from "@lingui/macro";
-import type { EXTCollection } from "@icpswap/types";
-import { NFT_STANDARDS } from "@icpswap/constants";
+import type { EXTCollection } from "@w2e/types";
+import { NFT_STANDARDS } from "@w2e/constants";
 import { FilledTextField } from "components/index";
-import { useEXTAllCollections } from "@icpswap/hooks";
+import { useEXTAllCollections } from "@w2e/hooks";
 import { Button, Box } from "@mui/material";
-import { isValidPrincipal } from "@icpswap/utils";
+import { isValidPrincipal } from "@w2e/utils";
 import { useEXTManager } from "store/nft/hooks";
 
 export const Standards = [{ label: "EXT", value: NFT_STANDARDS.EXT }];
@@ -209,7 +209,7 @@ export function ImportNFTCanisterModal({ open, onClose }: { open: boolean; onClo
           fullWidth
           disabled={!!error || (!riskWarning && step === 1)}
           onClick={handleImport}
-          // startIcon={loading ? <CircularProgress size={24} color="inherit" /> : null}
+        // startIcon={loading ? <CircularProgress size={24} color="inherit" /> : null}
         >
           {error || (step === 1 ? <Trans>Confirm</Trans> : <Trans>Import</Trans>)}
         </Button>

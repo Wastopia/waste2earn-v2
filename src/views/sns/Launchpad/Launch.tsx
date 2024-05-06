@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { useSwapSaleParameters, useSNSSwapInitArgs } from "@icpswap/hooks";
+import { useSwapSaleParameters, useSNSSwapInitArgs } from "@w2e/hooks";
 import { useMemo, useState } from "react";
 import { LoadingRow, TextButton } from "components/index";
 import AvatarImage from "components/Image/Avatar";

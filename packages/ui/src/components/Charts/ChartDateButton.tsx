@@ -2,7 +2,7 @@ import { useState, ReactNode, useEffect } from "react";
 import { Typography, Box } from "@mui/material";
 import { useTheme } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
-import { VolumeWindow } from "@icpswap/constants";
+import { VolumeWindow } from "@w2e/constants";
 
 export function SmallOptionButton({
   active,

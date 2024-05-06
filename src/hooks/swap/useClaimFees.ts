@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import BigNumber from "bignumber.js";
-import { Pool, CurrencyAmount, Token } from "@icpswap/swap-sdk";
+import { Pool, CurrencyAmount, Token } from "@w2e/swap-sdk";
 import { t } from "@lingui/macro";
 import { getActorIdentity } from "components/Identity";
 import { useAccountPrincipal } from "store/auth/hooks";
@@ -8,7 +8,7 @@ import { getLocaleMessage } from "locales/services";
 import { useStepCalls, newStepKey } from "hooks/useStepCall";
 import { getCollectFeeSteps } from "components/swap/CollectFeeSteps";
 import { useStepContentManager } from "store/steps/hooks";
-import { useSwapWithdraw , useReclaimCallback } from "hooks/swap/index";
+import { useSwapWithdraw, useReclaimCallback } from "hooks/swap/index";
 import { useErrorTip } from "hooks/useTips";
 import { collect } from "hooks/swap/v3Calls";
 import { ExternalTipArgs, OpenExternalTip } from "types/index";
@@ -44,10 +44,9 @@ function useCollectFeeCalls() {
 
         if (status === "ok") {
           return true;
-        } 
-          openErrorTip(getLocaleMessage(message) ?? t`Failed to claim`);
-          return false;
-        
+        }
+        openErrorTip(getLocaleMessage(message) ?? t`Failed to claim`);
+        return false;
       };
 
       const withdrawCurrencyA = async () => {

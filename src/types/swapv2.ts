@@ -1,4 +1,4 @@
-import { Override } from "@icpswap/types";
+import { Override } from "@w2e/types";
 import { QueryPositionResult as PositionResult } from "candid/swap-v2/SwapPositionManager";
 
 export type {

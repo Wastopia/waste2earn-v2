@@ -10,7 +10,7 @@ import { NFT_UPLOAD_FILES, MAX_NFT_MINT_SUPPLY } from "constants/index";
 import { Trans, t } from "@lingui/macro";
 import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity";
 import { Identity as TypeIdentity } from "types/index";
-import { type NFTControllerInfo } from "@icpswap/types";
+import { type NFTControllerInfo } from "@w2e/types";
 import RequiredMark from "components/RequiredMark";
 import RadioButtonUncheckedOutlinedIcon from "@mui/icons-material/RadioButtonUncheckedOutlined";
 import RadioButtonCheckedOutlined from "@mui/icons-material/RadioButtonCheckedOutlined";
@@ -20,12 +20,12 @@ import { stringToArrayBuffer } from "utils/index";
 import BigNumber from "bignumber.js";
 import { getLocaleMessage } from "locales/services";
 import Button from "components/authentication/ButtonConnector";
-import { useParsedQueryString } from "@icpswap/hooks";
+import { useParsedQueryString } from "@w2e/hooks";
 import { CardContent1120 } from "components/Layout/CardContent1120";
 
 export type Metadata = { label: string; value: string; key: number };
 
-export type MintTokenInfo = { metadata: Metadata[]; [key: string]: any };
+export type MintTokenInfo = { metadata: Metadata[];[key: string]: any };
 
 let metadataKey = 0;
 

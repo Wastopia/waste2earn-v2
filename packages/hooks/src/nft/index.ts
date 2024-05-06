@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import { NFTCanister, NFTTradeCanister, NFTCanisterController, NFTTradeStat, NFT_V1 } from "@icpswap/actor";
-import { resultFormat, isAvailablePageArgs, isPrincipal, availableArgsNull } from "@icpswap/utils";
+import { NFTCanister, NFTTradeCanister, NFTCanisterController, NFTTradeStat, NFT_V1 } from "@w2e/actor";
+import { resultFormat, isAvailablePageArgs, isPrincipal, availableArgsNull } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 import type {
   PaginationResult,
@@ -11,7 +11,7 @@ import type {
   OrderInfo,
   TotalTradeStat,
   NFTTransaction,
-} from "@icpswap/types";
+} from "@w2e/types";
 import { useCallsData } from "../useCallData";
 
 // ----------------> NFT Canisters

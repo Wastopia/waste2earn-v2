@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Grid, Typography, Box, InputAdornment } from "@mui/material";
-import { parseTokenAmount, formatTokenAmount } from "@icpswap/utils";
-import { claimOrRefreshNeuron } from "@icpswap/hooks";
+import { parseTokenAmount, formatTokenAmount } from "@w2e/utils";
+import { claimOrRefreshNeuron } from "@w2e/hooks";
 import { tokenTransfer } from "hooks/token/calls";
 import BigNumber from "bignumber.js";
 import CircularProgress from "@mui/material/CircularProgress";

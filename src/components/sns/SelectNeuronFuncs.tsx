@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
-import { useNeuronSystemFunctions } from "@icpswap/hooks";
+import { useNeuronSystemFunctions } from "@w2e/hooks";
 import { Box, Checkbox, Typography } from "@mui/material";
 import { Trans, t } from "@lingui/macro";
-import { Modal } from "@icpswap/ui";
+import { Modal } from "@w2e/ui";
 import { Filter } from "react-feather";
 
 export interface SelectNeuronFuncsProps {

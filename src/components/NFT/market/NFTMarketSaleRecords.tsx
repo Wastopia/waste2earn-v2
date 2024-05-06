@@ -1,6 +1,6 @@
 import { useState, useCallback } from "react";
 import { useTradeTxList } from "hooks/nft/trade";
-import { pageArgsFormat } from "@icpswap/utils";
+import { pageArgsFormat } from "@w2e/utils";
 import { TxRecord } from "types/nft";
 import NFTSaleRecords from "./NFTSaleRecords";
 

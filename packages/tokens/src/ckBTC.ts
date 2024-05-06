@@ -1,6 +1,6 @@
-import { Token } from "@icpswap/swap-sdk";
-import { TokenInfo } from "@icpswap/types";
-import { TOKEN_STANDARD } from "@icpswap/constants";
+import { Token } from "@w2e/swap-sdk";
+import { TokenInfo } from "@w2e/types";
+import { TOKEN_STANDARD } from "@w2e/constants";
 
 export const ck_BTC_TOKEN_INFO: TokenInfo = {
   standardType: TOKEN_STANDARD.ICRC2,

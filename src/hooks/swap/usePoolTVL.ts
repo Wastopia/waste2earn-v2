@@ -1,10 +1,10 @@
 import { useMemo } from "react";
 import { useUSDValue, useUSDPrice } from "hooks/useUSDPrice";
-import { CurrencyAmount, computePoolAddress, Token, FeeAmount } from "@icpswap/swap-sdk";
+import { CurrencyAmount, computePoolAddress, Token, FeeAmount } from "@w2e/swap-sdk";
 import BigNumber from "bignumber.js";
 import { usePoolTotalVolumeCall } from "hooks/swap/v2/useSwapCalls";
 import { usePoolTokenAmountsFromKey } from "hooks/swap/v3Calls";
-import { formatDollarAmount, numberToString } from "@icpswap/utils";
+import { formatDollarAmount, numberToString } from "@w2e/utils";
 
 export function usePoolTVL(
   token0: Token | undefined,
@@ -52,9 +52,8 @@ export function usePoolTVLAndTotalVolume(
     if (!token0 || !token1 || !token0USDPrice || !token1USDPrice || !balance0 || !balance1) {
       if (format) {
         return formatDollarAmount(0);
-      } 
-        return 0;
-      
+      }
+      return 0;
     }
 
     const token0TVLValue = new BigNumber(token0USDPrice).multipliedBy(balance0.toString());
@@ -62,18 +61,16 @@ export function usePoolTVLAndTotalVolume(
 
     if (format) {
       return formatDollarAmount(token0TVLValue.plus(token1TVLValue).toNumber());
-    } 
-      return token0TVLValue.plus(token1TVLValue).toNumber();
-    
+    }
+    return token0TVLValue.plus(token1TVLValue).toNumber();
   }, [token0, token1, token0USDPrice, token1USDPrice, balance0, balance1]);
 
   const poolTotalVolumeValue = useMemo(() => {
     if (!token0 || !totalVolume || !token0USDPrice) {
       if (format) {
         return formatDollarAmount(0);
-      } 
-        return 0;
-      
+      }
+      return 0;
     }
 
     const token0TotalVolume = new BigNumber(token0USDPrice).multipliedBy(totalVolume.tokenA.toString());
@@ -85,9 +82,8 @@ export function usePoolTVLAndTotalVolume(
     // return formatDollarAmount(new BigNumber(token0TotalVolume.toExact()).plus(token1TotalVolume.toExact()).toNumber());
     if (format) {
       return formatDollarAmount(token0TotalVolume.toNumber());
-    } 
-      return token0TotalVolume.toNumber();
-    
+    }
+    return token0TotalVolume.toNumber();
   }, [totalVolume, token0USDPrice, token0]);
 
   return useMemo(() => {
@@ -144,9 +140,8 @@ export function useV3PoolTVLAndTotalVolume(
     if (!token0 || !token1 || !token0USDPrice || !token1USDPrice || !balance0 || !balance1) {
       if (format) {
         return formatDollarAmount(0);
-      } 
-        return 0;
-      
+      }
+      return 0;
     }
 
     const token0TVLValue = new BigNumber(token0USDPrice).multipliedBy(balance0.toString());
@@ -154,18 +149,16 @@ export function useV3PoolTVLAndTotalVolume(
 
     if (format) {
       return formatDollarAmount(new BigNumber(token0TVLValue).plus(token1TVLValue).toNumber());
-    } 
-      return new BigNumber(token0TVLValue).plus(token1TVLValue).toNumber();
-    
+    }
+    return new BigNumber(token0TVLValue).plus(token1TVLValue).toNumber();
   }, [token0, token1, token0USDPrice, token1USDPrice, balance0, balance1]);
 
   const poolTotalVolumeValue = useMemo(() => {
     if (!token0 || !totalVolume || !token0USDPrice) {
       if (format) {
         return formatDollarAmount(0);
-      } 
-        return 0;
-      
+      }
+      return 0;
     }
 
     const token0TotalVolume = new BigNumber(token0USDPrice).multipliedBy(totalVolume.balance0);
@@ -177,9 +170,8 @@ export function useV3PoolTVLAndTotalVolume(
     // return formatDollarAmount(new BigNumber(token0TotalVolume.toExact()).plus(token1TotalVolume.toExact()).toNumber());
     if (format) {
       return formatDollarAmount(token0TotalVolume.toNumber());
-    } 
-      return new BigNumber(token0TotalVolume).toNumber();
-    
+    }
+    return new BigNumber(token0TotalVolume).toNumber();
   }, [totalVolume, token0USDPrice, token0]);
 
   return useMemo(() => {

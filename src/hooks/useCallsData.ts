@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from "react";
-import type { ApiResult } from "@icpswap/types";
+import type { ApiResult } from "@w2e/types";
 import { useCallKeysIndexManager, useUpdateCallResult, useCallResult, getCallIndex } from "store/call/hooks";
 
 export type Call<T> = () => Promise<ApiResult<T>>;

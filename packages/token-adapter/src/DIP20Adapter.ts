@@ -1,8 +1,8 @@
-import { resultFormat } from "@icpswap/utils";
-import { PaginationResult, ResultStatus } from "@icpswap/types";
-import { dip20, dip20BalanceActor, dip20SupplyActor } from "@icpswap/actor";
+import { resultFormat } from "@w2e/utils";
+import { PaginationResult, ResultStatus } from "@w2e/types";
+import { dip20, dip20BalanceActor, dip20SupplyActor } from "@w2e/actor";
 import { Principal } from "@dfinity/principal";
-import { DIP20, type DIP20TokenInfo } from "@icpswap/candid";
+import { DIP20, type DIP20TokenInfo } from "@w2e/candid";
 import { TokenHolder, Transaction, DIP20Metadata, Metadata } from "./types";
 import {
   BaseTokenAdapter,

@@ -9,8 +9,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import { useCallback } from "react";
 import { useCallsData } from "./useCallData";
-import { cap, cap_router } from "@icpswap/actor";
-import { resultFormat, enumToString } from "@icpswap/utils";
+import { cap, cap_router } from "@w2e/actor";
+import { resultFormat, enumToString } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 export function getCapHistorySize(canisterId) {
     return __awaiter(this, void 0, void 0, function* () {

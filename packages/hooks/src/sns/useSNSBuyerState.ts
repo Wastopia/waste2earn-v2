@@ -1,10 +1,7 @@
-import { resultFormat, availableArgsNull } from "@icpswap/utils";
+import { resultFormat, availableArgsNull } from "@w2e/utils";
 import { useCallsData } from "../useCallData";
-import { sns_swap } from "@icpswap/actor";
-import type {
-  GetBuyerStateResponse,
-  RefreshBuyerTokensResponse,
-} from "@icpswap/types";
+import { sns_swap } from "@w2e/actor";
+import type { GetBuyerStateResponse, RefreshBuyerTokensResponse } from "@w2e/types";
 import { useCallback } from "react";
 import { Principal } from "@dfinity/principal";
 
@@ -14,35 +11,31 @@ export async function getSNSBuyerState(swap_id: string, principal: string) {
       await sns_swap(swap_id)
     ).get_buyer_state({
       principal_id: availableArgsNull<Principal>(Principal.fromText(principal)),
-    })
+    }),
   ).data;
 }
 
 export function useSNSBuyerState(
   swap_id: string | undefined,
   principal: string | undefined,
-  reload?: boolean | number
+  reload?: boolean | number,
 ) {
   return useCallsData(
     useCallback(async () => {
       if (!swap_id || !principal) return undefined;
       return await getSNSBuyerState(swap_id, principal);
     }, [swap_id, principal]),
-    reload
+    reload,
   );
 }
 
-export async function refreshSNSBuyerTokens(
-  swap_id: string,
-  buyer: string,
-  confirmation_text?: string
-) {
+export async function refreshSNSBuyerTokens(swap_id: string, buyer: string, confirmation_text?: string) {
   return resultFormat<RefreshBuyerTokensResponse>(
     await (
       await sns_swap(swap_id, true)
     ).refresh_buyer_tokens({
       buyer,
       confirmation_text: availableArgsNull<string>(confirmation_text),
-    })
+    }),
   ).data;
 }

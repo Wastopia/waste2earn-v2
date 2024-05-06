@@ -1,7 +1,7 @@
 import { useAppSelector, useAppDispatch } from "store/hooks";
 import { useCallback, useMemo } from "react";
-import { numberToString } from "@icpswap/utils";
-import { Percent, CurrencyAmount, Position, Token } from "@icpswap/swap-sdk";
+import { numberToString } from "@w2e/utils";
+import { Percent, CurrencyAmount, Position, Token } from "@w2e/swap-sdk";
 import { BURN_FIELD } from "constants/swap";
 import { tryParseAmount } from "utils/swap";
 import { useToken } from "hooks/useCurrency";

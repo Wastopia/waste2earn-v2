@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { nftFile as fileActor } from "@icpswap/actor";
+import { nftFile as fileActor } from "@w2e/actor";
 import { network, NETWORK, host } from "constants/index";
 import { t } from "@lingui/macro";
 import { Identity } from "types/index";

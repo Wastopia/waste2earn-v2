@@ -5,7 +5,7 @@ import { useTips } from "hooks/useTips";
 import { getLocaleMessage } from "locales/services";
 import Identity, { CallbackProps } from "components/Identity";
 import { NoData, Modal } from "components/index";
-import type { StakingFarmInfo, StakingFarmDepositArgs, ActorIdentity } from "@icpswap/types";
+import type { StakingFarmInfo, StakingFarmDepositArgs, ActorIdentity } from "@w2e/types";
 import { unStake } from "hooks/staking-farm";
 import { Theme } from "@mui/material/styles";
 import { PositionItem } from "./PositionItem";

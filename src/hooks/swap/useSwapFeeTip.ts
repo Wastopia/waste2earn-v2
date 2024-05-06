@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { parseTokenAmount } from "@icpswap/utils";
-import { TradeType } from "@icpswap/constants";
-import { Token, Trade } from "@icpswap/swap-sdk";
+import { parseTokenAmount } from "@w2e/utils";
+import { TradeType } from "@w2e/constants";
+import { Token, Trade } from "@w2e/swap-sdk";
 import { useUSDPriceById } from "hooks/useUSDPrice";
 
 export function useSwapFeeTip(trade: Trade<Token, Token, TradeType> | null) {

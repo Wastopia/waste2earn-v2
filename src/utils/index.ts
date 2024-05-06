@@ -1,7 +1,7 @@
 /* eslint-disable no-extend-native */
 
 import JSBI from "jsbi";
-import { toSignificant } from "@icpswap/utils";
+import { toSignificant } from "@w2e/utils";
 import BigNumber from "bignumber.js";
 
 // @ts-ignore  hijack bigint

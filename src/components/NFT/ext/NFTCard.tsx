@@ -1,7 +1,7 @@
 import { MainCard } from "components/index";
 import { Grid, Typography, Box, Button } from "@mui/material";
 import { useTheme } from "@mui/styles";
-import { type EXTCollection, type ExtNft } from "@icpswap/types";
+import { type EXTCollection, type ExtNft } from "@w2e/types";
 import { Theme } from "@mui/material/styles";
 import { decodeTokenId } from "utils/nft/index";
 import { extNFTImage } from "utils/nft/ext";

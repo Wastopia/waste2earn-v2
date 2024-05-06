@@ -1,4 +1,4 @@
-import type { SnsTokensInfo } from "@icpswap/types";
+import type { SnsTokensInfo } from "@w2e/types";
 
 export interface SnsState {
   snsAllTokensInfo: SnsTokensInfo[];

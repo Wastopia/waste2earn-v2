@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useCallback } from "react";
 import { WRAPPED_ICP_TOKEN_INFO, TOKEN_STANDARD, ICP_TOKEN_INFO } from "constants/tokens";
-import { parseTokenAmount, BigNumber } from "@icpswap/utils";
+import { parseTokenAmount, BigNumber } from "@w2e/utils";
 import { AppState } from "store/index";
 import { useAppDispatch, useAppSelector } from "store/hooks";
 import { useImportedTokens, getTokenStandard } from "store/token/cache/hooks";
-import { use100ICPPriceInfo, useXDR2USD, useTokensFromList } from "@icpswap/hooks";
+import { use100ICPPriceInfo, useXDR2USD, useTokensFromList } from "@w2e/hooks";
 import { updateXDR2USD, updateICPPriceList, updateTokenList, updatePoolStandardInitialed } from "./actions";
 
 export function useAccount() {

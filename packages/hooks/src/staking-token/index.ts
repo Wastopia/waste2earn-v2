@@ -1,6 +1,6 @@
 import { useCallback } from "react";
-import { resultFormat, isAvailablePageArgs, availableArgsNull, isPrincipal } from "@icpswap/utils";
-import { stakingTokenStorage, stakingTokenController, stakingToken } from "@icpswap/actor";
+import { resultFormat, isAvailablePageArgs, availableArgsNull, isPrincipal } from "@w2e/utils";
+import { stakingTokenStorage, stakingTokenController, stakingToken } from "@w2e/actor";
 import type {
   CreateTokenPoolArgs,
   StakingTokenPoolInfo,
@@ -11,7 +11,7 @@ import type {
   StakingPoolGlobalData,
   ActorIdentity,
   PaginationResult,
-} from "@icpswap/types";
+} from "@w2e/types";
 import { Principal } from "@dfinity/principal";
 import { useCallsData } from "../useCallData";
 

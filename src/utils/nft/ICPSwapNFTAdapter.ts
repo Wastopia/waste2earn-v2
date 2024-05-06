@@ -1,6 +1,6 @@
-import type { NFTTransferArgs, NFTTransferResult, NFTAllowanceArgs, NFTApproveArgs } from "@icpswap/types";
-import { resultFormat } from "@icpswap/utils";
-import { NFTCanister } from "@icpswap/actor";
+import type { NFTTransferArgs, NFTTransferResult, NFTAllowanceArgs, NFTApproveArgs } from "@w2e/types";
+import { resultFormat } from "@w2e/utils";
+import { NFTCanister } from "@w2e/actor";
 import { Identity } from "types/global";
 import { BaseNFTAdapter } from "./BaseNFTAdapter";
 

@@ -1,7 +1,7 @@
 import { useEffect, useState, useMemo } from "react";
 import { network, NETWORK } from "constants/server";
 import { useGlobalTokenList } from "store/global/hooks";
-import { getSwapPools } from "@icpswap/hooks";
+import { getSwapPools } from "@w2e/hooks";
 
 // The token in TokenList & SwapPools for now
 export function useAllTokenIds() {

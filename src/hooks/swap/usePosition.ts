@@ -1,6 +1,6 @@
 import { useMemo } from "react";
-import { Position, Pool } from "@icpswap/swap-sdk";
-import { useSwapPoolMetadata } from "@icpswap/hooks";
+import { Position, Pool } from "@w2e/swap-sdk";
+import { useSwapPoolMetadata } from "@w2e/hooks";
 import { usePool, PoolState } from "hooks/swap/usePools";
 import { useToken } from "hooks/useCurrency";
 

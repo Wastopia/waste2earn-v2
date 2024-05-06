@@ -1,4 +1,4 @@
-import type { Neuron, ProposalData } from "@icpswap/types";
+import type { Neuron, ProposalData } from "@w2e/types";
 import { neuronFormat } from "./neurons";
 
 export function getVote(neuron: Neuron, proposal: ProposalData) {
