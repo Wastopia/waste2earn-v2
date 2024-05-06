@@ -9,9 +9,9 @@ import { ExceedRoutesPopper } from "./ExceedRoutesPopper";
 const useStyles = makeStyles((theme: Theme) => {
   return {
     navItem: {
-      height: "40px",
+      height: "60px",
       cursor: "pointer",
-      padding: "0 16px",
+      padding: "0 20px",
       "&:hover": {
         "& .MuiTypography-root": {
           color: "#FFFFFF",

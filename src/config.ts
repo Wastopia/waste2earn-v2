@@ -1,4 +1,4 @@
 export default {
-  fontFamily: `'Poppins','Roboto',sans-serif`,
+  fontFamily: `'Poppins','Raleway',sans-serif`,
   rtlLayout: false,
 };

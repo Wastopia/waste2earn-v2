@@ -5,6 +5,7 @@ import WebsiteIcon from "./icons/Website";
 import MediumIcon from "./icons/Medium";
 import GithubIcon from "./icons/Github";
 import GitbookIcon from "./icons/Gitbook";
+import { version } from "../../../.version";
 
 export type Route = {
   name: string;
@@ -25,7 +26,7 @@ export const MOBILE_MAX_NUMBER = 5;
 export const routes: Route[] = [
   {
     key: "swap",
-    name: `Swap`,
+    name: `Exchange`,
     path: "/swap",
   },
   {
@@ -50,10 +51,10 @@ export const routes: Route[] = [
       { key: "followUS_twitter", name: `Twitter`, link: "https://twitter.com/waste2earn", icon: TwitterIcon },
       { key: "followUS_Telegram", name: `Telegram`, link: "https://t.me/waste2earn", icon: TelegramIcon },
 
-      { key: "followUS_Medium", name: `Medium`, link: "https://waste2earn.medium.com/", icon: MediumIcon },
+      { key: "followUS_Medium", name: `Medium`, link: "https://medium.com/@waste2earn.io", icon: MediumIcon },
       { key: "followUS_Gitbook", name: `Gitbook`, link: "https://waste2earn.gitbook.io/", icon: GitbookIcon },
       { key: "followUS_Github", name: `Github`, link: "https://github.com/wastopia", icon: GithubIcon },
-      { key: "followUS_Discord", name: `Discord`, link: "https://discord.gg/UFDTQkBfEB", icon: DiscordIcon },
+      { key: "followUS_Discord", name: `Discord`, link: "https://discord.gg/GbnNzjQe", icon: DiscordIcon },
       { key: "followUS_Website", name: `Website`, link: "http://waste2earn.xyz/", icon: WebsiteIcon },
     ],
   },
@@ -62,10 +63,10 @@ export const routes: Route[] = [
     name: "White listing",
     link: "https://forms.gle/A7NUvs66g8NiBTYQ8",
   },
-  // {
-  //   key: "version",
-  //   name: `Version ${version}`,
-  //   path: "",
-  //   disabled: true,
-  // },
+  {
+    key: "version",
+    name: `Version ${version}`,
+    path: "",
+    disabled: true,
+  },
 ];
