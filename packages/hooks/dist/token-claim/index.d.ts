@@ -1,5 +1,5 @@
-import type { ActorIdentity, PaginationResult } from "@w2e/types";
-import type { ClaimEventInfo, ClaimQuota, ClaimTransaction } from "@w2e/types";
+import type { ActorIdentity, PaginationResult, ClaimEventInfo, ClaimQuota, ClaimTransaction } from "@w2e/types";
+
 export declare function getEvent(eventId: string): Promise<ClaimEventInfo>;
 export declare function useEvent(
   eventId: string | undefined,
@@ -84,4 +84,4 @@ export declare function useUserClaimEventTransactions(
   limit: number,
   reload?: boolean,
 ): import("@w2e/types").CallResult<PaginationResult<ClaimTransaction>>;
-//# sourceMappingURL=index.d.ts.map
+// # sourceMappingURL=index.d.ts.map

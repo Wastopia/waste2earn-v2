@@ -19,6 +19,7 @@ import type {
   PaginationResult,
 } from "@w2e/types";
 import { Principal } from "@dfinity/principal";
+
 export declare function createSwapPool(
   identity: ActorIdentity,
   args: CreatePoolArgs,
@@ -283,4 +284,4 @@ export declare function useSwapPositionOwner(
   poolId: string | undefined,
   positionIndex: number | bigint | undefined,
 ): import("@w2e/types").CallResult<string>;
-//# sourceMappingURL=calls.d.ts.map
+// # sourceMappingURL=calls.d.ts.map

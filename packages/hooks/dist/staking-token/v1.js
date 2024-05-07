@@ -1,16 +1,17 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+import { useCallback } from "react";
+import { resultFormat, isAvailablePageArgs, isPrincipal } from "@w2e/utils";
+import { v1StakingTokenStorage, v1StakingToken } from "@w2e/actor";
+import { useCallsData } from "../useCallData";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
         function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { useCallsData } from "../useCallData";
-import { useCallback } from "react";
-import { resultFormat, isAvailablePageArgs, isPrincipal } from "@w2e/utils";
-import { v1StakingTokenStorage, v1StakingToken } from "@w2e/actor";
 /* token pool */
 export function getV1StakingTokenPool(canisterId) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -88,4 +89,4 @@ export function useV1StakingTokenClaimTransactions(canisterId, offset, limit, re
         return yield getV1StakingTokenClaimTransactions(canisterId, offset, limit);
     }), [canisterId, offset, limit]), reload);
 }
-//# sourceMappingURL=v1.js.map
+// # sourceMappingURL=v1.js.map

@@ -9,6 +9,7 @@ import type {
   TotalTradeStat,
   NFTTransaction,
 } from "@w2e/types";
+
 export declare function getNFTCanisters(offset: number, limit: number): Promise<PaginationResult<NFTCanisterInfo>>;
 export declare function useNFTCanisters(
   offset: number,
@@ -187,4 +188,4 @@ export declare function useTradeOrder(
 ): import("@w2e/types").CallResult<OrderInfo>;
 export declare function getNFTTradeData(): Promise<TotalTradeStat>;
 export declare function useNFTTradeData(): import("@w2e/types").CallResult<TotalTradeStat>;
-//# sourceMappingURL=index.d.ts.map
+// # sourceMappingURL=index.d.ts.map

@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useHistory } from "react-router-dom";
 import { Box, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-import { MainCard } from "components/index";
+import { Breadcrumbs, MainCard } from "components/index";
 import { useNFTCanisterList, useCanisterMetadata } from "hooks/nft/useNFTCalls";
 import { Theme } from "@mui/material/styles";
 import Wrapper from "components/Wrapper";
@@ -123,11 +123,11 @@ export default function MarketplaceCollections() {
 
   return (
     <Wrapper>
-      {/* <Breadcrumbs
+      <Breadcrumbs
         prevLink="/marketplace/NFT"
         prevLabel={<Trans>Marketplace</Trans>}
         currentLabel={<Trans>Collections</Trans>}
-      /> */}
+      />
 
       <Box sx={{ margin: "60px 0 40px 0" }}>
         <Typography color="text.primary" fontWeight="700" fontSize="30px">

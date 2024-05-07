@@ -1,4 +1,5 @@
 import { TvlChartDayData } from "@w2e/types";
+
 export declare function getPoolChartTvl(
   id: string,
   pool: string,
@@ -23,4 +24,4 @@ export declare function useTokenChartTvl(
   offset: number,
   limit: number,
 ): import("@w2e/types").CallResult<TvlChartDayData[]>;
-//# sourceMappingURL=globalTVL.d.ts.map
+// # sourceMappingURL=globalTVL.d.ts.map

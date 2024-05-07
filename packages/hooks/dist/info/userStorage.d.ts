@@ -29,4 +29,4 @@ export declare function useInfoUserTransactions(
   limit: number,
   poolIds?: string[],
 ): import("@w2e/types").CallResult<PaginationResult<UserStorageTransaction>>;
-//# sourceMappingURL=userStorage.d.ts.map
+// # sourceMappingURL=userStorage.d.ts.map

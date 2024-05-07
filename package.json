@@ -1,6 +1,7 @@
 {
   "name": "waste2earn-home",
   "version": "1.0.2",
+  "homepage": "https://test.waste2earn.xyz",
   "scripts": {
     "dev": "pnpm run i18n && ./scripts/env.sh ic && PORT=3000 craco start",
     "dev:local": "pnpm run i18n && ./scripts/env.sh local && PORT=3000 craco start",

@@ -140,7 +140,7 @@ export function TokenSearch({ open, onClose }: SearchProps) {
     if (!allTokens || !search) return [];
     if (isValidPrincipal(search)) return allTokens.filter((e) => e.ledger_id.toString() === search);
     return allTokens
-      .filter((e) => e.symbol !== "ICP" && e.symbol !== "WICP")
+      .filter((e) => e.symbol !== "ICP" && e.symbol !== "W2E")
       .filter(
         (e) =>
           e.name.toLocaleLowerCase().includes(search.toLocaleLowerCase()) ||

@@ -1,6 +1,7 @@
+import { WrapICPInterfaceFactory, EXTTokenInterfaceFactory, } from "@w2e/candid";
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
-import { WrapICPInterfaceFactory, EXTTokenInterfaceFactory, } from "@w2e/candid";
+
 export const ext = (canisterId, identity) => actor.create({
     identity,
     canisterId,
@@ -11,4 +12,4 @@ export const wrapICP = (identity) => actor.create({
     identity,
     idlFactory: WrapICPInterfaceFactory,
 });
-//# sourceMappingURL=ext.js.map
+// # sourceMappingURL=ext.js.map

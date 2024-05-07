@@ -1,5 +1,6 @@
-import type { ActorIdentity, PaginationResult } from "@w2e/types";
 import type {
+  ActorIdentity,
+  PaginationResult,
   ProjectInfo,
   ProposalInfo,
   UserVotePowersInfo,
@@ -9,6 +10,7 @@ import type {
   ProposalCreateInfo,
 } from "@w2e/types";
 import { Principal } from "@dfinity/principal";
+
 export declare function createVotingCanister(
   identity: ActorIdentity,
   args: ProjectInfo,
@@ -144,4 +146,4 @@ export declare function commitVotingChunk(
   args: CommitBatchArgs,
   projectId: string,
 ): Promise<import("@w2e/types").StatusResult<boolean>>;
-//# sourceMappingURL=index.d.ts.map
+// # sourceMappingURL=index.d.ts.map

@@ -1,6 +1,3 @@
-import { actor } from "../actor";
-import { ActorName } from "../ActorName";
-
 import {
   V2Base,
   V2BaseInterfaceFactory,
@@ -13,6 +10,8 @@ import {
   V2ICPPrice,
   V2ICPPriceInterfaceFactory,
 } from "@w2e/candid";
+import { actor } from "../actor";
+import { ActorName } from "../ActorName";
 
 export const analyticSwap = () =>
   actor.create<V2Base>({

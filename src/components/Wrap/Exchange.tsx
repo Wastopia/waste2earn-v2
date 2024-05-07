@@ -181,8 +181,8 @@ export default function Exchange() {
 
       const loadingKey = openTip(
         t`${isWrap
-          ? `Wrapping ${formattedAmounts[SWAP_FIELD.INPUT]} ICP to ${formattedAmounts[SWAP_FIELD.OUTPUT]} WICP`
-          : `Unwrapping ${formattedAmounts[SWAP_FIELD.INPUT]} WICP to ${formattedAmounts[SWAP_FIELD.OUTPUT]} ICP`
+            ? `Wrapping ${formattedAmounts[SWAP_FIELD.INPUT]} ICP to ${formattedAmounts[SWAP_FIELD.OUTPUT]} WICP`
+            : `Unwrapping ${formattedAmounts[SWAP_FIELD.INPUT]} WICP to ${formattedAmounts[SWAP_FIELD.OUTPUT]} ICP`
           }`,
         TIP_LOADING,
       );

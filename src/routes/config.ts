@@ -29,7 +29,7 @@ const NFTCanisterList = Loadable(lazy(() => import("../views/nft/CanisterList"))
 const NFTCanisterCreate = Loadable(lazy(() => import("../views/nft/CanisterCreate")));
 const NFTCanisterDetails = Loadable(lazy(() => import("../views/nft/CanisterDetails")));
 
-// const NFTMarket = Loadable(lazy(() => import("../views/nft")));
+const NFTMarket = Loadable(lazy(() => import("../views/nft")));
 const NFTCollectMarket = Loadable(lazy(() => import("../views/nft/Collection")));
 const NFTMarketCollections = Loadable(lazy(() => import("../views/nft/MarketplaceCollections")));
 
@@ -88,7 +88,7 @@ export const routeConfigs: { [path: string]: (props: any) => JSX.Element } = {
   "/swap/v2/liquidity/increase/:positionId?": IncreaseLiquidityV2,
   "/swap/v2/wrap": Wrap,
 
-  // "/marketplace/NFT": NFTMarket,
+  "/marketplace/NFT": NFTMarket,
   "/marketplace/NFT/:canisterId": NFTCollectMarket,
   "/marketplace/NFT/view/:canisterId/:tokenId": NFTView,
   "/marketplace/collections": NFTMarketCollections,

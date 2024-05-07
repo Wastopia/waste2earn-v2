@@ -1,16 +1,18 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import { resultFormat } from "@w2e/utils";
 import { sns_wasm } from "@w2e/actor";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useCallsData } from "../useCallData";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 export function getListDeployedSNSs() {
     return __awaiter(this, void 0, void 0, function* () {
         return resultFormat(yield (yield sns_wasm()).list_deployed_snses({})).data;
@@ -67,7 +69,7 @@ export function getSnsAllTokensInfo() {
                 return 1;
             return 0;
         })
-            .map((e) => (Object.assign(Object.assign({}, e), { meta: Object.assign(Object.assign({}, e.meta), { logo: `https://3r4gx-wqaaa-aaaaq-aaaia-cai.icp0.io${e.meta.logo}` }) })));
+            .map((e) => ({...e, meta: {...e.meta, logo: `https://3r4gx-wqaaa-aaaaq-aaaia-cai.icp0.io${e.meta.logo}`}}));
     });
 }
 export function useSnsAllTokensInfo() {
@@ -89,4 +91,4 @@ export function useSnsAllTokensInfo() {
         result: snsAllTokensInfo,
     }), [loading, snsAllTokensInfo]);
 }
-//# sourceMappingURL=useListDeployedSNSs.js.map
+// # sourceMappingURL=useListDeployedSNSs.js.map

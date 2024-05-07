@@ -6,6 +6,7 @@ import type {
   ManageNeuronResponse,
   ListNervousSystemFunctionsResponse,
 } from "@w2e/types";
+
 export declare function getNeuron(canisterId: string, neuron_id: Uint8Array | number[]): Promise<Neuron>;
 export declare function useNeuron(
   governance_id: string | undefined,
@@ -117,4 +118,4 @@ export declare function neuronRemovePermissions(
   principal: Principal,
   permissions: Int32Array | number[],
 ): Promise<import("@w2e/types").StatusResult<ManageNeuronResponse>>;
-//# sourceMappingURL=governance.d.ts.map
+// # sourceMappingURL=governance.d.ts.map

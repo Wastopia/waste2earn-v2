@@ -3,13 +3,13 @@ export const idlFactory = ({ IDL }: any) => {
   const AccountIdentifier = IDL.Text;
   const User = IDL.Variant({
     principal: IDL.Principal,
-    address: AccountIdentifier
+    address: AccountIdentifier,
   });
   const SubAccount = IDL.Vec(IDL.Nat8);
   const AllowanceRequest = IDL.Record({
     owner: User,
     subaccount: IDL.Opt(SubAccount),
-    spender: IDL.Principal
+    spender: IDL.Principal,
   });
   const Balance__1 = IDL.Nat;
   const TokenIdentifier = IDL.Text;
@@ -17,41 +17,41 @@ export const idlFactory = ({ IDL }: any) => {
     InsufficientBalance: IDL.Null,
     InvalidToken: TokenIdentifier,
     Unauthorized: AccountIdentifier,
-    Other: IDL.Text
+    Other: IDL.Text,
   });
   const Result_4 = IDL.Variant({ ok: Balance__1, err: CommonError__1 });
   const ApproveRequest = IDL.Record({
     subaccount: IDL.Opt(SubAccount),
     allowance: Balance,
-    spender: IDL.Principal
+    spender: IDL.Principal,
   });
   const Result_5 = IDL.Variant({ ok: IDL.Bool, err: CommonError__1 });
   const BalanceRequest = IDL.Record({
     token: TokenIdentifier,
-    user: User
+    user: User,
   });
   const CommonError = IDL.Variant({
     InsufficientBalance: IDL.Null,
     InvalidToken: TokenIdentifier,
     Unauthorized: AccountIdentifier,
-    Other: IDL.Text
+    Other: IDL.Text,
   });
   const BalanceResponse = IDL.Variant({ ok: Balance, err: CommonError });
   const Result_10 = IDL.Variant({ ok: IDL.Nat, err: CommonError__1 });
   const Extension = IDL.Text;
   const HoldersRequest = IDL.Record({
     offset: IDL.Opt(IDL.Nat),
-    limit: IDL.Opt(IDL.Nat)
+    limit: IDL.Opt(IDL.Nat),
   });
   const Holder = IDL.Record({
     balance: IDL.Nat,
-    account: AccountIdentifier
+    account: AccountIdentifier,
   });
   const Page_2 = IDL.Record({
     content: IDL.Vec(Holder),
     offset: IDL.Nat,
     limit: IDL.Nat,
-    totalElements: IDL.Nat
+    totalElements: IDL.Nat,
   });
   const Result_9 = IDL.Variant({ ok: Page_2, err: CommonError });
   const Result_8 = IDL.Variant({ ok: IDL.Text, err: CommonError__1 });
@@ -61,9 +61,9 @@ export const idlFactory = ({ IDL }: any) => {
       ownerAccount: AccountIdentifier,
       metadata: IDL.Opt(IDL.Vec(IDL.Nat8)),
       name: IDL.Text,
-      symbol: IDL.Text
+      symbol: IDL.Text,
     }),
-    nonfungible: IDL.Record({ metadata: IDL.Opt(IDL.Vec(IDL.Nat8)) })
+    nonfungible: IDL.Record({ metadata: IDL.Opt(IDL.Vec(IDL.Nat8)) }),
   });
   const Result_7 = IDL.Variant({ ok: Metadata, err: CommonError__1 });
   const BlockHeight = IDL.Nat64;
@@ -72,7 +72,7 @@ export const idlFactory = ({ IDL }: any) => {
   const AccountIdentifier__1 = IDL.Text;
   const User__1 = IDL.Variant({
     principal: IDL.Principal,
-    address: AccountIdentifier
+    address: AccountIdentifier,
   });
   const Result_3 = IDL.Variant({ ok: IDL.Nat, err: CommonError });
   const TransactionRequest = IDL.Record({
@@ -80,13 +80,13 @@ export const idlFactory = ({ IDL }: any) => {
     user: IDL.Opt(User),
     offset: IDL.Opt(IDL.Nat),
     limit: IDL.Opt(IDL.Nat),
-    index: IDL.Opt(IDL.Nat)
+    index: IDL.Opt(IDL.Nat),
   });
   const TransType = IDL.Variant({
     burn: IDL.Null,
     mint: IDL.Null,
     approve: IDL.Null,
-    transfer: IDL.Null
+    transfer: IDL.Null,
   });
   const Transaction = IDL.Record({
     to: AccountIdentifier,
@@ -98,13 +98,13 @@ export const idlFactory = ({ IDL }: any) => {
     memo: IDL.Opt(IDL.Vec(IDL.Nat8)),
     timestamp: IDL.Int,
     index: IDL.Nat,
-    amount: Balance
+    amount: Balance,
   });
   const Page_1 = IDL.Record({
     content: IDL.Vec(Transaction),
     offset: IDL.Nat,
     limit: IDL.Nat,
-    totalElements: IDL.Nat
+    totalElements: IDL.Nat,
   });
   const Result_2 = IDL.Variant({ ok: Page_1, err: CommonError });
   const Memo = IDL.Vec(IDL.Nat8);
@@ -116,7 +116,7 @@ export const idlFactory = ({ IDL }: any) => {
     memo: Memo,
     subaccount: IDL.Opt(SubAccount),
     nonce: IDL.Opt(IDL.Nat),
-    amount: Balance
+    amount: Balance,
   });
   const TransferResponse = IDL.Variant({
     ok: Balance,
@@ -127,37 +127,37 @@ export const idlFactory = ({ IDL }: any) => {
       InvalidToken: TokenIdentifier,
       Rejected: IDL.Null,
       Unauthorized: AccountIdentifier,
-      Other: IDL.Text
-    })
+      Other: IDL.Text,
+    }),
   });
   const WithdrawRequest = IDL.Record({ to: User, amount: Balance });
   const BlockHeight__1 = IDL.Nat64;
   const Result_1 = IDL.Variant({ ok: BlockHeight__1, err: CommonError });
-  const WrapRequest = IDL.Record({
+  const WasteRequest = IDL.Record({
     user: IDL.Opt(User),
     offset: IDL.Opt(IDL.Nat),
     limit: IDL.Opt(IDL.Nat),
-    index: IDL.Opt(IDL.Nat)
+    index: IDL.Opt(IDL.Nat),
   });
   const Date = IDL.Nat64;
-  const WrapType = IDL.Variant({ wrap: IDL.Null, unwrap: IDL.Null });
-  const WrapRecord = IDL.Record({
+  const WasteType = IDL.Variant({ waste: IDL.Null, unwaste: IDL.Null });
+  const WasteRecord = IDL.Record({
     to: AccountIdentifier,
     date: Date,
     from: AccountIdentifier,
-    wrapType: WrapType,
+    wasteType: WasteType,
     blockHeight: BlockHeight,
     index: IDL.Nat,
-    amount: Balance
+    amount: Balance,
   });
   const Page = IDL.Record({
-    content: IDL.Vec(WrapRecord),
+    content: IDL.Vec(WasteRecord),
     offset: IDL.Nat,
     limit: IDL.Nat,
-    totalElements: IDL.Nat
+    totalElements: IDL.Nat,
   });
   const Result = IDL.Variant({ ok: Page, err: CommonError });
-  const WrapToken = IDL.Service({
+  const WasteToken = IDL.Service({
     allowance: IDL.Func([AllowanceRequest], [Result_4], ["query"]),
     approve: IDL.Func([ApproveRequest], [Result_5], []),
     balance: IDL.Func([BalanceRequest], [BalanceResponse], ["query"]),
@@ -179,7 +179,7 @@ export const idlFactory = ({ IDL }: any) => {
     transfer: IDL.Func([TransferRequest], [TransferResponse], []),
     transferFrom: IDL.Func([TransferRequest], [TransferResponse], []),
     withdraw: IDL.Func([WithdrawRequest], [Result_1], []),
-    wrappedTx: IDL.Func([WrapRequest], [Result], [])
+    wastedTx: IDL.Func([WasteRequest], [Result], []),
   });
-  return WrapToken;
+  return WasteToken;
 };

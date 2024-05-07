@@ -1,6 +1,5 @@
-import { actor } from "../actor";
-
 import { CAP, CapInterfaceFactory, CapRouter, CapRouterInterfaceFactory } from "@w2e/candid";
+import { actor } from "../actor";
 
 export const cap = (canisterId: string) =>
   actor.create<CAP>({

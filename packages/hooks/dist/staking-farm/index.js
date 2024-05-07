@@ -1,17 +1,19 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-import { useCallsData, usePaginationAllData } from "../useCallData";
 import { useCallback } from "react";
 import { resultFormat, isAvailablePageArgs } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 import { v3Farm, v3FarmController } from "@w2e/actor";
+import { useCallsData, usePaginationAllData } from "../useCallData";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 export function getV3UserFarmInfo(canisterId, principal) {
     return __awaiter(this, void 0, void 0, function* () {
         return resultFormat(yield (yield v3Farm(canisterId)).getFarmInfo(principal)).data;
@@ -142,4 +144,4 @@ export function useV3FarmDistributeRecords(storageId, offset, limit, owner = "",
     }), [offset, limit, owner, storageId]), reload);
 }
 /* v3 farm storage */
-//# sourceMappingURL=index.js.map
+// # sourceMappingURL=index.js.map

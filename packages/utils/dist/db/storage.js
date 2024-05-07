@@ -1,13 +1,15 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+import { IdbKeyVal } from "./db";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
         function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { IdbKeyVal } from "./db";
+
 export const isBrowser = typeof window !== "undefined";
 /**
  * IdbStorage is an interface for simple storage of string key-value pairs built on {@link IdbKeyVal}
@@ -22,6 +24,7 @@ export class IdbStorage {
         this.dbName = dbName;
         this.storeName = storeName;
     }
+
     get _db() {
         return new Promise((resolve) => {
             if (this.initializedDb) {
@@ -38,24 +41,28 @@ export class IdbStorage {
             });
         });
     }
+
     get(key) {
         return __awaiter(this, void 0, void 0, function* () {
             const db = yield this._db;
             return yield db.get(key);
         });
     }
+
     set(key, value) {
         return __awaiter(this, void 0, void 0, function* () {
             const db = yield this._db;
             yield db.set(key, value);
         });
     }
+
     remove(key) {
         return __awaiter(this, void 0, void 0, function* () {
             const db = yield this._db;
             yield db.remove(key);
         });
     }
+
     getAll() {
         return __awaiter(this, void 0, void 0, function* () {
             const db = yield this._db;
@@ -63,4 +70,4 @@ export class IdbStorage {
         });
     }
 }
-//# sourceMappingURL=storage.js.map
+// # sourceMappingURL=storage.js.map

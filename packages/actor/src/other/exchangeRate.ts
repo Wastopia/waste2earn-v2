@@ -1,5 +1,5 @@
-import { actor } from "../actor";
 import { ExchangeRate, ExchangeRateInterfaceFactory } from "@w2e/candid";
+import { actor } from "../actor";
 
 export const exchangeRate = () =>
   actor.create<ExchangeRate>({

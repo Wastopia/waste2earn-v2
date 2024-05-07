@@ -1,2 +1,2 @@
 export {};
-//# sourceMappingURL=wicp.js.map
+// # sourceMappingURL=wicp.js.map

@@ -1,5 +1,6 @@
-import { actor } from "../actor";
 import { DIP20InterfaceFactory, DIP20BalanceInterfaceFactory, XTCInterfaceFactory, DIP20SupplyInterfaceFactory, } from "@w2e/candid";
+import { actor } from "../actor";
+
 export const xtc = (identity) => actor.create({
     identity,
     idlFactory: XTCInterfaceFactory,
@@ -20,4 +21,4 @@ export const dip20SupplyActor = (canisterId, identity) => actor.create({
     idlFactory: DIP20SupplyInterfaceFactory,
     canisterId,
 });
-//# sourceMappingURL=dip20.js.map
+// # sourceMappingURL=dip20.js.map

@@ -2,6 +2,7 @@ import { AccountIdentifier, SubAccount } from "@dfinity/ledger-icp";
 import { Principal } from "@dfinity/principal";
 import { isSubAccount } from "./ic";
 import { isValidPrincipal } from "./isValidPrincipal";
+
 export function principalToAccount(principal, subAccount) {
     if (!principal)
         return principal;
@@ -22,4 +23,4 @@ export function principalToAccount(principal, subAccount) {
         subAccount: sub,
     }).toHex();
 }
-//# sourceMappingURL=principalToAccount.js.map
+// # sourceMappingURL=principalToAccount.js.map

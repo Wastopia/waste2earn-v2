@@ -1,21 +1,23 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import { useCallback } from "react";
 import { isPrincipal, isAvailablePageArgs } from "@w2e/utils";
 import { tokenAdapter } from "@w2e/token-adapter";
 import { Principal } from "@dfinity/principal";
 import { useCallsData } from "../useCallData";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 export function getTokenTotalHolder(canisterId) {
     return __awaiter(this, void 0, void 0, function* () {
         return (yield tokenAdapter.totalHolders({
-            canisterId: canisterId,
+            canisterId,
         })).data;
     });
 }
@@ -76,7 +78,7 @@ export function useTokenTransactions({ canisterId, account, offset, limit, capId
 }
 export function getTokenSupply(canisterId) {
     return __awaiter(this, void 0, void 0, function* () {
-        return (yield tokenAdapter.supply({ canisterId: canisterId })).data;
+        return (yield tokenAdapter.supply({ canisterId })).data;
     });
 }
 export function useTokenSupply(canisterId, reload) {
@@ -115,7 +117,7 @@ export function approve(_a) {
                 spender: Principal.fromText(spenderCanisterId),
                 allowance: BigInt(value),
                 subaccount,
-                account: account,
+                account,
             },
         });
     });
@@ -160,4 +162,4 @@ export function useTokenMintingAccount(canisterId) {
         return yield getTokenMintingAccount(canisterId);
     }), [canisterId]));
 }
-//# sourceMappingURL=calls.js.map
+// # sourceMappingURL=calls.js.map

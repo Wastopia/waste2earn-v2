@@ -1,4 +1,5 @@
 import type { GetBuyerStateResponse, RefreshBuyerTokensResponse } from "@w2e/types";
+
 export declare function getSNSBuyerState(swap_id: string, principal: string): Promise<GetBuyerStateResponse>;
 export declare function useSNSBuyerState(
   swap_id: string | undefined,
@@ -10,4 +11,4 @@ export declare function refreshSNSBuyerTokens(
   buyer: string,
   confirmation_text?: string,
 ): Promise<RefreshBuyerTokensResponse>;
-//# sourceMappingURL=useSNSBuyerState.d.ts.map
+// # sourceMappingURL=useSNSBuyerState.d.ts.map

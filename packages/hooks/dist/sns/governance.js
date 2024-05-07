@@ -1,21 +1,23 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import { sns_governance } from "@w2e/actor";
 import { useCallback } from "react";
 import { availableArgsNull, resultFormat } from "@w2e/utils";
 import { Principal } from "@dfinity/principal";
 import { useCallsData } from "../useCallData";
 import { neuronOperationCommand } from "./neuronCommand";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 export function getNeuron(canisterId, neuron_id) {
     return __awaiter(this, void 0, void 0, function* () {
-        var _a;
+        let _a;
         const result = (_a = resultFormat(yield (yield sns_governance(canisterId)).get_neuron({
             neuron_id: availableArgsNull({ id: neuron_id }),
         })).data) === null || _a === void 0 ? void 0 : _a.result;
@@ -32,7 +34,7 @@ export function useNeuron(governance_id, neuron_id, refresh) {
 }
 export function getListNeurons(_a) {
     return __awaiter(this, arguments, void 0, function* ({ canisterId, of_principal, limit, start_page_at }) {
-        var _b;
+        let _b;
         return (_b = resultFormat(yield (yield sns_governance(canisterId)).list_neurons({
             of_principal: availableArgsNull(of_principal ? Principal.fromText(of_principal) : undefined),
             limit,
@@ -279,4 +281,4 @@ export function neuronRemovePermissions(governance_id, neuron_id, principal, per
         }));
     });
 }
-//# sourceMappingURL=governance.js.map
+// # sourceMappingURL=governance.js.map

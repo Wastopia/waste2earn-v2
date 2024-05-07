@@ -14,7 +14,7 @@ import { useTokenInfo } from "hooks/token/useTokenInfo";
 import { TokenInfo } from "types/token";
 import { useAccountPrincipal, useConnectorType } from "store/auth/hooks";
 import TokenStandardLabel from "components/token/TokenStandardLabel";
-import { XTC, ckETH, ckBTC, WRAPPED_ICP, ICP_TOKEN_INFO, TOKEN_STANDARD } from "constants/tokens";
+import { ckETH, ckBTC, WRAPPED_ICP, ICP_TOKEN_INFO, TOKEN_STANDARD, XTC } from "constants/tokens";
 import XTCTopUpModal from "components/XTCTopup/index";
 import { useInfoToken } from "hooks/info/useInfoTokens";
 import { useToken } from "hooks/useCurrency";

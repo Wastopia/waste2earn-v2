@@ -1,18 +1,20 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+import { useCallback } from "react";
+import { isPrincipal, isValidPrincipal } from "@w2e/utils";
+import { tokenAdapter } from "@w2e/token-adapter";
+import { Principal } from "@dfinity/principal";
+import BigNumber from "bignumber.js";
+import { useLatestDataCall } from "../useCallData";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
         function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { useCallback } from "react";
-import { isPrincipal, isValidPrincipal } from "@w2e/utils";
-import { useLatestDataCall } from "../useCallData";
-import { tokenAdapter } from "@w2e/token-adapter";
-import { Principal } from "@dfinity/principal";
-import BigNumber from "bignumber.js";
+
 export function getTokenBalance(_a) {
     return __awaiter(this, arguments, void 0, function* ({ canisterId, address, sub, }) {
         const result = yield tokenAdapter.balance({
@@ -24,7 +26,7 @@ export function getTokenBalance(_a) {
                         ? {
                             principal: Principal.fromText(address),
                         }
-                        : { address: address },
+                        : { address },
                 token: "",
                 subaccount: sub ? [...sub] : undefined,
             },
@@ -42,4 +44,4 @@ export function useTokenBalance({ canisterId, address, sub, reload, }) {
             : new BigNumber(balance.toString());
     }), [address, canisterId, sub]), reload);
 }
-//# sourceMappingURL=useTokenBalance.js.map
+// # sourceMappingURL=useTokenBalance.js.map
