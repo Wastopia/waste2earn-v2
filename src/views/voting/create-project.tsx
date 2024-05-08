@@ -10,7 +10,7 @@ import { createVotingCanister } from "@w2e/hooks";
 import { Principal } from "@dfinity/principal";
 import { isValidPrincipal } from "@w2e/utils";
 import { TOKEN_STANDARD } from "constants/tokens";
-// import { standardCheck } from "utils/token/standardCheck";
+import { standardCheck } from "utils/token/standardCheck";
 
 export type Values = {
   name: string;
@@ -21,8 +21,10 @@ export type Values = {
 };
 
 export const TokenStandards = [
-  { label: "EXT", value: TOKEN_STANDARD.EXT },
-  { label: "DIP20", value: TOKEN_STANDARD.DIP20 },
+  // { label: "EXT", value: TOKEN_STANDARD.EXT },
+  // { label: "DIP20", value: TOKEN_STANDARD.DIP20 },
+  { label: "ICRC2", value: TOKEN_STANDARD.ICRC2 },
+
 ];
 
 export default function CreateVotingProject() {
@@ -47,12 +49,12 @@ export default function CreateVotingProject() {
   const handleCreateProject = async (identity: CallIdentity, { loading }: SubmitLoadingProps) => {
     if (loading) return;
 
-    // const { valid } = await standardCheck(values.tokenId, values.standard as TOKEN_STANDARD);
+    const { valid } = await standardCheck(values.tokenId, values.standard as TOKEN_STANDARD);
 
-    // if (valid === false) {
-    //   openErrorTip(t`This token id did not match the token standard ${values.standard}`);
-    //   return;
-    // }
+    if (valid === false) {
+      openErrorTip(t`This token id did not match the token standard ${values.standard}`);
+      return;
+    }
 
     const { status, message } = await createVotingCanister(identity, {
       logo: values.logo,

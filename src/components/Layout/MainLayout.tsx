@@ -71,8 +71,8 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
           container
           alignItems="center"
           sx={{
-            padding: "0 20px",
-            height: "64px",
+            padding: "0 15px",
+            height: "70px",
             [theme.breakpoints.down("md")]: {
               height: "60px",
             },
@@ -83,7 +83,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
       </AppBar>
 
       <Box className={classes.mainContent}>
-        {show && location.pathname.includes("/swap/v2") ? <V3Event onClick={() => setShow(false)} /> : null}
+        {show && location.pathname.includes("/swap/v2") ? <V3Event onClick={() => setShow(true)} /> : null}
         {globalTipShow && location.pathname.includes("sns") ? (
           <GlobalTips onClose={() => setGlobalTipShow(false)} />
         ) : null}

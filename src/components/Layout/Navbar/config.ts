@@ -25,8 +25,13 @@ export const MOBILE_MAX_NUMBER = 5;
 
 export const routes: Route[] = [
   {
+    key: "home",
+    name: `Home`,
+    path: "/home",
+  },
+  {
     key: "swap",
-    name: `Exchange`,
+    name: `Swap`,
     path: "/swap",
   },
   {
@@ -50,7 +55,6 @@ export const routes: Route[] = [
     subMenus: [
       { key: "followUS_twitter", name: `Twitter`, link: "https://twitter.com/waste2earn", icon: TwitterIcon },
       { key: "followUS_Telegram", name: `Telegram`, link: "https://t.me/waste2earn", icon: TelegramIcon },
-
       { key: "followUS_Medium", name: `Medium`, link: "https://medium.com/@waste2earn.io", icon: MediumIcon },
       { key: "followUS_Gitbook", name: `Gitbook`, link: "https://waste2earn.gitbook.io/", icon: GitbookIcon },
       { key: "followUS_Github", name: `Github`, link: "https://github.com/wastopia", icon: GithubIcon },
@@ -62,6 +66,11 @@ export const routes: Route[] = [
     key: "feedback",
     name: "White listing",
     link: "https://forms.gle/A7NUvs66g8NiBTYQ8",
+  },
+  {
+    key: "claim",
+    name: "Airdrop",
+    path: "/token-claim",
   },
   {
     key: "version",

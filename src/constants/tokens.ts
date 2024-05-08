@@ -5,10 +5,24 @@ import { Principal } from "@dfinity/principal";
 import { TOKEN_STANDARD } from "@w2e/types";
 import { LEDGER_CANISTER_ID } from "constants/icp";
 import ICPAvatar from "../assets/images/icons/tokens/icp.svg";
-import { ckETH_LEDGER_ID } from "./ckETH";
-import { ckBTC_ID } from "./ckBTC";
 import ckETHSVG from "../assets/images/token/ckETH.svg";
 import ckBTCSVG from "../assets/images/token/ckBTC.svg";
+import w2eSvg from "../assets/images/token/w2e-token.svg";
+import wPlSvg from "../assets/images/token/wPl-token.svg";
+import wPrSvg from "../assets/images/token/wPr-token.svg";
+import wGSvg from "../assets/images/token/wG-token.svg";
+import wOxSvg from "../assets/images/token/wOx-token.svg";
+import wMSvg from "../assets/images/token/wM-token.svg";
+import eWSvg from "../assets/images/token/eW-token.svg";
+import { ckETH_LEDGER_ID } from "./ckETH";
+import { ckBTC_ID } from "./ckBTC";
+import { W2E_ID } from "./W2E";
+import { WPl_ID } from "./wPl";
+import { WPr_ID } from "./wPr";
+import { WG_ID } from "./wG";
+import { WM_ID } from "./wM";
+import { WOx_ID } from "./wOx";
+import { EW_ID } from "./eW";
 
 export { TOKEN_STANDARD };
 
@@ -78,85 +92,75 @@ export const XTC = new Token({
   transFee: 0,
 });
 
-// export const SNS1 = new Token({
-//   address: "zfcdd-tqaaa-aaaaq-aaaga-cai",
-//   decimals: 8,
-//   symbol: "SNS1",
-//   name: "SNS1",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 0,
-// });
+export const W2E = new Token({
+  address: W2E_ID,
+  decimals: 8,
+  symbol: "Waste2Earn",
+  name: "W2E",
+  logo: w2eSvg,
+  standard: TOKEN_STANDARD.ICRC2,
+  transFee: 10,
+});
 
-// export const CHAT = new Token({
-//   address: "2ouva-viaaa-aaaaq-aaamq-cai",
-//   decimals: 8,
-//   symbol: "CHAT",
-//   name: "CHAT",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 0,
-// });
+export const WPL = new Token({
+  address: WPl_ID,
+  decimals: 8,
+  symbol: "Waste Plastic",
+  name: "wPl",
+  logo: wPlSvg,
+  standard: TOKEN_STANDARD.ICRC2,
+  transFee: 10,
+});
 
-// export const CAT = new Token({
-//   address: "uf2wh-taaaa-aaaaq-aabna-cai",
-//   decimals: 8,
-//   symbol: "CAT",
-//   name: "CatalyzeDAO",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 0,
-// });
+export const WPR = new Token({
+  address: WPr_ID,
+  decimals: 8,
+  symbol: "Waste Paper",
+  name: "wPr",
+  logo: wPrSvg,
+  standard: TOKEN_STANDARD.ICRC2,
+  transFee: 10,
+});
 
-// export const MOD = new Token({
-//   address: "xsi2v-cyaaa-aaaaq-aabfq-cai",
-//   decimals: 8,
-//   symbol: "MOD",
-//   name: "Modclub",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 10000,
-// });
+export const WG = new Token({
+  address: WG_ID,
+  decimals: 8,
+  symbol: "Waste Glass",
+  name: "wG",
+  logo: wGSvg,
+  standard: TOKEN_STANDARD.ICRC2,
+  transFee: 10,
+});
 
-// export const BoomDAO = new Token({
-//   address: "vtrom-gqaaa-aaaaq-aabia-cai",
-//   decimals: 8,
-//   symbol: "BOOM",
-//   name: "BoomDAO",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 100000,
-// });
+export const WM = new Token({
+  address: WM_ID,
+  decimals: 8,
+  symbol: "Waste Metal",
+  name: "wM",
+  logo: wMSvg,
+  standard: TOKEN_STANDARD.ICRC2,
+  transFee: 10,
+});
 
-// export const ICX = new Token({
-//   address: "rffwt-piaaa-aaaaq-aabqq-cai",
-//   decimals: 8,
-//   symbol: "ICX",
-//   name: "IC-X",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 100000,
-// });
+export const WOx = new Token({
+  address: WOx_ID,
+  decimals: 8,
+  symbol: "Waste Organic",
+  name: "wOx",
+  logo: wOxSvg,
+  standard: TOKEN_STANDARD.ICRC2,
+  transFee: 10,
+});
 
-// export const NUA = new Token({
-//   address: "rxdbk-dyaaa-aaaaq-aabtq-cai",
-//   decimals: 8,
-//   symbol: "NUA",
-//   name: "Nuance",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 100000,
-// });
-
-// export const SONIC = new Token({
-//   address: "qbizb-wiaaa-aaaaq-aabwq-cai",
-//   decimals: 8,
-//   symbol: "SONIC",
-//   name: "Sonic",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 100000,
-// });
+export const EW = new Token({
+  address: EW_ID,
+  decimals: 8,
+  symbol: "Electronic Waste",
+  name: "eW",
+  logo: eWSvg,
+  standard: TOKEN_STANDARD.ICRC2,
+  transFee: 10,
+});
 
 export const ckBTC = new Token({
   address: ckBTC_ID,
@@ -167,7 +171,6 @@ export const ckBTC = new Token({
   standard: TOKEN_STANDARD.ICRC2,
   transFee: 10,
 });
-
 export const ckETH = new Token({
   address: ckETH_LEDGER_ID,
   decimals: 18,
@@ -177,33 +180,3 @@ export const ckETH = new Token({
   standard: TOKEN_STANDARD.ICRC2,
   transFee: 2_000_000_000_000,
 });
-
-// export const TRAX = new Token({
-//   address: "emww2-4yaaa-aaaaq-aacbq-cai",
-//   decimals: 8,
-//   symbol: "TRAX",
-//   name: "TRAX",
-//   logo: ckETHSVG,
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 100000,
-// });
-
-// export const NTN = new Token({
-//   address: "f54if-eqaaa-aaaaq-aacea-cai",
-//   decimals: 8,
-//   symbol: "NTN",
-//   name: "Neutrinite",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 10_000,
-// });
-
-// export const GLDGov = new Token({
-//   address: "tyyy3-4aaaa-aaaaq-aab7a-cai",
-//   decimals: 8,
-//   symbol: "GLDGov",
-//   name: "Gold Governance Token",
-//   logo: "",
-//   standard: TOKEN_STANDARD.ICRC1,
-//   transFee: 100_000,
-// });

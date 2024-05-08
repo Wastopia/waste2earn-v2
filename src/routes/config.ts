@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import Loadable from "../components/Loading/Loadable";
 
+const Home = Loadable(lazy(() => import("../views/home")));
 const Wallet = Loadable(lazy(() => import("../views/wallet/index")));
 const StakingFarm = Loadable(lazy(() => import("../views/staking-farm/index")));
 const StakingFarmCreate = Loadable(lazy(() => import("../views/staking-farm/create")));
@@ -59,6 +60,7 @@ const SnsVotes = Loadable(lazy(() => import("../views/sns/Voting/index")));
 const SnsVoting = Loadable(lazy(() => import("../views/sns/Voting/Voting")));
 
 export const routeConfigs: { [path: string]: (props: any) => JSX.Element } = {
+  "/home": Home,
   "/wallet": Wallet,
 
   "/wallet/ckBTC": ckBTC,

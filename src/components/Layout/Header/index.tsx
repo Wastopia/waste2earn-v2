@@ -6,7 +6,7 @@ import LogoSection from "../../LogoSection";
 import ProfileSection from "./ProfileSection";
 import Navbar from "../Navbar";
 import MobileNavbar from "../Navbar/mobile/Navbar";
-import TokenClaim from "./TokenClaim";
+import ThemeSection from "./ThemeSection";
 
 export const customizeTheme = createTheme({
   breakpoints: {
@@ -64,7 +64,7 @@ export default function Header() {
               "@media(max-width: 640px)": { gap: "0 8px" },
             }}
           >
-            <TokenClaim />
+            <ThemeSection />
             <ProfileSection />
           </Box>
         </Grid>

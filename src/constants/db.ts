@@ -1,2 +1,2 @@
-export const DB_NAME = "Waste2Earn-app";
+export const DB_NAME = "W2E-app";
 export const DB_VERSION = 11;
