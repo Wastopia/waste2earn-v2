@@ -17,7 +17,9 @@ export default function Hero() {
         <Box
             id="hero"
             sx={(theme) => ({
+                cover: 'overflow',
                 width: '100%',
+                padding: '-10px',
                 backgroundImage:
                     theme.palette.mode === 'light'
                         ? 'linear-gradient(180deg, #CEE5FD, #)'
@@ -44,6 +46,7 @@ export default function Hero() {
                             alignSelf: 'center',
                             textAlign: 'center',
                             fontSize: 'clamp(3.5rem, 10vw, 4rem)',
+                            color: '#a62feb'
                         }}
                     >
                         Waste2Earn&nbsp;
@@ -61,7 +64,7 @@ export default function Hero() {
                     </Typography>
                     <Typography
                         textAlign="center"
-                        color="text.secondary"
+                        color="#FFFFFF"
                         sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
                     >
                         Explore our seamless transaction and delivering high-quality web3 solutions
@@ -118,7 +121,7 @@ export default function Hero() {
                     sx={(theme) => ({
                         mt: { xs: 8, sm: 10 },
                         alignSelf: 'center',
-                        height: { xs: 200, sm: 750 },
+                        height: { xs: 252, sm: 649 },
                         width: '100%',
                         backgroundImage:
                             theme.palette.mode === 'light'
@@ -137,7 +140,7 @@ export default function Hero() {
                                 : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
                     })}>
 
-                    <ReactPlayer url="/w2e-video.mp4" width="100%" height="720" controls />
+                    <ReactPlayer url="/w2e-video.mp4" width="100%" height="720" borderRadius="10px" controls />
                 </Box>
             </Container>
         </Box>

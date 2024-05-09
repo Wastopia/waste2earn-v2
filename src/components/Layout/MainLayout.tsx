@@ -83,7 +83,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
       </AppBar>
 
       <Box className={classes.mainContent}>
-        {show && location.pathname.includes("/swap/v2") ? <V3Event onClick={() => setShow(true)} /> : null}
+        {show && location.pathname.includes("/swap/v2") ? <V3Event onClick={() => setShow(false)} /> : null}
         {globalTipShow && location.pathname.includes("sns") ? (
           <GlobalTips onClose={() => setGlobalTipShow(false)} />
         ) : null}
