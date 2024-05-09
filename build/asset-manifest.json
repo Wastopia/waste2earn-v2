@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.25a17f78.css",
-    "main.js": "/static/js/main.21760bc2.js",
+    "main.js": "/static/js/main.f5ada60a.js",
     "static/js/4512.9235df3d.chunk.js": "/static/js/4512.9235df3d.chunk.js",
     "static/js/2603.4893db0a.chunk.js": "/static/js/2603.4893db0a.chunk.js",
-    "static/js/3855.f774cffd.chunk.js": "/static/js/3855.f774cffd.chunk.js",
+    "static/js/3855.1b9fde2a.chunk.js": "/static/js/3855.1b9fde2a.chunk.js",
     "static/js/9320.aa449656.chunk.js": "/static/js/9320.aa449656.chunk.js",
     "static/js/7837.6c58e879.chunk.js": "/static/js/7837.6c58e879.chunk.js",
     "static/js/3656.7901d4d1.chunk.js": "/static/js/3656.7901d4d1.chunk.js",
@@ -83,7 +83,7 @@
     "static/js/3569.f9b37900.chunk.js": "/static/js/3569.f9b37900.chunk.js",
     "static/js/8392.c8abd924.chunk.js": "/static/js/8392.c8abd924.chunk.js",
     "static/js/7326.8fb976f0.chunk.js": "/static/js/7326.8fb976f0.chunk.js",
-    "static/js/5097.633a4bea.chunk.js": "/static/js/5097.633a4bea.chunk.js",
+    "static/js/5097.83192f22.chunk.js": "/static/js/5097.83192f22.chunk.js",
     "static/js/4342.3f413afb.chunk.js": "/static/js/4342.3f413afb.chunk.js",
     "static/js/3214.ad8f072c.js": "/static/js/3214.ad8f072c.js",
     "static/js/2580.6cbbe14b.chunk.js": "/static/js/2580.6cbbe14b.chunk.js",
@@ -106,7 +106,7 @@
     "static/js/8361.bdbdfb48.chunk.js": "/static/js/8361.bdbdfb48.chunk.js",
     "static/js/1356.de3c3081.chunk.js": "/static/js/1356.de3c3081.chunk.js",
     "static/js/1283.4695f772.chunk.js": "/static/js/1283.4695f772.chunk.js",
-    "static/js/3041.80970a54.js": "/static/js/3041.80970a54.js",
+    "static/js/3041.6e1beac9.js": "/static/js/3041.6e1beac9.js",
     "static/media/loading.gif": "/static/media/loading.daf71b812fbde3c8e4ee.gif",
     "static/media/w2e-token.svg": "/static/media/w2e-token.025abf918aea123c9f611b091e1ebdac.svg",
     "static/media/wOx-token.svg": "/static/media/wOx-token.474a72d86474de02553a901c02067a4c.svg",
@@ -154,9 +154,9 @@
     "static/media/sync-alt.svg": "/static/media/sync-alt.eb3f9e82a97a704168c8c391288eb80d.svg",
     "static/media/add.svg": "/static/media/add.1275c2ddf891660b4f992c81a6422aa9.svg",
     "main.25a17f78.css.map": "/static/css/main.25a17f78.css.map",
-    "main.21760bc2.js.map": "/static/js/main.21760bc2.js.map",
+    "main.f5ada60a.js.map": "/static/js/main.f5ada60a.js.map",
     "4512.9235df3d.chunk.js.map": "/static/js/4512.9235df3d.chunk.js.map",
-    "3855.f774cffd.chunk.js.map": "/static/js/3855.f774cffd.chunk.js.map",
+    "3855.1b9fde2a.chunk.js.map": "/static/js/3855.1b9fde2a.chunk.js.map",
     "9320.aa449656.chunk.js.map": "/static/js/9320.aa449656.chunk.js.map",
     "7837.6c58e879.chunk.js.map": "/static/js/7837.6c58e879.chunk.js.map",
     "3656.7901d4d1.chunk.js.map": "/static/js/3656.7901d4d1.chunk.js.map",
@@ -235,7 +235,7 @@
     "3569.f9b37900.chunk.js.map": "/static/js/3569.f9b37900.chunk.js.map",
     "8392.c8abd924.chunk.js.map": "/static/js/8392.c8abd924.chunk.js.map",
     "7326.8fb976f0.chunk.js.map": "/static/js/7326.8fb976f0.chunk.js.map",
-    "5097.633a4bea.chunk.js.map": "/static/js/5097.633a4bea.chunk.js.map",
+    "5097.83192f22.chunk.js.map": "/static/js/5097.83192f22.chunk.js.map",
     "4342.3f413afb.chunk.js.map": "/static/js/4342.3f413afb.chunk.js.map",
     "3214.ad8f072c.js.map": "/static/js/3214.ad8f072c.js.map",
     "2580.6cbbe14b.chunk.js.map": "/static/js/2580.6cbbe14b.chunk.js.map",
@@ -258,12 +258,12 @@
     "8361.bdbdfb48.chunk.js.map": "/static/js/8361.bdbdfb48.chunk.js.map",
     "1356.de3c3081.chunk.js.map": "/static/js/1356.de3c3081.chunk.js.map",
     "1283.4695f772.chunk.js.map": "/static/js/1283.4695f772.chunk.js.map",
-    "3041.80970a54.js.map": "/static/js/3041.80970a54.js.map"
+    "3041.6e1beac9.js.map": "/static/js/3041.6e1beac9.js.map"
   },
   "entrypoints": [
-    "static/js/3041.80970a54.js",
+    "static/js/3041.6e1beac9.js",
     "static/js/3214.ad8f072c.js",
     "static/css/main.25a17f78.css",
-    "static/js/main.21760bc2.js"
+    "static/js/main.f5ada60a.js"
   ]
 }
