@@ -71,7 +71,11 @@
     "serve": "^11.3.2",
     "typechain": "8.3.2",
     "typescript": "4.9.5",
-    "webpack-retry-chunk-load-plugin": "^3.1.1"
+    "webpack-retry-chunk-load-plugin": "^3.1.1",
+    "dotenv-cra": "^3.0.2",
+    "gh-pages": "^3.2.3",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0"
   },
   "dependencies": {
     "@dfinity/agent": "1.0.1",
@@ -91,7 +95,7 @@
     "@mui/base": "5.0.0-beta.27",
     "@mui/icons-material": "5.5.0",
     "@mui/lab": "5.0.0-alpha.72",
-    "@mui/material": "5.5.0",
+    "@mui/material": "^5.15.17",
     "@mui/styles": "5.5.0",
     "@astrox/sdk-web": "^0.1.41",
     "@astrox/sdk-webview": "^0.1.41",
@@ -171,6 +175,7 @@
     "react-redux": "^7.2.3",
     "react-router-dom": "5.2.0",
     "react-scripts": "5.0.1",
+    "react-player": "^2.8.0",
     "redux": "^4.0.5",
     "redux-localstorage-simple": "^2.3.1",
     "redux-persist": "^6.0.0",

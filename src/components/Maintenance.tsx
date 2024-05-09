@@ -27,8 +27,8 @@ export function Maintenance() {
                 </Typography>
                 <Typography color="text.primary" fontSize="12px" sx={{ wordBreak: "break-word" }}>
                   Thank you for your patience! Stay updated by following&nbsp;
-                  <TextButton sx={{ fontSize: "12px" }} link="https://twitter.com/ICPSwap">
-                    ICPSwap on Twitter.
+                  <TextButton sx={{ fontSize: "12px" }} link="https://twitter.com/Waste2Earn">
+                    Waste2Earn on Twitter.
                   </TextButton>
                 </Typography>
                 <Typography color="text.primary" fontSize="12px" sx={{ wordBreak: "break-word" }}>

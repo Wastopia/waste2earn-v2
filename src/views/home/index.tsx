@@ -1,22 +1,133 @@
-import './index.css';
+import { useMemo, useState } from "react";
+import { Grid, Box, Typography } from "@mui/material";
+import { NoData, StaticLoading, MainCard } from "components/index";
+import Switch from "components/switch";
+import { Trans } from "@lingui/macro";
+import { STATE } from "types/staking-farm";
+import type { StakingFarmInfo } from "@w2e/types";
+import { useV3StakingFarms, useParsedQueryString } from "@w2e/hooks";
+import { useHistory } from "react-router-dom";
+import StakingPoolItem from "./components/StakingPoolItem";
+import GlobalData from "./components/GlobalData";
+import { Page, Pages } from "./components/PageToggle";
+import FarmContext from "./context";
+import Hero from "./components/Hero";
+
+function MainContent() {
+  const history = useHistory();
+
+  const [stakeOnly, setStakeOnly] = useState(false);
+
+  const { state } = useParsedQueryString() as { state: STATE };
+  const _state = useMemo(() => state ?? STATE.LIVE, [state]);
+  const { result, loading } = useV3StakingFarms(0, 200, _state);
+  const { content: list } = result ?? { content: [] as StakingFarmInfo[] };
+
+  const handleToggle = (value: Page) => {
+    history.push(value.path);
+  };
+
+  const [unStakedFarms, setUnStakedFarms] = useState<string[]>([]);
+
+  const handleUpdateUnStakedFarms = (unStakedFarms: string) => {
+    setUnStakedFarms((prevState) => prevState.concat(unStakedFarms));
+  };
+
+  const handleDeleteUnStakedFarms = (unStakedFarm: string) => {
+    setUnStakedFarms((prevState) => {
+      const state = [...prevState];
+      const index = prevState.indexOf(unStakedFarm);
+      if (index !== -1) {
+        state.splice(index, 1);
+      }
+      return state;
+    });
+  };
+
+  const handleToggleCheck = (checked: boolean) => {
+    setStakeOnly(checked);
+  };
+
+  return (
+    <FarmContext.Provider
+      value={{
+        unStakedFarms,
+        updateUnStakedFarms: handleUpdateUnStakedFarms,
+        deleteUnStakedFarms: handleDeleteUnStakedFarms,
+      }}
+    >
+      <MainCard>
+        <Grid
+          container
+          direction="row"
+          sx={{
+            padding: "10px 0 40px",
+            "@media (max-width: 960px)": {
+              padding: "10px 0px 0px 0px",
+            },
+          }}
+        >
+          <Grid item>
+            <Box sx={{ display: "flex", gap: "0 20px" }}>
+              {Pages.map((ele) => (
+                <Typography
+                  key={ele.path}
+                  variant="h3"
+                  color={_state === ele.state ? "textPrimary" : "textTertiary"}
+                  onClick={() => handleToggle(ele)}
+                  sx={{
+                    cursor: "pointer",
+                    textTransform: "capitalize",
+                    "@media (max-width:640px)": {
+                      fontSize: "16px",
+                    },
+                  }}
+                >
+                  {ele.label}
+                </Typography>
+              ))}
+            </Box>
+          </Grid>
+
+          <Grid item style={{ marginLeft: "auto" }}>
+            <Grid container alignItems="center" gap="0 10px">
+              <Typography display="inline">
+                <Trans>Staked only</Trans>
+              </Typography>
+              <Switch checked={stakeOnly} onChange={(event: any) => handleToggleCheck(event.target.checked)} />
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Box
+          sx={{
+            position: "relative",
+            minHeight: "440px",
+          }}
+        >
+          {!loading ? (
+            <Grid container justifyContent="center" sx={{ gap: "20px" }}>
+              {list.map((ele) => (
+                <StakingPoolItem key={ele.farmCid} stakeOnly={stakeOnly} state={_state} farm={ele} />
+              ))}
+            </Grid>
+          ) : null}
+          {((unStakedFarms.length === list.length && stakeOnly) || !list.length) && !loading && <NoData />}
+          {loading ? <StaticLoading loading={loading} /> : null}
+        </Box>
+      </MainCard>
+    </FarmContext.Provider>
+  );
+}
 
 export default function Home() {
-    return (
-        <div className="box">
-            <h1>Waste2Earn Management(TypeScript)</h1>
-            <div className="item">
-                <a href="https://mui.com/base-ui/">Base UI</a> is a library of unstyled React UI components
-                which includes prebuilt components with production-ready functionality, along with low-level
-                hooks for transferring that functionality to other components.
-            </div>
-            <div className="item">
-                <a href="https://create-react-app.dev/">Create React App</a> is a framework for quickly
-                creating a new React project without the need to configure complex build tools or
-                development environments.
-            </div>
-            <span>
-                Created with 💙 by <a href="https://mui.com">MUI</a>.
-            </span>
-        </div>
-    )
+  return (
+    <>
+      <Hero />
+      <GlobalData />
+      <Box sx={{ margin: "30px 0 0 0" }}>
+        <MainContent />
+      </Box>
+    </>
+  );
 }

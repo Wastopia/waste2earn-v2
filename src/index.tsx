@@ -1,5 +1,5 @@
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
 
@@ -29,7 +29,9 @@ ReactDOM.render(
         <PersistGate loading={null} persistor={persistor}>
             <BrowserRouter>
                 <LanguageProvider>
-                    <App />
+                    <HashRouter >
+                        <App />
+                    </HashRouter>
                 </LanguageProvider>
             </BrowserRouter>
         </PersistGate>
