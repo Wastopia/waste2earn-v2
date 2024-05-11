@@ -96,6 +96,7 @@ export function SwapMain() {
               </Box>
               <SwapSettingIcon type="swap" />
             </Box>
+
             <Box mt={3}>{ActiveComponent()}</Box>
           </MainCard>
 

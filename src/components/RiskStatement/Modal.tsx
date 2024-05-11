@@ -91,7 +91,7 @@ export default function RiskStatementModal({
         <Box>
           <Typography>
             <Trans>
-              1. ICPSwap is a decentralized financial hub of the Internet Computer, providing the transaction function
+              1. Waste2Earn is a decentralized financial hub under the Internet Computer, providing the transaction function
               of various tokens and NFTs within its ecosystem and other services. All the services are deployed on the
               Internet Computer, and all transactions can be checked on the Internet Computer protocol. Only you can be
               responsible for your own funds. Please make sure to keep your funds safe and be vigilant of fraud.
@@ -120,7 +120,7 @@ export default function RiskStatementModal({
             <Trans>
               4. Please stay vigilant to phishing attacks and make sure you are visiting{" "}
               <Typography color="primary" component="span">
-                https://app.icpswap.com
+                https://waste2earn.xyz
               </Typography>{" "}
               - check the URL carefully.
             </Trans>
@@ -129,8 +129,8 @@ export default function RiskStatementModal({
         <Box mt="30px">
           <Typography>
             <Trans>
-              5. For any events and news about ICPSwap, please refer to ICPSwap's Twitter:{" "}
-              <TextButton link="https://twitter.com/icpswap">https://twitter.com/icpswap</TextButton> or @ICPSwap
+              5. For any events and news about ICPSwap, please refer to Waste2earn's Twitter:{" "}
+              <TextButton link="https://twitter.com/icpswap">https://twitter.com/waste2earn</TextButton> or @Waste2Earn
             </Trans>
           </Typography>
         </Box>
@@ -163,7 +163,7 @@ export default function RiskStatementModal({
       </Box>
       <Box mt="5px">
         <Typography fontSize="10px">
-          <Trans>* The ICPSwap founding team reserves right for the final explanation of all the statements.</Trans>
+          <Trans>* The Waste2Earn founding team reserves right for the final explanation of all the statements.</Trans>
         </Typography>
       </Box>
     </Modal>

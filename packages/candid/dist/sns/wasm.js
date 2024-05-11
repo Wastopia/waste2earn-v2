@@ -1,2 +1,2 @@
 export {};
-//# sourceMappingURL=wasm.js.map
+// # sourceMappingURL=wasm.js.map

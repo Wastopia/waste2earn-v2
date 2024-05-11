@@ -2,27 +2,20 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
-import { useState } from 'react';
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, Typography, Link, alpha } from '@mui/material';
+import { Button, Typography, alpha } from '@mui/material';
 import ReactPlayer from 'react-player';
 
 export default function Hero() {
-    const [openDialog, setOpenDialog] = useState(false);
 
-    const handleTermsAgreement = () => {
-        setOpenDialog(false); // Close dialog
-        // Perform actions after agreement (e.g., create account)
-    };
     return (
         <Box
             id="hero"
             sx={(theme) => ({
-                cover: 'overflow',
                 width: '100%',
-                padding: '-10px',
+                borderRadius: '20px',
                 backgroundImage:
                     theme.palette.mode === 'light'
-                        ? 'linear-gradient(180deg, #CEE5FD, #)'
+                        ? 'linear-gradient(180deg, #CEE5FD)'
                         : `linear-gradient(#02294F, ${alpha('#090E10', 0.0)})`,
                 backgroundSize: '100% 20%',
                 backgroundRepeat: 'no-repeat',
@@ -93,28 +86,6 @@ export default function Hero() {
                             Start now
                         </Button>
                     </Stack>
-                    <Typography variant="caption" textAlign="center" sx={{ opacity: 0.8 }}>
-                        By clicking &quot;Start now&quot; you agree to our&nbsp;
-                        <Link href="mailto:waste2earn.io@gmail.com" color="primary">
-                            Terms & Conditions
-                        </Link>
-                        <Dialog open={openDialog} onClose={() => setOpenDialog(false)}>
-                            <DialogTitle>Terms & Conditions Agreement</DialogTitle>
-                            <DialogContent>
-                                <DialogContentText>
-                                    By proceeding, you agree to the Terms & Conditions available at:
-                                    <br />
-                                    <Link href="mailto:waste2earn.io@gmail.com" color="primary">
-                                        waste2earn.io@gmail.com (Terms & Conditions)
-                                    </Link>
-                                </DialogContentText>
-                            </DialogContent>
-                            <DialogActions>
-                                <Button onClick={() => setOpenDialog(false)}>Disagree</Button>
-                                <Button onClick={handleTermsAgreement}>Agree</Button>
-                            </DialogActions>
-                        </Dialog>
-                    </Typography>
                 </Stack>
                 <Box
                     id="image"

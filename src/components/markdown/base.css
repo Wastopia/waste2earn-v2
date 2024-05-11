@@ -1,28 +1,28 @@
 :root {
-  --text-color: #8492c4;
-  --border-color: #29314f;
-  --bg-color: #212946;
-  --link-color: #5669dc;
+  --text-color: #ffffff;
+  --border-color: #443463;
+  --bg-color: #2a5c5a;
+  --link-color: #74309c;
   --title-color: #ffffff;
-  --blockquote-color: #4F5A84;
+  --blockquote-color: #3a4fa1;
 }
 
 .markdown-body {
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.5;
   word-wrap: break-word;
   color: var(--text-color);
 }
 
 .markdown-body::before {
   display: table;
-  content: '';
+  content: "";
 }
 
 .markdown-body::after {
   display: table;
   clear: both;
-  content: '';
+  content: "";
 }
 
 .markdown-body > *:first-child {
@@ -281,11 +281,11 @@
   width: auto;
 }
 
-.markdown-body img[align='right'] {
+.markdown-body img[align="right"] {
   padding-left: 20px;
 }
 
-.markdown-body img[align='left'] {
+.markdown-body img[align="left"] {
   padding-right: 20px;
 }
 

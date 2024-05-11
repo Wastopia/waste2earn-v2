@@ -1,2 +1,2 @@
 export {};
-//# sourceMappingURL=icrc2.js.map
+// # sourceMappingURL=icrc2.js.map

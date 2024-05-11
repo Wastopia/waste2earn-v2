@@ -9,7 +9,7 @@ import {
   toSignificantWithGroupSeparator,
 } from "@w2e/utils";
 import BigNumber from "bignumber.js";
-import { WRAPPED_ICP, ICP } from "constants/tokens";
+import { ICP, W2E } from "constants/tokens";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useErrorTip, useSuccessTip } from "hooks/useTips";
 import { Trans, t } from "@lingui/macro";
@@ -37,7 +37,8 @@ const useStyles = makeStyles((theme: Theme) => {
 
 export type Values = {
   to: string;
-  amount: string;
+  weight: string;
+  amount: number;
 };
 
 function usePrincipalStandard(tokenId: string, standard: string) {
@@ -71,7 +72,8 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
 
   const initialValues = {
     to: transferTo ?? "",
-    amount: "",
+    weight: "",
+    amount: 0,
   };
 
   const [values, setValues] = useState<Values>(initialValues);
@@ -110,6 +112,17 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
     try {
       if (loading || !account) return;
 
+      // Calculate the actual transfer amount considering weight
+      const weight = new BigNumber(values.weight ?? 0);
+      const amount = new BigNumber(values.amount ?? 0).multipliedBy(weight);
+
+      const actualTransferAmount = amount.minus(parseTokenAmount(token.transFee, token.decimals));
+
+      if (actualTransferAmount.isLessThanOrEqualTo(0)) {
+        openErrorTip(t`Transfer amount must be greater than transaction fee.`);
+        return;
+      }
+
       const { status, message } = await tokenTransfer({
         canisterId: token.canisterId.toString(),
         to: values.to,
@@ -126,7 +139,7 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
         openSuccessTip(t`Transferred successfully`);
         setValues(initialValues);
         if (onTransferSuccess) onTransferSuccess();
-        if (token.canisterId.toString() === ICP.address || token.canisterId.toString() === WRAPPED_ICP.address) {
+        if (token.canisterId.toString() === ICP.address || token.canisterId.toString() === W2E.address) {
           if (setRefreshTotalBalance) setRefreshTotalBalance(!refreshTotalBalance);
         }
       } else {
@@ -141,8 +154,9 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
   };
 
   const actualTransferAmount = useMemo(() => {
-    const amount = new BigNumber(values.amount ?? 0).minus(parseTokenAmount(token.transFee, token.decimals));
-    return amount.isGreaterThan(0) ? amount.toString() : 0;
+    const weight = new BigNumber(values.weight ?? 0);
+    const amount = new BigNumber(values.amount ?? 0).multipliedBy(weight);
+    return amount.isGreaterThan(0) ? amount.minus(parseTokenAmount(token.transFee, token.decimals)).toString() : "0";
   }, [values, token]);
 
   const addressHelpText = () => {
@@ -189,6 +203,16 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           multiline
         />
         <NumberFilledTextField
+          placeholder="Enter weight in kilogram"
+          value={values.weight}
+          onChange={(value: string) => handleFieldChange(value, "weight")}
+          fullWidth
+          numericProps={{
+            allowNegative: false,
+          }}
+          autoComplete="off"
+        />
+        <NumberFilledTextField
           placeholder="Enter the amount"
           value={values.amount}
           onChange={(value: string) => handleFieldChange(value, "amount")}
@@ -219,10 +243,10 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
             <Trans>
               Balance:{" "}
               {`${balance
-                  ? new BigNumber(
-                    parseTokenAmount(balance, token.decimals).toFixed(token.decimals > 8 ? 8 : token.decimals),
-                  ).toFormat()
-                  : "--"
+                ? new BigNumber(
+                  parseTokenAmount(balance, token.decimals).toFixed(token.decimals > 8 ? 8 : token.decimals),
+                ).toFormat()
+                : "--"
                 }`}
             </Trans>
           </Typography>

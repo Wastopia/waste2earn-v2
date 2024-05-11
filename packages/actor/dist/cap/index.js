@@ -1,2 +1,2 @@
 export * from "./cap";
-//# sourceMappingURL=index.js.map
+// # sourceMappingURL=index.js.map

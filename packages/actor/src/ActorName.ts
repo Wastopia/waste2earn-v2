@@ -17,6 +17,7 @@ export enum ActorName {
 
   Token = "token",
   WICP = "wicp",
+  W2E = "w2e",
 
   FarmController = "FarmController",
   Farm = "Farm",

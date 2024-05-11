@@ -47,13 +47,13 @@ export const INFO_URL_MAP = {
 
 export const INFO_URL = INFO_URL_MAP[network];
 
-export const APP_URL = "https://app.icpswap.com";
+export const APP_URL = "https://waste2earn.xyz";
 
 export const DAYJS_FORMAT = "YYYY-MM-DD HH:mm:ss";
 
-export const V2SwapLink = "https://app.icpswap.com";
+export const V2SwapLink = "https://waste2earn.xyz";
 
-export const V3SwapLink = "https://app.icpswap.com";
+export const V3SwapLink = "https://waste2earn.xyz";
 
 export const AnonymousPrincipal = "2vxsx-fae";
 

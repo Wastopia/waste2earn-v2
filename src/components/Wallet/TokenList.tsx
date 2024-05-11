@@ -2,7 +2,17 @@ import { useState, useMemo } from "react";
 import { Box } from "@mui/material";
 import TokenListTable from "components/Wallet/TokenListTable";
 import TokenListHeader from "components/Wallet/TokenListHeader";
-import { ICP_METADATA, WRAPPED_ICP_METADATA } from "constants/tokens";
+import {
+  ICP_METADATA,
+  WRAPPED_ICP_METADATA,
+  W2E_METADATA,
+  WPL_METADATA,
+  WPR_METADATA,
+  WG_METADATA,
+  WM_METADATA,
+  WOX_METADATA,
+  EW_METADATA
+} from "constants/tokens";
 import { NETWORK, network } from "constants/server";
 import { useWalletCatchTokenIds, useUpdateHideSmallBalanceManager } from "store/wallet/hooks";
 import { DISPLAY_IN_WALLET_FOREVER } from "constants/wallet";
@@ -16,7 +26,17 @@ export default function WalletTokenList() {
   const globalTokenList = useGlobalTokenList();
 
   const tokens = useMemo(() => {
-    let tokenIds = [ICP_METADATA.canisterId.toString(), WRAPPED_ICP_METADATA.canisterId.toString(),];
+    let tokenIds = [
+      ICP_METADATA.canisterId.toString(),
+      WRAPPED_ICP_METADATA.canisterId.toString(),
+      W2E_METADATA.canisterId.toString(),
+      WPL_METADATA.canisterId.toString(),
+      WPR_METADATA.canisterId.toString(),
+      WG_METADATA.canisterId.toString(),
+      WM_METADATA.canisterId.toString(),
+      WOX_METADATA.canisterId.toString(),
+      EW_METADATA.canisterId.toString(),
+    ];
 
     if (network === NETWORK.IC) {
       tokenIds = [

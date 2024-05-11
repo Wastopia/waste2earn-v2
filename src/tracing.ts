@@ -48,7 +48,7 @@ Sentry.init({
   beforeSend,
   integrations: [
     new BrowserTracing({
-      startTransactionOnLocationChange: false,
+      startTransactionOnLocationChange: true,
       startTransactionOnPageLoad: true,
     }),
   ],

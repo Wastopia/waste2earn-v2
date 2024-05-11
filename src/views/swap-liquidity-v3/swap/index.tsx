@@ -213,6 +213,7 @@ export default function Swap() {
 
   return (
     <Box>
+
       <SwapInputWrapper
         onMaxInput={handleMaxInput}
         onInput={handleInput}

@@ -44,11 +44,11 @@ export const routes: Route[] = [
     name: `Wallet`,
     path: `/wallet`,
   },
-  {
-    key: "voting",
-    name: `Voting`,
-    path: `/voting`,
-  },
+  // {
+  //   key: "voting",
+  //   name: `Voting`,
+  //   path: `/voting`,
+  // },
   {
     key: "followUS",
     name: `Follow US`,
