@@ -73,9 +73,6 @@ importers:
       '@ethersproject/providers':
         specifier: ^5.7.2
         version: 5.7.2(bufferutil@4.0.8)(utf-8-validate@5.0.10)
-      '@honopu/auth-client':
-        specifier: 1.0.13
-        version: 1.0.13(@dfinity/agent@1.0.1(@dfinity/candid@1.0.1(@dfinity/principal@1.0.1))(@dfinity/principal@1.0.1))(@dfinity/candid@1.0.1(@dfinity/principal@1.0.1))(@dfinity/identity@1.0.1(@dfinity/agent@1.0.1(@dfinity/candid@1.0.1(@dfinity/principal@1.0.1))(@dfinity/principal@1.0.1))(@dfinity/principal@1.0.1)(@peculiar/webcrypto@1.4.6))(@dfinity/principal@1.0.1)
       '@lingui/cli':
         specifier: 4.6.0
         version: 4.6.0(typescript@4.9.5)
@@ -2314,14 +2311,6 @@ packages:
 
   '@floating-ui/utils@0.2.2':
     resolution: {integrity: sha512-J4yDIIthosAsRZ5CPYP/jQvUAQtlZTTD/4suA08/FEnlxqW3sKS9iAhgsa9VYLZ6vDHn/ixJgIqRQPotoBjxIw==}
-
-  '@honopu/auth-client@1.0.13':
-    resolution: {integrity: sha512-37GahZjPP4cSNwGKntQMuhzVsbX39XRpkhXweIPMtzUyyZgab4k4gBGtxz8RSpsY29dhu/qhc1BM9PLXbw440Q==, tarball: https://npm.pkg.github.com/download/@honopu/auth-client/1.0.13/059e7051379b9fecd03627bcfb53fc8c7209dc62}
-    peerDependencies:
-      '@dfinity/agent': 1.0.1
-      '@dfinity/candid': 1.0.1
-      '@dfinity/identity': 1.0.1
-      '@dfinity/principal': 1.0.1
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -13170,14 +13159,6 @@ snapshots:
       react-dom: 17.0.2(react@17.0.2)
 
   '@floating-ui/utils@0.2.2': {}
-
-  '@honopu/auth-client@1.0.13(@dfinity/agent@1.0.1(@dfinity/candid@1.0.1(@dfinity/principal@1.0.1))(@dfinity/principal@1.0.1))(@dfinity/candid@1.0.1(@dfinity/principal@1.0.1))(@dfinity/identity@1.0.1(@dfinity/agent@1.0.1(@dfinity/candid@1.0.1(@dfinity/principal@1.0.1))(@dfinity/principal@1.0.1))(@dfinity/principal@1.0.1)(@peculiar/webcrypto@1.4.6))(@dfinity/principal@1.0.1)':
-    dependencies:
-      '@dfinity/agent': 1.0.1(@dfinity/candid@1.0.1(@dfinity/principal@1.0.1))(@dfinity/principal@1.0.1)
-      '@dfinity/candid': 1.0.1(@dfinity/principal@1.0.1)
-      '@dfinity/identity': 1.0.1(@dfinity/agent@1.0.1(@dfinity/candid@1.0.1(@dfinity/principal@1.0.1))(@dfinity/principal@1.0.1))(@dfinity/principal@1.0.1)(@peculiar/webcrypto@1.4.6)
-      '@dfinity/principal': 1.0.1
-      idb: 8.0.0
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
