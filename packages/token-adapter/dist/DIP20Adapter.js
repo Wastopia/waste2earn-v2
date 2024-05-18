@@ -1,16 +1,18 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import { resultFormat } from "@w2e/utils";
 import { ResultStatus } from "@w2e/types";
 import { dip20, dip20BalanceActor, dip20SupplyActor } from "@w2e/actor";
 import { BaseTokenAdapter, } from "./BaseTokenAdapter";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 export class DIP20TokenAdapter extends BaseTokenAdapter {
     holders(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params }) {
@@ -46,6 +48,7 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             };
         });
     }
+
     totalHolders(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId }) {
             let tokenInfo = null;
@@ -59,6 +62,7 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             return resultFormat(undefined);
         });
     }
+
     supply(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId }) {
             try {
@@ -70,6 +74,7 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             }
         });
     }
+
     balance(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params }) {
             if (params.user.principal) {
@@ -86,6 +91,7 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             return resultFormat(BigInt(0));
         });
     }
+
     transfer(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, identity, params }) {
             if (!params.to.principal)
@@ -94,17 +100,20 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             return resultFormat(result);
         });
     }
+
     getFee(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId }) {
             const metadata = yield (yield this.actor(canisterId)).getMetadata();
             return resultFormat(metadata.fee);
         });
     }
+
     setFee(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, identity, params }) {
             return resultFormat(yield (yield this.actor(canisterId, identity)).setFee(params));
         });
     }
+
     setFeeTo(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, identity, params }) {
             if (!params.principal)
@@ -112,9 +121,10 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             return resultFormat(yield (yield this.actor(canisterId, identity)).setFeeTo(params.principal));
         });
     }
+
     transactions(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params }) {
-            var _b, _c, _d, _e, _f;
+            let _b; let _c; let _d; let _e; let _f;
             let cap_id = params.capId;
             if (!cap_id) {
                 cap_id = (_b = (yield params.getCapRootId(canisterId))) === null || _b === void 0 ? void 0 : _b.toString();
@@ -137,6 +147,7 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             });
         });
     }
+
     approve(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params, identity }) {
             // 10 times approve amount to fix dip20 insufficient allowance amount
@@ -144,6 +155,7 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             return resultFormat(yield (yield this.actor(canisterId, identity)).approve(params.spender, params.allowance * BigInt(10)));
         });
     }
+
     allowance(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params }) {
             if (!params.owner.principal) {
@@ -152,6 +164,7 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             return resultFormat(yield (yield this.actor(canisterId)).allowance(params.owner.principal, params.spender));
         });
     }
+
     metadata(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId }) {
             const metadata = (yield (yield this.actor(canisterId)).getMetadata());
@@ -169,14 +182,17 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
             };
         });
     }
+
     setLogo(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params, identity }) {
             return resultFormat(yield (yield this.actor(canisterId, identity)).setLogo(params));
         });
     }
+
     actualReceivedByTransfer({ amount }) {
         return amount;
     }
+
     getMintingAccount(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, }) {
             return {
@@ -190,4 +206,4 @@ export class DIP20TokenAdapter extends BaseTokenAdapter {
 export const DIP20Adapter = new DIP20TokenAdapter({
     actor: dip20,
 });
-//# sourceMappingURL=DIP20Adapter.js.map
+// # sourceMappingURL=DIP20Adapter.js.map

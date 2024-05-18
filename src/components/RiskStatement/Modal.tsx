@@ -101,7 +101,7 @@ export default function RiskStatementModal({
         <Box mt="30px">
           <Typography>
             <Trans>
-              2. The Internet Computer ecosystem is in its early stage. All functions of ICPSwap have undergone multiple
+              2. The Internet Computer ecosystem is in its early stage. All functions of Waste2Earn have undergone multiple
               rounds of internal and public testing and also iterative repair, but have not been audited yet. Please
               bear this in mind when using the platform.
             </Trans>
@@ -111,7 +111,7 @@ export default function RiskStatementModal({
           <Typography>
             <Trans>
               3. Anyone who has the seed phrase of a wallet address has control of the funds in that wallet. Never share
-              your seed phrase under any circumstances whatsoever, including with the ICPSwap team.
+              your seed phrase under any circumstances whatsoever, including with the Waste2Earn team.
             </Trans>
           </Typography>
         </Box>

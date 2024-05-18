@@ -1,7 +1,6 @@
 import TwitterIcon from "./icons/Twitter";
 import TelegramIcon from "./icons/Telegram";
 import DiscordIcon from "./icons/Discord";
-import WebsiteIcon from "./icons/Website";
 import MediumIcon from "./icons/Medium";
 import GithubIcon from "./icons/Github";
 import GitbookIcon from "./icons/Gitbook";
@@ -34,11 +33,11 @@ export const routes: Route[] = [
     name: `Swap`,
     path: "/swap",
   },
-  {
-    key: "marketplace",
-    name: `Marketplace`,
-    path: "/marketplace/collections",
-  },
+  // {
+  //   key: "marketplace",
+  //   name: `Marketplace`,
+  //   path: "/marketplace/collections",
+  // },
   {
     key: "wallet",
     name: `Wallet`,
@@ -59,7 +58,6 @@ export const routes: Route[] = [
       { key: "followUS_Gitbook", name: `Gitbook`, link: "https://waste2earn.gitbook.io/", icon: GitbookIcon },
       { key: "followUS_Github", name: `Github`, link: "https://github.com/wastopia", icon: GithubIcon },
       { key: "followUS_Discord", name: `Discord`, link: "https://discord.gg/GbnNzjQe", icon: DiscordIcon },
-      { key: "followUS_Website", name: `Website`, link: "http://waste2earn.xyz/", icon: WebsiteIcon },
     ],
   },
   {

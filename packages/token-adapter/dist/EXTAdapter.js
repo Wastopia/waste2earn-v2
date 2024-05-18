@@ -1,17 +1,19 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
 import { resultFormat, availableArgsNull, principalToAccount, isOkSubAccount, isBigIntMemo } from "@w2e/utils";
 import { SubAccount } from "@dfinity/ledger-icp";
 import { ResultStatus } from "@w2e/types";
 import { ext } from "@w2e/actor";
 import { BaseTokenAdapter, } from "./BaseTokenAdapter";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 export class EXTTokenAdapter extends BaseTokenAdapter {
     holders(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params }) {
@@ -21,16 +23,19 @@ export class EXTTokenAdapter extends BaseTokenAdapter {
             }));
         });
     }
+
     totalHolders(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId }) {
             return resultFormat(yield (yield this.actor(canisterId)).totalHolders());
         });
     }
+
     supply(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId }) {
             return resultFormat(yield (yield this.actor(canisterId)).supply());
         });
     }
+
     balance(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params }) {
             if (!params.user.address && !params.user.principal)
@@ -49,9 +54,10 @@ export class EXTTokenAdapter extends BaseTokenAdapter {
             }));
         });
     }
+
     transfer(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, identity, params }) {
-            var _b, _c;
+            let _b; let _c;
             if (!params.to.address && !params.to.principal)
                 throw Error("No to address or principal");
             if (!params.from.address && !params.from.principal)
@@ -79,11 +85,13 @@ export class EXTTokenAdapter extends BaseTokenAdapter {
             }));
         });
     }
+
     setFee(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, identity, params }) {
             return resultFormat(yield (yield this.actor(canisterId, identity)).setFee(params));
         });
     }
+
     setFeeTo(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, identity, params }) {
             if (!params.address)
@@ -91,9 +99,10 @@ export class EXTTokenAdapter extends BaseTokenAdapter {
             return resultFormat(yield (yield this.actor(canisterId, identity)).setFeeTo({ address: params.address }));
         });
     }
+
     transactions(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params }) {
-            var _b, _c, _d, _e, _f, _g;
+            let _b; let _c; let _d; let _e; let _f; let _g;
             let cap_id = params.capId;
             if (!cap_id) {
                 const extensions = yield this.extensions({ canisterId });
@@ -118,6 +127,7 @@ export class EXTTokenAdapter extends BaseTokenAdapter {
             }));
         });
     }
+
     approve(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params, identity }) {
             return resultFormat(yield (yield this.actor(canisterId, identity)).approve({
@@ -127,6 +137,7 @@ export class EXTTokenAdapter extends BaseTokenAdapter {
             }));
         });
     }
+
     allowance(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params }) {
             if (!params.owner.address && !params.owner.principal)
@@ -138,33 +149,38 @@ export class EXTTokenAdapter extends BaseTokenAdapter {
             }));
         });
     }
+
     metadata(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId }) {
-            var _b;
+            let _b;
             const metadata = (_b = resultFormat(yield (yield this.actor(canisterId)).metadata()).data) === null || _b === void 0 ? void 0 : _b.fungible;
             const logo = resultFormat(yield (yield this.actor(canisterId)).logo()).data;
             const fee = resultFormat(yield (yield this.actor(canisterId)).getFee()).data;
             return {
                 status: ResultStatus.OK,
-                data: Object.assign(Object.assign({}, metadata), { logo,
-                    fee }),
+                data: {...metadata, logo,
+                    fee},
                 message: "",
             };
         });
     }
+
     setLogo(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, params, identity }) {
             return resultFormat(yield (yield this.actor(canisterId, identity)).setLogo(params));
         });
     }
+
     actualReceivedByTransfer({ amount }) {
         return amount;
     }
+
     extensions(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId }) {
             return yield (yield this.actor(canisterId)).extensions();
         });
     }
+
     getMintingAccount(_a) {
         return __awaiter(this, arguments, void 0, function* ({ canisterId, }) {
             return {
@@ -178,4 +194,4 @@ export class EXTTokenAdapter extends BaseTokenAdapter {
 export const EXTAdapter = new EXTTokenAdapter({
     actor: ext,
 });
-//# sourceMappingURL=EXTAdapter.js.map
+// # sourceMappingURL=EXTAdapter.js.map

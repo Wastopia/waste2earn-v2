@@ -1,5 +1,6 @@
 import { Token } from "@w2e/swap-sdk";
 import { TOKEN_STANDARD, WICP_CANISTER_ID } from "@w2e/constants";
+
 export const WRAPPED_ICP_TOKEN_INFO = {
     standardType: TOKEN_STANDARD.EXT,
     name: "Wrapped ICP",
@@ -19,4 +20,4 @@ export const WRAPPED_ICP = new Token({
     standard: TOKEN_STANDARD.EXT,
     transFee: Number(WRAPPED_ICP_TOKEN_INFO.transFee),
 });
-//# sourceMappingURL=wicp.js.map
+// # sourceMappingURL=wicp.js.map

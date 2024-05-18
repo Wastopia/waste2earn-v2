@@ -1,6 +1,7 @@
 import { Token } from "../core";
 import { FeeAmount } from "../constants";
 import { computePoolAddress } from "./computePoolAddress";
+
 describe("#computePoolAddress", () => {
     it("should correctly compute the pool address", () => {
         const tokenA = new Token({
@@ -60,4 +61,4 @@ describe("#computePoolAddress", () => {
         expect(resultA).toEqual(resultB);
     });
 });
-//# sourceMappingURL=computePoolAddress.test.js.map
+// # sourceMappingURL=computePoolAddress.test.js.map

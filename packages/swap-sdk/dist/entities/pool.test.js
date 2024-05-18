@@ -1,20 +1,22 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
+import JSBI from "jsbi";
 import { Token, CurrencyAmount } from "../core";
 import { FeeAmount, TICK_SPACINGS } from "../constants";
 import { nearestUsableTick } from "../utils/nearestUsableTick";
 import { TickMath } from "../utils/tickMath";
 import { Pool } from "./pool";
 import { encodeSqrtRatioX96 } from "../utils/encodeSqrtRatioX96";
-import JSBI from "jsbi";
 import { NEGATIVE_ONE } from "../internalConstants";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
 const ONE_ETHER = JSBI.exponentiate(JSBI.BigInt(10), JSBI.BigInt(18));
 describe("Pool", () => {
     const USDC = new Token({
@@ -161,4 +163,4 @@ describe("Pool", () => {
         });
     });
 });
-//# sourceMappingURL=pool.test.js.map
+// # sourceMappingURL=pool.test.js.map

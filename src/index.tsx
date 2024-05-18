@@ -3,7 +3,6 @@ import { BrowserRouter, HashRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/lib/integration/react";
 
-import * as serviceWorker from "./serviceWorker";
 import store, { persistor } from "./store/index";
 import App from "./App";
 import { LanguageProvider } from "./i18n";
@@ -42,4 +41,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// serviceWorker.unregister();

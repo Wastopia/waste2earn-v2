@@ -1,11 +1,10 @@
 import { useCallback } from "react";
-import { useCallsData } from "./useCallData";
 import { cap, cap_router } from "@w2e/actor";
 import { resultFormat, enumToString } from "@w2e/utils";
-import type { PaginationResult } from "@w2e/types";
+import type { PaginationResult, TokenTransaction, TokenTransType } from "@w2e/types";
 import type { GetTokenContractRootBucketResponse } from "@w2e/candid";
 import { Principal } from "@dfinity/principal";
-import type { TokenTransaction, TokenTransType } from "@w2e/types";
+import { useCallsData } from "./useCallData";
 
 export async function getCapHistorySize(canisterId: string) {
   return await (await cap(canisterId)).size();
@@ -40,27 +39,35 @@ function SliceFormat(amount: any) {
 export function detailValueFormat(detailValue: any) {
   if (detailValue.Principal) {
     return detailValue.Principal.toString() as string;
-  } else if (detailValue.Float) {
+  }
+  if (detailValue.Float) {
     return detailValue.Float;
-  } else if (detailValue.False) {
+  }
+  if (detailValue.False) {
     return detailValue.False;
-  } else if (detailValue.True) {
+  }
+  if (detailValue.True) {
     return detailValue.True;
-  } else if (detailValue.I64) {
+  }
+  if (detailValue.I64) {
     return detailValue.I64;
-  } else if (detailValue.U64) {
+  }
+  if (detailValue.U64) {
     return detailValue.U64;
-  } else if (detailValue.TokenIdU64) {
+  }
+  if (detailValue.TokenIdU64) {
     return String(detailValue.TokenIdU64);
-  } else if (detailValue.Text) {
+  }
+  if (detailValue.Text) {
     return String(detailValue.Text);
-  } else if (detailValue.Slice && detailValue.Slice.length > 0) {
+  }
+  if (detailValue.Slice && detailValue.Slice.length > 0) {
     return SliceFormat(detailValue.Slice);
   }
 }
 
 export function detailsFormatter(details: any): { [key: string]: any } {
-  let obj = {};
+  const obj = {};
   details.forEach((detail) => {
     obj[detail[0]] = detailValueFormat(detail[1]);
   });
@@ -92,19 +99,19 @@ export async function getCapTransactions(canisterId: string, witness: boolean, o
     const details = detailsFormatter(_data.details);
 
     return {
-      timestamp: details["timestamp"] ?? _data.time * BigInt(1000000),
-      hash: details["hash"] ?? "",
-      fee: details["fee"],
-      from_owner: details["from"] ?? _data.caller.toString() ?? "",
+      timestamp: details.timestamp ?? _data.time * BigInt(1000000),
+      hash: details.hash ?? "",
+      fee: details.fee,
+      from_owner: details.from ?? _data.caller.toString() ?? "",
       from_account: "",
       from_sub: undefined,
-      to_owner: details["to"] ?? "",
+      to_owner: details.to ?? "",
       to_account: "",
       to_sub: undefined,
       transType: enumToString({ [_data.operation]: null } as TokenTransType),
-      amount: details["value"] ?? details["amount"] ?? "",
+      amount: details.value ?? details.amount ?? "",
       index: BigInt(0),
-      memo: details["memo"] ?? [],
+      memo: details.memo ?? [],
       status: "Complete",
     };
   });
@@ -165,25 +172,25 @@ export async function getCapUserTransactions(
     const details = detailsFormatter(_data.details);
 
     return {
-      timestamp: details["timestamp"] ?? _data.time * BigInt(1000000),
-      hash: details["hash"] ?? "",
-      fee: details["fee"] ?? BigInt(0),
-      from_owner: details["from"] ?? _data.caller.toString() ?? "",
+      timestamp: details.timestamp ?? _data.time * BigInt(1000000),
+      hash: details.hash ?? "",
+      fee: details.fee ?? BigInt(0),
+      from_owner: details.from ?? _data.caller.toString() ?? "",
       from_account: "",
       from_sub: undefined,
-      to_owner: details["to"] ?? "",
+      to_owner: details.to ?? "",
       to_account: "",
       to_sub: undefined,
       transType: enumToString({ [_data.operation]: null } as TokenTransType),
-      amount: details["value"] ?? details["amount"] ?? "",
+      amount: details.value ?? details.amount ?? "",
       index: BigInt(0),
-      memo: details["memo"] ?? [],
+      memo: details.memo ?? [],
       status: "Complete",
     };
   });
 
   return {
-    totalElements: totalElements,
+    totalElements,
     offset,
     limit: 64,
     content: transactions.reverse(),

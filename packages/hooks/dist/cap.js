@@ -1,17 +1,19 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+import { useCallback } from "react";
+import { cap, cap_router } from "@w2e/actor";
+import { resultFormat, enumToString } from "@w2e/utils";
+import { Principal } from "@dfinity/principal";
+import { useCallsData } from "./useCallData";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
         function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { useCallback } from "react";
-import { useCallsData } from "./useCallData";
-import { cap, cap_router } from "@w2e/actor";
-import { resultFormat, enumToString } from "@w2e/utils";
-import { Principal } from "@dfinity/principal";
+
 export function getCapHistorySize(canisterId) {
     return __awaiter(this, void 0, void 0, function* () {
         return yield (yield cap(canisterId)).size();
@@ -45,33 +47,33 @@ export function detailValueFormat(detailValue) {
     if (detailValue.Principal) {
         return detailValue.Principal.toString();
     }
-    else if (detailValue.Float) {
+    if (detailValue.Float) {
         return detailValue.Float;
     }
-    else if (detailValue.False) {
+    if (detailValue.False) {
         return detailValue.False;
     }
-    else if (detailValue.True) {
+    if (detailValue.True) {
         return detailValue.True;
     }
-    else if (detailValue.I64) {
+    if (detailValue.I64) {
         return detailValue.I64;
     }
-    else if (detailValue.U64) {
+    if (detailValue.U64) {
         return detailValue.U64;
     }
-    else if (detailValue.TokenIdU64) {
+    if (detailValue.TokenIdU64) {
         return String(detailValue.TokenIdU64);
     }
-    else if (detailValue.Text) {
+    if (detailValue.Text) {
         return String(detailValue.Text);
     }
-    else if (detailValue.Slice && detailValue.Slice.length > 0) {
+    if (detailValue.Slice && detailValue.Slice.length > 0) {
         return SliceFormat(detailValue.Slice);
     }
 }
 export function detailsFormatter(details) {
-    let obj = {};
+    const obj = {};
     details.forEach((detail) => {
         obj[detail[0]] = detailValueFormat(detail[1]);
     });
@@ -96,22 +98,22 @@ export function getCapTransactions(canisterId, witness, offset) {
             witness,
         });
         const transactions = result.data.map((_data) => {
-            var _a, _b, _c, _d, _e, _f, _g, _h;
+            let _a; let _b; let _c; let _d; let _e; let _f; let _g; let _h;
             const details = detailsFormatter(_data.details);
             return {
-                timestamp: (_a = details["timestamp"]) !== null && _a !== void 0 ? _a : _data.time * BigInt(1000000),
-                hash: (_b = details["hash"]) !== null && _b !== void 0 ? _b : "",
-                fee: details["fee"],
-                from_owner: (_d = (_c = details["from"]) !== null && _c !== void 0 ? _c : _data.caller.toString()) !== null && _d !== void 0 ? _d : "",
+                timestamp: (_a = details.timestamp) !== null && _a !== void 0 ? _a : _data.time * BigInt(1000000),
+                hash: (_b = details.hash) !== null && _b !== void 0 ? _b : "",
+                fee: details.fee,
+                from_owner: (_d = (_c = details.from) !== null && _c !== void 0 ? _c : _data.caller.toString()) !== null && _d !== void 0 ? _d : "",
                 from_account: "",
                 from_sub: undefined,
-                to_owner: (_e = details["to"]) !== null && _e !== void 0 ? _e : "",
+                to_owner: (_e = details.to) !== null && _e !== void 0 ? _e : "",
                 to_account: "",
                 to_sub: undefined,
                 transType: enumToString({ [_data.operation]: null }),
-                amount: (_g = (_f = details["value"]) !== null && _f !== void 0 ? _f : details["amount"]) !== null && _g !== void 0 ? _g : "",
+                amount: (_g = (_f = details.value) !== null && _f !== void 0 ? _f : details.amount) !== null && _g !== void 0 ? _g : "",
                 index: BigInt(0),
-                memo: (_h = details["memo"]) !== null && _h !== void 0 ? _h : [],
+                memo: (_h = details.memo) !== null && _h !== void 0 ? _h : [],
                 status: "Complete",
             };
         });
@@ -152,27 +154,27 @@ export function getCapUserTransactions(canisterId, principal, witness, offset) {
             user: principal,
         });
         const transactions = result.data.map((_data) => {
-            var _a, _b, _c, _d, _e, _f, _g, _h, _j;
+            let _a; let _b; let _c; let _d; let _e; let _f; let _g; let _h; let _j;
             const details = detailsFormatter(_data.details);
             return {
-                timestamp: (_a = details["timestamp"]) !== null && _a !== void 0 ? _a : _data.time * BigInt(1000000),
-                hash: (_b = details["hash"]) !== null && _b !== void 0 ? _b : "",
-                fee: (_c = details["fee"]) !== null && _c !== void 0 ? _c : BigInt(0),
-                from_owner: (_e = (_d = details["from"]) !== null && _d !== void 0 ? _d : _data.caller.toString()) !== null && _e !== void 0 ? _e : "",
+                timestamp: (_a = details.timestamp) !== null && _a !== void 0 ? _a : _data.time * BigInt(1000000),
+                hash: (_b = details.hash) !== null && _b !== void 0 ? _b : "",
+                fee: (_c = details.fee) !== null && _c !== void 0 ? _c : BigInt(0),
+                from_owner: (_e = (_d = details.from) !== null && _d !== void 0 ? _d : _data.caller.toString()) !== null && _e !== void 0 ? _e : "",
                 from_account: "",
                 from_sub: undefined,
-                to_owner: (_f = details["to"]) !== null && _f !== void 0 ? _f : "",
+                to_owner: (_f = details.to) !== null && _f !== void 0 ? _f : "",
                 to_account: "",
                 to_sub: undefined,
                 transType: enumToString({ [_data.operation]: null }),
-                amount: (_h = (_g = details["value"]) !== null && _g !== void 0 ? _g : details["amount"]) !== null && _h !== void 0 ? _h : "",
+                amount: (_h = (_g = details.value) !== null && _g !== void 0 ? _g : details.amount) !== null && _h !== void 0 ? _h : "",
                 index: BigInt(0),
-                memo: (_j = details["memo"]) !== null && _j !== void 0 ? _j : [],
+                memo: (_j = details.memo) !== null && _j !== void 0 ? _j : [],
                 status: "Complete",
             };
         });
         return {
-            totalElements: totalElements,
+            totalElements,
             offset,
             limit: 64,
             content: transactions.reverse(),
@@ -200,4 +202,4 @@ export function useCapRootId(canisterId, witness) {
         return yield getCapRootId(canisterId, witness);
     }), [canisterId, witness]), !!canisterId);
 }
-//# sourceMappingURL=cap.js.map
+// # sourceMappingURL=cap.js.map

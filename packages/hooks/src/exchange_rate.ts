@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { exchangeRate } from "@w2e/actor";
-import { useCallsData } from "./useCallData";
 import { parseTokenAmount } from "@w2e/utils";
+import { useCallsData } from "./useCallData";
 
 export async function getExchangeRates() {
   return await (await exchangeRate()).get_exchange_rates();

@@ -7,7 +7,6 @@ import { TextButton } from "components/index";
 import { Connector } from "constants/wallet";
 import { useWalletConnectorManager } from "store/auth/hooks";
 import PlugWalletLogo from "./icons/Plug.svg";
-import ICPSwapWalletLogo from "./icons/icpswap.svg";
 import StoicWalletLogo from "./icons/stoic.svg";
 import InterWalletLogo from "./icons/InternetIdentity.svg";
 import NFIDLogo from "./icons/NFID.svg";
@@ -76,11 +75,6 @@ export default function WalletConnector() {
       label: "Stoic Wallet",
       value: Connector.STOIC,
       logo: StoicWalletLogo,
-    },
-    {
-      label: "ICPSwap Wallet",
-      value: Connector.ICPSwap,
-      logo: ICPSwapWalletLogo,
     },
     { label: "NFID", value: Connector.NFID, logo: NFIDLogo },
     {

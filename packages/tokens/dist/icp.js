@@ -1,5 +1,6 @@
 import { Token } from "@w2e/swap-sdk";
 import { TOKEN_STANDARD, LEDGER_CANISTER_ID } from "@w2e/constants";
+
 export const ICP_TOKEN_INFO = {
     symbol: "ICP",
     name: "Internet Computer",
@@ -19,4 +20,4 @@ export const ICP = new Token({
     standard: TOKEN_STANDARD.ICRC2,
     transFee: Number(ICP_TOKEN_INFO.transFee),
 });
-//# sourceMappingURL=icp.js.map
+// # sourceMappingURL=icp.js.map

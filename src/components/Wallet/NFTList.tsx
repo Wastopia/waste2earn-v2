@@ -15,8 +15,8 @@ import { useEXTAllCollections, useExtUserNFTs } from "@w2e/hooks";
 
 const ICPSwapPositionNFTs = [
   "jwh2l-aqaaa-aaaan-qatdq-cai",
-  "brx5n-xqaaa-aaaan-qanqa-cai",
-  "4lnl6-hqaaa-aaaag-qblla-cai",
+  // "brx5n-xqaaa-aaaan-qanqa-cai",
+  // "4lnl6-hqaaa-aaaag-qblla-cai",
 ];
 
 export interface NFTCardUIProps {

@@ -34,11 +34,11 @@ const NFTMarket = Loadable(lazy(() => import("../views/nft")));
 const NFTCollectMarket = Loadable(lazy(() => import("../views/nft/Collection")));
 const NFTMarketCollections = Loadable(lazy(() => import("../views/nft/MarketplaceCollections")));
 
-// const Voting = Loadable(lazy(() => import("../views/voting/index")));
-// const VotingProject = Loadable(lazy(() => import("../views/voting/project")));
-// const VotingProposal = Loadable(lazy(() => import("../views/voting/proposal")));
-// const VotingCreateProposal = Loadable(lazy(() => import("../views/voting/create")));
-// const VoteCreateProject = Loadable(lazy(() => import("../views/voting/create-project")));
+const Voting = Loadable(lazy(() => import("../views/voting/index")));
+const VotingProject = Loadable(lazy(() => import("../views/voting/project")));
+const VotingProposal = Loadable(lazy(() => import("../views/voting/proposal")));
+const VotingCreateProposal = Loadable(lazy(() => import("../views/voting/create")));
+const VoteCreateProject = Loadable(lazy(() => import("../views/voting/create-project")));
 
 const TokenClaimIndex = Loadable(lazy(() => import("../views/token-claim/index")));
 const TokenClaimTransactions = Loadable(lazy(() => import("../views/token-claim/transactions")));
@@ -95,12 +95,12 @@ export const routeConfigs: { [path: string]: (props: any) => JSX.Element } = {
   "/marketplace/NFT/view/:canisterId/:tokenId": NFTView,
   "/marketplace/collections": NFTMarketCollections,
 
-  // "/voting": Voting,
-  // "/voting/:canisterId": VotingProject,
-  // "/voting/project/create": VoteCreateProject,
+  "/voting": Voting,
+  "/voting/:canisterId": VotingProject,
+  "/voting/project/create": VoteCreateProject,
 
-  // "/voting/proposal/details/:canisterId/:id": VotingProposal,
-  // "/voting/proposal/create/:id": VotingCreateProposal,
+  "/voting/proposal/details/:canisterId/:id": VotingProposal,
+  "/voting/proposal/create/:id": VotingCreateProposal,
 
   "/token-claim": TokenClaimIndex,
   "/token-claim/transactions/:id": TokenClaimTransactions,

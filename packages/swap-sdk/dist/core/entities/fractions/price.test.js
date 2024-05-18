@@ -1,12 +1,13 @@
 import { Token } from "../token";
 import { CurrencyAmount } from "./currencyAmount";
 import { Price } from "./price";
+
 describe("Price", () => {
     const ADDRESS_ZERO = "zfcdd-tqaaa-aaaaq-aaaga-cai";
-    const ADDRESS_ONE = "5xnja-6aaaa-aaaan-qad4a-cai";
-    const t0 = new Token({ symbol: "A", name: "A", address: ADDRESS_ZERO, decimals: 18, standard: "EXT" });
-    const t0_6 = new Token({ symbol: "A", name: "A", address: ADDRESS_ZERO, decimals: 6, standard: "EXT" });
-    const t1 = new Token({ symbol: "A", name: "A", address: ADDRESS_ONE, decimals: 18, standard: "EXT" });
+    const ADDRESS_ONE = "n6j6v-cqaaa-aaaam-acjma-cai";
+    const t0 = new Token({ symbol: "A", name: "A", address: ADDRESS_ZERO, decimals: 18, standard: "ICRC2" });
+    const t0_6 = new Token({ symbol: "A", name: "A", address: ADDRESS_ZERO, decimals: 6, standard: "ICRC2" });
+    const t1 = new Token({ symbol: "A", name: "A", address: ADDRESS_ONE, decimals: 18, standard: "ICRC2" });
     describe("#constructor", () => {
         it("array format works", () => {
             const price = new Price(t0, t1, 1, 54321);
@@ -53,4 +54,4 @@ describe("Price", () => {
         });
     });
 });
-//# sourceMappingURL=price.test.js.map
+// # sourceMappingURL=price.test.js.map

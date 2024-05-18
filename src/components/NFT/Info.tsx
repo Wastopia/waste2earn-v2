@@ -222,7 +222,7 @@ export default function NFTInfo({
 
   const handleToTwitter = () => {
     const twitterLink = `https://twitter.com/intent/tweet?url=${APP_URL}/wallet/nft/view/${canisterId}/${tokenId}&text=Look at ${isOwner ? "my" : "this"
-      } NFT "${metadata.name}" on ICPSwap (The Hub of Future Decentralized Finance)! &via=ICPSwap`;
+      } NFT "${metadata.name}" on Waste2Earn (The Hub for Waste Management Finance )! &via=Waste2Earn`;
 
     mockALinkAndOpen(twitterLink, "NFT_share_to_Twitter");
   };

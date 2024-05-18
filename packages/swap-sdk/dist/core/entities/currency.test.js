@@ -1,9 +1,10 @@
 import { Token } from "./token";
+
 describe("Currency", () => {
     const ADDRESS_ZERO = "2ouva-viaaa-aaaaq-aaamq-cai";
-    const ADDRESS_ONE = "5xnja-6aaaa-aaaan-qad4a-cai";
-    const t0 = new Token({ symbol: "A", name: "A", address: ADDRESS_ZERO, decimals: 18, standard: "EXT" });
-    const t1 = new Token({ symbol: "B", name: "B", address: ADDRESS_ONE, decimals: 18, standard: "EXT" });
+    const ADDRESS_ONE = "n6j6v-cqaaa-aaaam-acjma-cai";
+    const t0 = new Token({ symbol: "A", name: "A", address: ADDRESS_ZERO, decimals: 18, standard: "ICRC2" });
+    const t1 = new Token({ symbol: "B", name: "B", address: ADDRESS_ONE, decimals: 18, standard: "ICRC2" });
     describe("#equals", () => {
         it("token1 is not token0", () => {
             expect(t1.equals(t0)).toStrictEqual(false);
@@ -12,8 +13,8 @@ describe("Currency", () => {
             expect(t0.equals(t0)).toStrictEqual(true);
         });
         it("token0 is equal to another token0", () => {
-            expect(t0.equals(new Token({ address: ADDRESS_ZERO, decimals: 18, symbol: "symbol", name: "name", standard: "EXT" }))).toStrictEqual(true);
+            expect(t0.equals(new Token({ address: ADDRESS_ZERO, decimals: 18, symbol: "symbol", name: "name", standard: "ICRC2" }))).toStrictEqual(true);
         });
     });
 });
-//# sourceMappingURL=currency.test.js.map
+// # sourceMappingURL=currency.test.js.map

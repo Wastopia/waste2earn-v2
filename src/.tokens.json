@@ -64,38 +64,6 @@
     "symbol": "eW"
   },
   {
-    "fee": 10,
-    "decimals": 8,
-    "canisterId": "mxzaz-hqaaa-aaaar-qaada-cai",
-    "name": "ckBTC",
-    "standard": "ICRC2",
-    "symbol": "ckBTC"
-  },
-  {
-    "fee": 2000000000000,
-    "decimals": 18,
-    "canisterId": "ss2fx-dyaaa-aaaar-qacoq-cai",
-    "name": "ckETH",
-    "standard": "ICRC2",
-    "symbol": "ckETH"
-  },
-  {
-    "fee": 0,
-    "decimals": 18,
-    "canisterId": "cnoir-kyaaa-aaaam-acijq-cai",
-    "name": "DogWifBrow",
-    "standard": "ICRC2",
-    "symbol": "WIB"
-  },
-  {
-    "fee": 1000000,
-    "decimals": 8,
-    "canisterId": "ca6gz-lqaaa-aaaaq-aacwa-cai",
-    "name": "ICPSwap Token",
-    "standard": "ICRC1",
-    "symbol": "ICS"
-  },
-  {
     "fee": 0,
     "decimals": 8,
     "canisterId": "2ksfx-7yaaa-aaaai-ql5pq-cai",

@@ -1,11 +1,12 @@
-import { Percent, Token } from "../core";
 import JSBI from "jsbi";
+import { Percent, Token } from "../core";
 import { FeeAmount, TICK_SPACINGS } from "../constants";
 import { encodeSqrtRatioX96 } from "../utils/encodeSqrtRatioX96";
 import { nearestUsableTick } from "../utils/nearestUsableTick";
 import { TickMath } from "../utils/tickMath";
 import { Pool } from "./pool";
 import { Position } from "./position";
+
 describe("Position", () => {
     const USDC = new Token({
         address: "zfcdd-tqaaa-aaaaq-aaaga-cai",
@@ -403,4 +404,4 @@ describe("Position", () => {
         });
     });
 });
-//# sourceMappingURL=position.test.js.map
+// # sourceMappingURL=position.test.js.map

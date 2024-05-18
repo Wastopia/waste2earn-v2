@@ -1,8 +1,8 @@
 import {
   DIP20Adapter,
-  DIP20WICPAdapter,
-  DIP20XTCAdapter,
-  EXTAdapter,
+  // DIP20WICPAdapter,
+  // DIP20XTCAdapter,
+  // EXTAdapter,
   icrc1Adapter,
   icrc2Adapter,
   icpAdapter,
@@ -30,30 +30,30 @@ export async function standardCheck(id: string, standard: TOKEN_STANDARD) {
       metadata = (await icpAdapter.metadata({ canisterId: id })).data;
       valid = true;
     }
-  } else if (standard === TOKEN_STANDARD.DIP20_WICP) {
-    try {
-      metadata = (await DIP20WICPAdapter.metadata({ canisterId: id })).data;
-      if (metadata?.symbol && metadata?.symbol === "WICP") valid = true;
-    } catch (error) {
-      console.error(error);
-      valid = false;
-    }
-  } else if (standard === TOKEN_STANDARD.DIP20_XTC) {
-    try {
-      metadata = (await DIP20XTCAdapter.metadata({ canisterId: id })).data;
-      if (metadata?.symbol && metadata.symbol === "XTC") valid = true;
-    } catch (error) {
-      console.error(error);
-      valid = false;
-    }
-  } else if (standard === TOKEN_STANDARD.EXT) {
-    try {
-      metadata = (await EXTAdapter.metadata({ canisterId: id })).data;
-      if (metadata?.symbol) valid = true;
-    } catch (error) {
-      console.error(error);
-      valid = false;
-    }
+    // } else if (standard === TOKEN_STANDARD.DIP20_WICP) {
+    //   try {
+    //     metadata = (await DIP20WICPAdapter.metadata({ canisterId: id })).data;
+    //     if (metadata?.symbol && metadata?.symbol === "WICP") valid = true;
+    //   } catch (error) {
+    //     console.error(error);
+    //     valid = false;
+    //   }
+    // } else if (standard === TOKEN_STANDARD.DIP20_XTC) {
+    //   try {
+    //     metadata = (await DIP20XTCAdapter.metadata({ canisterId: id })).data;
+    //     if (metadata?.symbol && metadata.symbol === "XTC") valid = true;
+    //   } catch (error) {
+    //     console.error(error);
+    //     valid = false;
+    //   }
+    // } else if (standard === TOKEN_STANDARD.EXT) {
+    //   try {
+    //     metadata = (await EXTAdapter.metadata({ canisterId: id })).data;
+    //     if (metadata?.symbol) valid = true;
+    //   } catch (error) {
+    //     console.error(error);
+    //     valid = false;
+    //   }
   } else if (standard === TOKEN_STANDARD.ICRC2) {
     try {
       metadata = (await icrc2Adapter.metadata({ canisterId: id })).data;

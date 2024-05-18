@@ -1,7 +1,7 @@
 
 network=$1
 
-REACT_APP_SERVICES='REACT_APP_SERVICES="icpswap-v2,staking,token,nft,voting,token-list,token-claim,icpswap-v3,info-service-v2"'
+REACT_APP_SERVICES='REACT_APP_SERVICES="waste2earn-v2,staking,token,nft,voting,token-list,token-claim"'
 EXTEND_ESLINT="EXTEND_ESLINT=true"
 GENERATE_SOURCEMAP="GENERATE_SOURCEMAP=true"
 REACT_APP_SENTRY_ENABLED="REACT_APP_SENTRY_ENABLED=true"
