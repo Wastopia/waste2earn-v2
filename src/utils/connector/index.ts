@@ -9,7 +9,6 @@ import { StoicConnector } from "./stoic";
 import { NF_IDConnector } from "./NF_ID";
 import type { IConnector } from "./connectors";
 import { PlugConnector } from "./plug";
-import { ICPSwapConnector } from "./icpswap";
 import { InfinityConnector } from "./infinity";
 import { MeConnector } from "./me";
 
@@ -62,8 +61,6 @@ export class WalletConnector {
         return new NF_IDConnector(config);
       case Connector.PLUG:
         return new PlugConnector(config);
-      case Connector.ICPSwap:
-        return new ICPSwapConnector(config);
       case Connector.INFINITY:
         return new InfinityConnector(config);
       case Connector.ME:

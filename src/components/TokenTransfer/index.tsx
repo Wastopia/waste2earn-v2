@@ -27,7 +27,7 @@ import { Principal } from "@dfinity/principal";
 import MaxButton from "components/MaxButton";
 import { useUSDPriceById } from "hooks/useUSDPrice";
 import { QrCode } from "@mui/icons-material";
-import QRReader from 'react-qr-scanner';
+import QRReader from "components/QRReader";
 
 const useStyles = makeStyles((theme: Theme) => {
   return {
@@ -202,27 +202,34 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
     <Modal open={open} onClose={onClose} title={t`Transfer`}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: "24px 0" }}>
         <FilledTextField value={token.symbol} fullWidth disabled />
-        <FilledTextField
-          value={values.to} // Use principal if available, else use 'to' field value
-          placeholder={
-            usePrincipalStandard(token.canisterId, token.standardType)
-              ? t`Scan QR to get the principal ID`
-              : t`Enter the account ID or principal ID`
-          }
-          onChange={(value: string) => handleFieldChange(value, "to")}
-          helperText={addressHelpText()}
-          fullWidth
-          autoComplete="To"
-          multiline
-          InputProps={{
-            endAdornment: (
-              <InputAdornment position="end">
-                <IconButton onClick={() => setQrReaderOpen(true)}>
-                  <QrCode className="w-4 h-4" />
-                </IconButton>
-              </InputAdornment>
-            ),
-          }}
+        {!qrReaderOpen && (
+          <FilledTextField
+            value={values.to} // Use principal if available, else use 'to' field value
+            placeholder={
+              usePrincipalStandard(token.canisterId, token.standardType)
+                ? t`Scan QR to get the principal ID`
+                : t`Enter the account ID or principal ID`
+            }
+            onChange={(value: string) => handleFieldChange(value, "to")}
+            helperText={addressHelpText()}
+            fullWidth
+            autoComplete="To"
+            multiline
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton onClick={() => setQrReaderOpen(true)}>
+                    <QrCode className="w-4 h-4" />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+        )}
+        <QRReader
+          setVisible={setQrReaderOpen}
+          visible={qrReaderOpen}
+          onResult={handleQrResult}
         />
         <NumberFilledTextField
           placeholder="Enter weight in kilogram"
@@ -319,8 +326,6 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           )}
         </Identity>
       </Box>
-      {qrReaderOpen && <QRReader visible={qrReaderOpen} onResult={handleQrResult} />}
-
     </Modal>
   );
 }

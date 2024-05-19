@@ -188,7 +188,7 @@
     "toformat": "^2.0.0",
     "web3": "1.8.2",
     "xlsx": "https://cdn.sheetjs.com/xlsx-0.19.3/xlsx-0.19.3.tgz",
-    "react-qr-scanner": "^1.0.0-alpha.11"
+    "react-zxing": "^1.1.4"
   },
   "browserslist": [
     ">0.2%",

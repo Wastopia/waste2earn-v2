@@ -298,9 +298,6 @@ importers:
       react-player:
         specifier: ^2.8.0
         version: 2.16.0(react@17.0.2)
-      react-qr-scanner:
-        specifier: ^1.0.0-alpha.11
-        version: 1.0.0-alpha.11(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       react-redux:
         specifier: ^7.2.3
         version: 7.2.9(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
@@ -310,6 +307,9 @@ importers:
       react-scripts:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.24.1(@babel/core@7.24.5))(@babel/plugin-transform-react-jsx@7.23.4(@babel/core@7.24.5))(@types/babel__core@7.20.5)(bufferutil@4.0.8)(eslint@8.57.0)(node-notifier@8.0.2)(react@17.0.2)(ts-node@10.9.2(@types/node@13.13.52)(typescript@4.9.5))(type-fest@1.4.0)(typescript@4.9.5)(utf-8-validate@5.0.10)
+      react-zxing:
+        specifier: ^1.1.4
+        version: 1.1.4(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       redux:
         specifier: ^4.0.5
         version: 4.2.1
@@ -9200,12 +9200,6 @@ packages:
     peerDependencies:
       react: '>=16.6.0'
 
-  react-qr-scanner@1.0.0-alpha.11:
-    resolution: {integrity: sha512-TdaygL+4U9iapskJgK5Ilb1Cw4wwzQ3bVpIfzzbrEsxPaEJzmjQ7VuMz8E9hBQGCU4Ee+YtgglE3byEtgtRpkA==}
-    peerDependencies:
-      react: ^17.0.0 || ^18.0.0
-      react-dom: ^17.0.0 || ^18.0.0
-
   react-redux@7.2.9:
     resolution: {integrity: sha512-Gx4L3uM182jEEayZfRbI/G11ZpYdNAnBs70lFVMNdHJI76XYtR+7m0MN+eAs7UHBPhWXcnFPaS+9owSCJQHNpQ==}
     peerDependencies:
@@ -9255,6 +9249,13 @@ packages:
     peerDependencies:
       react: '>=16.6.0'
       react-dom: '>=16.6.0'
+
+  react-zxing@1.1.4:
+    resolution: {integrity: sha512-2BRjqpiNnVNIefxgp/GK+Pj6paNodh2nnky/fFqnMRrZmp7ExEl7vcwqJ4BKOjPZKwD3oWG+INX1Rl18rHQjsw==}
+    engines: {node: ^16 || ^18, yarn: ^1.22}
+    peerDependencies:
+      react: ^16.8.0  || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0  || ^17.0.0 || ^18.0.0
 
   react@17.0.2:
     resolution: {integrity: sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA==}
@@ -22146,13 +22147,6 @@ snapshots:
       react: 17.0.2
       react-fast-compare: 3.2.2
 
-  react-qr-scanner@1.0.0-alpha.11(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
-    dependencies:
-      '@zxing/library': 0.19.3
-      prop-types: 15.8.1
-      react: 17.0.2
-      react-dom: 17.0.2(react@17.0.2)
-
   react-redux@7.2.9(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
     dependencies:
       '@babel/runtime': 7.24.5
@@ -22293,6 +22287,12 @@ snapshots:
       dom-helpers: 5.2.1
       loose-envify: 1.4.0
       prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
+
+  react-zxing@1.1.4(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
+    dependencies:
+      '@zxing/library': 0.19.3
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
 

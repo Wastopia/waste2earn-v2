@@ -17,7 +17,6 @@ export type ActorConstructor = {
 };
 
 export enum Connector {
-  ICPSwap = "ICPSwap",
   PLUG = "PLUG",
   STOIC = "STOIC",
   IC = "IC",
@@ -54,7 +53,7 @@ export function isMeConnector(connector: Connector) {
 }
 
 export class Actor {
-  private connector: Connector = Connector.ICPSwap;
+  private connector: Connector = Connector.IC;
 
   private agent: null | HttpAgent = null;
 
@@ -75,7 +74,6 @@ export class Actor {
     host,
     idlFactory,
     identity,
-    agent,
     actorName,
   }: ActorConstructor): Promise<ActorSubclass<T>> {
     let id = canisterId;
