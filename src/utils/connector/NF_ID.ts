@@ -5,10 +5,10 @@ import { requestTransfer } from "@nfid/wallet";
 import { defaultWindowFeatures } from "@nfid/core";
 import { type CreateActorArgs, IConnector, ConnectorType, WalletConnectorConfig } from "./connectors";
 
-const APPLICATION_NAME = "ICPSwap";
+const APPLICATION_NAME = "Waste2Earn";
 const APPLICATION_LOGO_URL = "https://r7ftp-xaaaa-aaaag-qbbsq-cai.raw.ic0.app/ICPSwap_96x96.png";
 const APP_META = `applicationName=${APPLICATION_NAME}&applicationLogo=${APPLICATION_LOGO_URL}`;
-const AUTH_PATH = `/authenticate/?${  APP_META  }#authorize`;
+const AUTH_PATH = `/authenticate/?${APP_META}#authorize`;
 const NFID_ORIGIN = "https://nfid.one";
 const NF_ID_AUTH_URL = NFID_ORIGIN + AUTH_PATH;
 
