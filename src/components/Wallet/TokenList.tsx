@@ -4,7 +4,7 @@ import TokenListTable from "components/Wallet/TokenListTable";
 import TokenListHeader from "components/Wallet/TokenListHeader";
 import {
   ICP_METADATA,
-  WRAPPED_ICP_METADATA,
+  // WRAPPED_ICP_METADATA,
   W2E_METADATA,
   WPL_METADATA,
   WPR_METADATA,
@@ -28,7 +28,7 @@ export default function WalletTokenList() {
   const tokens = useMemo(() => {
     let tokenIds = [
       ICP_METADATA.canisterId.toString(),
-      WRAPPED_ICP_METADATA.canisterId.toString(),
+      // WRAPPED_ICP_METADATA.canisterId.toString(),
       W2E_METADATA.canisterId.toString(),
       WPL_METADATA.canisterId.toString(),
       WPR_METADATA.canisterId.toString(),

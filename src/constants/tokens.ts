@@ -88,7 +88,7 @@ export const XTC = new Token({
 // w2e
 export const W2E_METADATA: TokenMetadata = {
   symbol: "W2E",
-  name: "Waste2Earn",
+  name: "W2E",
   decimals: 18,
   canisterId: Principal.fromText(W2E_ID),
   metadata: [],
@@ -115,8 +115,8 @@ export const W2E = new Token({
 
 // wPl
 export const WPL_METADATA: TokenMetadata = {
-  symbol: "WPL",
-  name: "Waste Plastic",
+  symbol: "wPlastic",
+  name: "wPlastic",
   decimals: 18,
   canisterId: Principal.fromText(WPl_ID),
   metadata: [],
@@ -143,8 +143,8 @@ export const WPL = new Token({
 
 // wPr
 export const WPR_METADATA: TokenMetadata = {
-  symbol: "WPR",
-  name: "Waste Paper",
+  symbol: "wPaper",
+  name: "wPaper",
   decimals: 18,
   canisterId: Principal.fromText(WPr_ID),
   metadata: [],
@@ -171,8 +171,8 @@ export const WPR = new Token({
 
 // wG
 export const WG_METADATA: TokenMetadata = {
-  symbol: "WG",
-  name: "Waste Glass",
+  symbol: "wGlass",
+  name: "wGlass",
   decimals: 18,
   canisterId: Principal.fromText(WG_ID),
   metadata: [],
@@ -199,8 +199,8 @@ export const WG = new Token({
 
 // wM
 export const WM_METADATA: TokenMetadata = {
-  symbol: "WM",
-  name: "Waste Metal",
+  symbol: "wMetal",
+  name: "wMetal",
   decimals: 18,
   canisterId: Principal.fromText(WM_ID),
   metadata: [],
@@ -227,8 +227,8 @@ export const WM = new Token({
 
 // wOx
 export const WOX_METADATA: TokenMetadata = {
-  symbol: "WOX",
-  name: "Waste Organic",
+  symbol: "wOrganic",
+  name: "wOrganic",
   decimals: 18,
   canisterId: Principal.fromText(WOx_ID),
   metadata: [],
@@ -255,8 +255,8 @@ export const WOX = new Token({
 
 // eW
 export const EW_METADATA: TokenMetadata = {
-  symbol: "EW",
-  name: "Electronic Waste",
+  symbol: "eWaste",
+  name: "eWaste",
   decimals: 18,
   canisterId: Principal.fromText(EW_ID),
   metadata: [],

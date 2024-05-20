@@ -201,7 +201,8 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
   return (
     <Modal open={open} onClose={onClose} title={t`Transfer`}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: "24px 0" }}>
-        <FilledTextField value={token.symbol} fullWidth disabled />
+        <FilledTextField value={token.symbol} fullWidth />
+
         {!qrReaderOpen && (
           <FilledTextField
             value={values.to} // Use principal if available, else use 'to' field value
