@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable no-useless-constructor */
 import JSBI from "jsbi";
 import { ONE, ZERO } from "../internalConstants";
 

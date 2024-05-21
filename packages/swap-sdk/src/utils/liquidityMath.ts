@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable no-useless-constructor */
 import JSBI from "jsbi";
 import { NEGATIVE_ONE, ZERO } from "../internalConstants";
 
@@ -10,8 +12,7 @@ export abstract class LiquidityMath {
   public static addDelta(x: JSBI, y: JSBI): JSBI {
     if (JSBI.lessThan(y, ZERO)) {
       return JSBI.subtract(x, JSBI.multiply(y, NEGATIVE_ONE));
-    } else {
-      return JSBI.add(x, y);
     }
+    return JSBI.add(x, y);
   }
 }

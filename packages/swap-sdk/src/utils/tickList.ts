@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable no-useless-constructor */
 import JSBI from "jsbi";
 import invariant from "tiny-invariant";
 import { Tick } from "../entities/tick";
@@ -22,16 +24,16 @@ export abstract class TickList {
     // ensure ticks are spaced appropriately
     invariant(
       ticks.every(({ index }) => Math.abs(index) % tickSpacing === 0),
-      "TICK_SPACING"
+      "TICK_SPACING",
     );
 
     // ensure tick liquidity deltas sum to 0
     invariant(
       JSBI.equal(
         ticks.reduce((accumulator, { liquidityNet }) => JSBI.add(accumulator, liquidityNet), ZERO),
-        ZERO
+        ZERO,
       ),
-      "ZERO_NET"
+      "ZERO_NET",
     );
 
     invariant(isSorted(ticks, tickComparator), "SORTED");
@@ -88,21 +90,20 @@ export abstract class TickList {
       }
       const index = this.binarySearch(ticks, tick);
       return ticks[index];
-    } else {
-      invariant(!this.isAtOrAboveLargest(ticks, tick), "AT_OR_ABOVE_LARGEST");
-      if (this.isBelowSmallest(ticks, tick)) {
-        return ticks[0];
-      }
-      const index = this.binarySearch(ticks, tick);
-      return ticks[index + 1];
     }
+    invariant(!this.isAtOrAboveLargest(ticks, tick), "AT_OR_ABOVE_LARGEST");
+    if (this.isBelowSmallest(ticks, tick)) {
+      return ticks[0];
+    }
+    const index = this.binarySearch(ticks, tick);
+    return ticks[index + 1];
   }
 
   public static nextInitializedTickWithinOneWord(
     ticks: readonly Tick[],
     tick: number,
     lte: boolean,
-    tickSpacing: number
+    tickSpacing: number,
   ): [number, boolean] {
     const compressed = Math.floor(tick / tickSpacing); // matches rounding in the code
 
@@ -117,17 +118,16 @@ export abstract class TickList {
       const index = TickList.nextInitializedTick(ticks, tick, lte).index;
       const nextInitializedTick = Math.max(minimum, index);
       return [nextInitializedTick, nextInitializedTick === index];
-    } else {
-      const wordPos = (compressed + 1) >> 8;
-      const maximum = (((wordPos + 1) << 8) - 1) * tickSpacing;
-
-      if (this.isAtOrAboveLargest(ticks, tick)) {
-        return [maximum, false];
-      }
-
-      const index = this.nextInitializedTick(ticks, tick, lte).index;
-      const nextInitializedTick = Math.min(maximum, index);
-      return [nextInitializedTick, nextInitializedTick === index];
     }
+    const wordPos = (compressed + 1) >> 8;
+    const maximum = (((wordPos + 1) << 8) - 1) * tickSpacing;
+
+    if (this.isAtOrAboveLargest(ticks, tick)) {
+      return [maximum, false];
+    }
+
+    const index = this.nextInitializedTick(ticks, tick, lte).index;
+    const nextInitializedTick = Math.min(maximum, index);
+    return [nextInitializedTick, nextInitializedTick === index];
   }
 }

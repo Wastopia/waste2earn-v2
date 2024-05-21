@@ -3,4 +3,4 @@ export class BaseTokenAdapter {
         this.actor = actor;
     }
 }
-//# sourceMappingURL=BaseTokenAdapter.js.map
+// # sourceMappingURL=BaseTokenAdapter.js.map

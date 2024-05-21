@@ -16,7 +16,7 @@ export class Percent extends Fraction {
   /**
    * This boolean prevents a fraction from being interpreted as a Percent
    */
-  public readonly isPercent: true = true;
+  public readonly isPercent = true as const;
 
   add(other: Fraction | BigintIsh): Percent {
     return toPercent(super.add(other));
@@ -34,11 +34,11 @@ export class Percent extends Fraction {
     return toPercent(super.divide(other));
   }
 
-  public toSignificant(significantDigits: number = 5, format?: object, rounding?: Rounding): string {
+  public toSignificant(significantDigits = 5, format?: object, rounding?: Rounding): string {
     return super.multiply(ONE_HUNDRED).toSignificant(significantDigits, format, rounding);
   }
 
-  public toFixed(decimalPlaces: number = 2, format?: object, rounding?: Rounding): string {
+  public toFixed(decimalPlaces = 2, format?: object, rounding?: Rounding): string {
     return super.multiply(ONE_HUNDRED).toFixed(decimalPlaces, format, rounding);
   }
 }

@@ -12,6 +12,6 @@ export function nearestUsableTick(tick: number, tickSpacing: number) {
   invariant(tick >= TickMath.MIN_TICK && tick <= TickMath.MAX_TICK, "TICK_BOUND");
   const rounded = Math.round(tick / tickSpacing) * tickSpacing;
   if (rounded < TickMath.MIN_TICK) return rounded + tickSpacing;
-  else if (rounded > TickMath.MAX_TICK) return rounded - tickSpacing;
-  else return rounded;
+  if (rounded > TickMath.MAX_TICK) return rounded - tickSpacing;
+  return rounded;
 }

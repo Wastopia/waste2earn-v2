@@ -1,7 +1,8 @@
 import { enumToString, isOkSubAccount } from "@w2e/utils";
 import { AccountIdentifier, SubAccount } from "@dfinity/ledger-icp";
+
 export function icrcTransactionFormat(transaction, index) {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u, _v, _w, _x, _y, _z, _0, _1, _2, _3;
+    let _a; let _b; let _c; let _d; let _e; let _f; let _g; let _h; let _j; let _k; let _l; let _m; let _o; let _p; let _q; let _r; let _s; let _t; let _u; let _v; let _w; let _x; let _y; let _z; let _0; let _1; let _2; let _3;
     const memo = ((_a = transaction.transfer[0]) === null || _a === void 0 ? void 0 : _a.memo.length)
         ? (_b = transaction.transfer[0]) === null || _b === void 0 ? void 0 : _b.memo
         : ((_c = transaction.burn[0]) === null || _c === void 0 ? void 0 : _c.memo.length)
@@ -51,4 +52,4 @@ export function icrcTransactionFormat(transaction, index) {
         status: "",
     };
 }
-//# sourceMappingURL=utils.js.map
+// # sourceMappingURL=utils.js.map

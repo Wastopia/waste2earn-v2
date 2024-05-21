@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/prefer-as-const */
-
 import invariant from "tiny-invariant";
 import { validateAndParseAddress } from "../utils/validateAndParseAddress";
 import { BaseCurrency } from "./baseCurrency";
@@ -18,9 +16,9 @@ interface ConstructorArgs {
  * Represents an ERC20 token with a unique address and some metadata.
  */
 export class Token extends BaseCurrency {
-  public readonly isNative: false = false;
+  public readonly isNative = false as const;
 
-  public readonly isToken: true = true;
+  public readonly isToken = true as const;
 
   /**
    * The contract address on the chain on which this token lives

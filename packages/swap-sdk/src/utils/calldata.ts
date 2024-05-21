@@ -1,5 +1,5 @@
-import { BigintIsh } from "../core";
 import JSBI from "jsbi";
+import { BigintIsh } from "../core";
 
 /**
  * Generated method parameters for executing a call.
