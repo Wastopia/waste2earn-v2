@@ -1,5 +1,7 @@
+import Feature from "./components/Feature";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
+import Partners from "./components/Partners";
 import Roadmap from "./components/Roadmap";
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <>
       <Hero />
       <Roadmap />
+      <Feature />
+      <Partners />
       <Footer />
     </>
   );

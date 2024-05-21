@@ -28,7 +28,7 @@ export default function Hero() {
                         color: '#a62feb'
                     }}
                 >
-                    Waste2Earn&nbsp;
+                    Waste&nbsp;
                     <Typography
                         component="span"
                         variant="h1"
@@ -38,7 +38,7 @@ export default function Hero() {
                                 theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                         }}
                     >
-                        Hub
+                        Revalued
                     </Typography>
                 </Typography>
                 <Typography
@@ -46,8 +46,8 @@ export default function Hero() {
                     color="#FFFFFF"
                     sx={{ alignSelf: 'center', width: { sm: '100%', md: '80%' } }}
                 >
-                    Explore our seamless transaction and delivering high-quality web3 solutions
-                    tailored to your needs. Be part in creating Material Recovery Facility in your Community.
+                    Explore our seamless transaction in delivering high-quality web3 solutions
+                    tailored to your needs. Be part in the revolution of creating Waste Material Recovery Facility in your Community.
                 </Typography>
 
             </Stack>
