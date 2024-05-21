@@ -36,7 +36,7 @@ export type ConnectConfig = {
 export class WalletConnector {
   public connector: IConnector | null = null;
 
-  public connectorType: Connector = Connector.ICPSwap;
+  public connectorType: Connector = Connector.IC;
 
   // initial connect instance
   public async init(connectorType: Connector) {

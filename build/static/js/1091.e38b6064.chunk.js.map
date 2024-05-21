@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/1091.e38b6064.chunk.js","mappings":"2KAEe,SAASA,IACtB,OAAOC,EAAAA,EAAAA,KAACC,EAAAA,EAAO,GACjB,C","sources":["views/nft/View.tsx"],"sourcesContent":["import NFTView from \"components/NFT/NFTView\";\n\nexport default function _NFTView() {\n  return <NFTView />;\n}\n"],"names":["_NFTView","_jsx","NFTView"],"sourceRoot":""}

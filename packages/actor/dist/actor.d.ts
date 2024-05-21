@@ -12,7 +12,7 @@ export type ActorConstructor = {
   agent?: HttpAgent;
 };
 export declare enum Connector {
-  ICPSwap = "ICPSwap",
+  // ICPSwap = "ICPSwap",
   PLUG = "PLUG",
   STOIC = "STOIC",
   IC = "IC",

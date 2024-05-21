@@ -1,6 +1,7 @@
+import { SwapFactoryInterfaceFactory, SwapNFTInterfaceFactory, SwapPoolInterfaceFactory, TicketInterfaceFactory, PositionIndexInterfaceFactory, } from "@w2e/candid";
 import { actor } from "../actor";
 import { ActorName } from "../ActorName";
-import { SwapFactoryInterfaceFactory, SwapNFTInterfaceFactory, SwapPoolInterfaceFactory, TicketInterfaceFactory, PositionIndexInterfaceFactory, } from "@w2e/candid";
+
 export const swapNFT = (identity) => actor.create({
     actorName: ActorName.SwapNFTCanister,
     identity,
@@ -13,7 +14,7 @@ export const swapFactory = (identity) => actor.create({
 });
 export const swapPool = (canisterId, identity) => actor.create({
     identity,
-    canisterId: canisterId,
+    canisterId,
     idlFactory: SwapPoolInterfaceFactory,
 });
 export const swapTicket = () => actor.create({
@@ -25,4 +26,4 @@ export const swapPosition = (identity) => actor.create({
     idlFactory: PositionIndexInterfaceFactory,
     identity,
 });
-//# sourceMappingURL=global.js.map
+// # sourceMappingURL=global.js.map

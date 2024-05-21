@@ -1,6 +1,7 @@
+import { ClaimControllerInterfaceFactory, ClaimStorageInterfaceFactory, } from "@w2e/candid";
 import { actor } from "./actor";
 import { ActorName } from "./ActorName";
-import { ClaimControllerInterfaceFactory, ClaimStorageInterfaceFactory, } from "@w2e/candid";
+
 export const tokenClaimController = (identity) => actor.create({
     actorName: ActorName.ClaimController,
     identity,
@@ -11,4 +12,4 @@ export const tokenClaimStorage = (canisterId, identity) => actor.create({
     canisterId,
     idlFactory: ClaimStorageInterfaceFactory,
 });
-//# sourceMappingURL=token-claim.js.map
+// # sourceMappingURL=token-claim.js.map

@@ -18,6 +18,9 @@ const maintenancePages: string[] = [
   // "/swap/v2/wrap",
   // "/staking-farm",
   // "/staking-farm/create",
+  "/token-claim",
+  "/token-claim/transactions/:id",
+  "/token-claim/create"
 ];
 
 export default function MainRoutes() {

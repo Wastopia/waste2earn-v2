@@ -1,13 +1,15 @@
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+import { Actor } from "@dfinity/agent";
+
+const __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator.throw(value)); } catch (e) { reject(e); } }
         function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { Actor } from "@dfinity/agent";
+
 export function createBaseActor(_a) {
     return __awaiter(this, arguments, void 0, function* ({ canisterId, interfaceFactory, actorOptions, agent, fetchRootKey = false, }) {
         // Fetch root key for certificate validation during development
@@ -17,7 +19,7 @@ export function createBaseActor(_a) {
                 console.error(err);
             }));
         }
-        return Actor.createActor(interfaceFactory, Object.assign({ agent: agent, canisterId }, (actorOptions !== null && actorOptions !== void 0 ? actorOptions : {})));
+        return Actor.createActor(interfaceFactory, {agent, canisterId, ...(actorOptions !== null && actorOptions !== void 0 ? actorOptions : {})});
     });
 }
-//# sourceMappingURL=BaseActor.js.map
+// # sourceMappingURL=BaseActor.js.map

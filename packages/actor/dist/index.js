@@ -12,4 +12,4 @@ export * from "./token-claim";
 export * from "./voting";
 export * from "./actor";
 export * from "./ActorName";
-//# sourceMappingURL=index.js.map
+// # sourceMappingURL=index.js.map

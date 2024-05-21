@@ -1,6 +1,7 @@
+import { VoteControllerInterfaceFactory, VoteFileInterfaceFactory, VoteProjectInterfaceFactory, } from "@w2e/candid";
 import { actor } from "./actor";
 import { ActorName } from "./ActorName";
-import { VoteControllerInterfaceFactory, VoteFileInterfaceFactory, VoteProjectInterfaceFactory, } from "@w2e/candid";
+
 export const votingController = (identity) => actor.create({
     actorName: ActorName.VotingController,
     idlFactory: VoteControllerInterfaceFactory,
@@ -16,4 +17,4 @@ export const votingFile = (canisterId, identity) => actor.create({
     identity,
     idlFactory: VoteFileInterfaceFactory,
 });
-//# sourceMappingURL=voting.js.map
+// # sourceMappingURL=voting.js.map

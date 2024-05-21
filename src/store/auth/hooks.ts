@@ -70,10 +70,8 @@ export async function updateAuth({ walletType }: UpdateAuthProps) {
 
   const account = principalToAccount(principal);
 
-  const mnemonic =
-    walletType === Connector.ICPSwap || walletType === Connector.STOIC_MNEMONIC ? state.auth.mnemonic : "";
-  const password =
-    walletType === Connector.ICPSwap || walletType === Connector.STOIC_MNEMONIC ? state.auth.password : "";
+  const mnemonic = walletType === Connector.IC || walletType === Connector.STOIC_MNEMONIC ? state.auth.mnemonic : "";
+  const password = walletType === Connector.IC || walletType === Connector.STOIC_MNEMONIC ? state.auth.password : "";
 
   store.dispatch(
     login({
