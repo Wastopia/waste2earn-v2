@@ -49,7 +49,7 @@ export default function Canister() {
                     wPl ( Waste Plastic ) - mbbnc-biaaa-aaaam-acjiq-cai <br />
                     wPr ( Waste Paper ) - mpdak-2yaaa-aaaam-acjjq-cai <br />
                     wOx ( Waste Organic ) - mug4p-aaaaa-aaaam-acjla-cai <br />
-                    wM ( Waste Metal ) - m5fxt-wiaaa-aaaam-acjkq-cai <br />
+                    wM ( Waste Metal ) - m2erh-3qaaa-aaaam-acjka-cai <br />
                     wG ( Waste Glass ) - m5fxt-wiaaa-aaaam-acjkq-cai <br />
                     eW ( electronic Waste ) - mth23-nyaaa-aaaam-acjlq-cai <br />
                 </Typography>

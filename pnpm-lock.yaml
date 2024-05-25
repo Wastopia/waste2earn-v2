@@ -307,6 +307,9 @@ importers:
       react-scripts:
         specifier: 5.0.1
         version: 5.0.1(@babel/plugin-syntax-flow@7.24.1(@babel/core@7.24.5))(@babel/plugin-transform-react-jsx@7.23.4(@babel/core@7.24.5))(@types/babel__core@7.20.5)(bufferutil@4.0.8)(eslint@8.57.0)(node-notifier@8.0.2)(react@17.0.2)(ts-node@10.9.2(@types/node@13.13.52)(typescript@4.9.5))(type-fest@1.4.0)(typescript@4.9.5)(utf-8-validate@5.0.10)
+      react-scroll:
+        specifier: ^1.9.0
+        version: 1.9.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
       react-zxing:
         specifier: ^1.1.4
         version: 1.1.4(react-dom@17.0.2(react@17.0.2))(react@17.0.2)
@@ -340,6 +343,9 @@ importers:
       swr:
         specifier: ^2.2.0
         version: 2.2.5(react@17.0.2)
+      tailwindcss:
+        specifier: ^3.4.0
+        version: 3.4.3(ts-node@10.9.2(@types/node@13.13.52)(typescript@4.9.5))
       tiny-invariant:
         specifier: ^1.1.0
         version: 1.3.3
@@ -7694,6 +7700,9 @@ packages:
   lodash.sortby@4.7.0:
     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}
 
+  lodash.throttle@4.1.1:
+    resolution: {integrity: sha512-wIkUCfVKpVsWo3JSZlc+8MB5it+2AN5W8J7YVMST30UrvcQNZ1Okbj+rbVniijTWE6FGYy4XJq/rHkas8qJMLQ==}
+
   lodash.uniq@4.5.0:
     resolution: {integrity: sha512-xfBaXQd9ryd9dlSDvnvI0lvxfLJlYAZzXomUYzLKtUeOQvOP5piqAWuGtrhWeqaXK9hhoM/iyJc5AV+XfsX3HQ==}
 
@@ -9237,6 +9246,12 @@ packages:
     peerDependenciesMeta:
       typescript:
         optional: true
+
+  react-scroll@1.9.0:
+    resolution: {integrity: sha512-mamNcaX9Ng+JeSbBu97nWwRhYvL2oba+xR2GxvyXsbDeGP+gkYIKZ+aDMMj/n20TbV9SCWm/H7nyuNTSiXA6yA==}
+    peerDependencies:
+      react: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^15.5.4 || ^16.0.0 || ^17.0.0 || ^18.0.0
 
   react-smooth@4.0.1:
     resolution: {integrity: sha512-OE4hm7XqR0jNOq3Qmk9mFLyd6p2+j6bvbPJ7qlB7+oo0eNcL2l7WQzG6MBnT3EXY6xzkLMUBec3AfewJdA0J8w==}
@@ -20609,6 +20624,8 @@ snapshots:
 
   lodash.sortby@4.7.0: {}
 
+  lodash.throttle@4.1.1: {}
+
   lodash.uniq@4.5.0: {}
 
   lodash@4.17.21: {}
@@ -22272,6 +22289,13 @@ snapshots:
       - webpack-cli
       - webpack-hot-middleware
       - webpack-plugin-serve
+
+  react-scroll@1.9.0(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
+    dependencies:
+      lodash.throttle: 4.1.1
+      prop-types: 15.8.1
+      react: 17.0.2
+      react-dom: 17.0.2(react@17.0.2)
 
   react-smooth@4.0.1(react-dom@17.0.2(react@17.0.2))(react@17.0.2):
     dependencies:

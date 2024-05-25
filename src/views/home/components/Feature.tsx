@@ -1,43 +1,44 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import Button from '@mui/material/Button';
+import Link from '@mui/material/Link/Link'
+import walletPng from '../../../assets/images/home/wallet.png';
+import messengerPng from '../../../assets/images/home/messenger.png';
+import votingPng from '../../../assets/images/home/voting.png';
+
 
 const items = [
     {
-        icon: <ViewQuiltRoundedIcon />,
-        title: 'Wallet Integration',
+        icon: <EdgesensorHighRoundedIcon />,
+        title: 'Wallet, Swap and Liquidity ',
         description:
-            "Buy, sell, and swap directly from your wallet and manage your assets effortlessly, secure and readily available",
-        imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-        imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+            "Send and received directly from your wallet. Swap and Liquidity. Check transaction on ICP blockchain",
+        image: walletPng,
     },
     {
-        icon: <EdgesensorHighRoundedIcon />,
-        title: 'Exchange and Liquidity',
+        icon: <ViewQuiltRoundedIcon />,
+        title: 'Chat2Locate',
         description:
-            'Execute token swaps quickly and efficiently and access a vast pool of tokens for optimal trading opportunities.',
-        imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-        imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+            'Connect directly with our waste collection team within the app. Chat2Locate allows you to easily discuss your specific needs, preferred pick-up times, and any additional details.',
+        image: messengerPng
     },
     {
         icon: <DevicesRoundedIcon />,
-        title: 'NFT and DAO implementation',
+        title: 'Voting & NFT integration',
         description:
             'Earn unique NFTs representing your waste reduction efforts and DAO voting empowers users to shape the platform direction.',
-        imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-        imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+        image: votingPng
     },
 ];
 
@@ -72,24 +73,7 @@ export default function Features() {
                                 key={index}
                                 label={title}
                                 onClick={() => handleItemClick(index)}
-                                sx={{
-                                    borderColor: (theme) => {
-                                        if (theme.palette.mode === 'light') {
-                                            return selectedItemIndex === index ? 'primary.light' : '';
-                                        }
-                                        return selectedItemIndex === index ? 'primary.light' : '';
-                                    },
-                                    background: (theme) => {
-                                        if (theme.palette.mode === 'light') {
-                                            return selectedItemIndex === index ? 'none' : '';
-                                        }
-                                        return selectedItemIndex === index ? 'none' : '';
-                                    },
-                                    backgroundColor: selectedItemIndex === index ? 'primary.main' : '',
-                                    '& .MuiChip-label': {
-                                        color: selectedItemIndex === index ? '#fff' : '',
-                                    },
-                                }}
+
                             />
                         ))}
                     </Grid>
@@ -103,13 +87,10 @@ export default function Features() {
                     >
                         <Box
                             sx={{
-                                backgroundImage: (theme) =>
-                                    theme.palette.mode === 'light'
-                                        ? items[selectedItemIndex].imageLight
-                                        : items[selectedItemIndex].imageDark,
+                                backgroundImage: `url(${selectedFeature.image})`,
                                 backgroundSize: 'cover',
                                 backgroundPosition: 'center',
-                                minHeight: 280,
+                                minHeight: 438,
                             }}
                         />
                         <Box sx={{ px: 2, pb: 2 }}>
@@ -159,14 +140,9 @@ export default function Features() {
                                     background: 'none',
                                     backgroundColor:
                                         selectedItemIndex === index ? 'action.selected' : undefined,
-                                    borderColor: (theme) => {
-                                        if (theme.palette.mode === 'light') {
-                                            return selectedItemIndex === index
-                                                ? 'primary.light'
-                                                : 'grey.200';
-                                        }
-                                        return selectedItemIndex === index ? 'primary.dark' : 'grey.800';
-                                    },
+                                    borderColor: 'text.secondary',
+                                    color: 'text.primary',
+                                    transition: 'ease-in-out'
                                 }}
                             >
                                 <Box
@@ -179,22 +155,8 @@ export default function Features() {
                                         gap: 2.5,
                                     }}
                                 >
-                                    <Box
-                                        sx={{
-                                            color: (theme) => {
-                                                if (theme.palette.mode === 'light') {
-                                                    return selectedItemIndex === index
-                                                        ? 'primary.main'
-                                                        : 'grey.300';
-                                                }
-                                                return selectedItemIndex === index
-                                                    ? 'primary.main'
-                                                    : 'grey.700';
-                                            },
-                                        }}
-                                    >
-                                        {icon}
-                                    </Box>
+                                    <Box>{icon}</Box>
+
                                     <Box sx={{ textTransform: 'none' }}>
                                         <Typography
                                             color="text.primary"
@@ -220,9 +182,7 @@ export default function Features() {
                                                 '& > svg': { transition: '0.2s' },
                                                 '&:hover > svg': { transform: 'translateX(2px)' },
                                             }}
-                                            onClick={(event) => {
-                                                event.stopPropagation();
-                                            }}
+
                                         >
                                             <span>Learn more</span>
                                             <ChevronRightRoundedIcon
@@ -248,22 +208,12 @@ export default function Features() {
                             height: '100%',
                             width: '100%',
                             display: { xs: 'none', sm: 'flex' },
-                            pointerEvents: 'none',
+                            backgroundImage: `url(${selectedFeature.image})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
                         }}
-                    >
-                        <Box
-                            sx={{
-                                m: 'auto',
-                                width: 420,
-                                height: 500,
-                                backgroundSize: 'contain',
-                                backgroundImage: (theme) =>
-                                    theme.palette.mode === 'light'
-                                        ? items[selectedItemIndex].imageLight
-                                        : items[selectedItemIndex].imageDark,
-                            }}
-                        />
-                    </Card>
+                    />
+
                 </Grid>
             </Grid>
         </Container>
