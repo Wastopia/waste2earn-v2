@@ -74,9 +74,9 @@ export default function Roadmap() {
                             Foundation and Prototyping
                         </Typography>
                         <Typography>
-                            Core Development, <br />
+                            Token under ICRC2 Development, <br />
                             Wallet Integration, <br />
-                            Proof-of-Concept Development, <br />
+                            Swap and Liquidity, <br />
                             Proposal System Outline
                         </Typography>
                     </TimelineContent>
@@ -101,8 +101,10 @@ export default function Roadmap() {
                             Cross-Chain Expansion and IoT Exploration
                         </Typography>
                         <Typography>
-                            Compatability Research, <br />
-                            Smart-scale prototype , <br />
+                            EXT Token Development, <br />
+                            Smart Weight Integration , <br />
+                            Chatbox Integration, <br />
+                            NFT & Voting System
                         </Typography>
                     </TimelineContent>
                 </TimelineItem>
