@@ -12,7 +12,7 @@ export const TOKEN_AMOUNT_DISPLAY_DECIMALS = 8;
 export const NONE_TOKEN_SYMBOL = "--";
 export const EMPTY_CONTENT_SYMBOL = "--";
 
-export const REACT_GA_TRACKING_ID = "UA-200662567-2";
+export const REACT_GA_TRACKING_ID = "G-1RFZK7135G";
 
 export const MINT_TOKEN_CYCLES = 1860000000000;
 

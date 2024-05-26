@@ -1,11 +1,11 @@
 import { useContext, useMemo, useRef } from "react";
 import { Box, Typography } from "@mui/material";
-import { formatDollarAmount, principalToAccount } from "@w2e/utils";
-import { Trans, t } from "@lingui/macro";
+import { formatDollarAmount, } from "@w2e/utils";
+import { Trans } from "@lingui/macro";
 import { useSuccessTip } from "hooks/useTips";
 import { useICPPrice } from "hooks/useUSDPrice";
 import { ReactComponent as CopyIcon } from "assets/icons/Copy.svg";
-import { useAccountPrincipal } from "store/auth/hooks";
+// import { useAccountPrincipal } from "store/auth/hooks";
 import Copy, { CopyRef } from "components/Copy";
 import { ReactComponent as RefreshIcon } from "assets/icons/refresh.svg";
 import WalletContext from "./context";
@@ -72,7 +72,7 @@ export function AddressWrapper({ address, label }: AddressWrapperProps) {
 export default function WalletAccount() {
   const icpPrice = useICPPrice();
 
-  const principal = useAccountPrincipal();
+  // const principal = useAccountPrincipal();
   const [openSuccessTip] = useSuccessTip();
 
   const {
@@ -108,7 +108,7 @@ export default function WalletAccount() {
       sx={{
         display: "flex",
         width: "100%",
-        justifyContent: "space-between",
+        justifyContent: "center",
         padding: "0 0 30px 0",
         borderBottom: "1px solid #29314F",
         "@media(max-width: 640px)": {
@@ -140,7 +140,7 @@ export default function WalletAccount() {
         </Box>
       </Box>
 
-      <Box
+      {/* <Box
         sx={{
           display: "flex",
           gap: "0 12px",
@@ -173,7 +173,7 @@ export default function WalletAccount() {
         >
           <AddressWrapper address={principal ? principal.toString() : "--"} label={t`Principal ID`} />
         </Box>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

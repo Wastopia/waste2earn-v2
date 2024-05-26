@@ -7,6 +7,16 @@ Waste2Earn is a mobile-responsive web application built on the Internet Computer
 - Integrated Wallet: Send, receive, and track your W2E and other tokens with built-in features like QR scanning and transaction history.
 - Airdrop Support: Claim airdropped tokens for maintenance purposes.
 
+No-code canister created in [https://icpex.org/]ICpex :
+
+- W2E - n6j6v-cqaaa-aaaam-acjma-cai
+- wPlastic - mbbnc-biaaa-aaaam-acjiq-cai
+- wPaper - mpdak-2yaaa-aaaam-acjjq-cai
+- wMetal - m2erh-3qaaa-aaaam-acjka-cai
+- wGlass - m5fxt-wiaaa-aaaam-acjkq-cai
+- wOrganic - mug4p-aaaaa-aaaam-acjla-cai
+- eWaste - mth23-nyaaa-aaaam-acjlq-cai
+
 ### Planned Features:
 
 - NFTs: Integrate non-fungible tokens (NFTs) for potential future use cases.
@@ -21,7 +31,7 @@ Waste2Earn is a mobile-responsive web application built on the Internet Computer
 - Other Packages: Actor, Candid, Swap-SDK, Token-Adapter, Types, Tokens (EXT, ICRC1, ICRC2, DIP20)
 - Build Tools: CRACO React JS, pnpm
 - Monitoring: Sentry
-- Deployment:
+- Deployment: goDadddy domain, vercel
 
 Local development setup instructions are provided in the README.
 
@@ -31,14 +41,14 @@ Local development setup instructions are provided in the README.
 - Install Node.js.
 - Community & Resources:
 
-- Website: [invalid URL removed] (or your website URL)
-- Twitter: https://twitter.com/waste2earn
-- Discord: https://discord.com/invite/GbnNzjQe
-- Telegram: https://t.me/waste2earn
-- Medium: https://medium.com/@waste2earn.io
-- Gitbook: https://waste2earn.gitbook.io/waste2earn-documentation
-- Github: https://github.com/Wastopia/waste2earn-v2
-- Whitelist Form: https://forms.gle/A7NUvs66g8NiBTYQ8
+- Website: [https://waste2earn.xyz] waste2earn
+- Twitter: [https://twitter.com/waste2earn]waste2earn
+- Discord: [https://discord.com/invite/GbnNzjQe]waste2earn
+- Telegram: [https://t.me/waste2earn]waste2earn
+- Medium: [https://medium.com/@waste2earn.io]waste2earn
+- Gitbook: [https://waste2earn.gitbook.io/waste2earn-documentation]docs
+- Github: [https://github.com/Wastopia/waste2earn-v2]waste2earn
+- Whitelist Form: [https://forms.gle/A7NUvs66g8NiBTYQ8]waste2earn
 - Email: hello@waste2earn.xyz
 
 ### License:
