@@ -91,7 +91,7 @@ export const registerNFTs = ({ canisterIds, name }: { canisterIds: string[]; nam
   NFTs.register({ canisterIds, name });
 
 export enum AdapterName {
-  ICPSwap = "ICPSwap",
+  ICPSwap = "Waste2Earn",
 }
 
 NFTs.initialAdapter(AdapterName.ICPSwap, ICPSwapAdapter);

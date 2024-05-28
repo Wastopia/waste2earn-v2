@@ -1,6 +1,6 @@
 [
   {
-    "fee": 10000,
+    "fee": 10,
     "decimals": 8,
     "canisterId": "ryjl3-tyaaa-aaaaa-aaaba-cai",
     "name": "Internet Computer",
@@ -8,8 +8,8 @@
     "symbol": "ICP"
   },
   {
-    "fee": 10,
-    "decimals": 8,
+    "fee": 0,
+    "decimals": 18,
     "canisterId": "n6j6v-cqaaa-aaaam-acjma-cai",
     "name": "Waste2Earn",
     "standard": "ICRC2",
@@ -17,47 +17,47 @@
   },
   {
     "fee": 10,
-    "decimals": 8,
+    "decimals": 18,
     "canisterId": "mbbnc-biaaa-aaaam-acjiq-cai",
     "name": "wPlastic",
     "standard": "ICRC2",
     "symbol": "wPl"
   },
   {
-    "fee": 10,
-    "decimals": 8,
+    "fee": 0,
+    "decimals": 18,
     "canisterId": "mpdak-2yaaa-aaaam-acjjq-cai",
     "name": "wPaper",
     "standard": "ICRC2",
     "symbol": "wPr"
   },
   {
-    "fee": 10,
-    "decimals": 8,
+    "fee": 0,
+    "decimals": 18,
     "canisterId": "m2erh-3qaaa-aaaam-acjka-cai",
     "name": "wMetal",
     "standard": "ICRC2",
     "symbol": "wM"
   },
   {
-    "fee": 10,
-    "decimals": 8,
+    "fee": 0,
+    "decimals": 18,
     "canisterId": "m5fxt-wiaaa-aaaam-acjkq-cai",
     "name": "wGlass",
     "standard": "ICRC2",
     "symbol": "wG"
   },
   {
-    "fee": 10,
-    "decimals": 8,
+    "fee": 0,
+    "decimals": 18,
     "canisterId": "mug4p-aaaaa-aaaam-acjla-cai",
     "name": "wOrganic",
     "standard": "ICRC2",
     "symbol": "wOx"
   },
   {
-    "fee": 10,
-    "decimals": 8,
+    "fee": 0,
+    "decimals": 18,
     "canisterId": "mth23-nyaaa-aaaam-acjlq-cai",
     "name": "eWaste",
     "standard": "ICRC2",

@@ -180,7 +180,7 @@ export default function NFIDTransferModal({
         </Grid>
         <Grid item xs={12}>
           <Typography color="text.warning">
-            <Trans>Please ensure that the receiving address supports this Token/NFT!</Trans>
+            <Trans>Please ensure that the receiving address supports this Token</Trans>
           </Typography>
         </Grid>
         <Grid item xs={12}>

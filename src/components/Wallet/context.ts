@@ -3,7 +3,7 @@ import BigNumber from "bignumber.js";
 
 export type TokenBalance = { [tokenId: string]: BigNumber };
 
-export type Page = "token" | "nft";
+export type Page = "token";
 
 export interface WalletContextProps {
   refreshTotalBalance?: boolean;
