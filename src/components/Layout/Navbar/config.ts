@@ -43,7 +43,7 @@ export const routes: Route[] = [
     name: `Wallet`,
     subMenus: [
       { key: "Wallet1", name: `Wallet v1`, path: "/wallet" },
-      { key: "Wallet2", name: `betaWallet`, link: "https://waste2earn.xyz" },
+      { key: "Wallet2", name: `betaWallet`, link: "https://mqvnf-sqaaa-aaaap-ahhpa-cai.icp0.io/" },
     ],
   },
   // {

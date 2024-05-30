@@ -6,8 +6,9 @@ Waste2Earn is a mobile-responsive web application built on the Internet Computer
 - Token Exchange & Liquidity: Trade W2E and other tokens on the ICP Swap decentralized exchange (DEX) and contribute to liquidity pools.
 - Integrated Wallet: Send, receive, and track your W2E and other tokens with built-in features like QR scanning and transaction history.
 - Airdrop Support: Claim airdropped tokens for maintenance purposes.
+  -Community Engagement : Social media and Forms
 
-No-code canister created in [https://icpex.org/]ICpex :
+No-code canister created in [https://icpex.org/]ICpex under ICRC-2:
 
 - W2E - n6j6v-cqaaa-aaaam-acjma-cai
 - wPlastic - mbbnc-biaaa-aaaam-acjiq-cai
@@ -17,12 +18,16 @@ No-code canister created in [https://icpex.org/]ICpex :
 - wOrganic - mug4p-aaaaa-aaaam-acjla-cai
 - eWaste - mth23-nyaaa-aaaam-acjlq-cai
 
+Beta Wallet created with Canister : https://mqvnf-sqaaa-aaaap-ahhpa-cai.icp0.io/
+
 ### Planned Features:
 
 - NFTs: Integrate non-fungible tokens (NFTs) for potential future use cases.
 - Voting: Implement a voting system for community governance.
 - Staking & Farming: Earn rewards by staking or farming W2E tokens.
-- RER DAO Token (EXT standard): Create a governance token for the - - Waste2Earn Decentralized Autonomous Organization (DAO).
+- DAO Token (EXT standard): Create a governance token for the - - Waste2Earn Decentralized Autonomous Organization (DAO).
+- Chat2Locate for messaging and easy scheduling of waste collector's pick-up
+- Automate with IoT sensor for easy weighing using Arduino ESP32
 
 ### Technical Stack:
 
@@ -30,10 +35,14 @@ No-code canister created in [https://icpex.org/]ICpex :
 - Backend: Motoko (EXT standard token)
 - Other Packages: Actor, Candid, Swap-SDK, Token-Adapter, Types, Tokens (EXT, ICRC1, ICRC2, DIP20)
 - Build Tools: CRACO React JS, pnpm
-- Monitoring: Sentry
+- Monitoring: Sentry and Google Analytics
 - Deployment: goDadddy domain, vercel
 
 Local development setup instructions are provided in the README.
+
+### Related Repo: [https://github.com/wastopia]
+
+### Video Prompt : [https://www.youtube.com/watch?v=D0zQSNMXbiM]
 
 ### Getting Started:
 
