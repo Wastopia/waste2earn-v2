@@ -58,7 +58,7 @@ export interface MintRequest {
   blockHeight: BlockHeight;
 }
 export interface Page {
-  content: Array<WasteRecord>;
+  content: Array<WrapRecord>;
   offset: bigint;
   limit: bigint;
   totalElements: bigint;
@@ -136,22 +136,22 @@ export interface WithdrawRequest {
   to: User;
   amount: Balance;
 }
-export interface WasteRecord {
+export interface WrapRecord {
   to: AccountIdentifier;
   date: Date;
   from: AccountIdentifier;
-  wasteType: WasteType;
+  wrapType: WrapType;
   blockHeight: BlockHeight;
   index: bigint;
   amount: Balance;
 }
-export interface WasteRequest {
+export interface WrapRequest {
   user: [] | [User];
   offset: [] | [bigint];
   limit: [] | [bigint];
   index: [] | [bigint];
 }
-export interface WasteToken {
+export interface WrapToken {
   allowance: (arg_0: AllowanceRequest) => Promise<Result_4>;
   approve: (arg_0: ApproveRequest) => Promise<Result_5>;
   balance: (arg_0: BalanceRequest) => Promise<BalanceResponse>;
@@ -173,7 +173,7 @@ export interface WasteToken {
   transfer: (arg_0: TransferRequest) => Promise<TransferResponse>;
   transferFrom: (arg_0: TransferRequest) => Promise<TransferResponse>;
   withdraw: (arg_0: WithdrawRequest) => Promise<Result_1>;
-  wastedTx: (arg_0: WasteRequest) => Promise<Result>;
+  wastedTx: (arg_0: WrapRequest) => Promise<Result>;
 }
-export type WasteType = { waste: null } | { unwaste: null };
-export type _SERVICE = WasteToken;
+export type WrapType = { wrap: null } | { unwrap: null };
+export type _SERVICE = WrapToken;

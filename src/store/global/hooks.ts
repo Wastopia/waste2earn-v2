@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useCallback } from "react";
-import { WRAPPED_ICP_TOKEN_INFO, TOKEN_STANDARD, ICP_TOKEN_INFO } from "constants/tokens";
+import { W2E_TOKEN_INFO, TOKEN_STANDARD, ICP_TOKEN_INFO } from "constants/tokens";
 import { parseTokenAmount, BigNumber } from "@w2e/utils";
 import { AppState } from "store/index";
 import { useAppDispatch, useAppSelector } from "store/hooks";
@@ -43,7 +43,7 @@ export function useSwapTokenList(version?: "v2" | "v3"): SwapToken[] {
         if (version === "v2") {
           return token.canisterId.toString() !== ICP_TOKEN_INFO.canisterId;
         }
-        return token.canisterId.toString() !== WRAPPED_ICP_TOKEN_INFO.canisterId;
+        return token.canisterId.toString() !== W2E_TOKEN_INFO.canisterId;
       });
 
     const iTokens = Object.keys(importedTokens ?? [])

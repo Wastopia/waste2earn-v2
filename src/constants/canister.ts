@@ -47,6 +47,8 @@ export const CANISTER_NAMES = {
   TOKEN_SERVICE: "token",
   SWAP_POSITION_MANAGER: "SwapPositionManager",
   WICP: network === NETWORK.IC ? "wicp" : "WICP_T",
+  W2E: network === NETWORK.IC ? "w2e" : "W2E_T",
+
   FILE: "FileAssets",
   NFTCanisterController: "V3NFTCanisterController",
   SwapNFTCanister: "V3SwapNFTCanister",
@@ -80,6 +82,8 @@ export const CANISTER_NAMES = {
 
 export const fileCanisterId = getCanisterId(CANISTER_NAMES.FILE);
 export const WICPCanisterId = getCanisterId(CANISTER_NAMES.WICP);
+export const W2ECanisterId = getCanisterId(CANISTER_NAMES.W2E);
+
 export const swapPositionManagerCanisterId = getCanisterId(CANISTER_NAMES.SWAP_POSITION_MANAGER);
 export const SwapNFTCanisterId = getCanisterId(CANISTER_NAMES.SwapNFTCanister);
 export const NFTCanisterController = getCanisterId(CANISTER_NAMES.NFTCanisterController);

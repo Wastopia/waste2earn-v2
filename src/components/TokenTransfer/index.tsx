@@ -1,5 +1,5 @@
 import React, { useState, useContext, useMemo } from "react";
-import { Button, Grid, Typography, Box, InputAdornment, IconButton } from "@mui/material";
+import { Button, Grid, Typography, Box, InputAdornment } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import {
   parseTokenAmount,
@@ -26,8 +26,6 @@ import { Modal, FilledTextField, NumberFilledTextField } from "components/index"
 import { Principal } from "@dfinity/principal";
 import MaxButton from "components/MaxButton";
 import { useUSDPriceById } from "hooks/useUSDPrice";
-import { QrCode } from "@mui/icons-material";
-import QRReader from "components/QRReader";
 
 const useStyles = makeStyles((theme: Theme) => {
   return {
@@ -60,8 +58,7 @@ export interface TransferModalProps {
 }
 
 export default function TransferModal({ open, onClose, onTransferSuccess, token, transferTo }: TransferModalProps) {
-  const [qrReaderOpen, setQrReaderOpen] = React.useState(false);
-  const [principalFromState, setPrincipalFromState] = React.useState("");
+  const [principalFromState] = React.useState("");
   const classes = useStyles();
   const account = useAccount();
   const principalString = useAccountPrincipalString();
@@ -87,15 +84,6 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
       ...values,
       [field]: value,
     });
-  };
-
-  const handleQrResult = (result: unknown) => {
-    const p = result as any;
-    if (p?.text) {
-      setPrincipalFromState(p.text);
-      handleFieldChange(p.text, "to"); // Update the 'to' field value
-    }
-    setQrReaderOpen(false);
   };
 
   const getErrorMessage = () => {
@@ -203,35 +191,21 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
       <Box sx={{ display: "flex", flexDirection: "column", gap: "24px 0" }}>
         <FilledTextField value={token.symbol} fullWidth />
 
-        {!qrReaderOpen && (
-          <FilledTextField
-            value={values.to} // Use principal if available, else use 'to' field value
-            placeholder={
-              usePrincipalStandard(token.canisterId, token.standardType)
-                ? t`Scan QR to get the principal ID`
-                : t`Enter the account ID or principal ID`
-            }
-            onChange={(value: string) => handleFieldChange(value, "to")}
-            helperText={addressHelpText()}
-            fullWidth
-            autoComplete="To"
-            multiline
-            InputProps={{
-              endAdornment: (
-                <InputAdornment position="end">
-                  <IconButton onClick={() => setQrReaderOpen(true)}>
-                    <QrCode className="w-4 h-4" />
-                  </IconButton>
-                </InputAdornment>
-              ),
-            }}
-          />
-        )}
-        <QRReader
-          setVisible={setQrReaderOpen}
-          visible={qrReaderOpen}
-          onResult={handleQrResult}
+        <FilledTextField
+          value={values.to} // Use principal if available, else use 'to' field value
+          placeholder={
+            usePrincipalStandard(token.canisterId, token.standardType)
+              ? t`Enter your principal ID`
+              : t`Enter the account ID or principal ID`
+          }
+          onChange={(value: string) => handleFieldChange(value, "to")}
+          helperText={addressHelpText()}
+          fullWidth
+          autoComplete="To"
+          multiline
+
         />
+
         <NumberFilledTextField
           placeholder="Enter weight in kilogram"
           value={values.weight}

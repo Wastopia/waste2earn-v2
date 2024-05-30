@@ -8,7 +8,7 @@
     "symbol": "ICP"
   },
   {
-    "fee": 0,
+    "fee": 10,
     "decimals": 18,
     "canisterId": "n6j6v-cqaaa-aaaam-acjma-cai",
     "name": "Waste2Earn",
@@ -24,7 +24,7 @@
     "symbol": "wPl"
   },
   {
-    "fee": 0,
+    "fee": 10,
     "decimals": 18,
     "canisterId": "mpdak-2yaaa-aaaam-acjjq-cai",
     "name": "wPaper",
@@ -32,7 +32,7 @@
     "symbol": "wPr"
   },
   {
-    "fee": 0,
+    "fee": 10,
     "decimals": 18,
     "canisterId": "m2erh-3qaaa-aaaam-acjka-cai",
     "name": "wMetal",
@@ -40,7 +40,7 @@
     "symbol": "wM"
   },
   {
-    "fee": 0,
+    "fee": 10,
     "decimals": 18,
     "canisterId": "m5fxt-wiaaa-aaaam-acjkq-cai",
     "name": "wGlass",
@@ -48,7 +48,7 @@
     "symbol": "wG"
   },
   {
-    "fee": 0,
+    "fee": 10,
     "decimals": 18,
     "canisterId": "mug4p-aaaaa-aaaam-acjla-cai",
     "name": "wOrganic",
@@ -56,7 +56,7 @@
     "symbol": "wOx"
   },
   {
-    "fee": 0,
+    "fee": 10,
     "decimals": 18,
     "canisterId": "mth23-nyaaa-aaaam-acjlq-cai",
     "name": "eWaste",

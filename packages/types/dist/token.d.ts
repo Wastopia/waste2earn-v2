@@ -69,4 +69,4 @@ export type StorageTokenInfo = {
   totalSupply: string;
   transFee: string;
 };
-//# sourceMappingURL=token.d.ts.map
+// # sourceMappingURL=token.d.ts.map

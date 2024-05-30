@@ -5,7 +5,6 @@ import { Typography, alpha } from '@mui/material';
 import ReactPlayer from 'react-player';
 
 export default function Hero() {
-
     return (
         <Container
             sx={{
@@ -60,8 +59,8 @@ export default function Hero() {
                     width: '100%',
                     backgroundImage:
                         theme.palette.mode === 'light'
-                            ? 'url("/static/images/templates/templates-images/hero-light.png")'
-                            : 'url("/static/images/templates/templates-images/hero-dark.png")',
+                            ? 'url("/videopicture.webp")'
+                            : 'url("/videopicture.webp")',
                     backgroundSize: 'cover',
                     borderRadius: '10px',
                     outline: '1px solid',
@@ -75,7 +74,7 @@ export default function Hero() {
                             : `0 0 24px 12px ${alpha('#033363', 0.2)}`,
                 })}>
 
-                <ReactPlayer url="/w2e-video.mp4" width="100%" height="720" borderRadius="10px" controls />
+                <ReactPlayer url="/intro-video.mp4" width="100%" height="720" borderRadius="10px" controls />
             </Box>
         </Container>
     );

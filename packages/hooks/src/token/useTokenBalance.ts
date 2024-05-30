@@ -1,9 +1,9 @@
 import { useCallback } from "react";
 import { isPrincipal, isValidPrincipal } from "@w2e/utils";
-import { useLatestDataCall } from "../useCallData";
 import { tokenAdapter } from "@w2e/token-adapter";
 import { Principal } from "@dfinity/principal";
 import BigNumber from "bignumber.js";
+import { useLatestDataCall } from "../useCallData";
 
 export interface GetTokenBalanceArgs {
   canisterId: string;
@@ -21,7 +21,7 @@ export async function getTokenBalance({ canisterId, address, sub }: GetTokenBala
         ? {
             principal: Principal.fromText(address),
           }
-        : { address: address },
+        : { address },
       token: "",
       subaccount: sub ? [...sub] : undefined,
     },
