@@ -195,7 +195,7 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           value={values.to} // Use principal if available, else use 'to' field value
           placeholder={
             usePrincipalStandard(token.canisterId, token.standardType)
-              ? t`Enter your principal ID`
+              ? t`Enter the principal ID`
               : t`Enter the account ID or principal ID`
           }
           onChange={(value: string) => handleFieldChange(value, "to")}

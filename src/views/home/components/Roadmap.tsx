@@ -76,6 +76,7 @@ export default function Roadmap() {
                         <Typography>
                             Token under ICRC2 Development, <br />
                             Wallet Integration, <br />
+                            betaWallet v1, <br />
                             Swap and Liquidity, <br />
                             Proposal System Outline
                         </Typography>

@@ -16,7 +16,7 @@ import Link from '@mui/material/Link/Link'
 import walletPng from '../../../assets/images/home/wallet.png';
 import messengerPng from '../../../assets/images/home/messenger.png';
 import votingPng from '../../../assets/images/home/voting.png';
-
+import betaWalletPng from '../../../assets/images/home/betawallet.png';
 
 const items = [
     {
@@ -214,6 +214,31 @@ export default function Features() {
                         }}
                     />
 
+                </Grid>
+                <Grid container justifyContent="center" sx={{ mt: 5 }} >
+                    <Link
+                        href="https://mqvnf-sqaaa-aaaap-ahhpa-cai.icp0.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            justifyContent: 'center',
+                            py: 1.5,
+                            px: 4,
+                            borderRadius: 2,
+                            minWidth: '318px',
+                            minHeight: '122px',
+                            backgroundImage: `url(${betaWalletPng})`,
+                            backgroundRepeat: 'no-repeat',
+                            backgroundPosition: 'center',
+                            fontSize: '16px',
+                            fontWeight: 'bold',
+                            '&:hover': {
+                                backgroundColor: '#f5f5f5',
+                            },
+                        }}
+                    />
                 </Grid>
             </Grid>
         </Container>
