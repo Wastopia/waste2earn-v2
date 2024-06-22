@@ -62,7 +62,7 @@ export function componentStyleOverrides(theme: { [key: string]: any }) {
         containedSecondary: {
           background: isDark ? theme.colors.darkLevel4 : "#EFEFFF",
           color: isDark ? "#ffffff" : theme.colors.primaryMain,
-          border: "1px solid #5569DB",
+          border: "1px solid #365E32",
           boxShadow: "none",
         },
       },
@@ -178,7 +178,7 @@ export function componentStyleOverrides(theme: { [key: string]: any }) {
               marginBottom: 0,
             },
             "& .MuiSvgIcon-root": {
-              color: "#8492C4",
+              color: "#111936",
             },
             "&.Mui-selected, &:hover": {
               color: theme.menuSelected,
@@ -198,7 +198,7 @@ export function componentStyleOverrides(theme: { [key: string]: any }) {
             paddingLeft: "0px",
             background: "transparent",
             "& .MuiSvgIcon-root": {
-              color: "#8492C4",
+              color: "#111936",
             },
             "&.Mui-selected, &:hover": {
               color: theme.menuSelected,
@@ -401,7 +401,7 @@ export function componentStyleOverrides(theme: { [key: string]: any }) {
       styleOverrides: {
         flexContainer: {
           borderBottom: "1px solid",
-          borderColor: isDark ? theme.colors.textPrimary + 20 : theme.colors.grey200,
+          borderColor: isDark ? theme.colors.textPrimary + 20 : theme.colors.grey700,
         },
       },
     },

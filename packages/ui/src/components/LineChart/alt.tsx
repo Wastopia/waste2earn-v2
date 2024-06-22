@@ -96,7 +96,7 @@ export function LineChartAlt({
             tick={{ fill: theme.palette.text.secondary }}
           />
           <Tooltip
-            cursor={{ stroke: "#8572FF" }}
+            cursor={{ stroke: "#059212" }}
             contentStyle={{ display: "none" }}
             // @ts-ignore
             formatter={(value: number, name: string, props: { payload: { time: string; value: number } }) => {

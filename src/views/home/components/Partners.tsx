@@ -43,17 +43,7 @@ export default function LogoCollection() {
                                 theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                         }}
                     >
-                        Business&nbsp;
-                        <Typography
-                            component="span"
-                            variant="h1"
-                            sx={{
-                                fontSize: 'clamp(2rem, 10vw, 3rem)',
-                                color: '#a62feb'
-                            }}
-                        >
-                            Collaborators
-                        </Typography>
+                        Partners
                     </Typography>
                 </Stack>
 

@@ -5,8 +5,6 @@ import { Theme } from "@mui/material/styles";
 import DiscordIcon from "./Discord";
 import TwitterIcon from "./Twitter";
 import TelegramIcon from "./Telegram";
-import DistriktIcon from "./Distrikt";
-import DscvrIcon from "./Dscvr";
 import InstagramIcon from "./Instagram";
 import MediumIcon from "./Medium";
 import WebsiteIcon from "./Website";
@@ -20,8 +18,6 @@ export const Icons: { [key: string]: FC<{ width?: number }> } = {
   Website: WebsiteIcon,
   Discord: DiscordIcon,
   Twitter: TwitterIcon,
-  Dscvr: DscvrIcon,
-  Distrikt: DistriktIcon,
   Telegram: TelegramIcon,
   Instagram: InstagramIcon,
   Medium: MediumIcon,

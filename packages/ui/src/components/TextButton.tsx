@@ -14,7 +14,7 @@ export function ALink({ children, link }: ALinkProps) {
       href={link}
       target="_blank"
       rel="noreferrer"
-      style={{ textDecoration: "underline", textDecorationColor: "#8492c4" }}
+      style={{ textDecoration: "underline", textDecorationColor: "#111936" }}
     >
       <Typography
         color="text.secondary"

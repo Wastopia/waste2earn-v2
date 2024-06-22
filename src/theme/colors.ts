@@ -56,7 +56,7 @@ export default {
   // -----------------------|| DARK THEME VARIANTS ||-----------------------//
 
   // paper & background
-  darkPaper: "#111936",
+  darkPaper: "#240A34",
   darkBackground: "#1a223f",
 
   // dark 800 & 900
@@ -68,7 +68,7 @@ export default {
 
   // text variants
   darkTextPrimary: "#ffffff",
-  darkTextSecondary: "#8492c4",
+  darkTextSecondary: "#9EB8D9",
   darkTextTertiary: "#4F5A84",
   darkTextFourth: "#29314F",
   darkTextFifth: "#212946",
@@ -106,8 +106,8 @@ export default {
   darkSecondary200: "#b39ddb",
   darkSecondary800: "#6200ea",
 
-  defaultGradientStart: "#5569db",
-  defaultGradientEnd: "#8572ff",
+  defaultGradientStart: "#365E32",
+  defaultGradientEnd: "#059212",
 
   border0: "#4F5A84",
 };

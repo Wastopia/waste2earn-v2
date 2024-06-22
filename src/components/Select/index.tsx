@@ -171,7 +171,7 @@ export function Select({
                 )}
               </Grid>
 
-              <KeyboardArrowDownIcon sx={{ width: "18px", height: "18px", cursor: "pointer", color: "#8492C4" }} />
+              <KeyboardArrowDownIcon sx={{ width: "18px", height: "18px", cursor: "pointer", color: "#111936" }} />
             </Grid>
           </>
         </Grid>

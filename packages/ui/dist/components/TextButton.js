@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 import { Typography, Box } from "@mui/material";
 import { mockALinkAndOpen } from "@w2e/utils";
 export function ALink({ children, link }) {
-    return (_jsx("a", { href: link, target: "_blank", rel: "noreferrer", style: { textDecoration: "underline", textDecorationColor: "#8492c4" }, children: _jsx(Typography, { color: "text.secondary", sx: {
+    return (_jsx("a", { href: link, target: "_blank", rel: "noreferrer", style: { textDecoration: "underline", textDecorationColor: "#111936" }, children: _jsx(Typography, { color: "text.secondary", sx: {
                 cursor: "pointer",
                 userSelect: "none",
             }, component: "span", children: children }) }));

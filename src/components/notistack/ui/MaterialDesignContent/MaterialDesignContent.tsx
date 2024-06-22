@@ -58,7 +58,7 @@ const useStyles = makeStyles((theme: Theme) => {
       right: "18px",
       top: "18px",
       cursor: "pointer",
-      color: "#8492C4",
+      color: "#111936",
     },
     line: {
       position: "absolute",

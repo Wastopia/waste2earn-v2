@@ -338,7 +338,7 @@ export default function NFTCanisterCreate() {
                             <InputAdornment position="end">
                               <HighlightOffIcon
                                 sx={{
-                                  color: "#8492C4",
+                                  color: "#111936",
                                   fontSize: "20px",
                                   cursor: "pointer",
                                 }}

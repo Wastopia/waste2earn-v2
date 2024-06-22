@@ -1,5 +1,5 @@
 import { Grid, Box, Typography } from "@mui/material";
-import MaintenanceSVG from "assets/images/Maintenance.svg";
+// import MaintenanceSVG from "assets/images/Maintenance.svg";
 import { Trans } from "@lingui/macro";
 import { TextButton } from "@w2e/ui";
 
@@ -12,7 +12,7 @@ export function Maintenance() {
             <Typography color="text.primary" align="center" sx={{ fontSize: "24px", margin: "0 0 20px 0" }}>
               <Trans>🚧 Page Under Maintenance 🚧</Trans>
             </Typography>
-            <img src={MaintenanceSVG} alt="" />
+            {/* <img src={MaintenanceSVG} alt="" /> */}
             <Box
               sx={{
                 width: "374px",

@@ -13,9 +13,9 @@ export function DownloadIcon() {
   return (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M16 0H0V16H16V0Z" fill="white" fillOpacity="0.01" />
-      <path d="M3 8.00231V13H13V8" stroke="#8492C4" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M10.5 7.72266L8 10.2227L5.5 7.72266" stroke="#8492C4" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M7.99609 3V10.2222" stroke="#8492C4" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M3 8.00231V13H13V8" stroke="#111936" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M10.5 7.72266L8 10.2227L5.5 7.72266" stroke="#111936" strokeLinecap="round" strokeLinejoin="round" />
+      <path d="M7.99609 3V10.2222" stroke="#111936" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
 }
@@ -80,7 +80,7 @@ export default function VoteRecords({ canisterId, id }: { canisterId: string; id
               sx={{
                 marginLeft: "6px",
                 borderRadius: "9999px",
-                background: "#8492C4",
+                background: "#111936",
                 padding: "4px",
                 minWidth: "16px",
                 height: "16px",
@@ -99,7 +99,7 @@ export default function VoteRecords({ canisterId, id }: { canisterId: string; id
 
         <Grid>
           <Grid container alignItems="center" sx={{ cursor: "pointer" }} onClick={downloadVotes}>
-            {downloading ? <CircularProgress sx={{ color: "#8492C4" }} size="16px" /> : <DownloadIcon />}
+            {downloading ? <CircularProgress sx={{ color: "#111936" }} size="16px" /> : <DownloadIcon />}
 
             <Typography sx={{ marginLeft: "8px" }}>
               <Trans>Download</Trans>

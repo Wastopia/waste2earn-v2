@@ -42,7 +42,7 @@ export function LineChartAlt(_a) {
                             setLabel(undefined);
                         if (setValue)
                             setValue(undefined);
-                    }, children: [_jsx("defs", { children: _jsxs("linearGradient", { id: "gradient", x1: "0", y1: "0", x2: "0", y2: "1", children: [_jsx("stop", { offset: "5%", stopColor: darken(0.36, color), stopOpacity: 0.5 }), _jsx("stop", { offset: "100%", stopColor: color, stopOpacity: 0 })] }) }), _jsx(XAxis, { dataKey: "time", axisLine: false, tickLine: false, tickFormatter: (time) => dayjs(time).format(tickFormat), minTickGap: 10, tick: { fill: theme.palette.text.secondary } }), _jsx(Tooltip, { cursor: { stroke: "#8572FF" }, contentStyle: { display: "none" }, 
+                    }, children: [_jsx("defs", { children: _jsxs("linearGradient", { id: "gradient", x1: "0", y1: "0", x2: "0", y2: "1", children: [_jsx("stop", { offset: "5%", stopColor: darken(0.36, color), stopOpacity: 0.5 }), _jsx("stop", { offset: "100%", stopColor: color, stopOpacity: 0 })] }) }), _jsx(XAxis, { dataKey: "time", axisLine: false, tickLine: false, tickFormatter: (time) => dayjs(time).format(tickFormat), minTickGap: 10, tick: { fill: theme.palette.text.secondary } }), _jsx(Tooltip, { cursor: { stroke: "#059212" }, contentStyle: { display: "none" }, 
                             // @ts-ignore
                             formatter: (value, name, props) => {
                                 if (setValue && parsedValue !== props.payload.value) {

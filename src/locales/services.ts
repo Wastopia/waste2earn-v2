@@ -127,7 +127,7 @@ export const StakingLocals: Locals = {
   "The harvest task is busy, and please try again later": t`The harvest task is busy, and please try again later`,
 };
 
-export const WICPLocales: Locals = {
+export const W2ELocales: Locals = {
   Unauthorized: t`Unauthorized`,
   error_to_address: t`Invalid To Address`,
   amount_too_small: t`Requested amount is too small`,
@@ -156,7 +156,7 @@ export const ClaimMessages: Locals = {
 export const MessageMaps: Locals = {
   ...NFTLocals,
   ...TokenLocales,
-  ...WICPLocales,
+  ...W2ELocales,
   ...StakingLocals,
   ...SwapLocales,
   ...ClaimMessages,

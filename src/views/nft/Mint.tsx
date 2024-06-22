@@ -364,7 +364,7 @@ export default function NFTMint() {
                               <InputAdornment position="end">
                                 <HighlightOffIcon
                                   sx={{
-                                    color: "#8492C4",
+                                    color: "#111936",
                                     fontSize: "20px",
                                     cursor: "pointer",
                                   }}

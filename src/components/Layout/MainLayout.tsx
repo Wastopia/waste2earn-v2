@@ -11,7 +11,7 @@ import Header from "./Header";
 const useStyles = makeStyles((theme: Theme) => {
   return {
     appBar: {
-      backgroundColor: "#0B132F",
+      backgroundColor: "#0F0445",
     },
     content: {
       background: "transparent",

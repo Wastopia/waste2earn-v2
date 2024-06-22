@@ -76,10 +76,10 @@ export function CastVotes({ proposal, onVoteSuccess }: CastVotesProps) {
             cursor: "pointer",
             marginBottom: "20px",
             "&:hover": {
-              border: "1px solid #5569DB",
+              border: "1px solid #365E32",
             },
             "&.active": {
-              border: "1px solid #5569DB",
+              border: "1px solid #365E32",
             },
           }}
           onClick={() => setActiveVote(option.k)}
@@ -178,7 +178,7 @@ export function VotesResult({ proposal: _proposal }: { proposal: ProposalInfo })
                   top: 0,
                   left: 0,
                   height: "10px",
-                  background: "linear-gradient(89.44deg, #5569DB -0.31%, #8572FF 91.14%)",
+                  background: "linear-gradient(89.44deg, #365E32 -0.31%, #059212 91.14%)",
                   width: `${percent.toFixed(2)}%`,
                   borderRadius: "4px",
                 }}

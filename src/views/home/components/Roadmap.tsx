@@ -43,7 +43,7 @@ export default function Roadmap() {
                             variant="h1"
                             sx={{
                                 fontSize: 'clamp(3.5rem, 10vw, 4rem)',
-                                color: '#a62feb'
+                                color: '#059212'
                             }}
                         >
                             RoadMap

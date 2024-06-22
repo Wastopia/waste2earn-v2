@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) => {
   return {
     container: {
       padding: "15px 20px",
-      background: "linear-gradient(89.44deg, #5569DB -0.31%, #8572FF 91.14%)",
+      background: "linear-gradient(89.44deg, #365E32 -0.31%, #059212 91.14%)",
       [theme.breakpoints.down("md")]: {
         padding: "5px 10px",
       },

@@ -29,7 +29,7 @@ export function StateLabel({ state }: { state: ProposalState | undefined }) {
         borderRadius: "15px",
         background:
           state === ProposalState.ACTIVE
-            ? "linear-gradient(89.44deg, #5569DB -0.31%, #8572FF 91.14%)"
+            ? "linear-gradient(89.44deg, #365E32 -0.31%, #059212 91.14%)"
             : state === ProposalState.CLOSED
               ? "#565F80"
               : "#54C081",
@@ -116,7 +116,7 @@ export function VoteStateCount({ proposal }: VoteItemProps) {
     <Box
       component="span"
       sx={{
-        border: proposalState === ProposalState.CLOSED ? "1px solid #54C081" : "1px solid #5569DB",
+        border: proposalState === ProposalState.CLOSED ? "1px solid #54C081" : "1px solid #365E32",
         padding: "4px 10px",
         borderRadius: "16px",
         display: "flex",

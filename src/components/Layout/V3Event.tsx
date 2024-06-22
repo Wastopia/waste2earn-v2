@@ -31,7 +31,7 @@ export default function V3Event({ onClick }: { onClick: () => void }) {
     <Grid container alignItems="center" sx={{ height: "52px", background: "#B79C4A", padding: "0 20px" }}>
       <Grid item xs onClick={handleToTwitter}>
         <Typography sx={{ color: "#ffffff", cursor: "pointer", "@media(max-width: 640px)": { fontSize: "12px" } }}>
-          <Trans>We have launched ExSwap(MOR) V1. Click to Switch to the Smoother ExSwap V1 Ver.</Trans>
+          <Trans>We have launched wOrganic for Yellow Drum.</Trans>
         </Typography>
       </Grid>
 

@@ -57,7 +57,7 @@ export default function Features() {
                 <Grid item xs={12} md={6}>
                     <div>
                         <Typography component="h1" variant="h1" color="text.primary">
-                            dApp Features
+                            Features
                         </Typography>
                         <Typography
                             variant="body1"

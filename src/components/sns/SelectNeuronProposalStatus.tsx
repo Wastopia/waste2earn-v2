@@ -63,7 +63,7 @@ export function SelectNeuronProposalStatus({ governance_id, onChange }: SelectNe
           width: "fit-content",
           padding: "5px 10px",
           cursor: "pointer",
-          border: "1px solid #8492c4",
+          border: "1px solid #111936",
           borderRadius: "8px",
         }}
         onClick={() => setOpen(true)}

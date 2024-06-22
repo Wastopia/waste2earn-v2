@@ -2,7 +2,7 @@ import { useHistory } from "react-router-dom";
 import { Box, Button, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { Trans } from "@lingui/macro";
-import CollectionBg from "assets/images/nft/collection_bg.jpg";
+import CollectionBg from "assets/images/nft/collection_bg.png";
 
 const useStyles = makeStyles(() => {
   return {

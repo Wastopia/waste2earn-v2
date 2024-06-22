@@ -33,11 +33,7 @@ export const routes: Route[] = [
     name: `Swap`,
     path: "/swap",
   },
-  // {
-  //   key: "marketplace",
-  //   name: `Marketplace`,
-  //   path: "/marketplace/collections",
-  // },
+
   {
     key: "wallet",
     name: `Wallet`,
@@ -46,11 +42,27 @@ export const routes: Route[] = [
       { key: "Wallet2", name: `betaWallet`, link: "https://mqvnf-sqaaa-aaaap-ahhpa-cai.icp0.io/" },
     ],
   },
-  // {
-  //   key: "voting",
-  //   name: `Voting`,
-  //   path: `/voting`,
-  // },
+  {
+    key: "feedback",
+    name: "White listing",
+    link: "https://forms.gle/A7NUvs66g8NiBTYQ8",
+  },
+
+  {
+    key: "staking",
+    name: `Staking`,
+    path: `/staking-token`,
+  },
+  {
+    key: "marketplace",
+    name: `Marketplace`,
+    path: "/marketplace/collections",
+  },
+  {
+    key: "voting",
+    name: `Voting`,
+    path: `/voting`,
+  },
   {
     key: "followUS",
     name: `Follow US`,
@@ -63,11 +75,7 @@ export const routes: Route[] = [
       { key: "followUS_Discord", name: `Discord`, link: "https://discord.gg/GbnNzjQe", icon: DiscordIcon },
     ],
   },
-  {
-    key: "feedback",
-    name: "White listing",
-    link: "https://forms.gle/A7NUvs66g8NiBTYQ8",
-  },
+
   {
     key: "claim",
     name: "Airdrop",
