@@ -67,7 +67,7 @@ export const routes: Route[] = [
     key: "followUS",
     name: `Follow US`,
     subMenus: [
-      { key: "followUS_twitter", name: `Twitter`, link: "https://twitter.com/waste2earn", icon: TwitterIcon },
+      { key: "followUS_twitter", name: `Twitter`, link: "https://x.com/waste2earn", icon: TwitterIcon },
       { key: "followUS_Telegram", name: `Telegram`, link: "https://t.me/+stHCP7ZCoKcyNWY1", icon: TelegramIcon },
       { key: "followUS_Medium", name: `Medium`, link: "https://medium.com/@waste2earn.io", icon: MediumIcon },
       { key: "followUS_Gitbook", name: `Gitbook`, link: "https://waste2earn.gitbook.io/", icon: GitbookIcon },
