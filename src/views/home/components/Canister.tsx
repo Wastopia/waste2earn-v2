@@ -33,7 +33,7 @@ export default function Canister() {
                                 theme.palette.mode === 'light' ? 'primary.main' : 'primary.light',
                         }}
                     >
-                        Canister&nbsp;
+                        Use&nbsp;
                         <Typography
                             component="span"
                             variant="h3"
@@ -42,23 +42,13 @@ export default function Canister() {
                                 color: '#059212'
                             }}
                         >
-                            Token
+                            Cases
                         </Typography>
                     </Typography>
                 </Stack>
 
             </Container>
-            <Grid container justifyContent="center" sx={{ mt: 0.5, opacity: 0.6 }}>
-                <Typography component="h4" variant="h4" color="text.primary" sx={{ lineHeight: '1.3' }}>
-                    W2E ( Waste2Earn )- n6j6v-cqaaa-aaaam-acjma-cai <br />
-                    wPl ( Waste Plastic ) - mbbnc-biaaa-aaaam-acjiq-cai <br />
-                    wPr ( Waste Paper ) - mpdak-2yaaa-aaaam-acjjq-cai <br />
-                    wOx ( Waste Organic ) - mug4p-aaaaa-aaaam-acjla-cai <br />
-                    wM ( Waste Metal ) - m2erh-3qaaa-aaaam-acjka-cai <br />
-                    wG ( Waste Glass ) - m5fxt-wiaaa-aaaam-acjkq-cai <br />
-                    eW ( electronic Waste ) - mth23-nyaaa-aaaam-acjlq-cai <br />
-                </Typography>
-            </Grid>
+
             <Grid container justifyContent="center" sx={{ mt: 2 }}>
 
                 <Typography component="h2" variant="h2" justifyContent="center">
