@@ -1,5 +1,4 @@
 import { Typography, Box, Checkbox, useMediaQuery, useTheme } from "@mui/material";
-import AddToken from "components/Wallet/AddToken";
 import WalletPageToggle from "components/Wallet/PageToggle";
 import { Trans } from "@lingui/macro";
 
@@ -47,7 +46,7 @@ export default function TokenListHeader({ onHideSmallBalances, isHideSmallBalanc
             <HideSmallBalance onHideSmallBalances={onHideSmallBalances} isHideSmallBalances={isHideSmallBalances} />
           ) : null}
 
-          <AddToken />
+
         </Box>
       </Box>
       {matchDownSM ? (

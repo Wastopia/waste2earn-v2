@@ -25,7 +25,7 @@ export function TokenListIdentifying({ tokenId }: TokenListIdentifyingProps) {
       }}
     >
       <TokenListDarkIcon />
-      <Typography sx={{ fontSize: "12px", fontWeight: 500, color: "#1A223F" }}>Token List</Typography>
+      <Typography sx={{ fontSize: "12px", fontWeight: 500, color: "#301a3f" }}>Token List</Typography>
     </Box>
   ) : null;
 }

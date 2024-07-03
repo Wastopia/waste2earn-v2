@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkwaste2earn_home=self.webpackChunkwaste2earn_home||[]).push([[1091],{21091:(e,a,s)=>{s.r(a),s.d(a,{default:()=>t});var n=s(22893),r=s(36092);function t(){return(0,r.jsx)(n.A,{})}}}]);
-//# sourceMappingURL=1091.e38b6064.chunk.js.map

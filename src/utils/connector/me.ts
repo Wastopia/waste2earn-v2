@@ -98,7 +98,7 @@ export class MeConnector implements IConnector {
           // Max delegation targets is 1000 in Me Wallet
           delegationTargets: this.config.whitelist,
           host: this.config.host,
-          customDomain: "https://test.waste2earn.xyz",
+          customDomain: "https://waste2earn.xyz",
         });
 
         const { identity } = astrox;
@@ -118,7 +118,7 @@ export class MeConnector implements IConnector {
           delegationTargets.length > MAX_DELEGATION_TARGETS
             ? delegationTargets.slice(0, MAX_DELEGATION_TARGETS)
             : delegationTargets,
-        customDomain: "https://test.waste2earn.xyz",
+        customDomain: "https://waste2earn.xyz",
         maxTimeToLive: BigInt(MeExpireTime * 1000 * 1000 * 1000),
       });
 

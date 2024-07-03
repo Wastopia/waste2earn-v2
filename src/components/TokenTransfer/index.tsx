@@ -1,6 +1,4 @@
 import React, { useState, useContext, useMemo } from "react";
-import { Button, Grid, Typography, Box, InputAdornment } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 import {
   parseTokenAmount,
   formatTokenAmount,
@@ -9,14 +7,16 @@ import {
   toSignificantWithGroupSeparator,
 } from "@w2e/utils";
 import BigNumber from "bignumber.js";
+import { useErrorTip, useSuccessTip } from "hooks/useTips";
+import { makeStyles } from "@mui/styles";
+import { Button, Grid, Typography, Box, InputAdornment } from "@mui/material";
+import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity/index";
 import { ICP, W2E } from "constants/tokens";
 import CircularProgress from "@mui/material/CircularProgress";
-import { useErrorTip, useSuccessTip } from "hooks/useTips";
 import { Trans, t } from "@lingui/macro";
 import { tokenTransfer } from "hooks/token/calls";
 import { useTokenBalance } from "hooks/token/useTokenBalance";
 import { getLocaleMessage } from "locales/services";
-import Identity, { CallbackProps, SubmitLoadingProps } from "components/Identity/index";
 import { Theme } from "@mui/material/styles";
 import { TokenInfo } from "types/token";
 import { Identity as CallIdentity } from "types/index";
@@ -26,6 +26,9 @@ import { Modal, FilledTextField, NumberFilledTextField } from "components/index"
 import { Principal } from "@dfinity/principal";
 import MaxButton from "components/MaxButton";
 import { useUSDPriceById } from "hooks/useUSDPrice";
+
+// import QrCodeScannerIcon from '@mui/icons-material/QrCodeScanner';
+// import QrReader from "./QrReader";
 
 const useStyles = makeStyles((theme: Theme) => {
   return {
@@ -59,15 +62,16 @@ export interface TransferModalProps {
 
 export default function TransferModal({ open, onClose, onTransferSuccess, token, transferTo }: TransferModalProps) {
   const [principalFromState] = React.useState("");
+  // const [qrReaderOpen, setQrReaderOpen] = useState(false);
+  // const [newAccount, setNewAccount] = useState<string | null>(null);
+
   const classes = useStyles();
   const account = useAccount();
   const principalString = useAccountPrincipalString();
   const principal = useAccountPrincipal() || principalFromState;
   const [openErrorTip] = useErrorTip();
   const [openSuccessTip] = useSuccessTip();
-
   const { refreshTotalBalance, setRefreshTotalBalance } = useContext(WalletContext);
-
   const { result: balance } = useTokenBalance(token.canisterId, principal);
   const tokenUSDPrice = useUSDPriceById(token.canisterId);
 
@@ -85,6 +89,15 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
       [field]: value,
     });
   };
+
+  // const handleQrResult = (qrValue: string, to: string) => {
+  //   const p = qrValue as any;
+  //   if (p?.text) {
+  //     setPrincipalFromState(p.text);
+  //     handleFieldChange(p.text, to);
+  //   }
+  //   return newAccount;
+  // };
 
   const getErrorMessage = () => {
     if (!values.to) return t`Enter transfer to`;
@@ -109,7 +122,7 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
     return undefined;
   };
 
-  const handleSubmit = async (identity: CallIdentity, { loading, closeLoading }: SubmitLoadingProps) => {
+  const handleSubmit = async (_identity: CallIdentity, { loading, closeLoading }: SubmitLoadingProps) => {
     try {
       if (loading || !account) return;
 
@@ -190,12 +203,11 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
     <Modal open={open} onClose={onClose} title={t`Transfer`}>
       <Box sx={{ display: "flex", flexDirection: "column", gap: "24px 0" }}>
         <FilledTextField value={token.symbol} fullWidth />
-
         <FilledTextField
           value={values.to} // Use principal if available, else use 'to' field value
           placeholder={
             usePrincipalStandard(token.canisterId, token.standardType)
-              ? t`Enter the principal ID`
+              ? t`Enter Receive QR principal ID`
               : t`Enter the account ID or principal ID`
           }
           onChange={(value: string) => handleFieldChange(value, "to")}
@@ -203,8 +215,41 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           fullWidth
           autoComplete="To"
           multiline
-
         />
+
+        {/* {!qrReaderOpen && (
+          <FilledTextField
+            value={values.to}
+            placeholder={
+              usePrincipalStandard(token.canisterId, token.standardType)
+                ? t`Scan the Receive QR to get the principal ID`
+                : t`Enter the account ID or principal ID`
+            }
+            onChange={(value: string) => handleQrResult(value, "to")}
+            helperText={addressHelpText()}
+            fullWidth
+            autoComplete="To"
+            multiline
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton onClick={() => setQrReaderOpen(true)}>
+                    <QrCodeScannerIcon />
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+        )}
+        <QrReader
+          qrView={qrReaderOpen}
+          setQRview={setQrReaderOpen}
+          onSuccess={(value: string) => {
+            setNewAccount(value);
+            setQrReaderOpen(false)
+            navigator.clipboard.writeText(value);
+          }}
+        /> */}
 
         <NumberFilledTextField
           placeholder="Enter weight in kilogram"
@@ -273,7 +318,7 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           )
         </Typography>
         <Typography>
-          <Trans>Actually:</Trans> {toSignificantWithGroupSeparator(actualTransferAmount, 18)}
+          <Trans>Actual Fee ::</Trans> {toSignificantWithGroupSeparator(actualTransferAmount, 18)}
           &nbsp;{token.symbol}&nbsp;(
           {tokenUSDPrice && token
             ? `$${toSignificantWithGroupSeparator(
@@ -284,7 +329,7 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           )
         </Typography>
         <Typography color="text.warning">
-          <Trans>Please ensure that the receiving address supports this Token/NFT!</Trans>
+          <Trans>Please ensure that the receiving address supports this Token!</Trans>
         </Typography>
         <Identity onSubmit={handleSubmit} fullScreenLoading>
           {({ submit, loading }: CallbackProps) => (

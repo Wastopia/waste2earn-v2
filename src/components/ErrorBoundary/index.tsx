@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import * as Sentry from "@sentry/react";
 import { Grid, Box, Typography } from "@mui/material";
-import ErrorImage from "assets/images/Error";
+// import ErrorImage from "assets/images/Error";
 import { Layout } from "components/Layout/index";
 import { Trans } from "@lingui/macro";
 import copy from "copy-to-clipboard";
@@ -35,7 +35,7 @@ function Fallback({ error, eventId }: FallbackProps) {
                 <Trans>Oops, you've encountered an error</Trans>
               </Typography>
 
-              <ErrorImage />
+              {/* <ErrorImage /> */}
 
               <Box
                 sx={{

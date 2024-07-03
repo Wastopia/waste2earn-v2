@@ -3,7 +3,6 @@ import BigNumber from "bignumber.js";
 import { Box } from "@mui/material";
 import WalletAccount from "components/Wallet/WalletAccount";
 import TokenList from "components/Wallet/TokenList";
-// import NFTList from "components/Wallet/NFTList";
 import WalletContext, { TokenBalance, Page } from "components/Wallet/context";
 import { useConnectorStateConnected } from "store/auth/hooks";
 import ConnectWallet from "components/ConnectWallet";
@@ -58,12 +57,10 @@ export default function Wallet() {
         <Box sx={{ width: "100%", maxWidth: "1400px" }}>
           <WalletAccount />
           <Box sx={{ margin: "30px 0 0 0" }}>
+
             <Box sx={{ display: page === "token" ? "block" : "none" }}>
               <TokenList />
             </Box>
-            {/* <Box sx={{ display: page === "nft" ? "block" : "none" }}>
-              <NFTList />
-            </Box> */}
           </Box>
         </Box>
       </Box>

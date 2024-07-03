@@ -20,7 +20,7 @@ export default function NavBar() {
   };
 
   return (
-    <Box sx={{ display: "flex", gap: "0 12px" }}>
+    <Box sx={{ display: "flex", gap: "0 12px", paddingLeft: "200px" }}>
       <Routes routes={routes} onMenuClick={handleMenuClick} />
       {routes.length > MAX_NUMBER ? <ExceedRoutes routes={routes} onMenuClick={handleMenuClick} /> : null}
     </Box>

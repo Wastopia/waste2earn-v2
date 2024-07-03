@@ -12,7 +12,7 @@ export default {
     default: "en-US",
   },
   format: formatter({ lineNumbers: true, style: "minimal" }),
-  locales: ["en-US", "ja-JP", "ko-KR", "vi-VN", "zh-CN", "zh-TW"],
+  locales: ["en-US"],
   orderBy: "messageId",
   rootDir: ".",
   runtimeConfigModule: ["@lingui/core", "i18n"],

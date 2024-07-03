@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkwaste2earn_home=self.webpackChunkwaste2earn_home||[]).push([[658],{40658:(e,a,s)=>{s.r(a),s.d(a,{default:()=>r});var t=s(26207),n=s(37012);function r(){return(0,n.jsx)(t.A,{isWallet:!0})}}}]);
+//# sourceMappingURL=658.fe9b722c.chunk.js.map

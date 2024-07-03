@@ -23,16 +23,16 @@ export const MAX_NUMBER = 5;
 export const MOBILE_MAX_NUMBER = 5;
 
 export const routes: Route[] = [
-  {
-    key: "home",
-    name: `Home`,
-    path: "/home",
-  },
-  {
-    key: "swap",
-    name: `Swap`,
-    path: "/swap",
-  },
+  // {
+  //   key: "home",
+  //   name: `Home`,
+  //   path: "/home",
+  // },
+  // {
+  //   key: "swap",
+  //   name: `Swap`,
+  //   path: "/swap",
+  // },
 
   {
     key: "wallet",

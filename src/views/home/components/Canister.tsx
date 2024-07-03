@@ -62,7 +62,7 @@ export default function Canister() {
             <Grid container justifyContent="center" sx={{ mt: 2 }}>
 
                 <Typography component="h2" variant="h2" justifyContent="center">
-                    Introducing our Yellow Drum Project
+                    Yellow Drum Project &nbsp;
                 </Typography>
                 <Grid>
                     <Button sx={{

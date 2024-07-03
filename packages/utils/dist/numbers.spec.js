@@ -14,5 +14,19 @@ describe("#numbers", () => {
             expect(formatDollarAmount(0.000100123)).toEqual("$0.0001");
         });
     });
+    // describe("#formatPesoAmount", () => {
+    //     it("succeeds", () => {
+    //         expect(formatPesoAmount(0)).toEqual("₱0.00");
+    //     });
+    //     it("succeeds", () => {
+    //         expect(formatPesoAmount(undefined)).toEqual("-");
+    //     });
+    //     it("succeeds", () => {
+    //         expect(formatPesoAmount(0.00000123)).toEqual("₱0.0000012");
+    //     });
+    //     it("succeeds", () => {
+    //         expect(formaPesoAmount(0.000100123)).toEqual("₱0.0001");
+    //     });
+    // });
 });
 //# sourceMappingURL=numbers.spec.js.map

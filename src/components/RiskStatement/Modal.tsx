@@ -130,7 +130,7 @@ export default function RiskStatementModal({
           <Typography>
             <Trans>
               5. For any events and news about ICPSwap, please refer to Waste2earn's Twitter:{" "}
-              <TextButton link="https://twitter.com/icpswap">https://twitter.com/waste2earn</TextButton> or @Waste2Earn
+              <TextButton link="https://x.com/waste2earn">https://x.com/waste2earn</TextButton> or @Waste2Earn
             </Trans>
           </Typography>
         </Box>

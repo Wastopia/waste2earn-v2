@@ -1,6 +1,6 @@
 import { useContext, useMemo, useRef } from "react";
-import { Box, Typography } from "@mui/material";
-import { formatDollarAmount, } from "@w2e/utils";
+import { Box, Grid, Typography } from "@mui/material";
+import { formatDollarAmount } from "@w2e/utils";
 import { Trans } from "@lingui/macro";
 import { useSuccessTip } from "hooks/useTips";
 import { useICPPrice } from "hooks/useUSDPrice";
@@ -28,7 +28,7 @@ export function AddressWrapper({ address, label }: AddressWrapperProps) {
       sx={{
         maxWidth: "286px",
         borderRadius: "8px",
-        padding: "12px",
+        padding: "5px",
         border: "1px solid #29314F",
         height: "fit-content",
         "@media(max-width: 640px)": {
@@ -52,7 +52,7 @@ export function AddressWrapper({ address, label }: AddressWrapperProps) {
 
       <Box sx={{ margin: "8px 0 0 0", wordBreak: "break-all" }}>
         <Typography
-          sx={{ fontSize: "12px", whiteSpace: "break-spaces", cursor: "pointer", userSelect: "none" }}
+          sx={{ fontSize: "10px", whiteSpace: "break-spaces", cursor: "pointer", userSelect: "none" }}
           component="span"
           onClick={handleCopy}
         >
@@ -106,19 +106,20 @@ export default function WalletAccount() {
       sx={{
         display: "flex",
         width: "100%",
+        flexDirection: "column",
         justifyContent: "center",
+        alignItems: "center",
         padding: "0 0 30px 0",
         borderBottom: "1px solid #29314F",
-        "@media(max-width: 640px)": {
-          flexDirection: "column",
+        "@media(max-width: 286px)": {
           gap: "20px 0",
         },
       }}
     >
-      <Box>
+      <Box sx={{ paddingBottom: "10px" }}>
         <Box sx={{ display: "flex", gap: "0 8px", alignItems: "center" }}>
-          <Typography>
-            <Trans>Estimated Balance</Trans>
+          <Typography sx={{ width: "100%", "@media(max-width: 640px)": { textAlign: "center" } }}>
+            <Trans>Wallet Balance</Trans>
           </Typography>
 
           <RefreshIcon style={{ cursor: "pointer" }} onClick={handleRefreshBalance} />
@@ -127,6 +128,12 @@ export default function WalletAccount() {
         <Box sx={{ margin: "10px 0 0 0" }}>
           <Typography component="span" sx={{ fontSize: "32px", fontWeight: 600 }} color="text.primary">
             ≈{formatDollarAmount(totalValue.toString(), 2)}
+            {/* {totalValue && ( // Conditionally render Peso amount
+              <>
+                &nbsp;/&nbsp;
+                ≈{formatPesoAmount(totalValue.toString(), 2)}
+              </>
+            )} */}
           </Typography>
         </Box>
 
@@ -138,6 +145,83 @@ export default function WalletAccount() {
         </Box>
       </Box>
 
+      <Grid container justifyContent="center" sx={{ gap: "5px" }}>
+        <Typography sx={{
+          width: "100%",
+          "@media(max-width: 640px)": { textAlign: "center" }
+        }}>Add our Canister Token under ICRC-2
+        </Typography>
+        <Box
+          sx={{
+            minWidth: "100px",
+          }}
+        >
+          <AddressWrapper
+            address="n6j6v-cqaaa-aaaam-acjma-cai"
+            label="W2E"
+          />
+        </Box>
+        <Box
+          sx={{
+            minWidth: "100px",
+          }}
+        >
+          <AddressWrapper
+            address="mbbnc-biaaa-aaaam-acjiq-cai"
+            label="wPlastic"
+          />
+        </Box>
+        <Box
+          sx={{
+            minWidth: "100px",
+          }}
+        >
+          <AddressWrapper
+            address="mpdak-2yaaa-aaaam-acjjq-cai"
+            label="wPaper"
+          />
+        </Box>
+        <Box
+          sx={{
+            minWidth: "100px",
+          }}
+        >
+          <AddressWrapper
+            address="mug4p-aaaaa-aaaam-acjla-cai"
+            label="wOrganic"
+          />
+        </Box>
+        <Box
+          sx={{
+            minWidth: "100px",
+          }}
+        >
+          <AddressWrapper
+            address="m2erh-3qaaa-aaaam-acjka-cai"
+            label="wMetal"
+          />
+        </Box>
+        <Box
+          sx={{
+            minWidth: "100px",
+          }}
+        >
+          <AddressWrapper
+            address="m5fxt-wiaaa-aaaam-acjkq-cai"
+            label="wGlass"
+          />
+        </Box>
+        <Box
+          sx={{
+            minWidth: "100px",
+          }}
+        >
+          <AddressWrapper
+            address="mth23-nyaaa-aaaam-acjlq-cai"
+            label="eWaste"
+          />
+        </Box>
+      </Grid>
 
     </Box>
   );
