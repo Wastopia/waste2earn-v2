@@ -1,7 +1,8 @@
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import { Container, Stack } from '@mui/material';
+import { Button, Container, Stack } from '@mui/material';
+import { useHistory } from 'react-router-dom'
 
 
 const logos = [
@@ -28,6 +29,7 @@ const logoUrls = [
 ];
 
 export default function LogoCollection() {
+    const history = useHistory()
 
     return (
         <Box id="logoCollection" sx={{ py: 4 }}>
@@ -40,7 +42,7 @@ export default function LogoCollection() {
                     pb: { xs: 3, sm: 2 },
                 }}
             >
-                <Stack spacing={3} useFlexGap sx={{ width: { xs: '100%', sm: '70%' } }}>
+                <Stack spacing={3} useFlexGap sx={{ width: { xs: '100%', sm: '70%' }, alignItems: 'center' }}>
                     <Typography
                         variant="h1"
                         sx={{
@@ -55,10 +57,20 @@ export default function LogoCollection() {
                     >
                         Partners
                     </Typography>
+                    <Button
+                        onClick={() => history.push('/partner')}
+                        sx={{ width: '250px' }}
+                        variant="contained"
+                        color="primary"
+                        size="medium"
+                    >
+                        Be an ESG Certified Partner
+                    </Button>
                 </Stack>
 
             </Container>
             <Grid container justifyContent="center" sx={{ mt: 0.5, opacity: 1 }}>
+
                 {logos.map((logo, index) => (
                     <Grid item key={index}>
                         <a href={logoUrls[index]} target="_blank" rel="noreferrer" >
@@ -70,6 +82,7 @@ export default function LogoCollection() {
                         </a>
                     </Grid>
                 ))}
+
             </Grid>
         </Box>
     );

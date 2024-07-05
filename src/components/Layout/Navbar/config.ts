@@ -23,16 +23,11 @@ export const MAX_NUMBER = 5;
 export const MOBILE_MAX_NUMBER = 5;
 
 export const routes: Route[] = [
-  // {
-  //   key: "home",
-  //   name: `Home`,
-  //   path: "/home",
-  // },
-  // {
-  //   key: "swap",
-  //   name: `Swap`,
-  //   path: "/swap",
-  // },
+  {
+    key: "home",
+    name: `Home`,
+    path: "/home",
+  },
 
   {
     key: "wallet",
@@ -42,11 +37,16 @@ export const routes: Route[] = [
       { key: "Wallet2", name: `betaWallet`, link: "https://mqvnf-sqaaa-aaaap-ahhpa-cai.icp0.io/" },
     ],
   },
-  {
-    key: "feedback",
-    name: "White listing",
-    link: "https://forms.gle/A7NUvs66g8NiBTYQ8",
-  },
+  // {
+  //   key: "partner",
+  //   name: `Partner`,
+  //   path: "/partner",
+  // },
+  // {
+  //   key: "feedback",
+  //   name: "WhiteListing",
+  //   link: "https://forms.gle/A7NUvs66g8NiBTYQ8",
+  // },
 
   {
     key: "staking",

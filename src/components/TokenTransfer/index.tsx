@@ -318,7 +318,7 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           )
         </Typography>
         <Typography>
-          <Trans>Actual Fee ::</Trans> {toSignificantWithGroupSeparator(actualTransferAmount, 18)}
+          <Trans>Actual Fee:</Trans> {toSignificantWithGroupSeparator(actualTransferAmount, 18)}
           &nbsp;{token.symbol}&nbsp;(
           {tokenUSDPrice && token
             ? `$${toSignificantWithGroupSeparator(
