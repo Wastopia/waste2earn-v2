@@ -56,12 +56,12 @@ export default {
   // -----------------------|| DARK THEME VARIANTS ||-----------------------//
 
   // paper & background
-  darkPaper: "#114454",
+  darkPaper: "#0c3542",
   darkBackground: "#1a3e3f",
 
   // dark 800 & 900
   darkLevel1: "#112a36",
-  darkLevel2: "#1a383f",
+  darkLevel2: "#114454",
   darkLevel3: "#213b46",
   darkLevel4: "#0f1f24",
   darkLevel5: " #152329",

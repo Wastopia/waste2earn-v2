@@ -40,7 +40,7 @@ export const routes: Route[] = [
   {
     key: "swap",
     name: `Swap`,
-    link: "https://app.icpswap.com/swap",
+    path: "/swap",
   },
   // {
   //   key: "feedback",
