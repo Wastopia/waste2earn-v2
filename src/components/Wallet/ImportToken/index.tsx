@@ -16,8 +16,8 @@ import { Principal } from "@dfinity/principal";
 import { useSaveCacheTokenCallback } from "store/wallet/hooks";
 
 export const TokenStandards = [
-  { label: "EXT", value: TOKEN_STANDARD.EXT },
-  { label: "DIP20", value: TOKEN_STANDARD.DIP20 },
+  // { label: "EXT", value: TOKEN_STANDARD.EXT },
+  // { label: "DIP20", value: TOKEN_STANDARD.DIP20 },
   { label: "ICRC-1", value: TOKEN_STANDARD.ICRC1 },
   { label: "ICRC-2", value: TOKEN_STANDARD.ICRC2 },
 ];

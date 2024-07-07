@@ -437,7 +437,7 @@ export default function TransferPosition({
                 currencyA={currencyBase}
                 currencyB={currencyQuote}
                 borderColor={isDarkTheme(theme) ? "rgba(189, 200, 240, 0.4)" : "rgba(255, 255, 255, 0.4)"}
-                bgColor={isDarkTheme(theme) ? "#273155" : "#DADADA"}
+                bgColor={isDarkTheme(theme) ? "#412755" : "#DADADA"}
                 size={matchDownMD ? "20px" : "24px"}
               />
             </Grid>

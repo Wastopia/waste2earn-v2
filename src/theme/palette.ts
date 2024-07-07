@@ -83,7 +83,7 @@ export function themePalette(theme: { [key: string]: any }) {
     },
     border: {
       normal: isDark ? "1px solid #313A5A" : `1px solid ${theme.colors.lightGray200BorderColor}`,
-      border0: "1px solid #4F5A84",
+      border0: "1px solid #528078",
       gray200: isDark ? "1px solid #29314F" : `1px solid ${theme.colors.lightGray200BorderColor}`,
     },
     avatar: {

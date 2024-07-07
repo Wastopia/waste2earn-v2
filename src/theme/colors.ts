@@ -56,22 +56,22 @@ export default {
   // -----------------------|| DARK THEME VARIANTS ||-----------------------//
 
   // paper & background
-  darkPaper: "#240A34",
-  darkBackground: "#1a223f",
+  darkPaper: "#114454",
+  darkBackground: "#1a3e3f",
 
   // dark 800 & 900
-  darkLevel1: "#111936",
-  darkLevel2: "#1a223f",
-  darkLevel3: "#212946",
-  darkLevel4: "#29314f",
-  darkLevel5: "#273051",
+  darkLevel1: "#112a36",
+  darkLevel2: "#1a383f",
+  darkLevel3: "#213b46",
+  darkLevel4: "#0f1f24",
+  darkLevel5: " #152329",
 
   // text variants
   darkTextPrimary: "#ffffff",
-  darkTextSecondary: "#9EB8D9",
-  darkTextTertiary: "#4F5A84",
-  darkTextFourth: "#29314F",
-  darkTextFifth: "#212946",
+  darkTextSecondary: "#ffffff",
+  darkTextTertiary: "#ffffff",
+  darkTextFourth: "#ffffff",
+  darkTextFifth: "#ffffff",
 
   lightPrimaryMain: "#8672FF",
 
@@ -92,12 +92,12 @@ export default {
   lightGray200BorderColor: "#EFEFFF",
 
   // primary dark
-  darkPrimaryLight: "#e3f2fd",
-  darkPrimaryMain: "#8672FF",
-  darkPrimaryDark: "#5669dc",
-  darkPrimary200: "#000001",
-  darkPrimary800: "#1565c0",
-  darkPrimary400: "#4F5A84",
+  darkPrimaryLight: "#e3fdf3",
+  darkPrimaryMain: "#72fff3",
+  darkPrimaryDark: "#56dcc8",
+  darkPrimary200: "#062423",
+  darkPrimary800: "#15bdc0",
+  darkPrimary400: "#4f8480",
 
   // secondary dark
   darkSecondaryLight: "#212946",
@@ -109,5 +109,5 @@ export default {
   defaultGradientStart: "#365E32",
   defaultGradientEnd: "#059212",
 
-  border0: "#4F5A84",
+  border0: "#28f77b",
 };

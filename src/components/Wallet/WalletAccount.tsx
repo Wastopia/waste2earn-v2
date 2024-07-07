@@ -1,13 +1,13 @@
-import { useContext, useMemo, useRef } from "react";
+import { useRef } from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import { formatDollarAmount } from "@w2e/utils";
-import { Trans } from "@lingui/macro";
-import { useSuccessTip } from "hooks/useTips";
-import { useICPPrice } from "hooks/useUSDPrice";
+// import { formatDollarAmount } from "@w2e/utils";
+// import { Trans } from "@lingui/macro";
+// import { useSuccessTip } from "hooks/useTips";
+// import { useICPPrice } from "hooks/useUSDPrice";
 import { ReactComponent as CopyIcon } from "assets/icons/Copy.svg";
 import Copy, { CopyRef } from "components/Copy";
-import { ReactComponent as RefreshIcon } from "assets/icons/refresh.svg";
-import WalletContext from "./context";
+// import { ReactComponent as RefreshIcon } from "assets/icons/refresh.svg";
+// import WalletContext from "./context";
 
 export interface AddressWrapperProps {
   address: string | undefined;
@@ -69,37 +69,37 @@ export function AddressWrapper({ address, label }: AddressWrapperProps) {
 }
 
 export default function WalletAccount() {
-  const icpPrice = useICPPrice();
+  // const icpPrice = useICPPrice();
 
-  const [openSuccessTip] = useSuccessTip();
+  // const [openSuccessTip] = useSuccessTip();
 
-  const {
-    refreshTotalBalance,
-    setRefreshTotalBalance,
-    refreshCounter,
-    setRefreshCounter,
-    totalValue,
-    totalUSDBeforeChange,
-  } = useContext(WalletContext);
+  // const {
+  //   refreshTotalBalance,
+  //   setRefreshTotalBalance,
+  //   refreshCounter,
+  //   setRefreshCounter,
+  //   totalValue,
+  //   totalUSDBeforeChange,
+  // } = useContext(WalletContext);
 
-  const useTotalICPValue = useMemo(() => {
-    if (icpPrice) return totalValue.dividedBy(icpPrice);
-    return undefined;
-  }, [totalValue, icpPrice]);
+  // const useTotalICPValue = useMemo(() => {
+  //   if (icpPrice) return totalValue.dividedBy(icpPrice);
+  //   return undefined;
+  // }, [totalValue, icpPrice]);
 
-  const usdChange = useMemo(() => {
-    if (totalValue.isEqualTo(0) || totalUSDBeforeChange.isEqualTo(0)) return undefined;
-    return `${totalValue.minus(totalUSDBeforeChange).dividedBy(totalUSDBeforeChange).multipliedBy(100).toFixed(2)}%`;
-  }, [totalUSDBeforeChange, totalValue]);
+  // const usdChange = useMemo(() => {
+  //   if (totalValue.isEqualTo(0) || totalUSDBeforeChange.isEqualTo(0)) return undefined;
+  //   return `${totalValue.minus(totalUSDBeforeChange).dividedBy(totalUSDBeforeChange).multipliedBy(100).toFixed(2)}%`;
+  // }, [totalUSDBeforeChange, totalValue]);
 
-  const usdChangeType = usdChange && usdChange.includes("-") ? "down" : "up";
-  const USDChangeColor = usdChangeType === "up" ? "#54C081" : "#D3625B";
+  // const usdChangeType = usdChange && usdChange.includes("-") ? "down" : "up";
+  // const USDChangeColor = usdChangeType === "up" ? "#54C081" : "#D3625B";
 
-  const handleRefreshBalance = () => {
-    if (setRefreshTotalBalance) setRefreshTotalBalance(!refreshTotalBalance);
-    setRefreshCounter(refreshCounter + 1);
-    openSuccessTip("Refresh Success");
-  };
+  // const handleRefreshBalance = () => {
+  //   if (setRefreshTotalBalance) setRefreshTotalBalance(!refreshTotalBalance);
+  //   setRefreshCounter(refreshCounter + 1);
+  //   openSuccessTip("Refresh Success");
+  // };
 
   return (
     <Box
@@ -116,7 +116,7 @@ export default function WalletAccount() {
         },
       }}
     >
-      <Box sx={{ paddingBottom: "10px" }}>
+      {/* <Box sx={{ paddingBottom: "10px" }}>
         <Box sx={{ display: "flex", gap: "0 8px", alignItems: "center" }}>
           <Typography sx={{ width: "100%", "@media(max-width: 640px)": { textAlign: "center" } }}>
             <Trans>Wallet Balance</Trans>
@@ -128,12 +128,12 @@ export default function WalletAccount() {
         <Box sx={{ margin: "10px 0 0 0" }}>
           <Typography component="span" sx={{ fontSize: "32px", fontWeight: 600 }} color="text.primary">
             ≈{formatDollarAmount(totalValue.toString(), 2)}
-            {/* {totalValue && ( // Conditionally render Peso amount
+            {totalValue && ( // Conditionally render Peso amount
               <>
                 &nbsp;/&nbsp;
                 ≈{formatPesoAmount(totalValue.toString(), 2)}
               </>
-            )} */}
+            )}
           </Typography>
         </Box>
 
@@ -143,7 +143,7 @@ export default function WalletAccount() {
             {usdChange ? `${usdChangeType === "down" ? "" : "+"}${usdChange}` : "--"}
           </Typography>
         </Box>
-      </Box>
+      </Box> */}
 
       <Grid container justifyContent="center" sx={{ gap: "5px" }}>
         <Typography sx={{

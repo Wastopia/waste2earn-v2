@@ -41,7 +41,7 @@ export const CurrencyAmountFormatDecimals = (decimals: number | bigint | undefin
 };
 
 export const INFO_URL_MAP = {
-  [NETWORK.IC]: "https://icpex.org",
+  [NETWORK.IC]: "https://info.icpswap.com",
   [NETWORK.LOCAL]: "https://66jms-2yaaa-aaaaa-aabha-cai.dtest.app",
 };
 
@@ -51,9 +51,9 @@ export const APP_URL = "https://waste2earn.xyz";
 
 export const DAYJS_FORMAT = "YYYY-MM-DD HH:mm:ss";
 
-export const V2SwapLink = "https://waste2earn.xyz";
+export const V2SwapLink = "https://app.icpswap.com";
 
-export const V3SwapLink = "https://waste2earn.xyz";
+export const V3SwapLink = "https://app.icpswap.com";
 
 export const AnonymousPrincipal = "2vxsx-fae";
 

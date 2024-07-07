@@ -47,7 +47,7 @@ export function themeTypography(theme: { [key: string]: any }) {
       fontWeight: 400,
     },
     body1: {
-      fontSize: "0.875rem",
+      fontSize: "0.924rem",
       fontWeight: 400,
       lineHeight: "1.334em",
       color: theme.textSecondary,

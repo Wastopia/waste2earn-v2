@@ -51,7 +51,7 @@ export function componentStyleOverrides(theme: { [key: string]: any }) {
           "&.MuiButton-contained.Mui-disabled": {
             ...(isDark
               ? {
-                  background: "#4F5A84",
+                  background: "#271d78",
                 }
               : { color: "#9E9E9E", background: "#E0E0E0" }),
           },

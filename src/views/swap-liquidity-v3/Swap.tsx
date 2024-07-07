@@ -7,7 +7,7 @@ import SwapUIWrapper from "components/swap/SwapUIWrapper";
 import { t } from "@lingui/macro";
 import { Theme } from "@mui/material/styles";
 import { SwapWrapper } from "components/swap/SwapWrapper";
-import { ReclaimLink } from "components/swap/ReclaimLink";
+// import { ReclaimLink } from "components/swap/ReclaimLink";
 
 import SwapTransactions from "./swap/Transactions";
 
@@ -100,16 +100,16 @@ export function SwapMain() {
             <Box mt={3}>{ActiveComponent()}</Box>
           </MainCard>
 
-          <Box
+          {/* <Box
             mt="8px"
             sx={{
-              background: "#111936",
+              background: "#2f729e",
               padding: "16px",
               borderRadius: "12px",
             }}
           >
             <ReclaimLink />
-          </Box>
+          </Box> */}
         </Grid>
       </Grid>
     </SwapUIWrapper>

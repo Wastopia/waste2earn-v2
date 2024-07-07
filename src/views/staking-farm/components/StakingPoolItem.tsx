@@ -262,7 +262,7 @@ export default function FarmPool({ farm, state, stakeOnly }: FarmPoolProps) {
                   height: "44px",
                   lineHeight: "42px",
                   background: "#111936",
-                  border: "1px solid #29314F",
+                  border: "1px solid #95a8ed",
                   borderRadius: "8px",
                   padding: "0 14px",
                   alignItems: "center",

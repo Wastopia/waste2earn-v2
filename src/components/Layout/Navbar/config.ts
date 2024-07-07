@@ -37,22 +37,22 @@ export const routes: Route[] = [
       { key: "Wallet2", name: `betaWallet`, link: "https://mqvnf-sqaaa-aaaap-ahhpa-cai.icp0.io/" },
     ],
   },
-  // {
-  //   key: "partner",
-  //   name: `Partner`,
-  //   path: "/partner",
-  // },
+  {
+    key: "swap",
+    name: `Swap`,
+    link: "https://app.icpswap.com/swap",
+  },
   // {
   //   key: "feedback",
   //   name: "WhiteListing",
   //   link: "https://forms.gle/A7NUvs66g8NiBTYQ8",
   // },
 
-  {
-    key: "staking",
-    name: `Staking`,
-    path: `/staking-token`,
-  },
+  // {
+  //   key: "staking",
+  //   name: `Staking`,
+  //   path: `/staking-token`,
+  // },
   {
     key: "marketplace",
     name: `Marketplace`,

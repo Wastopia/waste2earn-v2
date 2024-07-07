@@ -44,7 +44,7 @@ export function TokenItem({ canisterId }: { canisterId: string }) {
         gap: "0 20px",
         height: "73px",
         alignItems: "center",
-        borderTop: "1px solid rgba(189, 200, 240, 0.082)",
+        borderTop: "1px solid rgba(224, 189, 240, 0.082)",
       }}
     >
       <Grid container alignItems="center">

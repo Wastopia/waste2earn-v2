@@ -27,7 +27,7 @@ import { ReceiveModal } from "./Receive";
 
 const useStyles = makeStyles(() => ({
   tokenAssets: {
-    fontSize: "0.6rem",
+    fontSize: "0.8rem",
   },
   walletSymbol: {
     cursor: "pointer",
