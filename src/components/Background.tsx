@@ -10,7 +10,7 @@ export default function Background() {
         right: "0",
         pointerEvents: "none",
         transform: "unset",
-        background: "linear-gradient(to top, rgba(128, 0, 128, 0.8), rgba(0, 0, 0, 1), rgba(0, 0, 128, 0.5))",
+        background: "linear-gradient(to top, rgba(12, 53, 66, 1), rgba(0, 0, 0, 1), rgba(0, 0, 128, 0.5))",
         width: "100vw",
         height: "100vh",
         zIndex: "-1",
