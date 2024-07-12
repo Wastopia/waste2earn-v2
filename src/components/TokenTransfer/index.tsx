@@ -207,7 +207,7 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           value={values.to} // Use principal if available, else use 'to' field value
           placeholder={
             usePrincipalStandard(token.canisterId, token.standardType)
-              ? t`Enter Receive QR principal ID`
+              ? t`Enter the principal ID`
               : t`Enter the account ID or principal ID`
           }
           onChange={(value: string) => handleFieldChange(value, "to")}
@@ -318,7 +318,7 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           )
         </Typography>
         <Typography>
-          <Trans>Actual Fee:</Trans> {toSignificantWithGroupSeparator(actualTransferAmount, 18)}
+          <Trans>Actually: </Trans> {toSignificantWithGroupSeparator(actualTransferAmount, 18)}
           &nbsp;{token.symbol}&nbsp;(
           {tokenUSDPrice && token
             ? `$${toSignificantWithGroupSeparator(
@@ -329,7 +329,7 @@ export default function TransferModal({ open, onClose, onTransferSuccess, token,
           )
         </Typography>
         <Typography color="text.warning">
-          <Trans>Please ensure that the receiving address supports this Token!</Trans>
+          <Trans>Please ensure that the receiving address supports this Token/NFT!</Trans>
         </Typography>
         <Identity onSubmit={handleSubmit} fullScreenLoading>
           {({ submit, loading }: CallbackProps) => (
