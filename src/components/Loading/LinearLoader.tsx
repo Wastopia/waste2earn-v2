@@ -1,17 +1,17 @@
 import { makeStyles } from "@mui/styles";
-import LinearProgress from "@mui/material/LinearProgress";
-import { Theme } from "@mui/material/styles";
+import { infinity } from 'ldrs'
 
-const useStyles = makeStyles((theme: Theme) => ({
+infinity.register()
+
+const useStyles = makeStyles(() => ({
   root: {
-    position: "fixed",
-    bottom: 0,
-    left: 0,
-    zIndex: 1301,
     width: "100%",
-    "& > * + *": {
-      marginTop: theme.spacing(2),
-    },
+    display: "flex",
+    justifyContent: "center",
+    position: "fixed",
+    top: 300,
+    zIndex: 1301,
+
   },
 }));
 
@@ -20,7 +20,15 @@ export default function LinearLoader() {
 
   return (
     <div className={classes.root}>
-      <LinearProgress color="primary" />
+
+      <l-infinity
+        size="155"
+        stroke="5"
+        stroke-length="0.25"
+        bg-opacity="0.1"
+        speed="1.3"
+        color="white"
+      />
     </div>
   );
 }
